@@ -66,3 +66,7 @@
 .fail-button:hover {
     background-color: #e7e7e7;
 }
+
+.success-Icon {
+    width: 110px;
+}
