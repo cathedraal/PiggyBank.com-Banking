@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+    flex-shrink: 0;
+    width: 100%;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f0f0f0;
+    border-radius: 50px 50px 0 0;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo {
+    width: 86px;
+}
+
+.footer-logoText {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-subtitle {
+    font-size: 16px;
+    width: 300px;
+    color: #767676;
+    text-align: center;
+}

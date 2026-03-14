@@ -1,0 +1,562 @@
+body {
+    display: flex;
+    font-family: 'Inter Display', sans-serif;
+    height: 100vh;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: "Inter Display";
+    src: url("../fonts/InterDisplay-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter Display";
+    src: url("../fonts/InterDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Display";
+    src: url("../fonts/InterDisplay-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Display";
+    src: url("../fonts/InterDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.body-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #00000008;
+    backdrop-filter: blur(30px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 300;
+    justify-content: center;
+    align-items: center;
+    /* Animation */
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.body-popup {
+    background-color: #ffffff;
+    padding: 50px;
+    max-width: 310px;
+    border-radius: 45px;
+    width: 100%;
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.03),
+    0 12px 24px rgba(0, 0, 0, 0.06),
+    0 32px 64px rgba(0, 0, 0, 0.10);
+}
+
+.body-popupText {
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.popup-button1 {
+    padding: 20px;
+    max-width: 60%;
+    width: 100%;
+    background-color: #0c6fff;
+    font-family: inherit;
+    border: none;
+    color: #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.popup-questionInput {
+    font-family: inherit;
+    text-align: left;
+    background-color: #f8f8f8;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    resize: none;
+    width: 100%;
+    height: 120px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.popup-button2 {
+    padding: 20px;
+    max-width: 40%;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    color: #000000;
+    border: 1px solid #e4e4e4;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+.continueAsGuest-button {
+    padding: 20px;
+    max-width: 160px;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    color: #000000;
+    border: 1px solid #e4e4e4;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+.popup-button2:hover {
+    background-color: #f6f6f6;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: #f5f5f5;
+    background-image: radial-gradient(#ffffff38 1.3px, transparent 1px);
+    background-size: 26px 26px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    align-items: center;
+}
+
+.error-message {
+    background-color: #ffe9e9;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+    color: #ff7171;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 12px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.page-backButton {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 20px;
+    width: 100px;
+    font-family: inherit;
+    font-weight: 500;
+    color: #000000;
+    border: 1px solid #e4e4e4;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-backButton:hover {
+    background-color: #f6f6f6;
+}
+
+.page-backButtonIcon {
+    opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    p  { font-size: 14px; }
+
+    .wrapper {
+        padding: 0px 15px;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .login-container,
+    .addCard-container {
+        padding: 0px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 45px;
+    }
+
+    .menu-currencyButtons {
+        gap: 5px;
+    }
+
+    .menu-header {
+        margin-top: 0px;
+    }
+
+    .menu-newsBlogImage {
+        max-width: 320px;
+    }
+
+    .menu-newsSection {
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    .menu-newsBlog {
+        padding: 0px;
+        flex-direction: unset;
+        flex-direction: row;
+        border: none
+    }
+
+    .newsPage-content {
+        font-size: 16px;
+    }
+
+    .menu-needHelpButton {
+        margin-right: 5px;
+    }
+
+    .newsPage-publishedDate {
+        font-size: 14px;
+    }
+
+    .body-popup {
+        padding: 30px;
+        border-radius: 40px;
+    }
+
+    .body-popupText {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .popup-questionInput {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        height: 100px;
+    }
+
+    .success-mainContainer,
+    .fail-mainContainer {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .menu-headerLogo {
+        width: 20%;
+    }
+
+    .menu-headerTitle {
+        font-size: 30px;
+    }
+
+    .menu-latestActionsContainer {
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    .menu-latestActionsDiv {
+        overflow-x: scroll;
+    }
+
+    .menu-walletsCardAmount {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-line {
+        width: 100%;
+        align-self: center;
+    }
+
+    .menu-headerSubtitle {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .profile-walletDetailsDiv {
+        padding: 30px;
+        min-width: unset;
+        max-width: 100vh;
+        flex-shrink: 0;
+    }
+
+    .profile-addCard {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .profile-cardBalance {
+        font-size: 50px;
+    }
+
+    .profile-cardHolderText2,
+    .profile-cardNumberText2,
+    .profile-cardExpdateText2,
+    .profile-cardCvcText2 {
+        font-size: 15px;
+    }
+
+    .profile-deleteCardButton p {
+        display: none;
+    }
+
+    .addCard-inputsContainer {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 40px;
+        border: none;
+    }
+
+    .addCard-otherDetailDiv {
+        padding: 0px;
+        margin-left: 0px;
+        width: 80%;
+    }
+
+    .addCard-div {
+        width: 90%;
+        padding: 0px !important;
+    }
+
+    .cardTypes-buttons {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .cardTypes-button {
+        width: 48%;
+    }
+
+    .login-logoText {
+        font-size: 30px;
+    }
+
+    .login-inputsContainer {
+        width: 80%;
+    }
+
+    .login-logo {
+        width: 100px;
+    }
+
+    .text-label {
+        margin-top: 50px;
+    }
+
+    .continueAsGuest-divider {
+        width: 70%;
+    }
+
+    .menu-noWalletsText {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .menu-benefitsContainer {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        width: auto;
+        margin-top: 30px;
+        gap: 5px;
+    }
+
+    .menu-benefitsDiv {
+        max-width: unset;
+        width: 250px;
+        padding: 30px;
+        flex-shrink: 0;
+    }
+
+    .menu-walletContainer {
+        flex-wrap: wrap;
+    }
+
+    .menu-wallet {
+        width: 100%;
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    .actionsPage-container {
+        padding: 30px;
+    }
+
+    .actions-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-walletBalance {
+        font-size: 50px;
+    }
+
+    .menu-manageWalletContainer {
+        width: 100%;
+        margin-top: 0px;
+        padding: 30px;
+    }
+
+    .menu-manageWalletButtons {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .menu-benefitsIcon {
+        margin-top: 40px;
+    }
+
+    .newsPage-div {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .actions-div {
+        max-width: unset;
+        width: fit-content;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .actions-date {
+        margin-top: 7px;
+        font-size: 13px;
+        margin-left: 20px;
+    }
+
+    .actions-text {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .actions-container {
+        flex-wrap: wrap;
+        max-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .actions-icon {
+        margin-left: 0px;
+    }
+
+    .actions-highlight2 {
+        font-size: 10px;
+        padding: 0px;
+    }
+
+    .actions-text {
+        margin-right: 0px;
+    }
+
+    .profile-personalContainer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile-walletsContainer {
+        flex-wrap: wrap;
+    }
+
+    .profile-wallets {
+        gap: 5px;
+    }
+
+    .profile-addWalletDiv {
+        margin-top: 20px;
+        margin-left: 0px;
+        max-width: unset;
+        width: 100%;
+        height: 120px;
+        border-radius: 30px;
+    }
+
+    .addCard-div {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .addMoney-mainDiv {
+        flex-direction: column-reverse !important;
+        flex-wrap: wrap;
+    }
+
+    .addMoney-mainSection {
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    .addMoney-wallets {
+        max-width: unset;
+        flex-direction: row;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .addMoney-walletBalance {
+        font-size: 30px;
+    }
+
+    .addMoney-wallet {
+        max-width: unset;
+        width: 70%;
+    }
+
+    .addMoney-inputDiv {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .addMoney-inputContainer {
+        margin-left: 0px !important;
+    }
+
+    .addMoney-input {
+        font-size: 60px;
+    }
+
+    .recipientInfo-container {
+        padding: 30px;
+    }
+}

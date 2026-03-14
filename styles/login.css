@@ -1,0 +1,183 @@
+.text-label {
+    font-weight: 500;
+    color: #787878;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #0000000a;
+    border-radius: 50px;
+    margin-top: auto;
+}
+
+.continueAsGuest-dividerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.continueAsGuest-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.continueAsGuest-divider::before,
+.continueAsGuest-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.continueAsGuest-divider span {
+    padding: 0 16px;
+    font-size: 12px;
+}
+
+.login-container {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e4e4e4;
+    padding: 60px;
+    border-radius: 45px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.03),
+    0 12px 24px rgba(0, 0, 0, 0.06),
+    0 32px 64px rgba(0, 0, 0, 0.10);
+}
+
+.login-welcomeText {
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    margin-top: 0px;
+}
+
+.login-logoText {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.login-logo {
+    width: 168px;
+    margin-bottom: 50px;
+}
+
+.login-subtitle {
+    text-align: center;
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.login-img {
+    width: 30%;
+    border: 1px solid #e4e4e4;
+    border-radius: 30px;
+}
+
+.login-text {
+    margin-top: 70px;
+}
+
+.login-inputsContainer {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 350px;
+    display: grid;
+    grid-template-areas: 
+    "name surname"
+    "email email";
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.login-nameDiv {
+    grid-area: name;
+}
+
+.login-nameInput {
+    font-family: inherit;
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: #ffffff;
+    text-align: left;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.login-surnameDiv {
+    grid-area: surname;
+}
+
+.login-surnameInput {
+    font-family: inherit;
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: #ffffff;
+    text-align: left;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.login-emailDiv {
+    grid-area: email;
+}
+
+.login-emailInput {
+    font-family: inherit;
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: #ffffff;
+    text-align: left;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.login-submitButton {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 20px;
+    width: 150px;
+    background-color: #0c6fff;
+    font-family: inherit;
+    border: none;
+    color: #ffffff;
+    font-weight: 530;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-submitButton:hover, 
+.addCard-submitButton:hover,
+.popup-button1:hover {
+    background-color: #4a92ff;
+}
