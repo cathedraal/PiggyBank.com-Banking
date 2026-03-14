@@ -147,7 +147,10 @@ export function renderSuccessPage(context, param1, param2, card) {
     successMainContainer.append(successButton)
 
     // footer
-   renderFooter(wrapper)
+    renderFooter(wrapper)
+    
+    // scroll when rendered
+    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 //renders "failed to send/withdrawn" page 
