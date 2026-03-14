@@ -217,6 +217,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 15px;
+    color: #000000;
     width: 100%;
     font-weight: 600;
     background-color: #f8f8f8;
@@ -430,6 +431,7 @@
     background-color: #ffffff;
     border: 1px solid #e4e4e4;
     border-radius: 40px;
+    color: #000000;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
