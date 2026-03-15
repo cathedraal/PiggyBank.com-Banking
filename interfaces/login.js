@@ -98,7 +98,7 @@ export function login() {
     // button
     const loginSubmitButton = document.createElement('button')
     loginSubmitButton.classList.add('login-submitButton')
-    loginSubmitButton.textContent = 'Log in'
+    loginSubmitButton.textContent = 'log in'
     loginSubmitButton.addEventListener('click', () => {
         let valid = true
 
@@ -137,7 +137,7 @@ export function login() {
 
     const continueAsGuestBtn = document.createElement('button')
     continueAsGuestBtn.classList.add('continueAsGuest-button')
-    continueAsGuestBtn.textContent = 'Continue as guest'
+    continueAsGuestBtn.textContent = 'continue as guest'
     continueAsGuestBtn.addEventListener('click', () => {
         username = 'Guest'
         usersurname = surnames[getRandomInt(0, surnames.length-1)]
