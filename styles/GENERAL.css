@@ -233,7 +233,7 @@ body::before {
     }
 
     .menu-newsBlogImage {
-        max-width: 320px;
+        max-width: 235px;
     }
 
     .menu-newsSection {
@@ -241,11 +241,23 @@ body::before {
         margin-top: 30px;
     }
 
+    .menu-newsBlogButton {
+        margin-top: auto;
+    }
+
+    .menu-newsBlogSubtitle {
+        display: none;
+    }
+
     .menu-newsBlog {
         padding: 0px;
         flex-direction: unset;
         flex-direction: row;
         border: none
+    }
+
+    .menu-newsContainer {
+        height: fit-content;
     }
 
     .newsPage-content {
