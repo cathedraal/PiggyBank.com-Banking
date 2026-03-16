@@ -1,3 +1,8 @@
+/**
+ * @overview Page where user sees the documented manipulations with his card/s
+ * @author Roman Mallindine
+ */
+
 import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderFooter, renderBackButton, renderAllActions } from "../logics/rendering.js"
 
