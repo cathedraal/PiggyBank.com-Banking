@@ -197,6 +197,9 @@ export function renderFailPage(context, param1, card) {
 
     // footer
    renderFooter(wrapper)
+    
+    // scroll when rendered
+    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 // renders currency label
@@ -319,7 +322,7 @@ export function renderBackButton(section) {
 
     const button = document.createElement("button")
     button.classList.add("page-backButton")
-    button.textContent = "Back"
+    button.textContent = "back"
 
     button.append(buttonIcon)
     button.addEventListener("click", () => {
@@ -332,7 +335,7 @@ export function renderBackButton(section) {
 export function renderLogoutButton(section, classList) {
     const menuLogoutButton = document.createElement('button')
     menuLogoutButton.classList.add(classList)
-    menuLogoutButton.textContent = 'Log out'
+    menuLogoutButton.textContent = 'log out'
     menuLogoutButton.addEventListener('click', () => {
         renderPopup(
             document.body, 
@@ -354,7 +357,7 @@ export function renderLogoutButton(section, classList) {
 export function renderNeedHelpButton(section) {
     const menuNeedHelpButton = document.createElement('button')
     menuNeedHelpButton.classList.add('menu-needHelpButton')
-    menuNeedHelpButton.textContent = 'Need help?'
+    menuNeedHelpButton.textContent = 'need help?'
     menuNeedHelpButton.addEventListener('click', () => {
         renderPopup(
             document.body,
@@ -461,7 +464,7 @@ export function renderWallet(section) {
     // add money
     const menuManageWalletAdd = document.createElement('button')
     menuManageWalletAdd.classList.add('menu-manageWalletAdd')
-    menuManageWalletAdd.textContent = 'Add money'
+    menuManageWalletAdd.textContent = 'add money'
     const menuManageWalletAddIconDiv = document.createElement('div')
     menuManageWalletAddIconDiv.classList.add('menu-manageWalletAddIconDiv')
     const menuManageWalletAddIcon = document.createElement('img')
@@ -485,7 +488,7 @@ export function renderWallet(section) {
     // transfer money
     const menuManageWalletTransfer = document.createElement('button')
     menuManageWalletTransfer.classList.add('menu-manageWalletTransfer')
-    menuManageWalletTransfer.textContent = 'Transfer money'
+    menuManageWalletTransfer.textContent = 'transfer money'
     const menuManageWalletTransferIconDiv = document.createElement('div')
     menuManageWalletTransferIconDiv.classList.add('menu-manageWalletTransferIconDiv')
     const menuManageWalletTransferIcon = document.createElement('img')
@@ -509,7 +512,7 @@ export function renderWallet(section) {
     // withdraw money
     const menuManageWalletWithdraw = document.createElement('button')
     menuManageWalletWithdraw.classList.add('menu-manageWalletWithdraw')
-    menuManageWalletWithdraw.textContent = 'Withdraw money'
+    menuManageWalletWithdraw.textContent = 'withdraw money'
     const menuManageWalletWithdrawIconDiv = document.createElement('div')
     menuManageWalletWithdrawIconDiv.classList.add('menu-manageWalletWithdrawIconDiv')
     const menuManageWalletWithdrawIcon = document.createElement('img')
