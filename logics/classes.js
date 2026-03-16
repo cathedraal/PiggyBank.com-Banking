@@ -1,7 +1,12 @@
-// classes for the banking project
+/**
+ * @overview Contains User, Card and Action classes which handle the main 
+ * banking logic - card management, transaction history and profile management
+ * @author Roman Mallindine
+ */
+
 import { changeCurrency, changeCardType } from "./globals.js";
 
-// all about user cards
+
 export class Card {
     constructor(cardHolder, cardNumber, cardExpDate, cardCvc, cardBalance, cardCurrency, cardType) {
         this.cardHolder = cardHolder;
@@ -45,7 +50,7 @@ export class Card {
     }
 }
 
-// all about user
+
 export class User {
     constructor(userName, userSurname, userEmail, loginDate) {
         this.userName = userName;
@@ -80,7 +85,7 @@ export class User {
         changeCardType('')
     }
 
-    // available in future -> need to buy a subscription
+    // available in future
     sendQuestion(username, text) {
         // send to email
         const params = {
@@ -91,6 +96,7 @@ export class User {
         // emailjs.send('service_807c8ah', 'template_lkb0bhl', params)
     }
 }
+
 
 export class Action {
     constructor(icon, text, highlight, date, context, source) {
