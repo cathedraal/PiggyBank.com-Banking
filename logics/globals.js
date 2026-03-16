@@ -15,7 +15,7 @@ export const news = [
         date: 'December 31st, 2025',
         title: 'Personal finance apps help users save more money',
         subtitle: 'New personal finance features such as spending analytics and smart budgeting tools are helping users better control their expenses.',
-        btnText: 'Read more',
+        btnText: 'read article',
         value: "personalFinance"
     },
     {
@@ -23,7 +23,7 @@ export const news = [
         date: 'January 15th, 2026',
         title: 'Banks introduce instant transfers with zero fees',
         subtitle: 'Several banks have launched instant money transfers without commissions, aiming to attract more users to their digital banking platforms.',
-        btnText: 'Read more',
+        btnText: 'read article',
         value: 'zeroFees'
     },
     {
@@ -31,7 +31,7 @@ export const news = [
         date: 'January 18th, 2026',
         title: 'Digital wallets gain popularity among young users',
         subtitle: 'Digital wallets are becoming increasingly popular among young adults, as users value fast transfers, easy balance tracking, and simple mobile interfaces.',
-        btnText: 'Read more',
+        btnText: 'read article',
         value: 'digitalWallets'
     }
 ]
