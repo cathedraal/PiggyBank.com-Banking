@@ -1,14 +1,26 @@
-// all of the variables in the project
+/**
+ * @overview Contains global variables which are being imported to main files of the project
+ * @author Roman Mallindine
+ */
 
 export const wrapper = document.getElementById("wrapper")
+
 export let user = ''
+
 export let currencyChosen = ''
+
 export let notEmpty = true
+
 export let recipientname = ''
+
 export let recipientemail = ''
+
 export let recipienttext = ''
+
 export let question = ''
+
 export let cardType = ''
+
 export const news = [
     {
         image: 'images/news3.png',
@@ -107,6 +119,7 @@ export const contexts = {
         button: 'Withdraw'
     }
 }
+
 export const validationContexts = {
     'email': {
         text1: 'email empty.',
@@ -141,6 +154,7 @@ export const validationContexts = {
         text: 'card cvc empty.'
     }
 }
+
 export const currencies = [
     {
         currency: "USD",
@@ -202,25 +216,62 @@ export const benefits = [
     }
 ]
 
+/**
+ * sets global variable user to the given parameter
+ * @param {string} value - new value
+ */
 export function setUserValue(value) {
     user = value
 }
+
+/**
+ * changes boolean global variable notEmpty to the given boolean. 
+ * Used to validate some of the main inputs.
+ * @param {boolean} boolean - new value
+ */
 export function changeEmptyValue(boolean) {
     notEmpty = boolean
 }
+
+/**
+ * changes global variable currencyChosen to the given parameter.
+ * Used to set user's currency on his card. 
+ * @param {string} currency - new value
+ */
 export function changeCurrency(currency) {
     currencyChosen = currency
 }
+
+/**
+ * changes global variables recipientname, recipientemail and recipienttext
+ * to the given parameters. Used to send an email to the beneficiary when
+ * transferring money.
+ * @param {string} name - new value
+ * @param {string} email - new value
+ * @param {string} text - new value
+ */
 export function changeRecipientValues(name, email, text) {
     recipientname = name
     recipientemail = email
     recipienttext = text
 }
 
+/**
+ * changes global variable cardType to the given parameter. 
+ * Used to set user's card type (DEBIT, CREDIT etc.).
+ * @param {string} value - new value
+ */
 export function changeCardType(value) {
     cardType = value
 }
 
+/**
+ * changes global variable question to the given parameter.
+ * Used to send a user's inputted question after clicking "need help"
+ * button in menu.
+ * Will be used IN FUTURE when EmailJS will be connected.
+ * @param {string} text - new value
+ */
 export function userQuestion(text) {
     question = text
 }
