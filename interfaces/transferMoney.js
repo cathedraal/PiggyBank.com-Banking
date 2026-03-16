@@ -1,7 +1,12 @@
+/**
+ * @overview Page where user can transfer money to the beneficiary from chosen wallet
+ * @author Roman Mallindine
+ */
+
 import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderBackButton, renderRecipientInfo, renderChooseWallet, renderFooter } from "../logics/rendering.js"
 
-// page where user can fill the form to transfer money
+
 export function transferMoney() {
     wrapper.innerHTML = ''
     
@@ -23,6 +28,6 @@ export function transferMoney() {
     // footer
     renderFooter(wrapper)
 
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
