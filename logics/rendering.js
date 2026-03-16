@@ -3,7 +3,7 @@
  * @author Roman Mallindine
  */
 
-import { wrapper, benefits, cardTypes, news, newsPage, user, question, contexts, recipientname, recipientemail, recipienttext, userQuestion, changeCurrency, changeRecipientValues, changeCardType, cardType, currencyChosen } from "./globals.js";
+import { benefits, cardTypes, news, newsPage, user, question, contexts, recipientname, recipientemail, recipienttext, userQuestion, changeCurrency, changeRecipientValues, changeCardType, cardType, currencyChosen } from "./globals.js";
 import { menu } from "../interfaces/menu.js";
 import { withdrawMoney } from "../interfaces/withdrawMoney.js";
 import { transferMoney } from "../interfaces/transferMoney.js";
@@ -15,6 +15,7 @@ import{ actions } from "../interfaces/actions.js"
 import { maskCardNumber, validateInput } from "./logic.js";
 import { Action } from "./classes.js";
 import { articlePage } from "../interfaces/articlePage.js";
+import { renderSuccessPage, renderFailPage } from "../interfaces/validationPages.js";
 
 
 // variables which are used in function "renderRecipientInfo()" which is 
@@ -105,6 +106,7 @@ export function renderPopup(section, text, callback, context) {
     buttons.append(popupButton2)
 }
 
+
 // renders text label above
 export function renderTextLabel(section, text) {
     const textLabel = document.createElement('h3')
@@ -114,108 +116,6 @@ export function renderTextLabel(section, text) {
     section.append(textLabel)
 }
 
-//renders success page
-export function renderSuccessPage(context, param1, param2, card) {
-    wrapper.innerHTML = ''
-
-    // header
-   renderHeader(wrapper, context)
-    
-    // main section
-    const successMainContainer = document.createElement('section')
-    successMainContainer.classList.add('success-mainContainer')
-    wrapper.append(successMainContainer)
-
-    // icon
-    const successIcon = document.createElement('img')
-    successIcon.classList.add('success-Icon')
-    successIcon.src = 'images/successful.png'
-    successMainContainer.append(successIcon)
-
-    // text
-    const successText = document.createElement('h1')
-    successText.classList.add('success-text')
-
-    const successSubtitle = document.createElement('p')
-    successSubtitle.classList.add('success-subtitle')
-
-    if (context === 'Add money') {
-        successText.textContent = `${param1} succesfully added!`
-        successSubtitle.textContent = `You used a ${card} for that`
-    } if (context === 'Transfer money') {
-        successText.textContent = `${param1} sent to ${param2} successfully!`
-        successSubtitle.textContent = `You used a ${card} for that`
-    } if (context === 'Withdraw money') {
-        successText.textContent = `${param1} withdrawn succesfully!`
-        successSubtitle.textContent = `You used a ${card} for that`
-    }
-    successMainContainer.append(successText)
-    successMainContainer.append(successSubtitle)
-
-    // button
-    const successButton = document.createElement('button')
-    successButton.classList.add('success-button')
-    successButton.textContent = 'Back to menu'
-    successButton.addEventListener('click', () => {
-        menu()
-    })
-    successMainContainer.append(successButton)
-
-    // footer
-    renderFooter(wrapper)
-    
-    // scroll when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
-//renders "failed to send/withdrawn" page 
-export function renderFailPage(context, param1, card) {
-    wrapper.innerHTML = ''
-
-    // header
-   renderHeader(wrapper, context)
-    
-    // main section
-    const failMainContainer = document.createElement('section')
-    failMainContainer.classList.add('fail-mainContainer')
-    wrapper.append(failMainContainer)
-
-    // icon
-    const failIcon = document.createElement('img')
-    failIcon.classList.add('fail-Icon')
-    failIcon.src = 'images/fail.png'
-    failMainContainer.append(failIcon)
-
-    // text
-    const failText = document.createElement('h1')
-    failText.classList.add('fail-text')
-    failText.innerHTML = `Failed to ${param1} money.<br>You don't have enough money.`
-    failMainContainer.append(failText)
-
-    const failSubtitle = document.createElement('p')
-    failSubtitle.classList.add('fail-subtitle')
-    failSubtitle.textContent = `You used a ${card} for that`
-    failMainContainer.append(failSubtitle)
-
-    // button
-    const failButton = document.createElement('button')
-    failButton.classList.add('fail-button')
-    failButton.textContent = 'Back'
-    failButton.addEventListener('click', () => {
-        if (context === 'Withdraw money') {
-            withdrawMoney()
-        } if (context === 'Transfer money') {
-            transferMoney()
-        }
-    })
-    failMainContainer.append(failButton)
-
-    // footer
-   renderFooter(wrapper)
-    
-    // scroll when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
-}
 
 // renders currency label
 export function renderCurrency(section, text, boolean, existingCurrency) {
@@ -283,6 +183,7 @@ export function renderCurrency(section, text, boolean, existingCurrency) {
     }
 }
 
+
 // renders available card types
 export function renderCardTypes(section) {
     const cardTypesContainer = document.createElement("div")
@@ -328,6 +229,7 @@ export function renderCardTypes(section) {
     }
 }
 
+
 // draws a back button when called
 export function renderBackButton(section) {
 
@@ -345,6 +247,7 @@ export function renderBackButton(section) {
     })
     section.append(button)
 }
+
 
 //renders log out button when called
 export function renderLogoutButton(section, classList) {
@@ -369,6 +272,7 @@ export function renderLogoutButton(section, classList) {
     section.append(menuLogoutButton)
 }
 
+
 //renders "need help?" button when called
 export function renderNeedHelpButton(section) {
     const menuNeedHelpButton = document.createElement('button')
@@ -391,6 +295,7 @@ export function renderNeedHelpButton(section) {
     })
     section.append(menuNeedHelpButton)
 }
+
 
 //renders wallet section
 export function renderWallet(section) {
@@ -550,6 +455,7 @@ export function renderWallet(section) {
     menuManageWalletButtons.append(menuManageWalletWithdraw)
 }
 
+
 // renders benefits section
 export function renderBenefits(section) {
     const benefitsContainer = document.createElement('section')
@@ -582,6 +488,7 @@ export function renderBenefits(section) {
         benefitsDiv.append(benefitsSubtitle)
     }
 }
+
 
 //renders actions section
 export function renderActions(section) {
@@ -656,6 +563,7 @@ export function renderActions(section) {
     }
 }
 
+
 // renders user logs
 export function renderAllActions(section) {
     const container = document.createElement("section")
@@ -703,6 +611,7 @@ export function renderAllActions(section) {
         actionsContainer.append(actionsDescription)
     }
 }
+
 
 //renders news section 
 export function renderNews(section) {
@@ -756,6 +665,7 @@ export function renderNews(section) {
     }
 }
 
+
 // renders a page with an article
 export function renderNewsPage(section, value) {
 
@@ -808,6 +718,7 @@ export function renderNewsPage(section, value) {
     content2.innerHTML = newsPage[value].content2
     newsPageDiv.append(content2)
 }
+
 
 /**
  * renders header
@@ -885,6 +796,7 @@ export function renderHeader(section, context, text = "") {
         header.append(headerLine)
     }
 }
+
 
 /**
  * Renders wallet selection and amount input for money operations
@@ -1066,6 +978,7 @@ export function renderChooseWallet(section, context) {
     addMoneyInputContainer.append(addMoneyInputSubmit)
 }
 
+
 // renders personal details about user like registration date etc.
 export function renderPersonalDetails(section) {
     const userDetails = [
@@ -1115,6 +1028,7 @@ export function renderPersonalDetails(section) {
         personalContainer.append(personalDiv)
     }
 }
+
 
 // renders details about users cards
 export function renderWalletsDetails(section) { 
@@ -1336,6 +1250,7 @@ export function renderWalletsDetails(section) {
     addWalletDiv.append(addWalletButton)
 } 
 
+
 // renders container with a text label in it in case having no cards added
 export function renderEmptyWallet(section) {
     const container = document.createElement("section")
@@ -1371,6 +1286,7 @@ export function renderEmptyWallet(section) {
     })
     container.append(addWalletButton)
 }
+
 
 // renders recipient inputs on a page
 export function renderRecipientInfo(section) {
@@ -1442,6 +1358,7 @@ export function renderRecipientInfo(section) {
     changeRecipientValues(recipientparam1, recipientparam2, recipientparam3)
 }
 
+
 // footer section
 export function renderFooter(section) {
     const footer = document.createElement('footer')
@@ -1465,6 +1382,7 @@ export function renderFooter(section) {
     footerSubtitle.textContent = 'a simple digital bank that lets users send, top up, and withdraw money. It’s designed to be easy to use and beginner-friendly.'
     footer.append(footerSubtitle)
 }
+
 
 //renders error message (reserve)
 export function errorMessage(area, message, visible = true) {
