@@ -1,6 +1,22 @@
+/**
+ * @overview Contains utility functions for input validation, 
+ * random number generation and card number masking.
+ * @author Roman Mallindine
+ */
+
 import { validationContexts } from "./globals.js";
 
-// validates an input and throws an error
+
+/**
+ * Validates an input and throws an error if the condition is false
+ * 
+ * @param {HTMLInputElement} input - an input which we want to validate
+ * @param {HTMLDivElement} area - area where we want to place the error message
+ * @param {string} context - context to understand what error message should be thrown
+ * @param {Function} callback - function called after validation 
+ * @example
+ * validateInput(addCardHolderInput, addCardHolderInputDiv, 'cardHolder', value => cardholder = value)
+ */
 export function validateInput(input, area, context, callback) {
     let errorMessage = area.querySelector('.error-message');
     if (!errorMessage) {
@@ -41,12 +57,17 @@ export function validateInput(input, area, context, callback) {
     input.addEventListener('blur', validate);
 }
 
-// random numbers
+/**
+ * A function which returns random number from a to b
+ * @param {number} a - from this number
+ * @param {number} b - to this number
+ * @returns {number} random number
+ */
 export function getRandomInt(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
-// masks a card number
+
 export function maskCardNumber(cardNumber) {
     // remove spaces
     const clean = cardNumber.replace(/\s/g, "");
