@@ -1,7 +1,12 @@
+/**
+ * @overview Page where user can add money to chosen wallet
+ * @author Roman Mallindine
+ */
+
 import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderBackButton, renderChooseWallet, renderFooter } from "../logics/rendering.js"
 
-// page where user adds money to his card
+
 export function addMoney() {
     wrapper.innerHTML = ''
     
@@ -21,6 +26,6 @@ export function addMoney() {
     // footer
     renderFooter(wrapper)
 
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
