@@ -1,12 +1,16 @@
+/**
+ * @overview Page where user adds his new card. He can decide whether he skips this step, 
+ * adds a guest card or adds his own card
+ * @author Roman Mallindine
+ */
+
 import { wrapper, user, currencyChosen, cardTypes, cardType, changeCardType, changeCurrency, currencies } from "../logics/globals.js"
 import { validateInput, getRandomInt } from "../logics/logic.js"
 import { renderFooter, renderCurrency, errorMessage, renderCardTypes, renderTextLabel, renderPopup } from "../logics/rendering.js"
 import { Card, Action } from "../logics/classes.js"
 import { menu } from "./menu.js"
 
-console.log(currencyChosen)
 
-// page where user adds a new card
 export function addCard() {
     wrapper.innerHTML = ''
 
@@ -229,6 +233,6 @@ export function addCard() {
     //render footer
     renderFooter(wrapper)
 
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }

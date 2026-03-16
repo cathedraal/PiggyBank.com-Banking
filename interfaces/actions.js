@@ -6,6 +6,7 @@
 import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderFooter, renderBackButton, renderAllActions } from "../logics/rendering.js"
 
+
 export function actions() {
     wrapper.innerHTML = ""
 
