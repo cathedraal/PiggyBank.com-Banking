@@ -1,17 +1,23 @@
-import { wrapper, user, setUserValue, currencyChosen } from "../logics/globals.js"
+/**
+ * @overview Log in page. User can decide whether he writes down his own data or 
+ * continues as guest, which saves some time
+ * @author Roman Mallindine
+ */
+
+import { wrapper, user, setUserValue } from "../logics/globals.js"
 import { validateInput, getRandomInt } from "../logics/logic.js"
 import { renderFooter, renderTextLabel } from "../logics/rendering.js"
 import { addCard } from "./addCard.js"
 import { User } from "../logics/classes.js"
 
-login()
-console.log("maximilia@gmail.com")
-console.log(currencyChosen)
 
+login()
+
+// variables
 const surnames = ['Mueller', 'Schmidt', 'Clinton', 'Smith']
 const emails = ['workemail@gmail.com', 'example@gmail.com', 'contact@gmail.com', 'business@gmail.com']
 
-// first page which user sees.
+
 export function login() {
     wrapper.innerHTML = ''
 
@@ -36,12 +42,6 @@ export function login() {
     const loginContainer = document.createElement('div')
     loginContainer.classList.add('login-container')
     wrapper.append(loginContainer)
-
-    // // logo
-    // const loginWelcomeText = document.createElement('p')
-    // loginWelcomeText.classList.add('login-welcomeText')
-    // loginWelcomeText.textContent = 'welcome to'
-    // loginContainer.append(loginWelcomeText)
 
     const loginLogoText = document.createElement('h1')
     loginLogoText.classList.add('login-logoText')
@@ -151,6 +151,6 @@ export function login() {
     // draw footer
     renderFooter(wrapper)
 
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 };
