@@ -1,7 +1,11 @@
-// TODO page where user sees profile details, card details
+/**
+ * @overview Page where user sees his personal data and the details about his card/s
+ * @author Roman Mallindine
+ */
 
-import { user, wrapper } from "../logics/globals.js"
+import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderFooter, renderLogoutButton, renderBackButton, renderPersonalDetails, renderWalletsDetails } from "../logics/rendering.js"
+
 
 export function profile() {
     wrapper.innerHTML = ""
@@ -32,6 +36,6 @@ export function profile() {
     // footer
     renderFooter(wrapper)
 
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
