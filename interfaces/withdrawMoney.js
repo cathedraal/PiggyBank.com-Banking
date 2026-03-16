@@ -1,7 +1,12 @@
+/**
+ * @overview Page where user can withdraw from chosen wallet
+ * @author Roman Mallindine
+ */
+
 import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderBackButton, renderChooseWallet, renderFooter } from "../logics/rendering.js"
 
-// page where user can withdraw some of his money
+
 export function withdrawMoney() {
     wrapper.innerHTML = ''
     
@@ -21,6 +26,6 @@ export function withdrawMoney() {
     // footer
     renderFooter(wrapper)
     
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
