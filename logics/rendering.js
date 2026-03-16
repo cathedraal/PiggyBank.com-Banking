@@ -1,3 +1,8 @@
+/**
+ * Contains functions responsible for rendering UI components and updating the interface
+ * @author Roman Mallindine
+ */
+
 import { wrapper, benefits, cardTypes, news, newsPage, user, question, contexts, recipientname, recipientemail, recipienttext, userQuestion, changeCurrency, changeRecipientValues, changeCardType, cardType, currencyChosen } from "./globals.js";
 import { menu } from "../interfaces/menu.js";
 import { withdrawMoney } from "../interfaces/withdrawMoney.js";
@@ -11,11 +16,21 @@ import { maskCardNumber, validateInput } from "./logic.js";
 import { Action } from "./classes.js";
 import { articlePage } from "../interfaces/articlePage.js";
 
+
+// variables which are used in function "renderRecipientInfo()" which is 
+// rendered when wanting to transfer money
 let recipientparam1 = ""
 let recipientparam2 = ""
 let recipientparam3 = ""
 
-// renders popup
+
+/**
+ * Renders a confirmation popup with two buttons
+ * @param {HTMLElement} section - element to append popup to
+ * @param {string} text - popup message
+ * @param {Function} callback - called with true if confirmed, false if declined
+ * @param {string} context - controls button labels ('deleting card' | 'logging out' | 'continue as guest' | 'adding card' | 'have question')
+ */
 export function renderPopup(section, text, callback, context) {
 
     const overlay = document.createElement('div')
@@ -354,6 +369,7 @@ export function renderLogoutButton(section, classList) {
     section.append(menuLogoutButton)
 }
 
+//renders "need help?" button when called
 export function renderNeedHelpButton(section) {
     const menuNeedHelpButton = document.createElement('button')
     menuNeedHelpButton.classList.add('menu-needHelpButton')
@@ -640,6 +656,7 @@ export function renderActions(section) {
     }
 }
 
+// renders user logs
 export function renderAllActions(section) {
     const container = document.createElement("section")
     container.classList.add("actionsPage-container")
@@ -739,6 +756,7 @@ export function renderNews(section) {
     }
 }
 
+// renders a page with an article
 export function renderNewsPage(section, value) {
 
     const newsPageDiv = document.createElement('div')
@@ -791,7 +809,10 @@ export function renderNewsPage(section, value) {
     newsPageDiv.append(content2)
 }
 
-//renders header on add money page 
+/**
+ * renders header
+ * @param {string} [text=''] - optional subtitle, used only on menu header
+ */
 export function renderHeader(section, context, text = "") {
     // header
 
@@ -865,7 +886,11 @@ export function renderHeader(section, context, text = "") {
     }
 }
 
-//renders choose wallet container on a page
+/**
+ * Renders wallet selection and amount input for money operations
+ * @param {HTMLElement} section - container on which we want to render wallet selection etc.
+ * @param {string} context - operation type ('Add money' | 'Transfer money' | 'Withdraw money')
+ */
 export function renderChooseWallet(section, context) {
     // variables
     let inputPressed = false
@@ -1311,6 +1336,7 @@ export function renderWalletsDetails(section) {
     addWalletDiv.append(addWalletButton)
 } 
 
+// renders container with a text label in it in case having no cards added
 export function renderEmptyWallet(section) {
     const container = document.createElement("section")
     container.classList.add('menu-noWalletsContainer')
@@ -1346,7 +1372,7 @@ export function renderEmptyWallet(section) {
     container.append(addWalletButton)
 }
 
-//renders recipient inputs on a page
+// renders recipient inputs on a page
 export function renderRecipientInfo(section) {
     // variables
 
