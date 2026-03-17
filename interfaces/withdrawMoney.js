@@ -3,32 +3,36 @@
  * @author Roman Mallindine
  */
 
-import { wrapper } from "../logics/globals.js"
-import { renderHeader, renderBackButton, renderChooseWallet, renderFooter } from "../logics/rendering.js"
-
+import { wrapper } from '../logics/globals.js';
+import {
+  renderHeader,
+  renderBackButton,
+  renderChooseWallet,
+  renderFooter,
+} from '../logics/rendering.js';
 
 /**
  * Renders page on which user can withdraw money from the chosen wallet
  */
 export function withdrawMoney() {
-    wrapper.innerHTML = ''
-    
-    // header
-    renderHeader(wrapper, 'Withdraw money')
+  wrapper.innerHTML = '';
 
-    const withdrawMoneyMainContainer = document.createElement('main')
-    withdrawMoneyMainContainer.classList.add('withdrawMoney-mainContainer')
-    wrapper.append(withdrawMoneyMainContainer)
+  // header
+  renderHeader(wrapper, 'Withdraw money');
 
-    // back button
-    renderBackButton(withdrawMoneyMainContainer)
+  const withdrawMoneyMainContainer = document.createElement('main');
+  withdrawMoneyMainContainer.classList.add('withdrawMoney-mainContainer');
+  wrapper.append(withdrawMoneyMainContainer);
 
-    // renders choose wallet container
-    renderChooseWallet(withdrawMoneyMainContainer, 'Withdraw money')
+  // back button
+  renderBackButton(withdrawMoneyMainContainer);
 
-    // footer
-    renderFooter(wrapper)
-    
-    // scroll up when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
+  // renders choose wallet container
+  renderChooseWallet(withdrawMoneyMainContainer, 'Withdraw money');
+
+  // footer
+  renderFooter(wrapper);
+
+  // scroll up when rendered
+  wrapper.scrollTo({ top: 0, behavior: 'smooth' });
 }

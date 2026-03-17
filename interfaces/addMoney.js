@@ -3,32 +3,36 @@
  * @author Roman Mallindine
  */
 
-import { wrapper } from "../logics/globals.js"
-import { renderHeader, renderBackButton, renderChooseWallet, renderFooter } from "../logics/rendering.js"
-
+import { wrapper } from '../logics/globals.js';
+import {
+  renderHeader,
+  renderBackButton,
+  renderChooseWallet,
+  renderFooter,
+} from '../logics/rendering.js';
 
 /**
  * Renders page on which user can add money to the chosen wallet
  */
 export function addMoney() {
-    wrapper.innerHTML = ''
-    
-    // header
-    renderHeader(wrapper, 'Add money')
+  wrapper.innerHTML = '';
 
-    const addMoneyMainContainer = document.createElement('main')
-    addMoneyMainContainer.classList.add('addMoney-mainContainer')
-    wrapper.append(addMoneyMainContainer)
+  // header
+  renderHeader(wrapper, 'Add money');
 
-    //render back button
-    renderBackButton(addMoneyMainContainer)
+  const addMoneyMainContainer = document.createElement('main');
+  addMoneyMainContainer.classList.add('addMoney-mainContainer');
+  wrapper.append(addMoneyMainContainer);
 
-    // renders choose wallet container
-    renderChooseWallet(addMoneyMainContainer, 'Add money')
+  //render back button
+  renderBackButton(addMoneyMainContainer);
 
-    // footer
-    renderFooter(wrapper)
+  // renders choose wallet container
+  renderChooseWallet(addMoneyMainContainer, 'Add money');
 
-    // scroll up when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
+  // footer
+  renderFooter(wrapper);
+
+  // scroll up when rendered
+  wrapper.scrollTo({ top: 0, behavior: 'smooth' });
 }

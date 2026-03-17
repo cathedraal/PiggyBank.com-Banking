@@ -1,227 +1,227 @@
 .addMoney-chooseWalletText {
-    margin-top: 0px
+  margin-top: 0px;
 }
 
 .addMoney-wallet {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #f8f8f8;
-    width: 100%;
-    padding: 30px;
-    margin-bottom: 15px;
-    border: 1px solid #e4e4e4;
-    border-radius: 40px;
-    cursor: pointer;
-    font-family: inherit;
-    overflow-x: auto;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 15px;
+  border: 1px solid #e4e4e4;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: inherit;
+  overflow-x: auto;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
 .addMoney-walletBalance {
-    font-size: 50px;
-    margin: 0;
-    color: #000000;
+  font-size: 50px;
+  margin: 0;
+  color: #000000;
 }
 
 .addMoney-walletNumber {
-    margin-bottom: 0;
-    margin-top: 0;
-    font-family: inherit;
-    color: #0000008a 
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: inherit;
+  color: #0000008a;
 }
 
 .addMoney-walletCurrency {
-    color: #0c6fff;
+  color: #0c6fff;
 }
 
 .addMoney-wallet--active .addMoney-wallet {
-    background-color: #0c6fff;
+  background-color: #0c6fff;
 }
 
 .addMoney-wallet--active .addMoney-walletNumber {
-    color: #ffffff70;
+  color: #ffffff70;
 }
 
 .addMoney-wallet--active .addMoney-walletBalance {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .addMoney-wallet--active .addMoney-walletCurrency {
-    color: #ffffff8d;
+  color: #ffffff8d;
 }
 
 .addMoney-wallets {
-    display: flex;
-    flex-direction: column;
-    max-height: 500px;
-    height: 100%;
-    max-width: 350px;
-    width: 100%;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  height: 100%;
+  max-width: 350px;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 .addMoney-mainSection {
-    padding: 50px;
-    border-radius: 45px;
-    border: 1px solid #e4e4e4;
-    background-color: #ffffff;
-    margin-top: 45px;
-    margin-bottom: 100px;
-    position: relative;
-    z-index: 200;
+  padding: 50px;
+  border-radius: 45px;
+  border: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  margin-top: 45px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 200;
 }
 
 .addMoney-mainDiv {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    max-width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  max-width: 100%;
 }
 
 .addMoney-inputDiv {
-    background-color: #ffffff;
-    padding: 50px;
-    border: 1px solid #e4e4e4;
-    border-radius: 40px;
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
+  background-color: #ffffff;
+  padding: 50px;
+  border: 1px solid #e4e4e4;
+  border-radius: 40px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .addMoney-inputContainerText {
-    color: #787878;
-    margin-top: 0px;
-    font-weight: 500;
+  color: #787878;
+  margin-top: 0px;
+  font-weight: 500;
 }
 
 .addMoney-inputContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
 }
 
 .addMoney-input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-weight: 500;
-    background-color: #ffffff;
-    font-size: 150px;
-    font-family: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+  background-color: #ffffff;
+  font-size: 150px;
+  font-family: inherit;
 }
 
 .addMoney-input::placeholder {
-    color: #00000012;
+  color: #00000012;
 }
 
 .addMoney-inputSubmit {
-    background-color: #0c6fff;
-    border: none;
-    outline: none;
-    padding: 20px;
-    width: 150px;
-    font-family: inherit;
-    font-weight: 500;
-    color: #ffffff;
-    border-radius: 50px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  background-color: #0c6fff;
+  border: none;
+  outline: none;
+  padding: 20px;
+  width: 150px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 50px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .addMoney-inputSubmit:hover {
-    background-color: #3586ff
+  background-color: #3586ff;
 }
 
 .recipientInfo-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 45px;
-    padding: 50px;
-    background-color: #ffffff;
-    border-radius: 45px;
-    border: 1px solid #e4e4e4;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 45px;
+  border: 1px solid #e4e4e4;
+  position: relative;
+  z-index: 1;
 }
 
 .recipientInfo-text {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 .recipientInfo-div {
-    display: grid;
-    width: 100%;
-    max-width: 400px;
-    grid-template-areas:
-    "name email"
-    "textarea textarea";
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+  display: grid;
+  width: 100%;
+  max-width: 400px;
+  grid-template-areas:
+    'name email'
+    'textarea textarea';
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 }
 
 .recipientName-div {
-    grid-area: name;
+  grid-area: name;
 }
 
 .recipientName-input {
-    font-family: inherit;
-    background-color: #f8f8f8;
-    border: none;
-    border-radius: 30px;
-    padding: 20px;
-    border: 2px solid;
-    border-color: #ffffff;
-    text-align: left;
-    transition: all 0.3s ease;
-    width: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
+  font-family: inherit;
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+  border: 2px solid;
+  border-color: #ffffff;
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
 .recipientEmail-div {
-    grid-area: email;
+  grid-area: email;
 }
 
 .recipientEmail-input {
-    font-family: inherit;
-    background-color: #f8f8f8;
-    border: none;
-    border-radius: 30px;
-    padding: 20px;
-    border: 2px solid;
-    border-color: #ffffff;
-    text-align: left;
-    transition: all 0.3s ease;
-    width: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
+  font-family: inherit;
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+  border: 2px solid;
+  border-color: #ffffff;
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
 .recipientOptional-div {
-    grid-area: textarea;
+  grid-area: textarea;
 }
 
 .recipientOptional-input {
-    font-family: inherit;
-    text-align: left;
-    background-color: #f8f8f8;
-    border: none;
-    border-radius: 30px;
-    padding: 20px;
-    border: 2px solid;
-    border-color: #ffffff;
-    transition: all 0.3s ease;
-    resize: none;
-    width: 100%;
-    height: 120px;
-    font-size: 15px;
-    box-sizing: border-box;
+  font-family: inherit;
+  text-align: left;
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+  border: 2px solid;
+  border-color: #ffffff;
+  transition: all 0.3s ease;
+  resize: none;
+  width: 100%;
+  height: 120px;
+  font-size: 15px;
+  box-sizing: border-box;
 }
