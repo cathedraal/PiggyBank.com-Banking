@@ -9,11 +9,13 @@ import { renderHeader, renderCurrency, renderBenefits, renderNeedHelpButton, ren
 import { getRandomInt } from "../logics/logic.js"
 
 
-// variables
 const hours = new Date().getHours()
 const phrases = ['what shall we do today?', 'let there be money!', 'here are your wallets!', `what's on your mind today?`, `what's up?`, `it's ${hours} o'clock now.`]
 
 
+/**
+ * Renders the main menu page
+ */
 export function menu() {
     wrapper.innerHTML = ''
 

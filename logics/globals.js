@@ -3,24 +3,55 @@
  * @author Roman Mallindine
  */
 
+
+/**
+ * Container where the content is placed
+ */
 export const wrapper = document.getElementById("wrapper")
 
+/**
+ * This global variable contains class User from classes.js after logging in
+ */
 export let user = ''
 
+/**
+ * This global variable sets the currency of the card user is adding
+ */
 export let currencyChosen = ''
 
+/**
+ * This global variable is used for validation of the core inputs
+ */
 export let notEmpty = true
 
+/**
+ * This global variable is used for transferring money to the beneficiary
+ */
 export let recipientname = ''
 
+/**
+ * This global variable is used for transferring money to the beneficiary
+ */
 export let recipientemail = ''
 
+/**
+ * This global variable is used for transferring money to the beneficiary
+ */
 export let recipienttext = ''
 
+/**
+ * This global variable contains user's question when he writes it after clicking "Need help?" button
+ */
 export let question = ''
 
+/**
+ * This global variable sets the card type ( DEBIT | CREDIT | VIRTUAL | PREPAID ) of the card user is adding
+ */
 export let cardType = ''
 
+/**
+ * This array contains articles which are displayed in the menu
+ */
 export const news = [
     {
         image: 'images/news3.png',
@@ -48,6 +79,9 @@ export const news = [
     }
 ]
 
+/**
+ * This array containes articles. The chosen article is displayed on the article page when clicking "Read article" in the menu
+ */
 export const newsPage = {
     digitalWallets: {
         header: "Digital wallets gain popularity among young users",
@@ -103,6 +137,11 @@ export const newsPage = {
     }
 }
 
+/**
+ * This object contains contexts for the input in the choose wallet section
+ * @example
+ * User clicks "Add money" in the menu -> input says "Money to be added" & button -> "Add money"
+ */
 export const contexts = {
     'Add money': {
         container: 'Money to be added',
@@ -120,6 +159,9 @@ export const contexts = {
     }
 }
 
+/**
+ * This object contains contexts for the input validation
+ */
 export const validationContexts = {
     'email': {
         text1: 'email empty.',
@@ -155,27 +197,27 @@ export const validationContexts = {
     }
 }
 
+/**
+ * This array contains currencies for creating buttons
+ */
 export const currencies = [
     {
         currency: "USD",
         value: "$",
-        icon: "images/icon_usd.png",
-        iconPressed: "images/pressed_icon_usd.png"
     }, 
     {
         currency: "GBP",
         value: "£",
-        icon: "images/icon_gdp.png",
-        iconPressed: "images/pressed_icon_gdp.png"
     }, 
     {
         currency: "EUR",
         value: "€",
-        icon: "images/icon_eur.png",
-        iconPressed: "images/pressed_icon_eur.png"
     },
 ]
 
+/**
+ * This array contains card types for creating buttons
+ */
 export const cardTypes = [
     {
         text: "DEBIT",
@@ -195,6 +237,9 @@ export const cardTypes = [
     }
 ]
 
+/**
+ * This array contains benefits of the PiggyBank.com which are displayed in the menu
+ */
 export const benefits = [
     {   
         header: 'PiggyBank.com is',

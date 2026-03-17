@@ -7,6 +7,9 @@ import { renderHeader, renderFooter, renderNewsPage, renderBackButton } from "..
 import { wrapper } from "../logics/globals.js";
 
 
+/**
+ * Renders page on which user can read an article
+ */
 export function articlePage(value) {
     wrapper.innerHTML = ''
 

@@ -7,6 +7,9 @@
 import { changeCurrency, changeCardType } from "./globals.js";
 
 
+/**
+ * Class Card - used to create a new card
+ */
 export class Card {
     constructor(cardHolder, cardNumber, cardExpDate, cardCvc, cardBalance, cardCurrency, cardType) {
         this.cardHolder = cardHolder;
@@ -51,6 +54,9 @@ export class Card {
 }
 
 
+/**
+ * Class Card - used to create a new user after logging in
+ */
 export class User {
     constructor(userName, userSurname, userEmail, loginDate) {
         this.userName = userName;
@@ -98,6 +104,9 @@ export class User {
 }
 
 
+/**
+ * This class is used to create user's log after manipulating with one of his cards
+ */
 export class Action {
     constructor(icon, text, highlight, date, context, source) {
         this.icon = icon,

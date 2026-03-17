@@ -7,6 +7,9 @@ import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderFooter, renderLogoutButton, renderBackButton, renderPersonalDetails, renderWalletsDetails } from "../logics/rendering.js"
 
 
+/**
+ * Renders page on which user can see his profile
+ */
 export function profile() {
     wrapper.innerHTML = ""
 

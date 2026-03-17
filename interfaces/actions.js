@@ -7,6 +7,9 @@ import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderFooter, renderBackButton, renderAllActions } from "../logics/rendering.js"
 
 
+/**
+ * Renders page with all of the user's logs
+ */
 export function actions() {
     wrapper.innerHTML = ""
 

@@ -11,13 +11,17 @@ import { addCard } from "./addCard.js"
 import { User } from "../logics/classes.js"
 
 
+// The first function which is called in HTML
 login()
 
-// variables
+
 const surnames = ['Mueller', 'Schmidt', 'Clinton', 'Smith']
 const emails = ['workemail@gmail.com', 'example@gmail.com', 'contact@gmail.com', 'business@gmail.com']
 
 
+/**
+ * Renders page on which user logs in
+ */
 export function login() {
     wrapper.innerHTML = ''
 

@@ -11,6 +11,9 @@ import { Card, Action } from "../logics/classes.js"
 import { menu } from "./menu.js"
 
 
+/**
+ * Renders page on which user adds his new card
+ */
 export function addCard() {
     wrapper.innerHTML = ''
 

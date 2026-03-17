@@ -7,6 +7,9 @@ import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderBackButton, renderRecipientInfo, renderChooseWallet, renderFooter } from "../logics/rendering.js"
 
 
+/**
+ * Renders page on which user can transfer money from the chosen wallet
+ */
 export function transferMoney() {
     wrapper.innerHTML = ''
     

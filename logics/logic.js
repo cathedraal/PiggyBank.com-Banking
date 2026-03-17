@@ -67,7 +67,9 @@ export function getRandomInt(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
-
+/**
+ * Masks a card number leaving last four digits visible
+ */
 export function maskCardNumber(cardNumber) {
     // remove spaces
     const clean = cardNumber.replace(/\s/g, "");

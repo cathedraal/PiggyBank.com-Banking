@@ -1,5 +1,5 @@
 /**
- * @overview Page where user can withdraw from chosen wallet
+ * @overview Page where user can withdraw money from chosen wallet
  * @author Roman Mallindine
  */
 
@@ -7,6 +7,9 @@ import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderBackButton, renderChooseWallet, renderFooter } from "../logics/rendering.js"
 
 
+/**
+ * Renders page on which user can withdraw money from the chosen wallet
+ */
 export function withdrawMoney() {
     wrapper.innerHTML = ''
     

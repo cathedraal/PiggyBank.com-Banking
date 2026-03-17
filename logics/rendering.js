@@ -1,5 +1,5 @@
 /**
- * Contains functions responsible for rendering UI components and updating the interface
+ * @overview Contains functions responsible for rendering UI components and updating the interface
  * @author Roman Mallindine
  */
 
@@ -18,7 +18,7 @@ import { articlePage } from "../interfaces/articlePage.js";
 import { renderSuccessPage, renderFailPage } from "../interfaces/validationPages.js";
 
 
-// variables which are used in function "renderRecipientInfo()" which is 
+// Variables which are used in function "renderRecipientInfo()" which is 
 // rendered when wanting to transfer money
 let recipientparam1 = ""
 let recipientparam2 = ""
@@ -107,7 +107,9 @@ export function renderPopup(section, text, callback, context) {
 }
 
 
-// renders text label above
+/**
+ * Renders text label above log in steps
+ */
 export function renderTextLabel(section, text) {
     const textLabel = document.createElement('h3')
     textLabel.classList.add('text-label')
@@ -117,7 +119,9 @@ export function renderTextLabel(section, text) {
 }
 
 
-// renders currency label
+/**
+ * Renders currency label
+ */
 export function renderCurrency(section, text, boolean, existingCurrency) {
 
     // object 
@@ -184,7 +188,9 @@ export function renderCurrency(section, text, boolean, existingCurrency) {
 }
 
 
-// renders available card types
+/**
+ * Renders available card types
+ */
 export function renderCardTypes(section) {
     const cardTypesContainer = document.createElement("div")
     cardTypesContainer.classList.add('cardTypes-Container')
@@ -230,7 +236,9 @@ export function renderCardTypes(section) {
 }
 
 
-// draws a back button when called
+/**
+ * Draws a back button when called
+ */
 export function renderBackButton(section) {
 
     const buttonIcon = document.createElement("img")
@@ -249,7 +257,9 @@ export function renderBackButton(section) {
 }
 
 
-//renders log out button when called
+/**
+ * Renders log out button when called
+ */
 export function renderLogoutButton(section, classList) {
     const menuLogoutButton = document.createElement('button')
     menuLogoutButton.classList.add(classList)
@@ -273,7 +283,9 @@ export function renderLogoutButton(section, classList) {
 }
 
 
-//renders "need help?" button when called
+/**
+ * Renders "need help?" button when called
+ */
 export function renderNeedHelpButton(section) {
     const menuNeedHelpButton = document.createElement('button')
     menuNeedHelpButton.classList.add('menu-needHelpButton')
@@ -297,7 +309,9 @@ export function renderNeedHelpButton(section) {
 }
 
 
-//renders wallet section
+/**
+ * Renders section with user's wallet in the menu
+ */
 export function renderWallet(section) {
     // wallet container
     const menuWalletContainer = document.createElement('section')
@@ -456,7 +470,9 @@ export function renderWallet(section) {
 }
 
 
-// renders benefits section
+/**
+ * Renders benefits section in the menu
+ */
 export function renderBenefits(section) {
     const benefitsContainer = document.createElement('section')
     benefitsContainer.classList.add('menu-benefitsContainer')
@@ -490,7 +506,9 @@ export function renderBenefits(section) {
 }
 
 
-//renders actions section
+/**
+ * Renders actions section in the menu
+ */
 export function renderActions(section) {
     const menuLatestActionsContainer = document.createElement('section')
     menuLatestActionsContainer.classList.add('menu-latestActionsContainer')
@@ -564,7 +582,9 @@ export function renderActions(section) {
 }
 
 
-// renders user logs
+/**
+ * Renders a container with user's actions with his card 
+ */
 export function renderAllActions(section) {
     const container = document.createElement("section")
     container.classList.add("actionsPage-container")
@@ -613,7 +633,9 @@ export function renderAllActions(section) {
 }
 
 
-//renders news section 
+/**
+ * Renders news section in the menu
+ */
 export function renderNews(section) {
     const menuNewsText = document.createElement('h3')
     menuNewsText.classList.add('menu-newsText')
@@ -666,7 +688,10 @@ export function renderNews(section) {
 }
 
 
-// renders a page with an article
+/**
+ * Renders a news article on selected section.
+ * @param {string} value - which article should be rendered
+ */
 export function renderNewsPage(section, value) {
 
     const newsPageDiv = document.createElement('div')
@@ -721,7 +746,7 @@ export function renderNewsPage(section, value) {
 
 
 /**
- * renders header
+ * Renders header
  * @param {string} [text=''] - optional subtitle, used only on menu header
  */
 export function renderHeader(section, context, text = "") {
@@ -979,7 +1004,9 @@ export function renderChooseWallet(section, context) {
 }
 
 
-// renders personal details about user like registration date etc.
+/**
+ * Renders personal details about user ( name, surname | email | reg. date ).
+ */
 export function renderPersonalDetails(section) {
     const userDetails = [
         {
@@ -1030,7 +1057,9 @@ export function renderPersonalDetails(section) {
 }
 
 
-// renders details about users cards
+/**
+ * Renders details about user's card/s with a button "Add card"
+ */
 export function renderWalletsDetails(section) { 
     
     // create date
@@ -1251,7 +1280,10 @@ export function renderWalletsDetails(section) {
 } 
 
 
-// renders container with a text label in it in case having no cards added
+/**
+ * Renders container in the menu with a text label in it when 
+ * user doesn't have any cards
+ */
 export function renderEmptyWallet(section) {
     const container = document.createElement("section")
     container.classList.add('menu-noWalletsContainer')
@@ -1288,7 +1320,9 @@ export function renderEmptyWallet(section) {
 }
 
 
-// renders recipient inputs on a page
+/**
+ * Renders inputs for the beneficiary on the "Transfer money" page
+ */
 export function renderRecipientInfo(section) {
     // variables
 
@@ -1359,7 +1393,9 @@ export function renderRecipientInfo(section) {
 }
 
 
-// footer section
+/**
+ * Renders footer section
+ */
 export function renderFooter(section) {
     const footer = document.createElement('footer')
     footer.classList.add('footer')
@@ -1384,7 +1420,12 @@ export function renderFooter(section) {
 }
 
 
-//renders error message (reserve)
+/**
+ * Renders an error message.
+ * @param {HTMLDivElement} area - area where we want to put this message
+ * @param {HTMLParagraphElement} message - the error text
+ * @param {boolean} visible - make this error message visible or not
+ */
 export function errorMessage(area, message, visible = true) {
 
     let errorMessage = area.querySelector('.error-message');

@@ -7,6 +7,9 @@ import { wrapper } from "../logics/globals.js"
 import { renderHeader, renderBackButton, renderChooseWallet, renderFooter } from "../logics/rendering.js"
 
 
+/**
+ * Renders page on which user can add money to the chosen wallet
+ */
 export function addMoney() {
     wrapper.innerHTML = ''
     

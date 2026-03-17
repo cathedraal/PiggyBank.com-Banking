@@ -10,7 +10,9 @@ import { withdrawMoney } from './withdrawMoney.js'
 import { transferMoney } from './transferMoney.js'
 
 
-// success page
+/**
+ * Renders success page after successful action
+ */
 export function renderSuccessPage(context, param1, param2, card) {
     wrapper.innerHTML = ''
 
@@ -60,11 +62,14 @@ export function renderSuccessPage(context, param1, param2, card) {
     // footer
     renderFooter(wrapper)
     
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-// "failed to send/withdrawn" page 
+
+/**
+ * Renders fail page after failed action
+ */
 export function renderFailPage(context, param1, card) {
     wrapper.innerHTML = ''
 
@@ -109,6 +114,6 @@ export function renderFailPage(context, param1, card) {
     // footer
     renderFooter(wrapper)
     
-    // scroll when rendered
+    // scroll up when rendered
     wrapper.scrollTo({ top: 0, behavior: 'smooth' })
 }
