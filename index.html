@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>PiggyBank</title>
+    <link rel="icon" href="./images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles/validationPages.css" />
+    <link rel="stylesheet" href="styles/actions.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/addCard.css" />
+    <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/newsPage.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/chooseWallet.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/headers.css" />
+    <link rel="stylesheet" href="styles/GENERAL.css" />
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper"></div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: 'tbkR0AmHVjjZwkDoE',
+        });
+      })();
+    </script>
+    <script type="module" src="./interfaces/login.js"></script>
+  </body>
+</html>
