@@ -1,37 +1,50 @@
-// TODO page where user sees profile details, card details
+/**
+ * @overview Page where user sees his personal data and the details about his card/s
+ * @author Roman Mallindine
+ */
 
-import { user, wrapper } from "../logics/globals.js"
-import { renderHeader, renderFooter, renderLogoutButton, renderBackButton, renderPersonalDetails, renderWalletsDetails } from "../logics/rendering.js"
+import { wrapper } from '../logics/globals.js';
+import {
+  renderHeader,
+  renderFooter,
+  renderLogoutButton,
+  renderBackButton,
+  renderPersonalDetails,
+  renderWalletsDetails,
+} from '../logics/rendering.js';
 
+/**
+ * Renders page on which user can see his profile
+ */
 export function profile() {
-    wrapper.innerHTML = ""
+  wrapper.innerHTML = '';
 
-    // header
-    renderHeader(wrapper, "profile", "this is your profile.")
+  // header
+  renderHeader(wrapper, 'profile', 'this is your profile.');
 
-    const profileMainContainer = document.createElement("section")
-    profileMainContainer.classList.add("profile-mainContainer")
-    wrapper.append(profileMainContainer)
+  const profileMainContainer = document.createElement('section');
+  profileMainContainer.classList.add('profile-mainContainer');
+  wrapper.append(profileMainContainer);
 
-    // button back
-    renderBackButton(profileMainContainer)
+  // button back
+  renderBackButton(profileMainContainer);
 
-    // personal details
-    renderPersonalDetails(profileMainContainer)
+  // personal details
+  renderPersonalDetails(profileMainContainer);
 
-    // card details
-    renderWalletsDetails(profileMainContainer)
+  // card details
+  renderWalletsDetails(profileMainContainer);
 
-    const menuLogoutButtonContainer = document.createElement('section')
-    menuLogoutButtonContainer.classList.add('menu-logoutButtonContainer')
-    profileMainContainer.append(menuLogoutButtonContainer)
+  const menuLogoutButtonContainer = document.createElement('section');
+  menuLogoutButtonContainer.classList.add('menu-logoutButtonContainer');
+  profileMainContainer.append(menuLogoutButtonContainer);
 
-    // log out button
-    renderLogoutButton(menuLogoutButtonContainer, 'profile-logoutButton')
+  // log out button
+  renderLogoutButton(menuLogoutButtonContainer, 'profile-logoutButton');
 
-    // footer
-    renderFooter(wrapper)
+  // footer
+  renderFooter(wrapper);
 
-    // scroll when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
+  // scroll up when rendered
+  wrapper.scrollTo({ top: 0, behavior: 'smooth' });
 }

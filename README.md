@@ -1,4 +1,5 @@
 # PiggyBank.com-Banking
+
 A simple digital bank that lets users send, top up, and withdraw money. It’s designed to be easy to use and beginner-friendly.
 
 ## Features
@@ -22,6 +23,7 @@ A simple digital bank that lets users send, top up, and withdraw money. It’s d
 - Modular architecture (ES Modules)
 
 ## Project Structure
+
 ```
 /interfaces
    - login.js
@@ -32,6 +34,7 @@ A simple digital bank that lets users send, top up, and withdraw money. It’s d
    - addMoney.js
    - transferMoney.js
    - withdrawMoney.js
+   - validationPages.js
    - actions.js
 /logics
    - classes.js

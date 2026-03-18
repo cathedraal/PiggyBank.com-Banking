@@ -1,28 +1,41 @@
-import { wrapper } from "../logics/globals.js"
-import { renderHeader, renderBackButton, renderRecipientInfo, renderChooseWallet, renderFooter } from "../logics/rendering.js"
+/**
+ * @overview Page where user can transfer money to the beneficiary from chosen wallet
+ * @author Roman Mallindine
+ */
 
-// page where user can fill the form to transfer money
+import { wrapper } from '../logics/globals.js';
+import {
+  renderHeader,
+  renderBackButton,
+  renderRecipientInfo,
+  renderChooseWallet,
+  renderFooter,
+} from '../logics/rendering.js';
+
+/**
+ * Renders page on which user can transfer money from the chosen wallet
+ */
 export function transferMoney() {
-    wrapper.innerHTML = ''
-    
-    // header
-    renderHeader(wrapper, 'Transfer money')
+  wrapper.innerHTML = '';
 
-    const transferMoneyMainContainer = document.createElement('main')
-    transferMoneyMainContainer.classList.add('transferMoney-mainContainer')
-    wrapper.append(transferMoneyMainContainer)
+  // header
+  renderHeader(wrapper, 'Transfer money');
 
-    //render back button
-    renderBackButton(transferMoneyMainContainer)
+  const transferMoneyMainContainer = document.createElement('main');
+  transferMoneyMainContainer.classList.add('transferMoney-mainContainer');
+  wrapper.append(transferMoneyMainContainer);
 
-    renderRecipientInfo(transferMoneyMainContainer)
+  //render back button
+  renderBackButton(transferMoneyMainContainer);
 
-    // renders choose wallet container
-    renderChooseWallet(transferMoneyMainContainer, 'Transfer money')
+  renderRecipientInfo(transferMoneyMainContainer);
 
-    // footer
-    renderFooter(wrapper)
+  // renders choose wallet container
+  renderChooseWallet(transferMoneyMainContainer, 'Transfer money');
 
-    // scroll when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
+  // footer
+  renderFooter(wrapper);
+
+  // scroll up when rendered
+  wrapper.scrollTo({ top: 0, behavior: 'smooth' });
 }

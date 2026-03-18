@@ -1,21 +1,38 @@
-import { renderHeader, renderFooter, renderNewsPage, renderBackButton } from "../logics/rendering.js";
-import { wrapper } from "../logics/globals.js";
+/**
+ * @overview Page where user can read an article.
+ * @author Roman Mallindine
+ */
 
+import {
+  renderHeader,
+  renderFooter,
+  renderNewsPage,
+  renderBackButton,
+} from '../logics/rendering.js';
+import { wrapper } from '../logics/globals.js';
 
+/**
+ * Renders page on which user can read an article
+ */
 export function articlePage(value) {
-    wrapper.innerHTML = ''
-    renderHeader(wrapper, "article", "Enjoying this article?")
+  wrapper.innerHTML = '';
 
-    const newsPageContainer = document.createElement('section')
-    newsPageContainer.classList.add('newsPage-container')
-    wrapper.append(newsPageContainer)
+  // header
+  renderHeader(wrapper, 'article', 'Enjoying this article?');
 
-    renderBackButton(newsPageContainer)
+  const newsPageContainer = document.createElement('section');
+  newsPageContainer.classList.add('newsPage-container');
+  wrapper.append(newsPageContainer);
 
-    renderNewsPage(newsPageContainer, value)
+  // back button
+  renderBackButton(newsPageContainer);
 
-    renderFooter(wrapper)
+  // article
+  renderNewsPage(newsPageContainer, value);
 
-    // scroll when rendered
-    wrapper.scrollTo({ top: 0, behavior: 'smooth' })
+  // footer
+  renderFooter(wrapper);
+
+  // scroll up when rendered
+  wrapper.scrollTo({ top: 0, behavior: 'smooth' });
 }
