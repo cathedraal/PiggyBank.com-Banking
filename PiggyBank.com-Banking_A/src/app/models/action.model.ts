@@ -1,4 +1,4 @@
-export interface descriptionItem {
+interface descriptionItem {
   add: string;
   addedCard: string;
   transfer: { success: string; error: string };

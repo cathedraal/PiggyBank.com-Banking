@@ -1,0 +1,69 @@
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 0px 0px 45px 45px;
+    border: 1px solid var(--borderColor);
+    background-color: var(--white);
+}
+
+.header-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1350px;
+    width: 100%;
+}
+
+.header-profileButton {
+    margin-left: 10px;
+    padding: 15px;
+    width: 70px;
+    background-color: var(--primary-color);
+    border-radius: 40px;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.header-profileButton:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.header-needHelpButton {
+    margin-left: auto;
+    padding: 15px;
+    width: 100px;
+    background-color: var(--white);
+    border: 1px solid var(--borderColor);
+    border-radius: 40px;
+    color: var(--black);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.header-needHelpButton:hover {
+    background-color: var(--white-hover);
+}
+
+.header-logo {
+    width: 40px;
+}
+
+.header-logoText {
+    margin-left: 15px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+:host {
+    width: 100%;
+    display: block;
+}

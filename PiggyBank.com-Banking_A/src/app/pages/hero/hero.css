@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.hero-contentRight {
+    margin-left: 100px;
+}
+
+.hero-textLabel {
+    font-weight: 500;
+    color: var(--subtitle);
+    border: 1px solid var(--borderColor);
+    font-size: 15px;
+    padding: 15px;
+    width: fit-content;
+    background-color: #0000000a;
+    border-radius: 50px;
+}
+
+.hero-img {
+    max-width: 500px;
+    border-radius: 40px;
+    border: 1px solid var(--borderColor);
+    box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.03),
+    0 12px 24px rgba(0, 0, 0, 0.06),
+    0 32px 64px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hero-img:hover {
+    box-shadow:
+    0 4px 4px rgba(0, 0, 0, 0.03),
+    0 7px 10px rgba(0, 0, 0, 0.06),
+    0 17px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+    font-size: 80px;
+    letter-spacing: 0.0em;
+    line-height: 100%;
+    color: var(--black);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.hero-subtitle {
+    margin-top: 0px;
+    color: var(--subtitle);
+}
+
+.hero-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 200px;
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    border-radius: 40px;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: medium;
+}
+
+.hero-buttonSvg {
+    opacity: 0.7;
+    margin-left: 10px;
+}
+
+.hero-button:hover {
+    background-color: var(--primary-color-hover);
+}

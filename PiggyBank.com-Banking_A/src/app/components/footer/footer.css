@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+    flex-shrink: 0;
+    width: 100%;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--white);
+    border-radius: 45px 45px 0 0;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.footer-logo {
+  width: 86px;
+}
+
+.footer-logoText {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.footer-subtitle {
+  font-size: 16px;
+  width: 300px;
+  color: var(--subtitle);
+  text-align: center;
+}

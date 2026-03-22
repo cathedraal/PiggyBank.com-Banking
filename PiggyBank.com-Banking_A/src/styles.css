@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Inter Display', sans-serif;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--background)
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('../public/fonts/InterDisplay-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('../public/fonts/InterDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('../public/fonts/InterDisplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('../public/fonts/InterDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+    --background: #f8fafc;
+    --borderColor: #e4e4e4;
+    --white: #ffffff;
+    --white-hover: #f6f6f6;
+    --black: #111111;
+    --subtitle: #767676;
+    --primary-color: #0c6fff;
+    --primary-color-hover: #4a92ff;
+}

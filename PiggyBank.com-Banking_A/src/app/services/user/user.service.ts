@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user.model';
+import { User } from '../../models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,6 @@ export class UserService {
   setUser(value: User): void {
     this.user = value;
   }
-
   deleteUser(): void {
     this.user = null;
   }
