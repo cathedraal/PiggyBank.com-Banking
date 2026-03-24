@@ -5,6 +5,13 @@ body {
   background-color: var(--background)
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
 @font-face {
   font-family: 'Inter Display';
   src: url('../public/fonts/InterDisplay-Regular.ttf') format('truetype');
@@ -42,4 +49,5 @@ body {
     --subtitle: #767676;
     --primary-color: #0c6fff;
     --primary-color-hover: #4a92ff;
+    --overlay: #00000008;
 }
