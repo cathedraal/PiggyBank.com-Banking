@@ -73,10 +73,26 @@
 }
 
 .popup-button2:hover {
-    background-color: var(--primary-color-hover);
+  background-color: var(--primary-color-hover);
 }
 
 .popup-text {
   margin-bottom: 30px;
   margin-top: 0px;
+}
+
+.popup-input {
+  font-family: inherit;
+  text-align: left;
+  background-color: var(--light-gray);
+  border: 1px solid var(--borderColor);
+  margin-bottom: 30px;
+  border-radius: 30px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  resize: none;
+  width: 100%;
+  height: 120px;
+  font-size: 15px;
+  box-sizing: border-box;
 }

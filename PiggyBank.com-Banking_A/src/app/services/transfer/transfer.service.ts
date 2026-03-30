@@ -3,6 +3,7 @@ import { RecipientService } from '../recipient/recipient.service';
 import { UserService } from '../user/user.service';
 import { BankService } from '../bank/bank.service'
 import emailjs from '@emailjs/browser';
+import { COMPANY_NAME } from '../../constants/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +25,7 @@ export class TransferService {
       recipientText: this.recipientService.getRecipientText(),
       userName: user?.name,
       userEmail: user?.email,
-      companyName: 'PiggyBank.com',
+      companyName: COMPANY_NAME,
     };
 
     emailjs.send('service_807c8ah', 'template_lkb0bhl', params);

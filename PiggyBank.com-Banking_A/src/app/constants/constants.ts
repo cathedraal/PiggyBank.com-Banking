@@ -4,16 +4,31 @@
  */
 
 import { articlePageItem, articlePreviewItem } from '../models/interfaces/articles.model';
-import { benefitItem } from '../models/interfaces/benefits.model'; 
+import { benefitItem } from '../models/interfaces/benefits.model';
 import { cardTypesItem } from '../models/interfaces/cardTypes.model';
 import { currencyTypesItem } from '../models/interfaces/currencies.model';
+import { guestItem } from '../models/interfaces/guest.model';
 import { inputValidationContextItem } from '../models/interfaces/inputValidation.model';
 import { walletActionContextItem } from '../models/interfaces/walletAction.model';
+
+/**
+ * Company name
+ */
+export const COMPANY_NAME: string = 'PiggyBank.com';
 
 /**
  * Amount of cards allowed to add
  */
 export const CARDS_AMOUNT_ALLOWED: number = 3;
+
+/**
+ * Guest profile
+ */
+export const GUEST_PROFILE: guestItem = {
+  name: 'Guest',
+  surname: ['Müller', 'Schmidt', 'Johnson', 'Smith', 'Clinton'],
+  email: ['workemail@gmail.com', 'example@gmail.com', 'noFun@gmail.com', 'businessmannn@gmail.com'],
+};
 
 /**
  * This array contains previews of articles which are displayed in the menu

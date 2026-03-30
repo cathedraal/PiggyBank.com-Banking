@@ -1,9 +1,17 @@
 <div class="body-overlay">
   <div class="body-popup">
     <h3 class="popup-text">{{ text }}</h3>
+    <input
+      type="text"
+      name="input"
+      class="popup-input"
+      placeholder="I have this issue..."
+      #userInput
+      [style.display]="popupContext === 'support' ? 'block' : 'none'"
+    />
     <div class="popup-buttons">
-      <button (click)="confirm()" class="popup-button1">{{ button1 }}</button>
-      <button (click)="decline()" class="popup-button2">{{ button2 }}</button>
+      <button (click)="decline()" class="popup-button1">{{ button1 }}</button>
+      <button (click)="confirm(userInput.value)" class="popup-button2">{{ button2 }}</button>
     </div>
   </div>
 </div>

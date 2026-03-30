@@ -25,18 +25,12 @@ main {
     max-width: 500px;
     border-radius: 40px;
     border: 1px solid var(--borderColor);
-    box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.03),
-    0 12px 24px rgba(0, 0, 0, 0.06),
-    0 32px 64px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     transition: all 0.3s ease;
 }
 
 .hero-img:hover {
-    box-shadow:
-    0 4px 4px rgba(0, 0, 0, 0.03),
-    0 7px 10px rgba(0, 0, 0, 0.06),
-    0 17px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-hovered)
 }
 
 .hero-title {
@@ -69,6 +63,7 @@ main {
     transition: all 0.3s ease;
     font-family: inherit;
     font-size: medium;
+    font-weight: 400;
 }
 
 .hero-buttonSvg {

@@ -14,12 +14,15 @@ export class QuestionService {
 
   sendQuestion(): void {
     const user = this.userService.getUser()
-    
+    const question = this.settingsService.getUserQuestion()
+
     const params = {
       userName: user?.name,
-      userQuestion: this.settingsService.getUserQuestion()
+      userQuestion: question
     }
 
     emailjs.send('service_807c8ah', 'template_lkb0bhl', params);
+
+    alert(`Question successfully sent. You asked: ${question}`)
   }
 }

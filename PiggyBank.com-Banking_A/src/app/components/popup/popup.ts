@@ -10,13 +10,13 @@ export class PopupComponent {
   @Input() text: string = ''
   @Input() button1: string = ''
   @Input() button2: string = ''
+  @Input() popupContext: string = ''
 
-  @Output() confirmed = new EventEmitter<void>()
+  @Output() confirmed = new EventEmitter<string>()
   @Output() declined = new EventEmitter<void>()
 
-  confirm(): void {
-    this.confirmed.emit()
-    alert('Question sent!')
+  confirm(value: string = ''): void {
+    this.confirmed.emit(value)
   }
 
   decline(): void {

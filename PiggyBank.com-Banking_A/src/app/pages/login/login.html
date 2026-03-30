@@ -1,0 +1,52 @@
+<main>
+  @if (isRegistrationFlow) {
+    <p class="registration-label">Step 1/2 – logging in</p>
+  }
+  <div class="login-container" [formGroup]="form">
+    @let name = form.controls.name;
+    @let surname = form.controls.surname;
+    @let email = form.controls.email;
+    <p class="login-headerParagraph">Welcome to</p>
+    <h1 class="login-headerTitle">PiggyBank.com</h1>
+    <img src="icons/logo.png" class="login-logo" />
+    <div class="login-inputs">
+      <div class="login-nameDiv">
+        <input type="text" class="login-nameInput" placeholder="name" formControlName="name" />
+        <div class="error-label" [class.visible]="name.invalid && name.touched">name required</div>
+      </div>
+      <div class="login-surnameDiv">
+        <input
+          type="text"
+          class="login-surnameInput"
+          placeholder="surname"
+          formControlName="surname"
+        />
+        <div class="error-label" [class.visible]="surname.invalid && surname.touched">
+          surname required
+        </div>
+      </div>
+      <div class="login-emailDiv">
+        <input type="text" class="login-emailInput" placeholder="email" formControlName="email" />
+        <div class="error-label" [class.visible]="email.invalid && email.touched">
+          @if (email.hasError('required')) {
+            email required
+          } @else {
+            email incorrect
+          }
+        </div>
+      </div>
+    </div>
+    <button class="login-submitButton" (click)="onSubmit()">continue</button>
+    <div class="login-dividerDiv">
+      <div class="login-divider">
+        <span class="login-dividerSpan">Or</span>
+      </div>
+    </div>
+    <div class="login-actionButtons">
+      <button routerLink="/hero" class="login-backButton" (click)="onBack()">
+        <img src="icons/back_button.png" alt="back" />
+      </button>
+      <button class="login-continueAsGuestButton" (click)="onSubmitAsGuest()">go as guest</button>
+    </div>
+  </div>
+</main>

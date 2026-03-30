@@ -2,7 +2,7 @@ body {
   font-family: 'Inter Display', sans-serif;
   justify-content: center;
   width: 100%;
-  background-color: var(--background)
+  background-color: var(--background);
 }
 
 body::before {
@@ -41,13 +41,22 @@ body::before {
 }
 
 :root {
-    --background: #f8fafc;
-    --borderColor: #e4e4e4;
-    --white: #ffffff;
-    --white-hover: #f6f6f6;
-    --black: #111111;
-    --subtitle: #767676;
-    --primary-color: #0c6fff;
-    --primary-color-hover: #4a92ff;
-    --overlay: #00000008;
+  --background: #f8fafc;
+  --borderColor: #e4e4e4;
+  --white: #ffffff;
+  --white-hover: #f6f6f6;
+  --black: #111111;
+  --light-black: #0000000a;
+  --subtitle: #767676;
+  --label: #7b7b7b;
+  --primary-color: #0c6fff;
+  --primary-color-hover: #4a92ff;
+  --overlay: #00000008;
+  --light-gray: #f8f8f8;
+  --shadow:
+    0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 24px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(0, 0, 0, 0.1);
+  --shadow-hovered:
+    0 4px 4px rgba(0, 0, 0, 0.03), 0 7px 10px rgba(0, 0, 0, 0.06), 0 17px 25px rgba(0, 0, 0, 0.1);
+  --error-background: rgb(255, 229, 229);
+  --error-label: rgb(167, 67, 67);
 }

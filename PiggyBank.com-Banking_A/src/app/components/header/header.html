@@ -10,9 +10,10 @@
 @if (isPopupOpen) {
   <app-popup
     [text]="popupText"
-    [button1]="'send'"
-    [button2]="'cancel'"
-    (confirmed)="onConfirm()"
+    [button1]="'cancel'"
+    [button2]="'send'"
+    [popupContext]="popupContext"
+    (confirmed)="onConfirm($event)"
     (declined)="onDecline()"
   ></app-popup>
 }
