@@ -19,6 +19,10 @@ export class User {
     this.cards.push(card);
   }
 
+  addAction(action: Action): void {
+    this.actions.push(action);
+  }
+
   deleteCard(card: Card): void {
     const index = this.cards.indexOf(card);
     if (index !== -1) {

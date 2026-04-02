@@ -7,7 +7,7 @@ export class Card {
     public cardNumber: string,
     public expDate: string,
     public cardCvc: string,
-    public cardBalance: number,
+    public cardBalance: number | null,
     public cardCurrency: string,
     public cardType: string,
   ) {}
@@ -18,10 +18,10 @@ export class Card {
   }
 
   addBalance(amount: number): void {
-    this.cardBalance = this.cardBalance + amount
+    this.cardBalance = this.cardBalance! + amount
   }
 
   transactBalance(amount: number): void {
-    this.cardBalance = this.cardBalance - amount
+    this.cardBalance = this.cardBalance! - amount
   }
 }

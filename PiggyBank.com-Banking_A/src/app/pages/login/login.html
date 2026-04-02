@@ -12,7 +12,7 @@
     <div class="login-inputs">
       <div class="login-nameDiv">
         <input type="text" class="login-nameInput" placeholder="name" formControlName="name" />
-        <div class="error-label" [class.visible]="name.invalid && name.touched">name required</div>
+        <div class="error-label" [class.visible]="name.invalid && name.dirty">name required</div>
       </div>
       <div class="login-surnameDiv">
         <input
@@ -21,13 +21,13 @@
           placeholder="surname"
           formControlName="surname"
         />
-        <div class="error-label" [class.visible]="surname.invalid && surname.touched">
+        <div class="error-label" [class.visible]="surname.invalid && surname.dirty">
           surname required
         </div>
       </div>
       <div class="login-emailDiv">
         <input type="text" class="login-emailInput" placeholder="email" formControlName="email" />
-        <div class="error-label" [class.visible]="email.invalid && email.touched">
+        <div class="error-label" [class.visible]="email.invalid && email.dirty">
           @if (email.hasError('required')) {
             email required
           } @else {
@@ -46,7 +46,13 @@
       <button routerLink="/hero" class="login-backButton" (click)="onBack()">
         <img src="icons/back_button.png" alt="back" />
       </button>
-      <button class="login-continueAsGuestButton" (click)="onSubmitAsGuest()">go as guest</button>
+      <button
+        routerLink="/add-card"
+        class="login-continueAsGuestButton"
+        (click)="onSubmitAsGuest()"
+      >
+        go as guest
+      </button>
     </div>
   </div>
 </main>

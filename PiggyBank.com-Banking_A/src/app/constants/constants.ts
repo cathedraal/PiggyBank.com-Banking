@@ -238,19 +238,19 @@ export const CURRENCY_TYPES: currencyTypesItem[] = [
  */
 export const CARD_TYPES: cardTypesItem[] = [
   {
-    text: 'DEBIT',
     value: 'DEBIT',
+    description: 'Spends money directly from your account.',
   },
   {
-    text: 'CREDIT',
     value: 'CREDIT',
+    description: 'Uses bank credit, must be repaid.',
   },
   {
-    text: 'PREPAID',
     value: 'PREPAID',
+    description: 'Works until preloaded funds run out.',
   },
   {
-    text: 'VIRTUAL',
     value: 'VIRTUAL',
+    description: 'Digital card for online payments, no physical form.',
   },
 ];

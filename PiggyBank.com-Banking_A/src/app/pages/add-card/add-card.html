@@ -1,0 +1,147 @@
+<main>
+  @if (isRegistrationFlow) {
+    <p class="registration-label">Step 2/2 – adding card</p>
+  }
+  <div class="addCard-container" [formGroup]="form">
+    @let holder = form.controls.holder;
+    @let number = form.controls.number;
+    @let expdate = form.controls.expDate;
+    @let cvc = form.controls.cvc;
+    <h1 class="addCard-header">
+      <span class="addCard-headerSpan">{{ user?.name }}</span
+      >, let's add your card
+    </h1>
+    <div class="addCard-containers">
+      <div class="addCard-leftContainer">
+        <h3 class="addCard-title">Card details</h3>
+        <div class="addCard-inputs">
+          <div class="addCard-holderDiv">
+            <input
+              class="addCard-holderInput"
+              type="text"
+              formControlName="holder"
+              (input)="onCardHolderInput($event)"
+              placeholder="name, surname"
+            />
+            <div class="error-label" [class.visible]="holder.invalid && holder.dirty">
+              holder required
+            </div>
+          </div>
+          <div class="addCard-numberDiv">
+            <input
+              class="addCard-numberInput"
+              type="text"
+              formControlName="number"
+              (input)="onCardNumberInput($event)"
+              inputmode="numeric"
+              maxlength="19"
+              autocomplete="cc-number"
+              placeholder="xxxx xxxx xxxx xxxx"
+            />
+            <div class="error-label" [class.visible]="number.invalid && number.dirty">
+              @if (number.hasError('required')) {
+                number required
+              } @else {
+                incorrect type
+              }
+            </div>
+          </div>
+          <div class="addCard-expdateDiv">
+            <input
+              class="addCard-expdateInput"
+              type="text"
+              formControlName="expDate"
+              (input)="onCardExpdateInput($event)"
+              inputmode="numeric"
+              maxlength="5"
+              placeholder="mm/yy"
+            />
+            <div class="error-label" [class.visible]="expdate.invalid && expdate.dirty">
+              date required
+            </div>
+          </div>
+          <div class="addCard-cvcDiv">
+            <input
+              class="addCard-cvcInput"
+              type="text"
+              formControlName="cvc"
+              (input)="onCardCvcInput($event)"
+              inputmode="numeric"
+              maxlength="4"
+              placeholder="cvc"
+            />
+            <div class="error-label" [class.visible]="cvc.invalid && cvc.dirty">
+              @if (cvc.hasError('required')) {
+                cvc required
+              } @else {
+                cvc incorrect
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="addCard-rightContainer">
+        <h3 class="addCard-title">Currency</h3>
+        <select
+          name="currencies"
+          (change)="onCurrencyChange($event)"
+          id="currencies"
+          class="addCard-dropdown"
+        >
+          <button>
+            <div>
+              <div class="selectedcontent2">{{ cardCurrency.currency }}</div>
+            </div>
+          </button>
+          <div class="addCard-optionContainer">
+            @for (currency of currencies; track $index) {
+              <option [value]="currency.currency" class="addCard-option">
+                <div class="addCard-optionDiv">
+                  <span class="addCard-optionTitle">{{ currency.currency }}</span>
+                </div>
+              </option>
+            }
+          </div>
+        </select>
+        <h3 class="addCard-title">Type</h3>
+        <select name="types" (change)="onTypeChange($event)" id="types" class="addCard-dropdown">
+          <button>
+            <div>
+              <div class="selectedcontent">{{ cardType }}</div>
+            </div>
+          </button>
+          <div class="addCard-optionContainer">
+            @for (type of types; track $index) {
+              <option [value]="type.value" class="addCard-option">
+                <div class="addCard-optionDiv">
+                  <span class="addCard-optionTitle">{{ type.value }}</span>
+                  <span class="addCard-optionSubtitle">{{ type.description }}</span>
+                </div>
+              </option>
+            }
+          </div>
+        </select>
+      </div>
+    </div>
+    <hr class="addCard-line" />
+    <div class="addCard-buttons">
+      <button routerLink="/login" class="addCard-backButton">
+        <img src="icons/back_button.png" alt="back" />
+      </button>
+      <button class="addCard-submitButton" (click)="onSubmit()">add card</button>
+      <button class="addCard-skipButton" (click)="openPopup()">skip</button>
+    </div>
+  </div>
+</main>
+
+@if (isPopupOpen) {
+  <app-popup
+    [text]="popupText"
+    [button1]="'create card'"
+    [button2]="'skip'"
+    [popupContext]="popupContext"
+    (confirmed)="onSkip()"
+    (declined)="onGuestCard()"
+  >
+  </app-popup>
+}

@@ -11,7 +11,7 @@ footer {
     padding-bottom: 30px;
     background-color: var(--white);
     border-radius: 45px 45px 0 0;
-    border: 1px solid #e4e4e4;
+    border: 1px solid var(--border-color);
     position: relative;
     z-index: 1;
     font-family: inherit;

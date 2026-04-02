@@ -10,7 +10,7 @@ export class PopupComponent {
   @Input() text: string = ''
   @Input() button1: string = ''
   @Input() button2: string = ''
-  @Input() popupContext: string = ''
+  @Input() popupContext: null | string = ''
 
   @Output() confirmed = new EventEmitter<string>()
   @Output() declined = new EventEmitter<void>()

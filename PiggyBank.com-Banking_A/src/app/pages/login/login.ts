@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { SettingsService } from '../../services/settings/settings.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../services/user/user.service';
@@ -47,22 +47,28 @@ export class LoginComponent {
   constructor(
     private settingsService: SettingsService,
     private userService: UserService,
+    private router: Router,
   ) {
     this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
   }
 
   onSubmit(): void {
-    if (this.form.valid) {
+    if (
+      this.form.valid &&
+      (this.form.value.name !== '' ||
+        this.form.value.surname !== '' ||
+        this.form.value.email !== '')
+    ) {
       this.userService.setUser(
         new User(
           this.form.value.name!,
           this.form.value.surname!,
           this.form.value.email!,
-          this.dateTime
+          this.dateTime,
         ),
       );
+      this.router.navigate(['/add-card']);
     }
-    console.log(this.userService.getUser());
   }
 
   onSubmitAsGuest(): void {
@@ -74,10 +80,9 @@ export class LoginComponent {
         this.dateTime,
       ),
     );
-    console.log(this.userService.getUser())
   }
 
   onBack(): void {
-    this.userService.deleteUser()
+    this.userService.deleteUser();
   }
 }

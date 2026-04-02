@@ -5,7 +5,7 @@ header {
     justify-content: center;
     padding: 15px;
     border-radius: 0px 0px 45px 45px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     background-color: var(--white);
 }
 
@@ -40,7 +40,7 @@ header {
     padding: 15px;
     width: 100px;
     background-color: var(--white);
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--border-color);
     border-radius: 40px;
     color: var(--black);
     font-weight: 600;

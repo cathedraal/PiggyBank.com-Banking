@@ -4,22 +4,22 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class SettingsService {
-  private userQuestion: string = ''
-  private registrationFlow: boolean = false
+  private userQuestion: string = '';
+  private registrationFlow: boolean = false;
 
   setUserQuestion(value: string): void {
-    this.userQuestion = value
+    this.userQuestion = value;
   }
-  
+
   getUserQuestion(): string {
-    return this.userQuestion
+    return this.userQuestion;
   }
 
   setRegistrationFlow(value: boolean): void {
-    this.registrationFlow = value
+    this.registrationFlow = value;
   }
 
   isRegistrationFlow(): boolean {
-    return this.registrationFlow
+    return this.registrationFlow;
   }
 }

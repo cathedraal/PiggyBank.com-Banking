@@ -1,4 +1,4 @@
 export interface cardTypesItem {
-  text: string;
   value: string;
+  description: string;
 }

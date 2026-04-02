@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Card } from '../../models/card.model';
+import { getRandomInt } from '../../utils/utils';
+import { User } from '../../models/user.model';
+import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -21,6 +24,17 @@ export class BankService {
   } 
   setAmount(value: string): void {
     this.amount = value
+  }
+  generateGuestCard(user: User): Card {
+    return new Card(
+      `${user.name.toUpperCase()} ${user.surname.toUpperCase()}`,
+      `${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)}`,
+      `${getRandomInt(1, 12)}/${getRandomInt(26, 35)}`,
+      `${getRandomInt(100, 999)}`,
+      null,
+      `${CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length-1)].value}`,
+      `${CARD_TYPES[getRandomInt(0, CARD_TYPES.length-1)].value}`
+    )
   }
 
   getCurrency(): string {

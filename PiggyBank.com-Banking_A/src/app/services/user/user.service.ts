@@ -10,6 +10,7 @@ export class UserService {
   setUser(value: User): void {
     this.user = value;
   }
+
   deleteUser(): void {
     this.user = null;
   }

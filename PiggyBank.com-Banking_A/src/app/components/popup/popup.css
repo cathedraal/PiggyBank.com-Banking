@@ -5,6 +5,7 @@
   backdrop-filter: blur(30px);
   position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
   display: flex;
   z-index: 300;
@@ -60,7 +61,7 @@
   font-family: inherit;
   border: none;
   color: var(--black);
-  border: 1px solid var(--borderColor);
+  border: 1px solid var(--border-color);
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -85,7 +86,7 @@
   font-family: inherit;
   text-align: left;
   background-color: var(--light-gray);
-  border: 1px solid var(--borderColor);
+  border: 1px solid var(--border-color);
   margin-bottom: 30px;
   border-radius: 30px;
   padding: 20px;
