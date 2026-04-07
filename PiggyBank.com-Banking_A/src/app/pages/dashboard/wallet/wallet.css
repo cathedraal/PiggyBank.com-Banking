@@ -1,0 +1,143 @@
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: var(--container-spacing);
+  height: 400px;
+}
+
+.dashboard-wallet {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 45px;
+  max-width: 750px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.dashboard-wallet:hover {
+  background-color: var(--white-hover);
+}
+
+.dashboard-walletTitle {
+  color: var(--container-title);
+  font-weight: 400;
+  margin: 0px;
+}
+
+.dashboard-walletHeader {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-walletType {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 40px;
+  margin-left: auto;
+}
+
+.dashboard-walletBalance {
+  margin: 0px;
+  font-size: 128px;
+  margin-top: auto;
+  max-width: 600px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.dashboard-walletBalance span {
+  color: var(--primary-color);
+}
+
+.dashboard-walletBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard-walletBottom p {
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5px;
+  color: var(--container-title);
+}
+
+.dashboard-walletProfileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--profile-button);
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+.dashboard-walletProfileButton:hover {
+  background-color: var(--profile-button-hover);
+}
+
+.dashboard-manageWalletDiv {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 45px;
+  margin-left: 25px;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.dashboard-manageWalletDiv h4 {
+  color: var(--container-title);
+  font-weight: 400;
+  margin-top: 0px;
+}
+
+.dashboard-manageWalletButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-top: auto;
+  min-width: 210px;
+  width: 100%;
+}
+
+.dashboard-manageWalletAdd,
+.dashboard-manageWalletTransfer,
+.dashboard-manageWalletWithdraw {
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 40px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 600;
+  gap: 15px;
+  font-size: medium;
+}

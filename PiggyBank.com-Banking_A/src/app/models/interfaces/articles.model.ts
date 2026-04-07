@@ -5,6 +5,7 @@ export interface articlePreviewItem {
   subtitle: string;
   btnText: string;
   value: string;
+  time: string;
 }
 
 export interface articlePageItem {

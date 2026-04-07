@@ -1,0 +1,52 @@
+main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  gap: 10px;
+  margin-left: 60px;
+}
+
+main img {
+  width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main h4 {
+  margin: 0px;
+  color: var(--container-title);
+}
+
+main div {
+  padding: 10px;
+}
+
+main span {
+  font-weight: 200;
+  color: var(--container-title);
+  margin-left: 10px;
+}
+
+.dashboard-gbpCurrencyDiv,
+.dashboard-usdCurrencyDiv {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+}
+
+.dashboard-gbpCurrencyFrom,
+.dashboard-usdCurrencyFrom {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+}
+
+.dashboard-gbpCurrencyTo,
+.dashboard-usdCurrencyTo {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background-color: var(--currency-span);
+  border-radius: 50px;
+}

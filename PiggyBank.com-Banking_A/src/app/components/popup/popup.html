@@ -1,14 +1,23 @@
 <div class="body-overlay">
   <div class="body-popup">
-    <h3 class="popup-text">{{ text }}</h3>
-    <input
-      type="text"
-      name="input"
-      class="popup-input"
-      placeholder="I have this issue..."
-      #userInput
-      [style.display]="popupContext === 'support' ? 'block' : 'none'"
-    />
+    <div class="popup-header">
+      <h3 class="popup-text">{{ text }}</h3>
+      <button><img src="icons/cross.svg" alt="cancel" (click)="close()"></button>
+    </div>
+    <div class="popup-support" [style.display]="popupContext === 'support' ? 'block' : 'none'">
+      <textarea
+        type="text"
+        name="input"
+        class="popup-input"
+        placeholder="I have this issue..."
+        #userInput
+      ></textarea>
+      <div class="popup-supportButtons">
+        @for (button of supportButtons; track $index) {
+          <button class="popup-supportButton" [value]="button.value" (click)="onInputValueChange($event, userInput)">{{button.text}}</button>
+        }
+      </div>
+    </div>
     <div class="popup-buttons">
       <button (click)="decline()" class="popup-button1">{{ button1 }}</button>
       <button (click)="confirm(userInput.value)" class="popup-button2">{{ button2 }}</button>

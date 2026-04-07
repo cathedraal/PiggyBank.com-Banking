@@ -1,0 +1,89 @@
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    margin-top: var(--container-spacing);
+    padding: 45px;
+    box-sizing: border-box;
+}
+
+:host {
+    position: relative;
+    z-index: 1;
+}
+
+.dashboard-transactionsButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 200px;
+    background-color: var(--white);
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.dashboard-transactionsButton h4 {
+    color: var(--container-title);
+    font-weight: 400;
+    margin: 0px;
+}
+
+.dashboard-transactionsButton img {
+    transition: all 0.3s ease;
+}
+
+.dashboard-transactionsButton:hover img {
+    transform: translateX(8px);
+}
+
+.dashboard-transaction {
+    cursor: default;
+    display: flex;
+}
+
+.dashboard-transactionsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-transactionText {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray);
+    border-radius: 50px;
+    padding: 10px;
+    width: fit-content;
+    margin-right: 15px;
+}
+
+.dashboard-transaction hr {
+  width: 100%;    /* занимает всю доступную ширину */
+  height: 1px;    /* маленькая высота — тонкая линия */
+  background-color: var(--hr);  /* цвет линии */
+  border: none;    /* убираем стандартный бордер */
+  align-self: center;  /* по вертикали по центру */
+  flex: 1;
+}
+
+.dashboard-transactionText p {
+    margin: 0px;
+    font-family: inherit;
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+.dashboard-transactionText span {
+    background-color: var(--light-dark-gray);
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.dashboard-transactionDate {
+    margin-left: 15px;
+    color: var(--container-title);
+}

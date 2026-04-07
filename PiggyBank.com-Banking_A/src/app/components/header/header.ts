@@ -4,6 +4,7 @@ import { UserService } from '../../services/user/user.service';
 import { User } from '../../models/user.model';
 import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,18 +14,23 @@ import { QuestionService } from '../../services/question/question.service';
 })
 export class HeaderComponent {
   isPopupOpen = false;
-  user!: User | null;
-  popupText!: string;
+  user: User | null = null;
+  popupText: string;
   popupContext: string = 'support';
   userQuestion!: string;
 
   constructor(
-    private userService: UserService,
+    protected userService: UserService,
     private settingsService: SettingsService,
     private questionService: QuestionService,
+    private router: Router
   ) {
     this.user = this.userService.getUser();
-    this.popupText = `${this.user?.name}, describe your problem.`;
+    if (this.user) {
+      this.popupText = `${this.user.name}, describe your problem.`;
+    } else {
+      this.popupText = `Guest, describe your problem.`;
+    }
   }
 
   openPopup(): void {
@@ -45,5 +51,13 @@ export class HeaderComponent {
 
   onDecline(): void {
     this.isPopupOpen = false;
+  }
+
+  route() {
+    if (this.user) {
+      this.router.navigate(['./profile'])
+    } else {
+      this.router.navigate(['./login'])
+    }
   }
 }

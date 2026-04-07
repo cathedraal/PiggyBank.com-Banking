@@ -5,16 +5,24 @@ footer {
     flex-direction: column;
     margin-top: auto;
     flex-shrink: 0;
+    max-width: 1350px;
     width: 100%;
     gap: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: var(--white);
-    border-radius: 45px 45px 0 0;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     position: relative;
     z-index: 1;
     font-family: inherit;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo {
@@ -23,13 +31,14 @@ footer {
 
 .footer-logoText {
   font-size: 20px;
-  font-weight: 600;
-  color: var(--black);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  color: var(--white);
 }
 
 .footer-subtitle {
   font-size: 16px;
   width: 300px;
-  color: var(--subtitle);
+  color: var(--white);
   text-align: center;
 }

@@ -9,6 +9,7 @@ import { cardTypesItem } from '../models/interfaces/cardTypes.model';
 import { currencyTypesItem } from '../models/interfaces/currencies.model';
 import { guestItem } from '../models/interfaces/guest.model';
 import { inputValidationContextItem } from '../models/interfaces/inputValidation.model';
+import { supportButtonItem } from '../models/interfaces/supports.model';
 import { walletActionContextItem } from '../models/interfaces/walletAction.model';
 
 /**
@@ -35,31 +36,34 @@ export const GUEST_PROFILE: guestItem = {
  */
 export const ARTICLE_PREVIEW_SECTION: articlePreviewItem[] = [
   {
-    image: 'images/news3.png',
-    date: 'December 31st, 2025',
-    title: 'Personal finance apps help users save more money',
-    subtitle:
-      'New personal finance features such as spending analytics and smart budgeting tools are helping users better control their expenses.',
-    btnText: 'read article',
-    value: 'personalFinance',
-  },
-  {
-    image: 'images/news2.png',
-    date: 'January 15th, 2026',
-    title: 'Banks introduce instant transfers with zero fees',
-    subtitle:
-      'Several banks have launched instant money transfers without commissions, aiming to attract more users to their digital banking platforms.',
-    btnText: 'read article',
-    value: 'zeroFees',
-  },
-  {
-    image: 'images/news1.png',
+    image: 'images/articlePreview_digitalWallets.svg',
     date: 'January 18th, 2026',
     title: 'Digital wallets gain popularity among young users',
     subtitle:
       'Digital wallets are becoming increasingly popular among young adults, as users value fast transfers, easy balance tracking, and simple mobile interfaces.',
-    btnText: 'read article',
+    btnText: 'Read',
     value: 'digitalWallets',
+    time: '2 min'
+  },
+  {
+    image: 'images/articlePreview_zeroFees.svg',
+    date: 'January 15th, 2026',
+    title: 'Banks introduce instant transfers with zero fees',
+    subtitle:
+      'Several banks have launched instant money transfers without commissions, aiming to attract more users to their digital banking platforms.',
+    btnText: 'Read',
+    value: 'zeroFees',
+    time: '1 min'
+  },
+  {
+    image: 'images/articlePreview_personalFinance.svg',
+    date: 'December 31st, 2025',
+    title: 'Personal finance apps help users save more money',
+    subtitle:
+      'New personal finance features such as spending analytics and smart budgeting tools are helping users better control their expenses.',
+    btnText: 'Read',
+    value: 'personalFinance',
+    time: '3 min'
   },
 ];
 
@@ -69,19 +73,19 @@ export const ARTICLE_PREVIEW_SECTION: articlePreviewItem[] = [
 export const BENEFITS_SECTION: benefitItem[] = [
   {
     header: 'PiggyBank.com is',
-    image: 'images/secure_transactions.png',
+    image: 'icons/benefits_secureTransactions.svg',
     title: 'Secure transactions',
-    subtitle: 'Your data and payments are protected with modern encryption and security standards.',
+    subtitle: 'Your data and payments are protected with modern encryption and security standards.'
   },
   {
     header: 'PiggyBank.com is',
-    image: 'images/instant_transfers.png',
+    image: 'icons/benefits_instantTransfers.svg',
     title: 'Instant transfers',
     subtitle: 'Send and receive money within seconds without unnecessary delays.',
   },
   {
     header: 'PiggyBank.com is',
-    image: 'images/multi_currency_support.png',
+    image: 'icons/benefits_multiCurrencySupport.svg',
     title: 'Multi-currency support',
     subtitle: 'Manage multiple currencies easily in one simple wallet.',
   },
@@ -240,17 +244,44 @@ export const CARD_TYPES: cardTypesItem[] = [
   {
     value: 'DEBIT',
     description: 'Spends money directly from your account.',
+    color: '#f0a4005e',
   },
   {
     value: 'CREDIT',
     description: 'Uses bank credit, must be repaid.',
+    color: '#50c8785a',
   },
   {
     value: 'PREPAID',
     description: 'Works until preloaded funds run out.',
+    color: '#7c68ee52',
   },
   {
     value: 'VIRTUAL',
     description: 'Digital card for online payments, no physical form.',
+    color: '#4a8fd94e',
+  },
+];
+
+export const TRANSACTION_BENEFITS: string[] = [
+  'protected data',
+  'multi-currency',
+  'low-rates',
+  'real-time balance',
+  'secure payments',
+];
+
+export const SUPPORT_BUTTONS: supportButtonItem[] = [
+  {
+    text: 'crash',
+    value: 'The app crashes when I try to open the settings.',
+  },
+  {
+    text: 'lag',
+    value: 'The page loads very slowly and sometimes freezes.',
+  },
+  {
+    text: 'login',
+    value: 'I can not log in with my email and password.',
   },
 ];

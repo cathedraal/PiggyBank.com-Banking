@@ -14,7 +14,6 @@ export class Action {
 
   constructor(
     public actionIcon: string,
-    public actionHighlight: string,
     public actionDate: string,
     public actionSource: string,
     public actionContext: keyof descriptionItem,

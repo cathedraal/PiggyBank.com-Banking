@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  margin-top: var(--container-spacing);
+}
+
+.dashboard-transactionBenefitDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dashboard-transactionBenefit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  padding: 17px;
+}
+
+.dashboard-transactionBenefit p {
+  color: var(--transaction-benefit);
+  font-weight: 100;
+  font-family: inherit;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 13px;
+  margin-left: 7px;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.dashboard-transactionBenefit:hover p {
+  color: var(--black);
+}
+
+.dashboard-transactionBenefit svg path {
+  stroke: var(--transaction-benefit);
+  transition: all 0.3s ease;
+}
+
+.dashboard-transactionBenefit:hover svg path {
+  stroke: var(--primary-color);
+}

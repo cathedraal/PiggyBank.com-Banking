@@ -50,6 +50,8 @@ export class AddCardComponent {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
   });
 
   protected form = new FormGroup<AddCardForm>({
@@ -170,12 +172,15 @@ export class AddCardComponent {
    * Creates a new card with given parameters from the UI Component using service
    */
   onSubmit(): void {
+    const clean = this.cardNumber.replace(/\s/g, '')
+    const lastFourDigits = clean.slice(-4)
+    const source = `${this.cardType}  •• ${lastFourDigits}`
+
     if (this.form.valid) {
       const action = new Action(
-        'icons/actions_addedCard.png',
-        '',
+        'icons/transactions_newCard.svg',
         this.dateTime,
-        '',
+        source,
         'addedCard',
         'Added a new',
       );
@@ -194,6 +199,7 @@ export class AddCardComponent {
       this.router.navigate(['/dashboard']);
       this.isPopupOpen = false;
       console.log(card);
+      console.log(this.user)
     }
   }
 
@@ -208,16 +214,20 @@ export class AddCardComponent {
    * Creates a guest card with given random parameters using service
    */
   onGuestCard(): void {
-    const action = new Action(
-      'icons/actions_addedCard.png',
-      '',
-      this.dateTime,
-      '',
-      'addedCard',
-      'Added a new',
-    );
     const guestCard = this.bankService.generateGuestCard(
       this.user!
+    );
+
+    const clean = guestCard.cardNumber.replace(/\s/g, '')
+    const lastFourDigits = clean.slice(-4)
+    const source = `${this.cardType}  •• ${lastFourDigits}`
+
+    const action = new Action(
+      'icons/transactions_newCard.svg',
+      this.dateTime,
+      source,
+      'addedCard',
+      'Added a new guest',
     );
     this.bankService.setCurrentCard(guestCard);
     this.user?.addCard(guestCard);
@@ -225,6 +235,7 @@ export class AddCardComponent {
     this.router.navigate(['/dashboard']);
     this.isPopupOpen = false;
     console.log(guestCard);
+    console.log(this.user)
   }
 
   /**
@@ -233,5 +244,12 @@ export class AddCardComponent {
   onSkip(): void {
     this.isPopupOpen = false;
     this.router.navigate(['/dashboard']);
+  }
+
+  /**
+   * Closes popup
+   */
+  onClose(): void {
+    this.isPopupOpen = false
   }
 }

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
+import { supportButtonItem } from '../../models/interfaces/supports.model';
+import { SUPPORT_BUTTONS } from '../../constants/constants';
 
 @Component({
   selector: 'app-popup',
@@ -14,6 +16,9 @@ export class PopupComponent {
 
   @Output() confirmed = new EventEmitter<string>()
   @Output() declined = new EventEmitter<void>()
+  @Output() closed = new EventEmitter<void>()
+
+  supportButtons: supportButtonItem[] = SUPPORT_BUTTONS
 
   confirm(value: string = ''): void {
     this.confirmed.emit(value)
@@ -21,5 +26,14 @@ export class PopupComponent {
 
   decline(): void {
     this.declined.emit()
+  }
+
+  close(): void {
+    this.closed.emit()
+  }
+
+  onInputValueChange(event: Event, input: HTMLTextAreaElement) {
+    const button = event.target as HTMLButtonElement
+    input.value = button.value
   }
 }

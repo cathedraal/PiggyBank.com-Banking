@@ -126,7 +126,7 @@
     <hr class="addCard-line" />
     <div class="addCard-buttons">
       <button routerLink="/login" class="addCard-backButton">
-        <img src="icons/back_button.png" alt="back" />
+        <img src="icons/back.svg" alt="back" />
       </button>
       <button class="addCard-submitButton" (click)="onSubmit()">add card</button>
       <button class="addCard-skipButton" (click)="openPopup()">skip</button>
@@ -142,6 +142,7 @@
     [popupContext]="popupContext"
     (confirmed)="onSkip()"
     (declined)="onGuestCard()"
+    (closed)="onClose()"
   >
   </app-popup>
 }

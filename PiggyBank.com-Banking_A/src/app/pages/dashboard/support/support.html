@@ -1,0 +1,21 @@
+<main>
+    <div class="dashboard-supportText">
+        <h4>Need help?</h4>
+        <p>Contact us – we usually reply within 24 hours.</p>
+    </div>
+    <button class="dashboard-supportButton" (click)="openPopup()">
+        <img src="icons/support.svg" alt="support">
+        contact
+    </button>
+</main>
+
+@if (isPopupOpen) {
+    <app-popup
+        [text]="popupText"
+        [button1]="'cancel'"
+        [button2]="'send'"
+        [popupContext]="popupContext"
+        (confirmed)="onConfirm($event)"
+        (declined)="onDecline()"
+    ></app-popup>
+}

@@ -1,0 +1,19 @@
+<main>
+    <button class="dashboard-transactionsButton">
+        <h4>Recent activity</h4>
+        <img src="icons/transactions_showAllButton.svg" alt="show all">
+    </button>
+    <div class="dashboard-transactionsDiv">
+        @for (transaction of transactions; track $index) {
+            <div class="dashboard-transaction">
+                <div class="dashboard-transactionText">
+                    <img [src]="transaction.actionIcon" alt="transaction icon">
+                    <p>{{ transaction.actionText }}</p>
+                    <span> {{ transaction.actionSource }}</span>
+                </div>
+                <hr>
+                <p class="dashboard-transactionDate">{{ transaction.actionDate }}</p>
+            </div>
+        }
+    </div>
+</main>

@@ -1,9 +1,15 @@
 <header>
   <div class="header-div">
-    <img src="icons/logo.png" class="header-logo" alt="logo" />
+    <img src="icons/logo.svg" class="header-logo" alt="logo" />
     <h3 class="header-logoText">PiggyBank.com</h3>
-    <button class="header-needHelpButton" (click)="openPopup()">support</button>
-    <button routerLink="/profile" class="header-profileButton">profile</button>
+    <button class="header-needHelpButton" (click)="openPopup()"><img src="icons/support.svg" alt="support"> support</button>
+    <button class="header-profileButton" (click)="route()">
+      @if (userService.getUser()) {
+        <h4>{{ userService.getUser()!.name.charAt(0) + userService.getUser()!.surname.charAt(0) }}</h4>
+      } @else {
+        hey, log in
+      }
+    </button>
   </div>
 </header>
 
@@ -15,5 +21,6 @@
     [popupContext]="popupContext"
     (confirmed)="onConfirm($event)"
     (declined)="onDecline()"
+    (closed)="onDecline()"
   ></app-popup>
 }

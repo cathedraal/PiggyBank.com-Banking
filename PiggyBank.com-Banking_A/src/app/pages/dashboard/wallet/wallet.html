@@ -1,0 +1,46 @@
+<main>
+  <div class="dashboard-wallet">
+    <div class="dashboard-walletHeader">
+      <h4 class="dashboard-walletTitle">Main wallet balance</h4>
+      <h4 class="dashboard-walletType" [style.backgroundColor]="userCardTypeColor">
+        {{ userMainCard?.cardType }}
+      </h4>
+    </div>
+    <h1 class="dashboard-walletBalance">
+      <span>{{ userMainCard?.cardCurrency }}</span
+      >{{ 312.231 | number: '1.2-2' }}
+    </h1>
+    <div class="dashboard-walletBottom">
+      <img src="icons/wallet_safe.svg" alt="safe" class="dashboard-walletImg" />
+      <p>{{ userCardNumber }}</p>
+      <button routerLink="/profile" class="dashboard-walletProfileButton">
+        <img src="icons/wallet_profile.svg" alt="profile" />
+      </button>
+    </div>
+  </div>
+  <div class="dashboard-manageWalletDiv">
+    <h4>Manage wallet</h4>
+    <div class="dashboard-manageWalletButtons">
+      <button class="dashboard-manageWalletAdd" routerLink="">
+        <img src="icons/manageWallet_add.svg" alt="add" class="dashboard-manageWalletAddIcon" /> add
+        money
+      </button>
+      <button class="dashboard-manageWalletTransfer" routerLink="">
+        <img
+          src="icons/manageWallet_transfer.svg"
+          alt="transfer"
+          class="dashboard-manageWalletTransferIcon"
+        />
+        transfer money
+      </button>
+      <button class="dashboard-manageWalletWithdraw" routerLink="">
+        <img
+          src="icons/manageWallet_withdraw.svg"
+          alt=""
+          class="dashboard-manageWalletWithdrawIcon"
+        />
+        withdraw money
+      </button>
+    </div>
+  </div>
+</main>

@@ -1,8 +1,10 @@
 body {
-  font-family: 'Inter Display', sans-serif;
+  font-family: 'Inter Variable', sans-serif;
   justify-content: center;
   width: 100%;
   background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body::before {
@@ -13,47 +15,79 @@ body::before {
 }
 
 @font-face {
-  font-family: 'Inter Display';
-  src: url('../public/fonts/InterDisplay-Regular.ttf') format('truetype');
+  font-family: 'Inter Variable';
+  src: url('../public/fonts/InterDisplay-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Inter Display';
-  src: url('../public/fonts/InterDisplay-Medium.ttf') format('truetype');
+  font-family: 'Inter Variable';
+  src: url('../public/fonts/InterDisplay-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter Display';
-  src: url('../public/fonts/InterDisplay-SemiBold.ttf') format('truetype');
+  font-family: 'Inter Variable';
+  src: url('../public/fonts/InterDisplay-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter Display';
-  src: url('../public/fonts/InterDisplay-Bold.ttf') format('truetype');
+  font-family: 'Inter Variable';
+  src: url('../public/fonts/InterDisplay-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
 :root {
+  --letter-spacing: -0.5px;
+  --container-spacing: 25px;
+  --border-radius: 65px;
+  --border-radius-2: 40px;
   --background: #f8fafc;
   --border-color: #e4e4e4;
+  --hr: #eaeaea;
+  --date: #aeaeae;
+  --subtitle4: #7d7d7d;
   --white: #ffffff;
+  --currency-span: #f5f5f5;
   --white-hover: #f6f6f6;
   --black: #111111;
   --light-black: #0000000a;
   --subtitle: #767676;
   --label: #7b7b7b;
+  --container-title: #787878;
   --primary-color: #0c6fff;
   --primary-color-hover: #4a92ff;
   --overlay: #00000008;
   --light-gray: #f8f8f8;
-  --line: #DFDFDF;
+  --light-dark-gray: #f0f0f0;
+  --gray: #e7e7e7;
+  --dark-gray: #9f9f9f;
+  --line: #dfdfdf;
+  --active: #81b4ff;
+  --profile-button: #e5e5e5;
+  --profile-button-hover: #d9d9d9;
+  --transaction-benefit: #b9b9b9;
   --shadow:
     0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 24px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(0, 0, 0, 0.1);
   --shadow-hovered:
