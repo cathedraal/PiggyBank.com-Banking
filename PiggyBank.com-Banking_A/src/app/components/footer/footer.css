@@ -1,15 +1,11 @@
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin-top: auto;
     flex-shrink: 0;
     max-width: 1350px;
     width: 100%;
     gap: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 45px;
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
@@ -18,6 +14,83 @@ footer {
     font-family: inherit;
     box-shadow: var(--shadow);
     margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.footer-bottomDiv {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-bottomLinksDiv p,
+.footer-bottomSocialDiv p,
+.footer-bottomNewsletterDiv p {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  display: block;
+}
+
+a {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-bottomLinksDiv {
+  margin-left: auto;
+}
+
+.footer-bottomNewsletterInputDiv {
+  margin-top: 15px;
+}
+
+.footer-bottomNewsletterInputDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+input {
+  background-color: #ffffff3f;
+  border: 1px solid #ffffff72;
+  border-radius: 40px;
+  padding: 15px;
+  color: var(--white);
+}
+
+input::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  height: fit-content;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+button:hover {
+  background-color: var(--white-hover);
 }
 
 :host {
@@ -30,15 +103,34 @@ footer {
 }
 
 .footer-logoText {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: var(--letter-spacing);
   color: var(--white);
 }
 
-.footer-subtitle {
+.footer-logoText span {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  opacity: 0.3;
+  margin-left: 15px;
+}
+
+.footer-subtitle1 {
   font-size: 16px;
-  width: 300px;
   color: var(--white);
-  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.footer-subtitle2 {
+  font-size: 16px;
+  width: 320px;
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 0px;
 }

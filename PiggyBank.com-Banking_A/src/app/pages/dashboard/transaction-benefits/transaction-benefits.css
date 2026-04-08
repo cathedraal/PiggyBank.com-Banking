@@ -29,7 +29,7 @@ main {
 
 .dashboard-transactionBenefit p {
   color: var(--transaction-benefit);
-  font-weight: 100;
+  font-weight: 400;
   font-family: inherit;
   margin-top: 0px;
   margin-bottom: 0px;

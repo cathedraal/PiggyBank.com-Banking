@@ -58,6 +58,7 @@ main {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  font-weight: 700;
 }
 
 .dashboard-walletBalance span {

@@ -16,6 +16,13 @@ body::before {
 
 @font-face {
   font-family: 'Inter Variable';
+  src: url('../public/fonts/InterDisplay-Thin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Inter Variable';
   src: url('../public/fonts/InterDisplay-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;

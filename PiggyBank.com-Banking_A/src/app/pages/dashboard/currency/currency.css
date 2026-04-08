@@ -22,7 +22,7 @@ main div {
 }
 
 main span {
-  font-weight: 200;
+  font-weight: 400;
   color: var(--container-title);
   margin-left: 10px;
 }
@@ -39,7 +39,6 @@ main span {
 .dashboard-gbpCurrencyFrom,
 .dashboard-usdCurrencyFrom {
   padding: 10px;
-  border: 1px solid var(--border-color);
   border-radius: 50px;
 }
 

@@ -1,17 +1,22 @@
 header {
   display: flex;
+  max-width: 1350px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  border-radius: 0px 0px 45px 45px;
+  padding: 15px 40px 15px 40px;
   border-bottom: 1px solid var(--border-color);
   background-color: #f8fafc58;
   backdrop-filter: blur(120px);
+  box-sizing: border-box;
 }
 
 :host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
+  width: 100%;
   z-index: 1000;
   top: 0;
 }
@@ -82,9 +87,4 @@ header {
   font-weight: 600;
   letter-spacing: var(--letter-spacing);
   color: var(--black);
-}
-
-:host {
-  width: 100%;
-  display: block;
 }
