@@ -2,24 +2,23 @@ footer {
     flex-direction: column;
     margin-top: auto;
     flex-shrink: 0;
-    max-width: 1350px;
+    max-width: 1200px;
     width: 100%;
     gap: 10px;
     padding: 45px;
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
     position: relative;
     z-index: 1;
     font-family: inherit;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-tertiary);
     margin-bottom: 20px;
     box-sizing: border-box;
 }
 
 .footer-bottomDiv {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .footer-bottomLinksDiv p,
@@ -40,13 +39,14 @@ li {
 }
 
 a {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--white);
   font-weight: 300;
   letter-spacing: 1px;
   margin-top: 0px;
   text-decoration: none;
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .footer-bottomLinksDiv {
@@ -111,14 +111,6 @@ button:hover {
   color: var(--white);
 }
 
-/* .footer-logoText span {
-  width: 100%;
-  height: 1px;
-  background: var(--border-color);
-  opacity: 0.3;
-  margin-left: 15px;
-} */
-
 .footer-subtitle1 {
   font-size: 16px;
   color: var(--white);
@@ -127,10 +119,11 @@ button:hover {
 }
 
 .footer-subtitle2 {
-  font-size: 16px;
+  font-size: 14px;
   width: 320px;
   color: var(--white);
   font-weight: 300;
   letter-spacing: 1px;
   margin-top: 0px;
+  opacity: 0.8;
 }
