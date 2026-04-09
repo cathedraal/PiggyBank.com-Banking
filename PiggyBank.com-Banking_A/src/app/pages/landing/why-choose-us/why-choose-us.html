@@ -1,0 +1,16 @@
+<main>
+  <div class="landing-whychooseusTopDiv">
+    @for (benefit of benefits; track $index) {
+      <div class="landing-whychooseusBenefit">
+        <img [src]="benefit.image" alt="benefit" />
+        <h4>{{ benefit.title }}</h4>
+        <p>{{ benefit.subtitle }}</p>
+      </div>
+    }
+  </div>
+  <hr />
+  <div class="landing-whychooseusBottomDiv">
+    <p>benefits</p>
+    <h1>why choose us?</h1>
+  </div>
+</main>

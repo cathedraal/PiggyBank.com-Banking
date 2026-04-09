@@ -1,0 +1,92 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: var(--container-padding-primary) var(--container-padding-primary) 0
+    var(--container-padding-primary);
+  overflow: hidden;
+}
+
+main h4 {
+  font-weight: 400;
+  padding: 10px 20px 10px 20px;
+  color: var(--label);
+  background-color: var(--label-background);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+main h1 {
+  font-weight: 700;
+  margin-top: 0px;
+  font-size: 100px;
+  letter-spacing: var(--letter-spacing);
+  width: 700px;
+  text-align: center;
+  line-height: 85px;
+  background: linear-gradient(91deg, #0C6FFF 8.85%, rgba(87, 156, 255, 0.70) 94.15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-heroCircleBg {
+  width: 550px;
+  height: 550px;
+  background-color: var(--primary-color);
+  z-index: 100;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(200px);
+}
+
+.landing-heroMockupDiv {
+  position: relative;
+}
+
+.landing-heroMockupImgDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-heroMockupImg {
+  z-index: 300;
+  position: absolute;
+  bottom: 0;
+}
+
+.landing-heroImgAdd {
+  position: absolute;
+  z-index: 500;
+  left: -80px;
+  top: 170px;
+  box-shadow: var(--shadow-tertiary);
+  border-radius: 50px;
+}
+
+.landing-heroImgTransfer {
+  position: absolute;
+  z-index: 500;
+  right: -80px;
+  bottom: 180px;
+  box-shadow: var(--shadow-tertiary);
+  border-radius: 50px;
+}
+
+.landing-heroImgWithdraw {
+  position: absolute;
+  z-index: 500;
+  left: -80px;
+  bottom: 80px;
+  box-shadow: var(--shadow-tertiary);
+  border-radius: 50px;
+}

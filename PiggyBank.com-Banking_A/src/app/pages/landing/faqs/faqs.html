@@ -1,0 +1,21 @@
+<main>
+  <div class="landing-faqsTopDiv">
+    @for (faq of faqs; track $index) {
+      <div class="landing-faq">
+        <button class="landing-faqButton" (click)="toggle($index)">
+          {{ faq.title }}
+          <img src="icons/landing/cross_faqs.svg" alt="close" />
+        </button>
+        <div class="landing-faqPannel" [class.active]="faq.active">
+          <hr />
+          <p>{{ faq.subtitle }}</p>
+        </div>
+      </div>
+    }
+  </div>
+  <hr />
+  <div class="landing-faqsBottomDiv">
+    <p>FAQs</p>
+    <h1>before you start.</h1>
+  </div>
+</main>

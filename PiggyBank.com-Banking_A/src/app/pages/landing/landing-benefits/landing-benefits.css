@@ -1,0 +1,23 @@
+main {
+  justify-content: center;
+  gap: 10px;
+  display: flex;
+  width: fit-content;
+  margin-top: var(--container-spacing);
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+main h4 {
+  font-weight: 400;
+  color: var(--container-title);
+  padding: 30px 50px 30px 50px;
+  background-color: var(--white);
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  opacity: 0.7;
+  margin: 0px;
+}

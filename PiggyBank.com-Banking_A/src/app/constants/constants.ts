@@ -7,8 +7,10 @@ import { articlePageItem, articlePreviewItem } from '../models/interfaces/articl
 import { benefitItem } from '../models/interfaces/benefits.model';
 import { cardTypesItem } from '../models/interfaces/cardTypes.model';
 import { currencyTypesItem } from '../models/interfaces/currencies.model';
+import { faqItem } from '../models/interfaces/faqs.model';
 import { guestItem } from '../models/interfaces/guest.model';
 import { inputValidationContextItem } from '../models/interfaces/inputValidation.model';
+import { stepsItem } from '../models/interfaces/steps.model';
 import { supportButtonItem } from '../models/interfaces/supports.model';
 import { walletActionContextItem } from '../models/interfaces/walletAction.model';
 
@@ -73,21 +75,21 @@ export const ARTICLE_PREVIEW_SECTION: articlePreviewItem[] = [
 export const BENEFITS_SECTION: benefitItem[] = [
   {
     header: 'PiggyBank.com is',
-    image: 'icons/benefits_secureTransactions.svg',
-    title: 'Secure transactions',
-    subtitle: 'Your data and payments are protected with modern encryption and security standards.'
+    image: 'icons/secure_transactions.svg',
+    title: 'secure transactions',
+    subtitle: 'your data and payments are protected with modern encryption and security standards.'
   },
   {
     header: 'PiggyBank.com is',
-    image: 'icons/benefits_instantTransfers.svg',
-    title: 'Instant transfers',
-    subtitle: 'Send and receive money within seconds without unnecessary delays.',
+    image: 'icons/instant_transfers.svg',
+    title: 'instant transfers',
+    subtitle: 'send and receive money within seconds without unnecessary delays.',
   },
   {
     header: 'PiggyBank.com is',
-    image: 'icons/benefits_multiCurrencySupport.svg',
-    title: 'Multi-currency support',
-    subtitle: 'Manage multiple currencies easily in one simple wallet.',
+    image: 'icons/multi_currency_support.svg',
+    title: 'multi-currency support',
+    subtitle: 'manage multiple currencies easily in one simple wallet.',
   },
 ];
 
@@ -285,3 +287,53 @@ export const SUPPORT_BUTTONS: supportButtonItem[] = [
     value: 'I can not log in with my email and password.',
   },
 ];
+
+
+export const HERO_BENEFITS_SECTION: string[] = [
+  'low-rates', 'real-time balance', 'secure payments', 'protected data', 'multi-currency'
+]
+
+export const STEPS_SECTION: stepsItem[] = [
+  {
+    icon: '01',
+    title: 'log in',
+    subtitle: 'create your account in seconds, no paperwork.'
+  },
+  {
+    icon: '02',
+    title: 'adding your first card',
+    subtitle: 'link your card and set your preferred currency.'
+  },
+  {
+    icon: '03',
+    title: 'enjoy',
+    subtitle: 'manipulate with your card whenever you want.'
+  }
+]
+
+export const FAQS_SECTION: faqItem[] = [
+  {
+    title: 'Is my data save?',
+    subtitle: 'Yes. We use modern encryption to protect your personal and financial data at all times.',
+    active: false
+  },
+  {
+    title: 'How many cards can I add?',
+    subtitle: 'You can add three cards and switch between them anytime from your dashboard.',
+    active: false
+  },
+  {
+    title: 'What currencies are supported?',
+    subtitle: 'PiggyBank.com supports EUR, USD, GBP and more — you choose your preferred currency when adding a card.',
+    active: false
+  },
+  {
+    title: 'Is there a fee for transfers?',
+    subtitle: 'Yes. We keep our rates low and transparent at max. 2 per cent — no hidden fees, no surprises.',
+    active: false
+  },
+]
+
+export const LANDING_BENEFITS_SECTION: string[] = [
+  'modern', 'fast', 'simple', 'transparent', 'secure'
+]

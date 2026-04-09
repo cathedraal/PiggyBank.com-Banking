@@ -1,0 +1,68 @@
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  padding: var(--container-padding-secondary);
+  border-radius: var(--border-radius);
+  margin-top: var(--container-spacing);
+}
+
+main div {
+  display: flex;
+  width: 100%;
+}
+
+main h4 {
+  margin: 0 0 80px 0;
+  width: 100%;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+main h4 span {
+  background-color: var(--primary-color-hover);
+  color: var(--white);
+  font-weight: 400;
+  padding: 20px;
+  max-width: 100px;
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+main div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--white);
+  border: none;
+  color: var(--black);
+  font-family: inherit;
+  height: fit-content;
+  padding: 17px;
+  border-radius: 40px;
+  font-weight: 600;
+  max-width: 220px;
+  width: 100%;
+  box-shadow: var(--shadow-secondary);
+  margin-left: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: medium;
+}
+
+main div button svg {
+  transition: all 0.3s ease;
+}
+
+main div button:hover {
+  background-color: var(--white-hover);
+}
+
+main div button:hover svg {
+  transform: translateX(8px);
+}

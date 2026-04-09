@@ -1,0 +1,88 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  margin: var(--container-spacing) 0 var(--container-spacing) 0;
+}
+
+.landing-ctaPill {
+  color: var(--black);
+  border-radius: 50px;
+  border: 1px solid #11111152;
+  width: fit-content;
+  margin: 0 0 15px 0;
+  font-weight: 300;
+  padding: 10px 20px 10px 20px;
+}
+
+.landing-ctaDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  z-index: 500;
+}
+
+.landing-ctaDiv h1 {
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  letter-spacing: -1.44px;
+  width: 400px;
+  text-align: center;
+  line-height: 42px;
+  background: linear-gradient(90deg, #0c6ffe 0%, rgba(12, 111, 254, 0.29) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-ctaSubtitle {
+  width: 300px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.landing-ctaDiv button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--white);
+  font-family: inherit;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 40px;
+  font-weight: 400;
+  width: fit-content;
+  box-shadow: var(--shadow-tertiary);
+  margin-top: 70px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.landing-ctaDiv button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.landing-ctaCircleBg {
+  width: 550px;
+  height: 550px;
+  background-color: var(--primary-color);
+  z-index: 100;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(200px);
+  bottom: -300px;
+  position: relative;
+}

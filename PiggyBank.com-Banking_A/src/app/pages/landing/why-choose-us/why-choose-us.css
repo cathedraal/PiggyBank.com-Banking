@@ -1,0 +1,67 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--container-spacing);
+  background-color: var(--white);
+  padding: var(--container-padding-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+  width: 100%;
+  margin: 25px 0 25px 0;
+}
+
+.landing-whychooseusTopDiv {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}
+
+.landing-whychooseusBenefit img {
+  background-color: var(--primary-color-icon);
+  width: fit-content;
+  margin: 0px;
+  width: 30px;
+  padding: 20px;
+  color: var(--primary-color);
+  border-radius: 20px;
+}
+
+.landing-whychooseusBenefit {
+  max-width: 170px;
+  width: 100%;
+}
+
+.landing-whychooseusBenefit h4 {
+  color: var(--black);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-secondary);
+}
+
+.landing-whychooseusBenefit p {
+  margin-bottom: 0px;
+  color: var(--label);
+}
+
+.landing-whychooseusBottomDiv p {
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  padding: 10px 20px 10px 20px;
+  color: var(--label);
+  background-color: var(--label-background);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  width: fit-content;
+}
+
+.landing-whychooseusBottomDiv h1 {
+  margin: 0px;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 600;
+}

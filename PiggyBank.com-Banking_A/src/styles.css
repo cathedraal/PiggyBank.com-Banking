@@ -16,7 +16,7 @@ body::before {
 
 @font-face {
   font-family: 'Inter Variable';
-  src: url('../public/fonts/InterDisplay-Thin.woff2') format('woff2');
+  src: url('../public/fonts/InterDisplay-Light.woff2') format('woff2');
   font-style: normal;
   font-weight: 300;
 }
@@ -66,7 +66,10 @@ h4 {
 }
 
 :root {
-  --letter-spacing: -0.5px;
+  --container-padding-secondary: 60px;
+  --container-padding-primary: 45px;
+  --letter-spacing-secondary: -0.5px;
+  --letter-spacing-primary: -1.44px;
   --container-spacing: 25px;
   --border-radius: 65px;
   --border-radius-2: 40px;
@@ -82,8 +85,10 @@ h4 {
   --light-black: #0000000a;
   --subtitle: #767676;
   --label: #7b7b7b;
+  --label-background: #f9f9f9;
   --container-title: #787878;
   --primary-color: #0c6fff;
+  --primary-color-icon: #eff5ff;
   --primary-color-hover: #4a92ff;
   --overlay: #00000008;
   --light-gray: #f8f8f8;
@@ -95,6 +100,14 @@ h4 {
   --profile-button: #e5e5e5;
   --profile-button-hover: #d9d9d9;
   --transaction-benefit: #b9b9b9;
+  --shadow-container-primary: 
+    0 215px 60px 0 rgba(0, 0, 0, 0.00), 0 138px 55px 0 rgba(0, 0, 0, 0.01), 0 77px 46px 0 rgba(0, 0, 0, 0.05), 0 34px 34px 0 rgba(0, 0, 0, 0.09), 0 9px 19px 0 rgba(0, 0, 0, 0.10);
+  --shadow-container-secondary: 
+    0 376px 105px 0 rgba(0, 0, 0, 0.00), 0 241px 96px 0 rgba(0, 0, 0, 0.01), 0 135px 81px 0 rgba(0, 0, 0, 0.05), 0 60px 60px 0 rgba(0, 0, 0, 0.09), 0 15px 33px 0 rgba(0, 0, 0, 0.10);
+  --shadow-tertiary: 
+    0 145px 41px 0 rgba(0, 0, 0, 0.00), 0 93px 37px 0 rgba(0, 0, 0, 0.02), 0 52px 31px 0 rgba(0, 0, 0, 0.08), 0 23px 23px 0 rgba(0, 0, 0, 0.13), 0 6px 13px 0 rgba(0, 0, 0, 0.15);
+  --shadow-secondary: 
+    0 102px 28px 0 rgba(0, 0, 0, 0.00), 0 65px 26px 0 rgba(0, 0, 0, 0.03), 0 37px 22px 0 rgba(0, 0, 0, 0.10), 0 16px 16px 0 rgba(0, 0, 0, 0.17), 0 4px 9px 0 rgba(0, 0, 0, 0.20);
   --shadow:
     0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 24px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(0, 0, 0, 0.1);
   --shadow-hovered:
