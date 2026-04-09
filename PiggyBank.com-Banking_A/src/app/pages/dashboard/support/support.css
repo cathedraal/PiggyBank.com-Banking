@@ -10,7 +10,7 @@ main {
     background-color: var(--primary-color);
     border-radius: var(--border-radius-2);
     box-sizing: border-box;
-    padding: 45px;
+    padding: 35px;
     margin-top: var(--container-spacing);
     max-width: 950px;
     width: 100%;
@@ -50,5 +50,5 @@ main {
     margin: 0px;
     opacity: 0.8;
     color: var(--white);
-    font-weight: 400;
+    font-weight: 300;
 }

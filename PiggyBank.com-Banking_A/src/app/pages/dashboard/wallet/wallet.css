@@ -19,14 +19,14 @@ main {
   height: 100%;
   transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-container-primary);
   position: relative;
   z-index: 100;
   box-sizing: border-box;
 }
 
 .dashboard-wallet:hover {
-  background-color: var(--white-hover);
+  transform: scale(1.007);
 }
 
 .dashboard-walletTitle {

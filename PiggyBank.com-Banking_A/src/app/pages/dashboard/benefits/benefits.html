@@ -1,9 +1,8 @@
 <main>
     @for (benefit of benefits; track $index) {
         <div class="dashboard-benefit">
-            <h4 class="dashboard-benefitHeader">{{benefit.header}}</h4>
             <button><img src="icons/cross.svg" class="dashboard-benefitDelete" alt="cancel" (click)="deleteBenefit(benefit)"></button>
-            <img [src]="benefit.image" alt="benefit">
+            <img [src]="benefit.image" alt="benefit" class="dashboard-benefitImg">
             <h4 class="dashboard-benefitTitle">
                 {{ benefit.title }}
             </h4>

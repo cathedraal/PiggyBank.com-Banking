@@ -6,15 +6,17 @@
     <div class="dashboard-articlesDiv">
             @for (article of articles; track $index) {
                 <div class="dashboard-article">
-                    <div class="dashboard-articleImgDiv">
-                        <img [src]="article.image" alt="article" class="dashboard-articleImg">
-                        <img src="icons/white_logo.svg" alt="white logo" class="dashboard-articleLogo">
-                        <p class="dashboard-articleTime"><img src="icons/time.svg" alt="time" class="dashboard-articleTimeIcon">{{article.time}}</p>
+                    <div class="dashboard-articleContent">
+                        <div class="dashboard-articleImgDiv">
+                            <img [src]="article.image" alt="article" class="dashboard-articleImg">
+                            <img src="icons/white_logo.svg" alt="white logo" class="dashboard-articleLogo">
+                            <p class="dashboard-articleTime"><img src="icons/time.svg" alt="time" class="dashboard-articleTimeIcon">{{article.time}}</p>
+                        </div>
+                        
+                        <p class="dashboard-articleDate">{{article.date}}</p>
+                        <h4>{{article.title}}</h4>
+                        <p class="dashboard-articleSubtitle">{{article.subtitle}}</p>
                     </div>
-                    
-                    <p class="dashboard-articleDate">{{article.date}}</p>
-                    <h4>{{article.title}}</h4>
-                    <p class="dashboard-articleSubtitle">{{article.subtitle}}</p>
                     <button>{{article.btnText}}</button>
                 </div>
             }
