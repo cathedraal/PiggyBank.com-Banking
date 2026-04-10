@@ -290,7 +290,7 @@ export const SUPPORT_BUTTONS: supportButtonItem[] = [
 
 
 export const HERO_BENEFITS_SECTION: string[] = [
-  'low-rates', 'real-time balance', 'secure payments', 'protected data', 'multi-currency'
+  'low-rates.', 'real-time balance.', 'secure payments.', 'protected data.', 'multi-currency.'
 ]
 
 export const STEPS_SECTION: stepsItem[] = [
@@ -335,5 +335,5 @@ export const FAQS_SECTION: faqItem[] = [
 ]
 
 export const LANDING_BENEFITS_SECTION: string[] = [
-  'modern', 'fast', 'simple', 'transparent', 'secure'
+  'modern.', 'fast.', 'simple.', 'transparent.', 'secure.'
 ]

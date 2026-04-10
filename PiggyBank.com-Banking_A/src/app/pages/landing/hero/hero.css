@@ -17,7 +17,7 @@ main {
     cursor: default;
 }
 
-main h4 {
+main p {
   font-weight: 400;
   padding: 10px 20px 10px 20px;
   color: var(--label);

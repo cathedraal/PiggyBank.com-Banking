@@ -19,7 +19,7 @@ main.show {
 }
 
 .landing-aboutUsLeftContainer p {
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   font-weight: 400;
   padding: 10px 20px 10px 20px;
   color: var(--label);
@@ -27,6 +27,7 @@ main.show {
   border: 1px solid var(--border-color);
   border-radius: 40px;
   width: fit-content;
+  font-weight: 300;
 }
 
 .landing-aboutUsLeftContainer h1 {
@@ -47,11 +48,17 @@ main.show {
   font-weight: 600;
   letter-spacing: var(--letter-spacing-secondary);
   margin: 0px;
+  margin-bottom: 20px;
 }
 
 .landing-aboutUsRightContainer h4 span {
   color: var(--primary-color);
-  font-size: 34px;
+  font-size: 36px;
+  transition: all 0.3s ease;
+}
+
+.landing-aboutUsRightContainer h4 span:hover {
+    font-size: 46px;
 }
 
 .landing-aboutUsRightContainer p {

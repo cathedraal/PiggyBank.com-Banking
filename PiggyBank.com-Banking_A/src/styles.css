@@ -85,11 +85,11 @@ body::before {
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 48px;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 h3 {
@@ -97,7 +97,11 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
 }
 
 :root {

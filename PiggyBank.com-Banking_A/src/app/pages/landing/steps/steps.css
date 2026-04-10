@@ -67,15 +67,17 @@ hr {
   color: var(--black);
   letter-spacing: var(--letter-spacing-secondary);
   font-weight: 600;
+  margin: 20px 0 20px 0;
 }
 
 .landing-step p {
   color: var(--label);
   margin: 0px;
+  font-weight: 300;
 }
 
 .landing-stepsBottomDiv p {
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   font-weight: 400;
   padding: 10px 20px 10px 20px;
   color: var(--label);

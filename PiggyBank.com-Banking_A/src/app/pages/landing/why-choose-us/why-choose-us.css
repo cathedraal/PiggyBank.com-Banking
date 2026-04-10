@@ -58,15 +58,17 @@ hr {
   color: var(--black);
   font-weight: 600;
   letter-spacing: var(--letter-spacing-secondary);
+  margin: 20px 0 20px 0
 }
 
 .landing-whychooseusBenefit p {
   margin-bottom: 0px;
   color: var(--label);
+  font-weight: 300;
 }
 
 .landing-whychooseusBottomDiv p {
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   font-weight: 400;
   padding: 10px 20px 10px 20px;
   color: var(--label);

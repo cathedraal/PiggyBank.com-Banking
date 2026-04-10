@@ -48,17 +48,17 @@ main.show {
 
 .landing-faqPannel {
   display: grid;
-  grid-template-rows: 0fr; /* "Схлопнутое" состояние */
-  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Мягкая кривая */
+  grid-template-rows: 0fr; 
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
   overflow: hidden;
 }
 
 .landing-faqPannel.active {
-  grid-template-rows: 1fr; /* Раскрываемся на весь контент */
+  grid-template-rows: 1fr; 
 }
 
 .landing-faqPannelInner {
-  min-height: 0; /* Техническое свойство, чтобы grid мог вычислить 0fr */
+  min-height: 0; 
 }
 
 .landing-faqPannel p {
@@ -97,7 +97,7 @@ hr {
 }
 
 .landing-faqsBottomDiv p {
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   font-weight: 400;
   padding: 10px 20px 10px 20px;
   color: var(--label);
