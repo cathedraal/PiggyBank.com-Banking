@@ -22,5 +22,6 @@ export class App implements OnInit {
     };
 
     requestAnimationFrame(raf);
+    lenis.scrollTo(0)
   }
 }
