@@ -34,6 +34,13 @@ main span {
   background-color: var(--white);
   border-radius: 50px;
   border: 1px solid var(--border-color);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.dashboard-gbpCurrencyDiv:hover,
+.dashboard-usdCurrencyDiv:hover {
+  transform: scale(1.03);
 }
 
 .dashboard-gbpCurrencyFrom,

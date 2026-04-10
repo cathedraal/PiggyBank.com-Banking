@@ -12,6 +12,12 @@ main {
   background-color: var(--white);
   border-radius: var(--border-radius);
   position: relative;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.dashboard-benefit:hover {
+  transform: scale(1.007);
 }
 
 .dashboard-benefit button {

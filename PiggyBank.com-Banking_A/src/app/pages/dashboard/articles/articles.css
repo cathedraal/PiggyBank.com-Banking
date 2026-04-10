@@ -1,12 +1,17 @@
 main {
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: var(--container-padding-primary);
     background-color: var(--white);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     margin-top: var(--container-spacing);
     margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+
+main:hover {
+    transform: scale(1.005);
 }
 
 main button {
@@ -63,7 +68,7 @@ main button:hover img {
 }
 
 .dashboard-articleImg {
-    width: 381px;
+    width: 360px;
     height: 181px;
     object-position: center 65%;
     object-fit: cover;
@@ -129,9 +134,13 @@ main button:hover img {
     margin-bottom: 0px;
     transition: all 0.3s ease;
     margin-top: 30px;
-    max-width: 381px;
+    max-width: 360px;
 }
 
 .dashboard-article button:hover {
     background-color: var(--white);
+}
+
+.dashboard-article {
+    max-width: 400px;
 }

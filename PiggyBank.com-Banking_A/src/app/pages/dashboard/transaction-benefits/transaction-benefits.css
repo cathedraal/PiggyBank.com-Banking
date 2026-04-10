@@ -25,6 +25,11 @@ main {
   border-radius: 50px;
   border: 1px solid var(--border-color);
   padding: 17px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-transactionBenefit:hover {
+  transform: scale(1.05);
 }
 
 .dashboard-transactionBenefit p {
