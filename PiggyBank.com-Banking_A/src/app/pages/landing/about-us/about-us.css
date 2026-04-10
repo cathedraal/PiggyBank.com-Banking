@@ -1,10 +1,21 @@
 main {
-  display: flex;
-  background-color: var(--white);
-  border: 1px solid var(--border-color);
-  padding: var(--container-padding-secondary);
-  border-radius: var(--border-radius);
-  margin-top: var(--container-spacing);
+    display: flex;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: var(--container-padding-secondary);
+    border-radius: var(--border-radius);
+    margin-top: var(--container-spacing);    
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateY(100px);
+    cursor: default;
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+main.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .landing-aboutUsLeftContainer p {

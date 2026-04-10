@@ -1,11 +1,21 @@
 main {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--border-color);
-  padding: var(--container-padding-secondary);
-  background-color: var(--white);
-  margin-top: var(--container-spacing);
-  border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    padding: var(--container-padding-secondary);
+    background-color: var(--white);
+    margin-top: var(--container-spacing);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+main.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .landing-faqsTopDiv {
@@ -37,11 +47,18 @@ main {
 }
 
 .landing-faqPannel {
-  display: none;
+  display: grid;
+  grid-template-rows: 0fr; /* "Схлопнутое" состояние */
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Мягкая кривая */
+  overflow: hidden;
 }
 
 .landing-faqPannel.active {
-  display: block;
+  grid-template-rows: 1fr; /* Раскрываемся на весь контент */
+}
+
+.landing-faqPannelInner {
+  min-height: 0; /* Техническое свойство, чтобы grid мог вычислить 0fr */
 }
 
 .landing-faqPannel p {
@@ -58,6 +75,11 @@ main {
   border-radius: 50%;
   margin-left: auto;
   background-color: var(--primary-color-icon);
+  transition: all 0.3s ease;
+}
+
+.landing-faqsTopDiv button img.active {
+    transform: rotate(45deg);
 }
 
 hr {

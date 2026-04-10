@@ -1,9 +1,25 @@
 main {
-  justify-content: center;
-  gap: 10px;
-  display: flex;
-  width: fit-content;
-  margin-top: var(--container-spacing);
+    justify-content: center;
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: var(--container-spacing);
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+    border-radius: 30px;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+main.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 :host {
@@ -14,10 +30,27 @@ main {
 main h4 {
   font-weight: 400;
   color: var(--container-title);
-  padding: 30px 50px 30px 50px;
+  padding: 40px 50px 40px 50px;
   background-color: var(--white);
   border-radius: 50px;
   border: 1px solid var(--border-color);
   opacity: 0.7;
   margin: 0px;
+  text-align: center;
+  width: 150px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+main h4:hover {
+    padding: 40px 30px 40px 30px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    animation: spin 20s infinite linear;
 }

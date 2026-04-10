@@ -1,11 +1,27 @@
 main {
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--container-spacing);
-  background-color: var(--white);
-  padding: var(--container-padding-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--container-spacing);
+    background-color: var(--white);
+    padding: var(--container-padding-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius); 
+    cursor: default;   
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+main.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+:host {
+    position: relative;
+    z-index: 100;
 }
 
 hr {

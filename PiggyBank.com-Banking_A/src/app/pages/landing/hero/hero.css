@@ -1,15 +1,20 @@
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 90px;
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  padding: var(--container-padding-primary) var(--container-padding-primary) 0
-    var(--container-padding-primary);
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: var(--container-padding-primary) var(--container-padding-primary) 0
+      var(--container-padding-primary);
+    overflow: hidden;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-timing-function: ease;
+    cursor: default;
 }
 
 main h4 {
@@ -71,6 +76,7 @@ main h1 {
   top: 170px;
   box-shadow: var(--shadow-tertiary);
   border-radius: 50px;
+  animation: floating 1.5s ease-in-out infinite alternate;
 }
 
 .landing-heroImgTransfer {
@@ -80,6 +86,7 @@ main h1 {
   bottom: 180px;
   box-shadow: var(--shadow-tertiary);
   border-radius: 50px;
+  animation: floating 2s ease-in-out infinite alternate;
 }
 
 .landing-heroImgWithdraw {
@@ -89,4 +96,5 @@ main h1 {
   bottom: 80px;
   box-shadow: var(--shadow-tertiary);
   border-radius: 50px;
+  animation: floating 2.5s ease-in-out infinite alternate;
 }

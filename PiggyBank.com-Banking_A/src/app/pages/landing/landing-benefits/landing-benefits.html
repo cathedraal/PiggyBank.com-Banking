@@ -1,5 +1,17 @@
-<main>
-    @for (benefit of benefits; track $index) {
-        <h4>{{benefit}}</h4>
-    }
+<main #mainEl>
+    <div>
+        @for (benefit of benefits; track $index) {
+            <h4>{{benefit}}</h4>
+        }
+    </div>
+    <div aria-hidden="true">
+        @for (benefit of benefits; track $index) {
+            <h4>{{benefit}}</h4>
+        }
+    </div>
+    <div aria-hidden="true">
+        @for (benefit of benefits; track $index) {
+            <h4>{{benefit}}</h4>
+        }
+    </div>
 </main>

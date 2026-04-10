@@ -7,6 +7,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes floating {
+  from {
+    transform: translateY(0);
+  } to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  } to {
+    translate: -100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.1;
+    transform: translateY(300px);
+    filter: blur(30px);
+  } to {
+    opacity: 1;
+    transform: translateY(0px);
+    filter: blur(0);
+  }
+}
+
 body::before {
   content: '';
   position: fixed;
