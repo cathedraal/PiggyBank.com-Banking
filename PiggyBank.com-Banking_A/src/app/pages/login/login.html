@@ -6,9 +6,9 @@
     @let name = form.controls.name;
     @let surname = form.controls.surname;
     @let email = form.controls.email;
-    <p class="login-headerParagraph">Welcome to</p>
-    <h1 class="login-headerTitle">PiggyBank.com</h1>
-    <img src="icons/logo.svg" class="login-logo" />
+    @let phone = form.controls.phone;
+    <h1 class="login-headerTitle">Register</h1>
+    <h4 class="login-headerSubtitle">Personal details</h4>
     <div class="login-inputs">
       <div class="login-nameDiv">
         <input type="text" class="login-nameInput" placeholder="name" formControlName="name" />
@@ -35,24 +35,72 @@
           }
         </div>
       </div>
-    </div>
-    <button class="login-submitButton" (click)="onSubmit()">continue</button>
-    <div class="login-dividerDiv">
-      <div class="login-divider">
-        <span class="login-dividerSpan">Or</span>
+      <div class="login-phoneDiv">
+        <input type="text" class="login-phoneInput" maxlength="20" placeholder="phone number" formControlName="phone" (input)="onPhoneNumberInput($event)"/>
+        <div class="error-label" [class.visible]="phone.invalid && phone.dirty">
+          @if (phone.hasError('required')) {
+            phone required
+          } @else if (!isValidPhone) {
+            phone incorrect
+          } @else {
+            phone to short
+          }
+        </div>
       </div>
+      <select
+          name="country codes"
+          id="countryCodes"
+          class="login-countryCodeDropdown"
+          (change)="onCountryCodeChange($event)"
+        >
+          <button>
+            <div>
+              <div class="selectedcontent2">{{ selectedCountryCode.value }}</div>
+            </div>
+          </button>
+          <div class="login-countryCodeOptionContainer">
+            @for (ccode of ccodes; track $index) {
+              <option [value]="ccode.value" class="login-countryCodeOption">
+                <div class="login-countryCodeOptioDiv">
+                  <span class="login-countryCodeOptionTitle">{{ ccode.code }}</span>
+                </div>
+              </option>
+            }
+          </div>
+      </select>
     </div>
-    <div class="login-actionButtons">
+    <hr>
+    <div class="login-containerButtons">
       <button routerLink="/landing" class="login-backButton" (click)="onBack()">
-        <img src="icons/back.svg" alt="back" />
+        <svg
+          class="arrow-icon"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 15H28M28 15L21 8M28 15L21 22"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </button>
-      <button
-        routerLink="/add-card"
-        class="login-continueAsGuestButton"
-        (click)="onSubmitAsGuest()"
-      >
-        go as guest
-      </button>
+      <button class="login-submitButton" (click)="onSubmit()">continue</button>
     </div>
+  </div>
+  <div class="login-asGuestContainer">
+    <h1>Continue as guest</h1>
+    <button
+      routerLink="/add-card"
+      class="login-continueAsGuestButton"
+      (click)="onSubmitAsGuest()"
+    >
+      continue
+    </button>
   </div>
 </main>

@@ -6,6 +6,7 @@
 import { articlePageItem, articlePreviewItem } from '../models/interfaces/articles.model';
 import { benefitItem } from '../models/interfaces/benefits.model';
 import { cardTypesItem } from '../models/interfaces/cardTypes.model';
+import { countryCodeItem } from '../models/interfaces/ccodes.model';
 import { currencyTypesItem } from '../models/interfaces/currencies.model';
 import { faqItem } from '../models/interfaces/faqs.model';
 import { guestItem } from '../models/interfaces/guest.model';
@@ -31,6 +32,7 @@ export const GUEST_PROFILE: guestItem = {
   name: 'Guest',
   surname: ['Müller', 'Schmidt', 'Johnson', 'Smith', 'Clinton'],
   email: ['workemail@gmail.com', 'example@gmail.com', 'noFun@gmail.com', 'businessmannn@gmail.com'],
+  phone: ['157 8342 9156', '202 555 7843', '7911 638204', '6 72 48 59 13'],
 };
 
 /**
@@ -45,7 +47,7 @@ export const ARTICLE_PREVIEW_SECTION: articlePreviewItem[] = [
       'Digital wallets are becoming increasingly popular among young adults, as users value fast transfers, easy balance tracking, and simple mobile interfaces.',
     btnText: 'Read',
     value: 'digitalWallets',
-    time: '2 min'
+    time: '2 min',
   },
   {
     image: 'images/articlePreview_zeroFees.svg',
@@ -55,7 +57,7 @@ export const ARTICLE_PREVIEW_SECTION: articlePreviewItem[] = [
       'Several banks have launched instant money transfers without commissions, aiming to attract more users to their digital banking platforms.',
     btnText: 'Read',
     value: 'zeroFees',
-    time: '1 min'
+    time: '1 min',
   },
   {
     image: 'images/articlePreview_personalFinance.svg',
@@ -65,7 +67,7 @@ export const ARTICLE_PREVIEW_SECTION: articlePreviewItem[] = [
       'New personal finance features such as spending analytics and smart budgeting tools are helping users better control their expenses.',
     btnText: 'Read',
     value: 'personalFinance',
-    time: '3 min'
+    time: '3 min',
   },
 ];
 
@@ -77,7 +79,7 @@ export const BENEFITS_SECTION: benefitItem[] = [
     header: 'PiggyBank.com is',
     image: 'icons/secure_transactions.svg',
     title: 'secure transactions',
-    subtitle: 'your data and payments are protected with modern encryption and security standards.'
+    subtitle: 'your data and payments are protected with modern encryption and security standards.',
   },
   {
     header: 'PiggyBank.com is',
@@ -288,52 +290,82 @@ export const SUPPORT_BUTTONS: supportButtonItem[] = [
   },
 ];
 
-
 export const HERO_BENEFITS_SECTION: string[] = [
-  'low-rates.', 'real-time balance.', 'secure payments.', 'protected data.', 'multi-currency.'
-]
+  'low-rates.',
+  'real-time balance.',
+  'secure payments.',
+  'protected data.',
+  'multi-currency.',
+];
 
 export const STEPS_SECTION: stepsItem[] = [
   {
     icon: '01',
     title: 'log in',
-    subtitle: 'create your account in seconds, no paperwork.'
+    subtitle: 'create your account in seconds, no paperwork.',
   },
   {
     icon: '02',
     title: 'adding your first card',
-    subtitle: 'link your card and set your preferred currency.'
+    subtitle: 'link your card and set your preferred currency.',
   },
   {
     icon: '03',
     title: 'enjoy',
-    subtitle: 'manipulate with your card whenever you want.'
-  }
-]
+    subtitle: 'manipulate with your card whenever you want.',
+  },
+];
 
 export const FAQS_SECTION: faqItem[] = [
   {
     title: 'Is my data save?',
-    subtitle: 'Yes. We use modern encryption to protect your personal and financial data at all times.',
-    active: false
+    subtitle:
+      'Yes. We use modern encryption to protect your personal and financial data at all times.',
+    active: false,
   },
   {
     title: 'How many cards can I add?',
     subtitle: 'You can add three cards and switch between them anytime from your dashboard.',
-    active: false
+    active: false,
   },
   {
     title: 'What currencies are supported?',
-    subtitle: 'PiggyBank.com supports EUR, USD, GBP and more — you choose your preferred currency when adding a card.',
-    active: false
+    subtitle:
+      'PiggyBank.com supports EUR, USD, GBP and more — you choose your preferred currency when adding a card.',
+    active: false,
   },
   {
     title: 'Is there a fee for transfers?',
-    subtitle: 'Yes. We keep our rates low and transparent at max. 2 per cent — no hidden fees, no surprises.',
-    active: false
+    subtitle:
+      'Yes. We keep our rates low and transparent at max. 2 per cent — no hidden fees, no surprises.',
+    active: false,
   },
-]
+];
 
 export const LANDING_BENEFITS_SECTION: string[] = [
-  'modern.', 'fast.', 'simple.', 'transparent.', 'secure.'
-]
+  'modern.',
+  'fast.',
+  'simple.',
+  'transparent.',
+  'secure.',
+];
+
+export const COUNTRY_CODES: countryCodeItem[] = [
+  { value: '+1', code: '+1' },
+  { value: '+44', code: '+44' },
+  { value: '+49', code: '+49' },
+  { value: '+33', code: '+33' },
+  { value: '+39', code: '+39' },
+  { value: '+34', code: '+34' },
+  { value: '+7', code: '+7' },
+  { value: '+380', code: '+380' },
+  { value: '+48', code: '+48' },
+  { value: '+90', code: '+90' },
+  { value: '+86', code: '+86' },
+  { value: '+81', code: '+81' },
+  { value: '+82', code: '+82' },
+  { value: '+61', code: '+61' },
+  { value: '+55', code: '+55' },
+  { value: '+91', code: '+91' },
+  { value: '+52', code: '+52' },
+];

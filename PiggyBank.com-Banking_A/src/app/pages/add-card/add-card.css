@@ -41,6 +41,8 @@ main {
   align-self: first baseline;
   margin-bottom: 30px;
   margin-top: 0px;
+  font-size: 40px;
+  letter-spacing: var(--letter-spacing-primary);
 }
 
 .addCard-inputs {
@@ -86,6 +88,7 @@ main {
   transition: all 0.3s ease;
   font-size: 15px;
   box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 .error-label.visible {
@@ -136,6 +139,10 @@ main {
   }
 }
 
+.addCard-dropdown:hover {
+  background-color: var(--white-hover);
+}
+
 .addCard-optionDiv {
   display: flex;
   flex-direction: column;
@@ -172,6 +179,7 @@ main {
   margin-bottom: 15px;
   color: var(--subtitle);
   font-weight: 400;
+  font-size: 20px;
 }
 
 .addCard-line {

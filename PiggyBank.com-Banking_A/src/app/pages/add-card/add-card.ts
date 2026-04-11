@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../../services/settings/settings.service';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user/user.service';
@@ -24,7 +24,7 @@ interface AddCardForm {
   templateUrl: `./add-card.html`,
   styleUrl: './add-card.css',
 })
-export class AddCardComponent {
+export class AddCardComponent implements OnInit {
   // html template
   isRegistrationFlow: boolean = false;
   isPopupOpen: boolean = false;
@@ -55,7 +55,7 @@ export class AddCardComponent {
   });
 
   protected form = new FormGroup<AddCardForm>({
-    holder: new FormControl<string>('', {
+    holder: new FormControl<string>(``, {
       nonNullable: true,
       validators: Validators.required,
     }),
@@ -81,6 +81,11 @@ export class AddCardComponent {
   ) {
     this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
     this.user = this.userService.getUser();
+    this.form.controls.holder.setValue(`${this.user?.name.toUpperCase()} ${this.user?.surname.toUpperCase()}`)
+  }
+
+  ngOnInit(): void {
+    console.log(this.user)
   }
 
   /**

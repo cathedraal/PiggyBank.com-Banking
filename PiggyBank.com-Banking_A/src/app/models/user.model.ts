@@ -12,7 +12,8 @@ export class User {
     public name: string,
     public surname: string,
     public email: string,
-    public logDate: string,
+    public phone: {code: string, number: string},
+    public logDate: string
   ) {}
 
   addCard(card: Card): void {
