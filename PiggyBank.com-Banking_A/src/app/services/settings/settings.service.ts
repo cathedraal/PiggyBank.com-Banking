@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SettingsService {
   private userQuestion: string = '';
-  private registrationFlow: boolean = false;
+  private registrationFlow: boolean = true;
 
   setUserQuestion(value: string): void {
     this.userQuestion = value;

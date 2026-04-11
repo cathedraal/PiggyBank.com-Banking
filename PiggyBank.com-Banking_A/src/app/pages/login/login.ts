@@ -8,6 +8,7 @@ import { User } from '../../models/user.model';
 import { getRandomInt } from '../../utils/utils';
 import { parsePhoneNumberWithError, type CountryCode } from 'libphonenumber-js';
 import { countryCodeItem } from '../../models/interfaces/ccodes.model';
+import { RegistrationFlowComponent } from "../../components/registration-flow/registration-flow";
 
 interface LoginForm {
   name: FormControl<string>;
@@ -18,7 +19,7 @@ interface LoginForm {
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, RegistrationFlowComponent],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })

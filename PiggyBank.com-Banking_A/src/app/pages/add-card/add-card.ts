@@ -11,6 +11,7 @@ import { currencyTypesItem } from '../../models/interfaces/currencies.model';
 import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/constants';
 import { Action } from '../../models/action.model';
 import { cardTypesItem } from '../../models/interfaces/cardTypes.model';
+import { RegistrationFlowComponent } from '../../components/registration-flow/registration-flow';
 
 interface AddCardForm {
   holder: FormControl<string>;
@@ -20,7 +21,7 @@ interface AddCardForm {
 }
 @Component({
   selector: 'app-add-card',
-  imports: [RouterLink, ReactiveFormsModule, PopupComponent],
+  imports: [RouterLink, ReactiveFormsModule, PopupComponent, RegistrationFlowComponent],
   templateUrl: `./add-card.html`,
   styleUrl: './add-card.css',
 })

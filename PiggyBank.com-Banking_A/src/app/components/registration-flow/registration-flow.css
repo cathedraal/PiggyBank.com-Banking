@@ -1,0 +1,76 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+hr {
+    height: 1px;
+    width: 200px;
+    border: none;
+    background-color: var(--border-color);
+}
+
+hr.active {
+    width: 100px;
+}
+
+:host {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.registrationFlow-firstStep {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.registrationFlow-secondStep {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.registrationFlow-secondStepIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    border: 1px solid var(--border-color);
+    padding: 23px 20px 23px 20px;
+}
+
+.registrationFlow-firstStepIcon img {
+    width: 23.5px;
+}
+
+.registrationFlow-firstStepIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    border: 1px solid var(--border-color);
+    padding: 23px 22px 23px 22px;
+}
+
+.registrationFlow-firstStepIcon.active {
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.registrationFlow-firstStepIcon h4,
+.registrationFlow-secondStepIcon h4 {
+    margin: 0px;
+    color: var(--container-title);
+    font-weight: 400;
+}

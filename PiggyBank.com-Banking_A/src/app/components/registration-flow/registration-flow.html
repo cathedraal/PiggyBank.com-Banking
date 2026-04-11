@@ -1,0 +1,21 @@
+<main>
+    <div class="registrationFlow-firstStep">
+        <div class="registrationFlow-firstStepIcon" [class.active]="isLoginPassed">
+            @if (!isLoginPassed) {
+                <h4>1/2</h4>
+            } @else {
+                <img src="icons/registration-flow/check.svg" alt="first step">
+            }
+        </div>
+        <p>logging in</p>
+    </div>
+    <hr [class.active]="isLoginPassed">
+    <div class="registrationFlow-secondStep">
+        <div class="registrationFlow-secondStepIcon">
+            <h4>2/2</h4>
+        </div>
+        @if (isLoginPassed) {
+            <p>adding your card</p>
+        }
+    </div>
+</main>

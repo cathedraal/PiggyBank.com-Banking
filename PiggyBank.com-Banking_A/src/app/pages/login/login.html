@@ -1,7 +1,8 @@
+@if (isRegistrationFlow) {
+  <app-registration-flow
+  [isLoginPassed]="false"></app-registration-flow>
+}
 <main>
-  @if (isRegistrationFlow) {
-    <p class="registration-label">Step 1/2 – logging in</p>
-  }
   <div class="login-container" [formGroup]="form">
     @let name = form.controls.name;
     @let surname = form.controls.surname;

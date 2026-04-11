@@ -1,7 +1,8 @@
+@if (isRegistrationFlow) {
+  <app-registration-flow
+  [isLoginPassed]="true"></app-registration-flow>
+}
 <main>
-  @if (isRegistrationFlow) {
-    <p class="registration-label">Step 2/2 – adding card</p>
-  }
   <div class="addCard-container" [formGroup]="form">
     @let holder = form.controls.holder;
     @let number = form.controls.number;
