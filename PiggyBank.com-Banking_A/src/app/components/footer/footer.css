@@ -2,7 +2,6 @@ footer {
     flex-direction: column;
     margin-top: auto;
     flex-shrink: 0;
-    max-width: 1200px;
     width: 100%;
     gap: 10px;
     padding: 45px;
@@ -12,8 +11,38 @@ footer {
     z-index: 1;
     font-family: inherit;
     box-shadow: var(--shadow-tertiary);
-    margin-bottom: 20px;
     box-sizing: border-box;
+    z-index: 500;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.footer-sign {
+  align-self: last baseline;
+  margin: 10px 200px 20px 0;
+  color: var(--black);
+  position: relative;
+  z-index: 100;
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.footer-sign a {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: var(--letter-spacing-secondary);
 }
 
 .footer-bottomDiv {
@@ -69,6 +98,7 @@ input {
   border-radius: 40px;
   padding: 15px;
   color: var(--white);
+  outline: none;
 }
 
 input::placeholder {
@@ -91,11 +121,6 @@ button {
 
 button:hover {
   background-color: var(--white-hover);
-}
-
-:host {
-  display: flex;
-  justify-content: center;
 }
 
 .footer-logo {

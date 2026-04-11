@@ -136,6 +136,14 @@ hr {
   background-color: var(--white-hover);
 }
 
+.login-countryCodeDropdown::picker-icon {
+  transition: all 0.5s ease;
+}
+
+.login-countryCodeDropdown:open.active::picker-icon {
+  rotate: 180deg
+}
+
 .login-countryCodeOption {
   padding: 10px;
   border-radius: 10px;

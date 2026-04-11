@@ -1,6 +1,5 @@
 @if (isRegistrationFlow) {
-  <app-registration-flow
-  [isLoginPassed]="true"></app-registration-flow>
+  <app-registration-flow [isLoginPassed]="true"></app-registration-flow>
 }
 <main>
   <div class="addCard-container" [formGroup]="form">
@@ -88,8 +87,9 @@
           (change)="onCurrencyChange($event)"
           id="currencies"
           class="addCard-dropdown"
+          [class.active]="isChoosingCurrency"
         >
-          <button>
+          <button (click)="isChoosingCurrency = true">
             <div>
               <div class="selectedcontent2">{{ cardCurrency.currency }}</div>
             </div>
@@ -105,7 +105,13 @@
           </div>
         </select>
         <h4 class="addCard-title">Type</h4>
-        <select name="types" (change)="onTypeChange($event)" id="types" class="addCard-dropdown">
+        <select
+          name="types"
+          (change)="onTypeChange($event)"
+          id="types"
+          class="addCard-dropdown"
+          [class.active]="isChoosingType"
+        >
           <button>
             <div>
               <div class="selectedcontent">{{ cardType }}</div>

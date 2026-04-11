@@ -53,6 +53,7 @@
           id="countryCodes"
           class="login-countryCodeDropdown"
           (change)="onCountryCodeChange($event)"
+          [class.active]="isChoosingCountryCode"
         >
           <button>
             <div>

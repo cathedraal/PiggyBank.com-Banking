@@ -143,6 +143,14 @@ main {
   background-color: var(--white-hover);
 }
 
+.addCard-dropdown::picker-icon {
+  transition: all 0.5s ease;
+}
+
+.addCard-dropdown:open.active::picker-icon {
+  rotate: 180deg
+}
+
 .addCard-optionDiv {
   display: flex;
   flex-direction: column;
@@ -211,7 +219,7 @@ main {
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
-  font-size: medium;
+  font-size: 18px;
 }
 
 .addCard-submitButton:hover {
@@ -231,7 +239,7 @@ main {
   transition: all 0.3s ease;
   font-family: inherit;
   font-weight: 500;
-  font-size: medium;
+  font-size: 18px;
 }
 
 .addCard-backButton {

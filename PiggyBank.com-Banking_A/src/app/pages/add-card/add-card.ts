@@ -55,6 +55,10 @@ export class AddCardComponent implements OnInit {
     minute: '2-digit',
   });
 
+  // variables 
+  isChoosingType: boolean = false
+  isChoosingCurrency: boolean = false
+
   protected form = new FormGroup<AddCardForm>({
     holder: new FormControl<string>(``, {
       nonNullable: true,
@@ -156,6 +160,8 @@ export class AddCardComponent implements OnInit {
    * @param event - select event from card currency dropdown
    */
   onCurrencyChange(event: Event): void {
+    this.isChoosingCurrency = true
+
     const select = event.target as HTMLSelectElement;
     const found = this.currencies.find((c) => c.currency === select.value);
     if (found) {
@@ -169,6 +175,8 @@ export class AddCardComponent implements OnInit {
    * @param event - select event from card type dropdown
    */
   onTypeChange(event: Event): void {
+    this.isChoosingType = true
+
     const select = event.target as HTMLSelectElement;
     this.cardType = select.value;
     this.bankService.setCardType(this.cardType);

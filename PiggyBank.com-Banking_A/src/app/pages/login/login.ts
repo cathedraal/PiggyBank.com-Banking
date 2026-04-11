@@ -30,6 +30,7 @@ export class LoginComponent {
   ccodes: countryCodeItem[] = COUNTRY_CODES;
   selectedCountryCode: countryCodeItem = this.ccodes[0];
   formattedPhoneNumber: string = '';
+  isChoosingCountryCode: boolean = false
 
   // date
   date = new Date();
@@ -120,6 +121,8 @@ export class LoginComponent {
   }
 
   onCountryCodeChange(event: Event): void {
+    this.isChoosingCountryCode = true
+
     const select = event.target as HTMLSelectElement;
 
     const found = this.ccodes.find((el) => el.value === select.value);
