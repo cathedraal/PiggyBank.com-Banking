@@ -41,6 +41,7 @@ export class LoginComponent {
 
   // variables
   isValidPhone: boolean = false;
+  user: User | null = null
 
   protected form = new FormGroup<LoginForm>({
     name: new FormControl<string>('', {
@@ -66,7 +67,15 @@ export class LoginComponent {
     private userService: UserService,
     private router: Router,
   ) {
+    this.user = this.userService.getUser()
     this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
+
+    if (this.user) {
+      this.form.controls.name.setValue(this.user.name)
+      this.form.controls.surname.setValue(this.user.surname)
+      this.form.controls.email.setValue(this.user.email)
+      this.form.controls.phone.setValue(this.user.phone.number)
+    }
   }
 
   onSubmit(): void {
