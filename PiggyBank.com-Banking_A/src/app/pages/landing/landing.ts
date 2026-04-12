@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { HeroBenefitsComponent } from './hero-benefits/hero-benefits';
 import { HeroCtaComponent } from './hero-cta/hero-cta';
 import { AboutUsComponent } from './about-us/about-us';
@@ -22,7 +22,7 @@ import { LandingBenefitsComponent } from './landing-benefits/landing-benefits';
     FaqsComponent,
     CtaComponent,
     HeroComponent,
-    LandingBenefitsComponent,
+    LandingBenefitsComponent
   ],
   templateUrl: `./landing.html`,
   styleUrl: './landing.css',

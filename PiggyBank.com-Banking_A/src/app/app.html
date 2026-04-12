@@ -1,5 +1,11 @@
-<app-header />
-<div class="wrapper">
-  <router-outlet />
-</div>
-<app-footer />
+@if (isLoading()) {
+    <app-loader [class.hide]="isHiding()"></app-loader>
+} @else {
+    <div class="app-content" [class.visible]="isVisible()">
+      <app-header />
+      <div class="wrapper">
+        <router-outlet />
+      </div>
+      <app-footer />
+    </div>
+}
