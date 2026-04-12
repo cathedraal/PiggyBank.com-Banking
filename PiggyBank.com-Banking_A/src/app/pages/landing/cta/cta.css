@@ -64,13 +64,13 @@ main.show {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+padding: 10px 25px 10px 10px;
   background-color: var(--primary-color);
   border: none;
   color: var(--white);
   font-family: inherit;
   height: fit-content;
-  padding: 20px;
   border-radius: 40px;
   font-weight: 400;
   width: fit-content;
@@ -78,11 +78,24 @@ main.show {
   margin-top: 70px;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: medium;
+  font-size: 18px;
+}
+
+.landing-ctaDiv button svg {
+    background-color: var(--black);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ffffff36;
+    color: var(--white);
+  transition: all 0.3s ease;
 }
 
 .landing-ctaDiv button:hover {
   background-color: var(--primary-color-hover);
+}
+
+.landing-ctaDiv button:hover svg {
+    background-color: var(--primary-color-hover);
 }
 
 .landing-ctaCircleBg {

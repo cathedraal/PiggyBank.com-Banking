@@ -47,30 +47,38 @@ main div button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   background-color: var(--white);
   border: none;
   color: var(--black);
   font-family: inherit;
   height: fit-content;
-  padding: 17px;
+  padding: 10px 10px 10px 25px;
   border-radius: 40px;
   font-weight: 600;
-  max-width: 220px;
-  width: 100%;
+  width: fit-content;
   box-shadow: var(--shadow-secondary);
   margin-left: auto;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: medium;
+  font-size: 18px;
 }
 
 main div button svg {
+    background-color: var(--black);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #0c6dff18;
+    color: var(--primary-color);
   transition: all 0.3s ease;
 }
 
 main div button:hover {
   background-color: var(--white-hover);
+}
+
+main div button:hover svg {
+    background-color: var(--white-hover);
 }
 
 main div button:hover svg {
