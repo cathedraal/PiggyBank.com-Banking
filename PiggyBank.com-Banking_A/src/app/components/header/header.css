@@ -3,7 +3,7 @@ header {
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 15px 40px 15px 40px;
+  padding: 5px 40px 5px 40px;
   background-color: #f8fafc58;
   backdrop-filter: blur(120px);
   box-sizing: border-box;
@@ -22,15 +22,47 @@ header {
 .header-div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   width: 100%;
 }
 
+.header-logoDiv {
+  display: flex;
+}
+
+.header-cornerButtons {
+  display: flex;
+}
+
+.header-landingButtons {
+  display: flex;
+  margin-left: 80px;
+  gap: 5px;
+}
+
+.header-landingButtons button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: medium;
+  letter-spacing: var(--letter-spacing-secondary);
+  color: var(--black);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.header-landingButtons button:hover {
+  background-color: #1111110a;
+}
+
 .header-profileButton {
   margin-left: 10px;
-  padding: 15px;
+  padding: 2px 6px 2px 15px;
   width: fit-content;
   background-color: var(--primary-color);
   border-radius: 40px;
@@ -41,22 +73,39 @@ header {
   font-family: inherit;
 }
 
+.header-profileButton.profile h4 {
+  padding: 0 5px 0 5px;
+}
+
+.header-profileButton.profile {
+  padding: 10px;
+}
+
 .header-profileButton:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.header-profileButton:hover h4 span {
   background-color: var(--primary-color-hover);
 }
 
 .header-profileButton h4 {
   margin: 0px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.header-profileButton h4 span {
+  background-color: #ffffff36;
+  border-radius: 50px;
+  padding: 10px;
 }
 
 .header-needHelpButton {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-left: auto;
-  padding: 15px;
+  padding: 5px;
   width: 120px;
   background-color: var(--white);
   border: 1px solid var(--border-color);
@@ -69,10 +118,18 @@ header {
 }
 
 .header-needHelpButton img {
+  background-color: #0000000e;
+  padding: 10px;
+  border-radius: 50%;
   margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
 .header-needHelpButton:hover {
+  background-color: var(--white-hover);
+}
+
+.header-needHelpButton:hover img {
   background-color: var(--white-hover);
 }
 
@@ -81,8 +138,8 @@ header {
 }
 
 .header-logoText {
-  margin-left: 15px;
+  margin-left: 10px;
   font-weight: 600;
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: var(--letter-spacing-secondary);
   color: var(--black);
 }

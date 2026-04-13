@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
   styleUrl: './header.css',
 })
 export class HeaderComponent {
+  isLandingPage: boolean = false
   isPopupOpen = false;
   user: User | null = null;
   popupText: string;
@@ -21,7 +22,7 @@ export class HeaderComponent {
 
   constructor(
     protected userService: UserService,
-    private settingsService: SettingsService,
+    protected settingsService: SettingsService,
     private questionService: QuestionService,
     private router: Router
   ) {
@@ -53,11 +54,18 @@ export class HeaderComponent {
     this.isPopupOpen = false;
   }
 
-  route() {
+  onRoute() {
     if (this.user) {
       this.router.navigate(['./profile'])
+      if (this.user.cards?.length === 0) {
+        this.isPopupOpen = true
+      }
     } else {
       this.router.navigate(['./login'])
     }
+  }
+
+  scrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({behavior: 'smooth'})
   }
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class SettingsService {
   private userQuestion: string = '';
   private registrationFlow: boolean = true;
+  private landingPage = signal(false)
 
   setUserQuestion(value: string): void {
     this.userQuestion = value;
@@ -21,5 +22,13 @@ export class SettingsService {
 
   isRegistrationFlow(): boolean {
     return this.registrationFlow;
+  }
+
+  setLandingPage(value: boolean): void {
+    this.landingPage.set(value)
+  }
+
+  isLandingPage(): boolean {
+    return this.landingPage()
   }
 }

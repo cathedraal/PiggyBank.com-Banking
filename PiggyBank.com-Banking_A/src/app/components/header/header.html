@@ -1,15 +1,27 @@
 <header>
   <div class="header-div">
-    <img src="icons/logo.svg" class="header-logo" alt="logo" />
-    <h3 class="header-logoText">PiggyBank.com</h3>
-    <button class="header-needHelpButton" (click)="openPopup()"><img src="icons/support.svg" alt="support"> support</button>
-    <button class="header-profileButton" (click)="route()">
-      @if (userService.getUser()) {
-        <h4>{{ userService.getUser()!.name.charAt(0) + userService.getUser()!.surname.charAt(0) }}</h4>
-      } @else {
-        hey, log in
-      }
-    </button>
+    <div class="header-logoDiv">
+      <img src="icons/logo.svg" class="header-logo" alt="logo" />
+      <h3 class="header-logoText">PiggyBank</h3>
+    </div>
+    @if (settingsService.isLandingPage()) {
+      <div class="header-landingButtons">
+        <button (click)="scrollTo('aboutUs')">About</button>
+        <button (click)="scrollTo('steps')">Steps</button>
+        <button (click)="scrollTo('benefits')">Benefits</button>
+        <button (click)="scrollTo('faqs')">FAQs</button>
+      </div>
+    }
+    <div class="header-cornerButtons">
+      <button class="header-needHelpButton" (click)="openPopup()"><img src="icons/support.svg" alt="support">support</button>
+      <button class="header-profileButton" (click)="onRoute()" [class.profile]="userService.getUser()">
+        @if (userService.getUser()) {
+          <h4>{{ userService.getUser()!.name.charAt(0) + userService.getUser()!.surname.charAt(0) }}</h4>
+        } @else {
+          <h4>hey, <span>log in</span></h4>
+        }
+      </button>
+    </div>
   </div>
 </header>
 

@@ -70,6 +70,7 @@ export class LoginComponent {
   ) {
     this.user = this.userService.getUser()
     this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
+    this.settingsService.setLandingPage(false)
 
     if (this.user) {
       this.form.controls.name.setValue(this.user.name)
