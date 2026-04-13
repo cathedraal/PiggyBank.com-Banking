@@ -18,7 +18,7 @@ main {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease;
-  cursor: crosshair;
+  cursor: pointer;
   box-shadow: var(--shadow-container-primary);
   position: relative;
   z-index: 100;
@@ -26,7 +26,7 @@ main {
 }
 
 .dashboard-wallet:hover {
-  transform: scale(1.007);
+  transform: scale(1.006);
 }
 
 .dashboard-walletTitle {
@@ -109,11 +109,6 @@ main {
   position: relative;
   z-index: 1;
   flex: 1;
-  transition: all 0.3s ease;
-}
-
-.dashboard-manageWalletDiv:hover {
-  transform: scale(1.005);
 }
 
 .dashboard-manageWalletDiv h4 {

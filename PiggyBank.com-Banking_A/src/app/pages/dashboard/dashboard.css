@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 120px;
+  padding: 120px 0 60px 0;
 }
 
 .dashboard-header {
@@ -21,8 +21,8 @@ main {
 }
 
 .dashboard-title {
-    letter-spacing: var(--letter-spacing);
-    margin-bottom: 0px;
+    letter-spacing: var(--letter-spacing-primary);
+    margin: 0px;
     font-size: 48px;
     font-weight: 600;
 }

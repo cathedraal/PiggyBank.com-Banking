@@ -10,28 +10,23 @@ main {
     background-color: var(--primary-color);
     border-radius: var(--border-radius-2);
     box-sizing: border-box;
-    padding: 35px;
+    padding: 30px;
     margin-top: var(--container-spacing);
-    max-width: 950px;
+    max-width: 1000px;
     width: 100%;
-    transition: all 0.3s ease;
-}
-
-main:hover {
-    transform: scale(1.003);
 }
 
 .dashboard-supportButton {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    align-items: center;
     background-color: var(--white);
     border: none;
     color: var(--black);
     font-family: inherit;
     height: fit-content;
-    padding: 20px;
-    width: 150px;
+    padding: 5px;
+    max-width: 140px;
+    width: 100%;
     border-radius: 40px;
     font-weight: 600;
     margin-left: auto;
@@ -40,7 +35,19 @@ main:hover {
     font-size: medium;
 }
 
+.dashboard-supportButton img {
+    background-color: #0000000e;
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
 .dashboard-supportButton:hover {
+    background-color: var(--white-hover);
+}
+
+.dashboard-supportButton:hover img {
     background-color: var(--white-hover);
 }
 

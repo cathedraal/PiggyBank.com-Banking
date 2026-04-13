@@ -7,11 +7,6 @@ main {
     margin-top: var(--container-spacing);
     padding: 45px;
     box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-main:hover {
-    transform: scale(1.003);
 }
 
 :host {
