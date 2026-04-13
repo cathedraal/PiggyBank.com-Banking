@@ -11,6 +11,7 @@ import { currencyTypesItem } from '../../../models/interfaces/currencies.model';
 import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/constants';
 import { Action } from '../../../models/action.model';
 import { cardTypesItem } from '../../../models/interfaces/cardTypes.model';
+import { NotificationService } from '../../../services/notification/notification.service';
 
 interface AddCardForm {
   holder: FormControl<string>;
@@ -81,6 +82,7 @@ export class AddCardComponent implements OnInit {
     private userService: UserService,
     private bankService: BankService,
     private router: Router,
+    private notificationService: NotificationService
   ) {
     this.settingsService.setLoginPassed(true);
     this.user = this.userService.getUser();
@@ -214,6 +216,10 @@ export class AddCardComponent implements OnInit {
       this.isPopupOpen = false;
       console.log(card);
       console.log(this.user);
+
+      this.notificationService.setBooleanNotification(true)
+      this.notificationService.setNotification(true)
+      this.notificationService.setNotificationMessage('added card')
     }
   }
 
@@ -248,6 +254,10 @@ export class AddCardComponent implements OnInit {
     this.isPopupOpen = false;
     console.log(guestCard);
     console.log(this.user);
+
+    this.notificationService.setBooleanNotification(true)
+    this.notificationService.setNotification(true)
+    this.notificationService.setNotificationMessage('added card')
   }
 
   /**

@@ -4,10 +4,12 @@ import { Footer } from './components/footer/footer';
 import { HeaderComponent } from './components/header/header';
 import Lenis from 'lenis';
 import { LoaderComponent } from './components/loader/loader';
+import { NotificationComponent } from './components/notification/notification';
+import { NotificationService } from './services/notification/notification.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, HeaderComponent, LoaderComponent],
+  imports: [RouterOutlet, Footer, HeaderComponent, LoaderComponent, NotificationComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -17,6 +19,8 @@ export class App implements OnInit {
   protected isHiding = signal(false)
   protected isVisible = signal(false)
   private timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+  constructor (protected notificationService: NotificationService) {}
 
   ngOnInit(): void {
     const lenis = new Lenis({ lerp: 0.08 });

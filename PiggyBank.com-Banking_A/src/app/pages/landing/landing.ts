@@ -32,5 +32,6 @@ export class LandingComponent {
 
   constructor ( private settingsService: SettingsService ) {
     this.settingsService.setRegistrationFlow(true)
+    this.settingsService.setLandingPage(true)
   }
 }

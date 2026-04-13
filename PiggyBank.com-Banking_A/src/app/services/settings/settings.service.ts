@@ -9,6 +9,7 @@ export class SettingsService {
   private landingPage = signal(false)
   private loginPassed = signal(false)
 
+  // question
   setUserQuestion(value: string): void {
     this.userQuestion = value;
   }
@@ -16,6 +17,7 @@ export class SettingsService {
     return this.userQuestion;
   }
 
+  // registration-flow
   setRegistrationFlow(value: boolean): void {
     this.registrationFlow.set(value);
   }
@@ -23,6 +25,7 @@ export class SettingsService {
     return this.registrationFlow();
   }
 
+  // landing-page
   setLandingPage(value: boolean): void {
     this.landingPage.set(value)
   }
@@ -30,6 +33,7 @@ export class SettingsService {
     return this.landingPage()
   }
 
+  // login
   setLoginPassed(value: boolean): void {
     this.loginPassed.set(value)
   }

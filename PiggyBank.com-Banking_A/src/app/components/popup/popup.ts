@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { supportButtonItem } from '../../models/interfaces/supports.model';
 import { SUPPORT_BUTTONS } from '../../constants/constants';
 

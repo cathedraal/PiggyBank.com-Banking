@@ -1,11 +1,17 @@
 @if (isLoading()) {
-    <app-loader [class.hide]="isHiding()"></app-loader>
+  <app-loader [class.hide]="isHiding()"></app-loader>
 } @else {
-    <div class="app-content" [class.visible]="isVisible()">
-      <app-header />
-      <div class="wrapper">
-        <router-outlet />
-      </div>
-      <app-footer />
+  @if (notificationService.isNotified()) {
+    <app-notification
+      animate.enter="fadeIn"
+      animate.leave="fadeOut"
+    ></app-notification>
+  }
+  <div class="app-content" [class.visible]="isVisible()">
+    <app-header />
+    <div class="wrapper">
+      <router-outlet />
     </div>
+    <app-footer />
+  </div>
 }

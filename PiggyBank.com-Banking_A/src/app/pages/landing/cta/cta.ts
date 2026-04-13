@@ -1,8 +1,9 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-cta',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: `./cta.html`,
   styleUrl: './cta.css',
 })

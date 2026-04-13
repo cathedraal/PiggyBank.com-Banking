@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
   styleUrl: './header.css',
 })
 export class HeaderComponent {
-  isLandingPage: boolean = false
   isPopupOpen = false;
   user: User | null = null;
   popupText: string;

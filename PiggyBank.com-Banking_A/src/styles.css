@@ -14,6 +14,15 @@ body {
   scrollbar-width: none; /* firefox */
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* pills on mockup in hero section */
 @keyframes floating {
   from {
@@ -61,14 +70,26 @@ body {
 }
 
 /* container & label slide in */
-@keyframes slideInFromRight {
+@keyframes slideInFromBottom {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+
+/* container & label slide in */
+@keyframes slideOutFromTop {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
   }
 }
 
@@ -206,6 +227,8 @@ p {
     0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 24px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(0, 0, 0, 0.1);
   --shadow-hovered:
     0 4px 4px rgba(0, 0, 0, 0.03), 0 7px 10px rgba(0, 0, 0, 0.06), 0 17px 25px rgba(0, 0, 0, 0.1);
+  --succeed-background: #C8FFBA;
+  --succeed-label: #327D1F;
   --error-background: rgb(255, 229, 229);
   --error-label: rgb(167, 67, 67);
 }
