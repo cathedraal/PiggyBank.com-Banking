@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistrationFlow } from './registration-flow';
+import { RegistrationFlowComponent } from './registration-flow';
 
 describe('RegistrationFlow', () => {
-  let component: RegistrationFlow;
-  let fixture: ComponentFixture<RegistrationFlow>;
+  let component: RegistrationFlowComponent;
+  let fixture: ComponentFixture<RegistrationFlowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegistrationFlow],
+      imports: [RegistrationFlowComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RegistrationFlow);
+    fixture = TestBed.createComponent(RegistrationFlowComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

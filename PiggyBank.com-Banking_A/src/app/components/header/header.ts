@@ -61,7 +61,7 @@ export class HeaderComponent {
         this.isPopupOpen = true
       }
     } else {
-      this.router.navigate(['./login'])
+      this.router.navigate(['/registration-flow/login'])
     }
   }
 

@@ -14,31 +14,73 @@ body {
   scrollbar-width: none; /* firefox */
 }
 
+/* pills on mockup in hero section */
 @keyframes floating {
   from {
     transform: translateY(0);
-  } to {
+  }
+  to {
     transform: translateY(20px);
   }
 }
 
+/* endless flow on landing page */
 @keyframes spin {
   from {
     translate: 0;
-  } to {
+  }
+  to {
     translate: -100%;
   }
 }
 
+/* smooth container appearing */
 @keyframes appear {
   from {
     opacity: 0.1;
     transform: translateY(300px);
     filter: blur(30px);
-  } to {
+  }
+  to {
     opacity: 1;
     transform: translateY(0px);
     filter: blur(0);
+  }
+}
+
+/* container & label slide in */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* container & label slide in */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* animation for icons in registration flow */
+@keyframes iconChange {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -141,15 +183,25 @@ p {
   --profile-button-hover: #d9d9d9;
   --transaction-benefit: #b9b9b9;
   --shadow-img:
-    0 92px 26px 0 rgba(0, 0, 0, 0.00), 0 59px 24px 0 rgba(0, 0, 0, 0.02), 0 33px 20px 0 rgba(0, 0, 0, 0.08), 0 15px 15px 0 rgba(0, 0, 0, 0.13), 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-  --shadow-container-primary: 
-    0 215px 60px 0 rgba(0, 0, 0, 0.00), 0 138px 55px 0 rgba(0, 0, 0, 0.01), 0 77px 46px 0 rgba(0, 0, 0, 0.05), 0 34px 34px 0 rgba(0, 0, 0, 0.09), 0 9px 19px 0 rgba(0, 0, 0, 0.10);
-  --shadow-container-secondary: 
-    0 376px 105px 0 rgba(0, 0, 0, 0.00), 0 241px 96px 0 rgba(0, 0, 0, 0.01), 0 135px 81px 0 rgba(0, 0, 0, 0.05), 0 60px 60px 0 rgba(0, 0, 0, 0.09), 0 15px 33px 0 rgba(0, 0, 0, 0.10);
-  --shadow-tertiary: 
-    0 145px 41px 0 rgba(0, 0, 0, 0.00), 0 93px 37px 0 rgba(0, 0, 0, 0.02), 0 52px 31px 0 rgba(0, 0, 0, 0.08), 0 23px 23px 0 rgba(0, 0, 0, 0.13), 0 6px 13px 0 rgba(0, 0, 0, 0.15);
-  --shadow-secondary: 
-    0 102px 28px 0 rgba(0, 0, 0, 0.00), 0 65px 26px 0 rgba(0, 0, 0, 0.03), 0 37px 22px 0 rgba(0, 0, 0, 0.10), 0 16px 16px 0 rgba(0, 0, 0, 0.17), 0 4px 9px 0 rgba(0, 0, 0, 0.20);
+    0 92px 26px 0 rgba(0, 0, 0, 0), 0 59px 24px 0 rgba(0, 0, 0, 0.02),
+    0 33px 20px 0 rgba(0, 0, 0, 0.08), 0 15px 15px 0 rgba(0, 0, 0, 0.13),
+    0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  --shadow-container-primary:
+    0 215px 60px 0 rgba(0, 0, 0, 0), 0 138px 55px 0 rgba(0, 0, 0, 0.01),
+    0 77px 46px 0 rgba(0, 0, 0, 0.05), 0 34px 34px 0 rgba(0, 0, 0, 0.09),
+    0 9px 19px 0 rgba(0, 0, 0, 0.1);
+  --shadow-container-secondary:
+    0 376px 105px 0 rgba(0, 0, 0, 0), 0 241px 96px 0 rgba(0, 0, 0, 0.01),
+    0 135px 81px 0 rgba(0, 0, 0, 0.05), 0 60px 60px 0 rgba(0, 0, 0, 0.09),
+    0 15px 33px 0 rgba(0, 0, 0, 0.1);
+  --shadow-tertiary:
+    0 145px 41px 0 rgba(0, 0, 0, 0), 0 93px 37px 0 rgba(0, 0, 0, 0.02),
+    0 52px 31px 0 rgba(0, 0, 0, 0.08), 0 23px 23px 0 rgba(0, 0, 0, 0.13),
+    0 6px 13px 0 rgba(0, 0, 0, 0.15);
+  --shadow-secondary:
+    0 102px 28px 0 rgba(0, 0, 0, 0), 0 65px 26px 0 rgba(0, 0, 0, 0.03),
+    0 37px 22px 0 rgba(0, 0, 0, 0.1), 0 16px 16px 0 rgba(0, 0, 0, 0.17),
+    0 4px 9px 0 rgba(0, 0, 0, 0.2);
   --shadow:
     0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 24px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(0, 0, 0, 0.1);
   --shadow-hovered:

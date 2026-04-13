@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { SettingsService } from '../../services/settings/settings.service';
+import { SettingsService } from '../../../services/settings/settings.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UserService } from '../../services/user/user.service';
-import { COUNTRY_CODES, GUEST_PROFILE } from '../../constants/constants';
-import { User } from '../../models/user.model';
-import { getRandomInt } from '../../utils/utils';
+import { UserService } from '../../../services/user/user.service';
+import { COUNTRY_CODES, GUEST_PROFILE } from '../../../constants/constants';
+import { User } from '../../../models/user.model';
+import { getRandomInt } from '../../../utils/utils';
 import { parsePhoneNumberWithError, type CountryCode } from 'libphonenumber-js';
-import { countryCodeItem } from '../../models/interfaces/ccodes.model';
-import { RegistrationFlowComponent } from "../../components/registration-flow/registration-flow";
+import { countryCodeItem } from '../../../models/interfaces/ccodes.model';
 
 interface LoginForm {
   name: FormControl<string>;
@@ -19,7 +18,7 @@ interface LoginForm {
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink, ReactiveFormsModule, RegistrationFlowComponent],
+  imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
@@ -68,6 +67,7 @@ export class LoginComponent {
     private userService: UserService,
     private router: Router,
   ) {
+    this.settingsService.setLoginPassed(false)
     this.user = this.userService.getUser()
     this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
     this.settingsService.setLandingPage(false)
@@ -96,7 +96,7 @@ export class LoginComponent {
           this.dateTime,
         ),
       );
-      this.router.navigate(['/add-card']);
+      this.router.navigate(['/registration-flow/add-card']);
     }
   }
 

@@ -4,18 +4,6 @@ main {
     flex-direction: row;
     width: fit-content;
     justify-content: center;
-    margin-bottom: 30px;
-}
-
-hr {
-    height: 1px;
-    width: 200px;
-    border: none;
-    background-color: var(--border-color);
-}
-
-hr.active {
-    width: 100px;
 }
 
 :host {
@@ -23,6 +11,24 @@ hr.active {
     align-items: center;
     width: 100%;
     justify-content: center;
+    animation: slideInFromTop 0.3s ease;
+    margin: 0 0 30px 0;
+}
+
+h4, p, img, .registrationFlow-firstStep {
+    animation: iconChange 0.3s ease;
+}
+
+hr {
+    height: 1px;
+    width: 200px;
+    border: none;
+    background-color: var(--border-color);
+    animation: iconChange 0.3s ease;
+}
+
+hr.active {
+    width: 100px;
 }
 
 .registrationFlow-firstStep {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { HeroBenefitsComponent } from './hero-benefits/hero-benefits';
 import { HeroCtaComponent } from './hero-cta/hero-cta';
 import { AboutUsComponent } from './about-us/about-us';
@@ -29,10 +29,8 @@ import { SettingsService } from '../../services/settings/settings.service';
   styleUrl: './landing.css',
 })
 export class LandingComponent {
-  isLandingPage: boolean = false
 
   constructor ( private settingsService: SettingsService ) {
-    this.settingsService.setLandingPage(true)
-    this.isLandingPage = this.settingsService.isLandingPage()
+    this.settingsService.setRegistrationFlow(true)
   }
 }

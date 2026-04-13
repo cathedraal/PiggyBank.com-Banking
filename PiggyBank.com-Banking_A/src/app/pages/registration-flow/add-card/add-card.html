@@ -1,6 +1,3 @@
-@if (isRegistrationFlow) {
-  <app-registration-flow [isLoginPassed]="true"></app-registration-flow>
-}
 <main>
   <div class="addCard-container" [formGroup]="form">
     @let holder = form.controls.holder;
@@ -132,7 +129,7 @@
     </div>
     <hr class="addCard-line" />
     <div class="addCard-buttons">
-      <button routerLink="/login" class="addCard-backButton">
+      <button routerLink="/registration-flow/login" class="addCard-backButton">
         <img src="icons/back.svg" alt="back" />
       </button>
       <button class="addCard-submitButton" (click)="onSubmit()">add card</button>

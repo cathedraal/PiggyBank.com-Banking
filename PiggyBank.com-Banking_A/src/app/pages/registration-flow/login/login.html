@@ -1,7 +1,3 @@
-@if (isRegistrationFlow) {
-  <app-registration-flow
-  [isLoginPassed]="false"></app-registration-flow>
-}
 <main>
   <div class="login-container" [formGroup]="form">
     @let name = form.controls.name;
@@ -98,7 +94,7 @@
   <div class="login-asGuestContainer">
     <h1>Continue as guest</h1>
     <button
-      routerLink="/add-card"
+      routerLink="/registration-flow/add-card"
       class="login-continueAsGuestButton"
       (click)="onSubmitAsGuest()"
     >

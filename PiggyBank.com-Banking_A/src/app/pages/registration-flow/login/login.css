@@ -18,6 +18,7 @@ main {
   border: 1px solid var(--border-color);
   padding: var(--container-padding-secondary);
   border-radius: var(--border-radius);
+  animation: slideInFromTop 0.4s ease;
 }
 
 .login-headerSubtitle {
@@ -38,6 +39,7 @@ main {
   margin-bottom: auto;
   box-shadow: var(--shadow-container-primary);
   margin-left: var(--container-spacing);
+  animation: slideInFromTop 1s ease;
 }
 
 .login-headerParagraph {

@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { SettingsService } from '../../services/settings/settings.service';
+import { Component, OnInit, signal } from '@angular/core';
+import { SettingsService } from '../../../services/settings/settings.service';
 import { Router, RouterLink } from '@angular/router';
-import { UserService } from '../../services/user/user.service';
-import { User } from '../../models/user.model';
+import { UserService } from '../../../services/user/user.service';
+import { User } from '../../../models/user.model';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { BankService } from '../../services/bank/bank.service';
-import { Card } from '../../models/card.model';
-import { PopupComponent } from '../../components/popup/popup';
-import { currencyTypesItem } from '../../models/interfaces/currencies.model';
-import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/constants';
-import { Action } from '../../models/action.model';
-import { cardTypesItem } from '../../models/interfaces/cardTypes.model';
-import { RegistrationFlowComponent } from '../../components/registration-flow/registration-flow';
+import { BankService } from '../../../services/bank/bank.service';
+import { Card } from '../../../models/card.model';
+import { PopupComponent } from '../../../components/popup/popup';
+import { currencyTypesItem } from '../../../models/interfaces/currencies.model';
+import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/constants';
+import { Action } from '../../../models/action.model';
+import { cardTypesItem } from '../../../models/interfaces/cardTypes.model';
 
 interface AddCardForm {
   holder: FormControl<string>;
@@ -21,13 +20,12 @@ interface AddCardForm {
 }
 @Component({
   selector: 'app-add-card',
-  imports: [RouterLink, ReactiveFormsModule, PopupComponent, RegistrationFlowComponent],
+  imports: [RouterLink, ReactiveFormsModule, PopupComponent],
   templateUrl: `./add-card.html`,
   styleUrl: './add-card.css',
 })
 export class AddCardComponent implements OnInit {
   // html template
-  isRegistrationFlow: boolean = false;
   isPopupOpen: boolean = false;
   popupText: string = `you didn't add a card. Create a guest card?`;
   popupContext: string = 'guestCard';
@@ -55,9 +53,9 @@ export class AddCardComponent implements OnInit {
     minute: '2-digit',
   });
 
-  // variables 
-  isChoosingType: boolean = false
-  isChoosingCurrency: boolean = false
+  // variables
+  isChoosingType: boolean = false;
+  isChoosingCurrency: boolean = false;
 
   protected form = new FormGroup<AddCardForm>({
     holder: new FormControl<string>(``, {
@@ -84,13 +82,15 @@ export class AddCardComponent implements OnInit {
     private bankService: BankService,
     private router: Router,
   ) {
-    this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
+    this.settingsService.setLoginPassed(true);
     this.user = this.userService.getUser();
-    this.form.controls.holder.setValue(`${this.user?.name.toUpperCase()} ${this.user?.surname.toUpperCase()}`)
+    this.form.controls.holder.setValue(
+      `${this.user?.name.toUpperCase()} ${this.user?.surname.toUpperCase()}`,
+    );
   }
 
   ngOnInit(): void {
-    console.log(this.user)
+    console.log(this.user);
   }
 
   /**
@@ -160,7 +160,7 @@ export class AddCardComponent implements OnInit {
    * @param event - select event from card currency dropdown
    */
   onCurrencyChange(event: Event): void {
-    this.isChoosingCurrency = true
+    this.isChoosingCurrency = true;
 
     const select = event.target as HTMLSelectElement;
     const found = this.currencies.find((c) => c.currency === select.value);
@@ -175,7 +175,7 @@ export class AddCardComponent implements OnInit {
    * @param event - select event from card type dropdown
    */
   onTypeChange(event: Event): void {
-    this.isChoosingType = true
+    this.isChoosingType = true;
 
     const select = event.target as HTMLSelectElement;
     this.cardType = select.value;
@@ -186,9 +186,9 @@ export class AddCardComponent implements OnInit {
    * Creates a new card with given parameters from the UI Component using service
    */
   onSubmit(): void {
-    const clean = this.cardNumber.replace(/\s/g, '')
-    const lastFourDigits = clean.slice(-4)
-    const source = `${this.cardType}  •• ${lastFourDigits}`
+    const clean = this.cardNumber.replace(/\s/g, '');
+    const lastFourDigits = clean.slice(-4);
+    const source = `${this.cardType}  •• ${lastFourDigits}`;
 
     if (this.form.valid) {
       const action = new Action(
@@ -213,7 +213,7 @@ export class AddCardComponent implements OnInit {
       this.router.navigate(['/dashboard']);
       this.isPopupOpen = false;
       console.log(card);
-      console.log(this.user)
+      console.log(this.user);
     }
   }
 
@@ -228,13 +228,11 @@ export class AddCardComponent implements OnInit {
    * Creates a guest card with given random parameters using service
    */
   onGuestCard(): void {
-    const guestCard = this.bankService.generateGuestCard(
-      this.user!
-    );
+    const guestCard = this.bankService.generateGuestCard(this.user!);
 
-    const clean = guestCard.cardNumber.replace(/\s/g, '')
-    const lastFourDigits = clean.slice(-4)
-    const source = `${this.cardType}  •• ${lastFourDigits}`
+    const clean = guestCard.cardNumber.replace(/\s/g, '');
+    const lastFourDigits = clean.slice(-4);
+    const source = `${this.cardType}  •• ${lastFourDigits}`;
 
     const action = new Action(
       'icons/transactions_newCard.svg',
@@ -249,7 +247,7 @@ export class AddCardComponent implements OnInit {
     this.router.navigate(['/dashboard']);
     this.isPopupOpen = false;
     console.log(guestCard);
-    console.log(this.user)
+    console.log(this.user);
   }
 
   /**
@@ -264,6 +262,6 @@ export class AddCardComponent implements OnInit {
    * Closes popup
    */
   onClose(): void {
-    this.isPopupOpen = false
+    this.isPopupOpen = false;
   }
 }

@@ -1,0 +1,4 @@
+@if (isRegistrationFlow()) {
+  <app-registration-label [isLoginPassed]="settingsService.isLoginPassed()"></app-registration-label>
+}
+<router-outlet></router-outlet>
