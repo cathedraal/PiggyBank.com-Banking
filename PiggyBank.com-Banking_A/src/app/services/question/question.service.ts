@@ -22,7 +22,5 @@ export class QuestionService {
     }
 
     emailjs.send('service_807c8ah', 'template_lkb0bhl', params);
-
-    alert(`Question successfully sent. You asked: ${question}`)
   }
 }

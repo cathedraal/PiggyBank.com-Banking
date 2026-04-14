@@ -6,44 +6,50 @@
   animation: slideOutFromTop 1000ms ease-out forwards;
 }
 
-main { 
-    display: flex;
-    transition: opacity 200ms ease-in, transform 200ms ease-in;
-    @starting-style {
-        opacity: 0; 
-        transform: translateY(50px);
-    }
+main {
+  display: flex;
+  transition:
+    opacity 200ms ease-in,
+    transform 200ms ease-in;
+  @starting-style {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 }
 
 :host {
-    display: block;
-    position: fixed;
-    bottom: 60px;
-    left: 50%;
-    z-index: 1100;
-}
-
-main div {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-    border-radius: 50px;
-    box-shadow: var(--shadow-container-primary);
+  display: block;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  z-index: 1100;
+  transform: translateX(-40%);
 }
 
 main div h4 {
-    font-weight: 600;
-    letter-spacing: var(--letter-spacing-secondary);
-    margin: 0px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-secondary);
+  margin: 0px;
 }
 
 .notification-succeed {
-    background-color: var(--succeed-background);
-    color: var(--succeed-label);
+  background-color: var(--succeed-background);
+  color: var(--succeed-label);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 50px;
+  box-shadow: var(--shadow-container-primary);
 }
 
-.notification-failed {
-    background-color: var(--error-background);
-    color: var(--error-label);
+.notification-notSucceed {
+  background-color: var(--error-background);
+  color: var(--error-label);
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+  border-radius: 50px;
+  box-shadow: var(--shadow-container-primary);
 }

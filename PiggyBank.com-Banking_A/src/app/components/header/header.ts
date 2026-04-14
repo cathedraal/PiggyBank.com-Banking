@@ -5,6 +5,7 @@ import { User } from '../../models/user.model';
 import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
 import { Router } from '@angular/router';
+import { NotificationService } from '../../services/notification/notification.service';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +24,8 @@ export class HeaderComponent {
     protected userService: UserService,
     protected settingsService: SettingsService,
     private questionService: QuestionService,
-    private router: Router
+    private router: Router,
+    private notificationService: NotificationService
   ) {
     this.user = this.userService.getUser();
     if (this.user) {
@@ -42,10 +44,15 @@ export class HeaderComponent {
     this.isPopupOpen = false;
     this.userQuestion = question;
     if (question === '') {
-      alert('Please write something or cancel.');
+      this.notificationService.setBooleanNotification(false)
+      this.notificationService.setNotification(true)
+      this.notificationService.setNotificationMessage("failed to send question")
     } else {
       this.settingsService.setUserQuestion(this.userQuestion);
       this.questionService.sendQuestion();
+      this.notificationService.setBooleanNotification(true)
+      this.notificationService.setNotification(true)
+      this.notificationService.setNotificationMessage("question sent")
     }
   }
 
