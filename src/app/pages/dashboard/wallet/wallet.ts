@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { Card } from '../../../models/card.model';
 import { BankService } from '../../../services/bank/bank.service';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { maskCardNumber } from '../../../utils/utils';
 import { RouterLink } from '@angular/router';
 import { CARD_TYPES } from '../../../constants/constants';
 
 @Component({
   selector: 'app-wallet',
-  imports: [CommonModule, RouterLink, NgOptimizedImage],
+  imports: [CommonModule, RouterLink],
   templateUrl: `./wallet.html`,
   styleUrl: './wallet.css',
 })

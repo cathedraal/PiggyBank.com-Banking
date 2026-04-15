@@ -1,6 +1,6 @@
 <main #mainEl>
   <div class="landing-stepsTopDiv">
-    <img ngSrc="icons/landing/arrow_steps.svg" alt="step" class="landing-stepIcon1" />
+    <img src="icons/landing/arrow_steps.svg" alt="step" class="landing-stepIcon1" />
     @for (step of steps; track $index) {
       <div class="landing-step">
         <h2>{{ step.icon }}</h2>
@@ -8,7 +8,7 @@
         <p>{{ step.subtitle }}</p>
       </div>
     }
-    <img ngSrc="icons/landing/arrow_steps.svg" alt="step" class="landing-stepIcon2" />
+    <img src="icons/landing/arrow_steps.svg" alt="step" class="landing-stepIcon2" />
   </div>
   <hr />
   <div class="landing-stepsBottomDiv">

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-currency',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: `./currency.html`,
   styleUrl: './currency.css',
 })

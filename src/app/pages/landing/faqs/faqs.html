@@ -4,7 +4,7 @@
       <div class="landing-faq">
         <button class="landing-faqButton" (click)="toggle($index)">
           {{ faq.title }}
-          <img ngSrc="icons/landing/cross_faqs.svg" alt="close" [class.active]="faq.active"/>
+          <img src="icons/landing/cross_faqs.svg" alt="close" [class.active]="faq.active"/>
         </button>
         <div class="landing-faqPannel" [class.active]="faq.active">
             <div class="landing-faqPannelInner">
