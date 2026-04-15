@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { CURRENCY_TYPES } from '../../../constants/constants';
-import { currencyTypesItem } from '../../../models/interfaces/currencies.model';
-import { BankService } from '../../../services/bank/bank.service';
-import { Card } from '../../../models/card.model';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-currency',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: `./currency.html`,
   styleUrl: './currency.css',
 })

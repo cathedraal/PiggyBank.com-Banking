@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { stepsItem } from '../../../models/interfaces/steps.model';
 import { STEPS_SECTION } from '../../../constants/constants';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-steps',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: `./steps.html`,
   styleUrl: './steps.css',
 })

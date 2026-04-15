@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, ViewChild, ElementRef } from '@angular/core';
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: 'app-secure',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: `./secure.html`,
   styleUrl: './secure.css',
 })
