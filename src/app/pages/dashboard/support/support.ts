@@ -4,10 +4,11 @@ import { UserService } from '../../../services/user/user.service';
 import { User } from '../../../models/user.model';
 import { SettingsService } from '../../../services/settings/settings.service';
 import { QuestionService } from '../../../services/question/question.service';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-support',
-  imports: [PopupComponent],
+  imports: [PopupComponent, NgOptimizedImage],
   templateUrl: `./support.html`,
   styleUrl: './support.css',
 })

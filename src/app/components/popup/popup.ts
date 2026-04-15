@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { supportButtonItem } from '../../models/interfaces/supports.model';
 import { SUPPORT_BUTTONS } from '../../constants/constants';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-popup',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './popup.html',
   styleUrl: './popup.css',
 })

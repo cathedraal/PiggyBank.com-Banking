@@ -1,7 +1,7 @@
 <main>
     <button class="dashboard-articlesButton">
         <h4>Latest articles on PiggyBank</h4>
-        <img src="icons/transactions_showAllButton.svg" alt="show all">
+        <img ngSrc="icons/transactions_showAllButton.svg" alt="show all">
     </button>
     <div class="dashboard-articlesDiv">
             @for (article of articles; track $index) {
@@ -9,8 +9,8 @@
                     <div class="dashboard-articleContent">
                         <div class="dashboard-articleImgDiv">
                             <img [ngSrc]="article.image" width="320" height="250" alt="article" class="dashboard-articleImg">
-                            <img src="icons/white_logo.svg" alt="white logo" class="dashboard-articleLogo">
-                            <p class="dashboard-articleTime"><img src="icons/time.svg" alt="time" class="dashboard-articleTimeIcon">{{article.time}}</p>
+                            <img ngSrc="icons/white_logo.svg" alt="white logo" class="dashboard-articleLogo">
+                            <p class="dashboard-articleTime"><img ngSrc="icons/time.svg" alt="time" class="dashboard-articleTimeIcon">{{article.time}}</p>
                         </div>
                         
                         <p class="dashboard-articleDate">{{article.date}}</p>

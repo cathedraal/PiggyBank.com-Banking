@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { faqItem } from '../../../models/interfaces/faqs.model';
 import { FAQS_SECTION } from '../../../constants/constants';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-faqs',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: `./faqs.html`,
   styleUrl: './faqs.css',
 })
