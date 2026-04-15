@@ -1,19 +1,27 @@
 <main>
-    <button class="dashboard-transactionsButton">
-        <h4>Recent activity</h4>
-        <img src="icons/transactions_showAllButton.svg" alt="show all">
-    </button>
-    <div class="dashboard-transactionsDiv">
-        @for (transaction of transactions; track $index) {
-            <div class="dashboard-transaction">
-                <div class="dashboard-transactionText">
-                    <img [src]="transaction.actionIcon" alt="transaction icon">
-                    <p>{{ transaction.actionText }}</p>
-                    <span> {{ transaction.actionSource }}</span>
-                </div>
-                <hr>
-                <p class="dashboard-transactionDate">{{ transaction.actionDate }}</p>
-            </div>
-        }
-    </div>
+  <button class="dashboard-transactionsButton">
+    <h4>Recent activity</h4>
+    <img src="icons/transactions_showAllButton.svg" alt="show all" />
+  </button>
+  <div class="dashboard-transactionsDiv">
+    @if (transactions.length === 0) {
+      <div class="dashboard-noTransaction">
+        <p class="dashboard-noTransactionText">No actions in the last 24 hours</p>
+        <hr class="dashboard-noTransactionHr" />
+        <p class="dashboard-transactionDate">{{ dateTime }}</p>
+      </div>
+    } @else {
+      @for (transaction of transactions; track $index) {
+        <div class="dashboard-transaction">
+          <div class="dashboard-transactionText">
+            <img [src]="transaction.actionIcon" alt="transaction icon" />
+            <p>{{ transaction.actionText }}</p>
+            <span> {{ transaction.actionSource }}</span>
+          </div>
+          <hr />
+          <p class="dashboard-transactionDate">{{ transaction.actionDate }}</p>
+        </div>
+      }
+    }
+  </div>
 </main>
