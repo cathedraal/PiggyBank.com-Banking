@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { UserService } from '../../services/user/user.service';
 import { WalletComponent } from './wallet/wallet';
 import { ArticlesComponent } from './articles/articles';
@@ -14,7 +13,6 @@ import { TransactionBenefitsComponent } from "./transaction-benefits/transaction
 @Component({
   selector: 'app-dashboard',
   imports: [
-    RouterLink,
     WalletComponent,
     ArticlesComponent,
     TransactionsComponent,
