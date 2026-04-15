@@ -1,8 +1,8 @@
 <main>
     @for (benefit of benefits; track $index) {
         <div class="dashboard-benefit">
-            <button><img ngSrc="icons/cross.svg" class="dashboard-benefitDelete" alt="cancel" (click)="deleteBenefit(benefit)"></button>
-            <img [ngSrc]="benefit.image" alt="benefit" class="dashboard-benefitImg">
+            <button><img src="icons/cross.svg" class="dashboard-benefitDelete" alt="cancel" (click)="deleteBenefit(benefit)"></button>
+            <img [src]="benefit.image" alt="benefit" class="dashboard-benefitImg">
             <h4 class="dashboard-benefitTitle">
                 {{ benefit.title }}
             </h4>

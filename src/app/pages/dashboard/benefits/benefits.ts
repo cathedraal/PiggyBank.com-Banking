@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { benefitItem } from '../../../models/interfaces/benefits.model';
 import { BENEFITS_SECTION } from '../../../constants/constants';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-benefits',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: `./benefits.html`,
   styleUrl: './benefits.css',
 })

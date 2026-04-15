@@ -2,7 +2,7 @@
   <div class="landing-whychooseusTopDiv">
     @for (benefit of benefits; track $index) {
       <div class="landing-whychooseusBenefit">
-        <img [ngSrc]="benefit.image" alt="benefit" />
+        <img [src]="benefit.image" alt="benefit" />
         <h4>{{ benefit.title }}</h4>
         <p>{{ benefit.subtitle }}</p>
       </div>

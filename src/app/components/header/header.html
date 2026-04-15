@@ -1,7 +1,7 @@
 <header>
   <div class="header-div">
     <div class="header-logoDiv">
-      <img ngSrc="icons/logo.svg" class="header-logo" alt="logo" />
+      <img src="icons/logo.svg" class="header-logo" alt="logo" />
       <h3 class="header-logoText">PiggyBank</h3>
     </div>
     @if (settingsService.isLandingPage()) {
@@ -13,7 +13,7 @@
       </div>
     }
     <div class="header-cornerButtons">
-      <button class="header-needHelpButton" (click)="openPopup()"><img ngSrc="icons/support.svg" alt="support">support</button>
+      <button class="header-needHelpButton" (click)="openPopup()"><img src="icons/support.svg" alt="support">support</button>
       <button class="header-profileButton" (click)="onRoute()" [class.profile]="userService.getUser()">
         @if (userService.getUser()) {
           <h4>{{ userService.getUser()!.name.charAt(0) + userService.getUser()!.surname.charAt(0) }}</h4>

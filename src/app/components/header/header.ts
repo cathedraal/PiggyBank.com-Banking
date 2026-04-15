@@ -6,11 +6,10 @@ import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
 import { Router } from '@angular/router';
 import { NotificationService } from '../../services/notification/notification.service';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [PopupComponent, NgOptimizedImage],
+  imports: [PopupComponent],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

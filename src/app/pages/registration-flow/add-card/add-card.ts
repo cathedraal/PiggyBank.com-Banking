@@ -12,7 +12,6 @@ import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/constants';
 import { Action } from '../../../models/action.model';
 import { cardTypesItem } from '../../../models/interfaces/cardTypes.model';
 import { NotificationService } from '../../../services/notification/notification.service';
-import { NgOptimizedImage } from '@angular/common';
 
 interface AddCardForm {
   holder: FormControl<string>;
@@ -22,7 +21,7 @@ interface AddCardForm {
 }
 @Component({
   selector: 'app-add-card',
-  imports: [RouterLink, ReactiveFormsModule, PopupComponent, NgOptimizedImage],
+  imports: [RouterLink, ReactiveFormsModule, PopupComponent],
   templateUrl: `./add-card.html`,
   styleUrl: './add-card.css',
 })
