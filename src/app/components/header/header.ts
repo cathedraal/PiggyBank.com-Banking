@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Signal } from '@angular/core';
 import { PopupComponent } from '../popup/popup';
 import { UserService } from '../../services/user/user.service';
 import { User } from '../../models/user.model';
@@ -15,8 +15,10 @@ import { NotificationService } from '../../services/notification/notification.se
 })
 export class HeaderComponent {
   isPopupOpen = false;
-  user: User | null = null;
-  popupText: string;
+  user: Signal<User | null>;
+  get popupText(): string {
+    return this.user() ? `${this.user()!.name}, describe your problem.` : `Guest, describe your problem.`
+  }
   popupContext: string = 'support';
   userQuestion!: string;
 
@@ -25,14 +27,8 @@ export class HeaderComponent {
     protected settingsService: SettingsService,
     private questionService: QuestionService,
     private router: Router,
-    private notificationService: NotificationService
   ) {
-    this.user = this.userService.getUser();
-    if (this.user) {
-      this.popupText = `${this.user.name}, describe your problem.`;
-    } else {
-      this.popupText = `Guest, describe your problem.`;
-    }
+    this.user = this.userService.user;
   }
 
   openPopup(): void {
@@ -43,17 +39,7 @@ export class HeaderComponent {
   onConfirm(question: string): void {
     this.isPopupOpen = false;
     this.userQuestion = question;
-    if (question === '') {
-      this.notificationService.setBooleanNotification(false)
-      this.notificationService.setNotification(true)
-      this.notificationService.setNotificationMessage("failed to send question")
-    } else {
-      this.settingsService.setUserQuestion(this.userQuestion);
-      this.questionService.sendQuestion();
-      this.notificationService.setBooleanNotification(true)
-      this.notificationService.setNotification(true)
-      this.notificationService.setNotificationMessage("question sent")
-    }
+    this.questionService.sendQuestion(this.userQuestion, this.user())
   }
 
   onDecline(): void {
@@ -61,9 +47,9 @@ export class HeaderComponent {
   }
 
   onRoute() {
-    if (this.user) {
+    if (this.user()) {
       this.router.navigate(['./profile'])
-      if (this.user.cards?.length === 0) {
+      if (this.user()!.cards?.length === 0) {
         this.isPopupOpen = true
       }
     } else {

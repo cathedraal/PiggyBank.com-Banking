@@ -1,26 +1,58 @@
 import { Injectable } from '@angular/core';
 import { UserService } from '../user/user.service';
-import { SettingsService } from '../settings/settings.service'
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
+import { NotificationService } from '../notification/notification.service';
+import { User } from '../../models/user.model';
+import { getRandomInt } from '../../utils/utils';
 
 @Injectable({
   providedIn: 'root',
 })
 export class QuestionService {
-  constructor(
-    private userService: UserService,
-    private settingsService: SettingsService
-  ) {}
+  constructor(private notificationService: NotificationService) {}
 
-  sendQuestion(): void {
-    const user = this.userService.getUser()
-    const question = this.settingsService.getUserQuestion()
+  sendQuestion(question: string, user: User | null = null): void {
+    let name: string = '';
+    let surname: string = '';
+    let email: string = '';
 
-    const params = {
-      userName: user?.name,
-      userQuestion: question
+    if (user) {
+      name = user.name;
+      surname = user.surname;
+      email = user.email;
+    } else {
+      name = '<Unregistered>';
+      surname = `id${getRandomInt(0, 1000000)}`;
+      email = 'unregistered@email.com';
     }
 
-    emailjs.send('service_807c8ah', 'template_lkb0bhl', params);
+    const params = {
+      userName: name,
+      userSurname: surname,
+      userEmail: email,
+      userQuestion: question,
+    };
+
+    if (question.trim() !== '') {
+      emailjs
+        .send('service_o3go1c5', 'template_0x3nzou', params, {
+          publicKey: 'pOZWidCJ7_WUh0fjm',
+        })
+        .then(() => {
+          this.notificationService.setBooleanNotification(true);
+          this.notificationService.setNotification(true);
+          this.notificationService.setNotificationMessage('question sent');
+        })
+        .catch((error) => {
+          console.error('EmailJS error:', error);
+          this.notificationService.setBooleanNotification(false);
+          this.notificationService.setNotification(true);
+          this.notificationService.setNotificationMessage('failed to send question');
+        });
+    } else if (question.trim() === '') {
+      this.notificationService.setBooleanNotification(false);
+      this.notificationService.setNotification(true);
+      this.notificationService.setNotificationMessage('failed to send question');
+    }
   }
 }
