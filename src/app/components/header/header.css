@@ -32,6 +32,14 @@ header {
   display: flex;
 }
 
+.header-logoDiv button {
+  display: flex;
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .header-cornerButtons {
   display: flex;
 }

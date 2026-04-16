@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  padding: var(--container-padding-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-container-primary);
+  margin-top: var(--container-spacing);
+}
+
+:host {
+  position: relative;
+  z-index: 500;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 50px 0;
+  gap: 10px;
+}
+
+main div h1 {
+  letter-spacing: var(--letter-spacing-primary);
+  font-size: 36px;
+  margin: 0px;
+  font-weight: 600;
+  cursor: default;
+}
+
+main div img {
+  background-color: var(--primary-color-icon);
+  padding: 15px;
+  border-radius: 25px;
+}
+
+main div button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  color: var(--primary-color);
+  font-size: 18px;
+  cursor: pointer;
+}

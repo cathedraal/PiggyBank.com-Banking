@@ -1,8 +1,10 @@
 <header>
   <div class="header-div">
     <div class="header-logoDiv">
-      <img src="icons/logo.svg" class="header-logo" alt="logo" />
-      <h3 class="header-logoText">PiggyBank</h3>
+      <button routerLink="/landing">
+        <img src="icons/logo.svg" class="header-logo" alt="logo" />
+        <h3 class="header-logoText">PiggyBank</h3>
+      </button>
     </div>
     @if (settingsService.isLandingPage()) {
       <div class="header-landingButtons">

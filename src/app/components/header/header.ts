@@ -4,11 +4,12 @@ import { UserService } from '../../services/user/user.service';
 import { User } from '../../models/user.model';
 import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { NotificationService } from '../../services/notification/notification.service';
 
 @Component({
   selector: 'app-header',
-  imports: [PopupComponent],
+  imports: [PopupComponent, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
