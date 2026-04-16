@@ -20,7 +20,6 @@ export class SupportComponent {
 
   constructor(
     private userService: UserService,
-    private settingsService: SettingsService,
     private questionService: QuestionService,
   ) {
     this.user = this.userService.getUser();
@@ -35,14 +34,7 @@ export class SupportComponent {
 
   onConfirm(question: string): void {
     this.isPopupOpen = false;
-
-    if (question === '') {
-      alert('Please write something or cancel.');
-    } else {
-      this.userQuestion = question;
-      this.settingsService.setUserQuestion(this.userQuestion);
-      this.questionService.sendQuestion();
-    }
+    this.questionService.sendQuestion(question, this.user);
   }
 
   onDecline(): void {

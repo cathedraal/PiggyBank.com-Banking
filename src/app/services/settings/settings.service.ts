@@ -4,18 +4,9 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class SettingsService {
-  private userQuestion: string = '';
   private registrationFlow = signal(false);
   private landingPage = signal(false)
   private loginPassed = signal(false)
-
-  // question
-  setUserQuestion(value: string): void {
-    this.userQuestion = value;
-  }
-  getUserQuestion(): string {
-    return this.userQuestion;
-  }
 
   // registration-flow
   setRegistrationFlow(value: boolean): void {
