@@ -4,6 +4,7 @@ import { AddCardComponent } from './pages/registration-flow/add-card/add-card';
 import { DashboardComponent } from './pages/dashboard/dashboard';
 import { LandingComponent } from './pages/landing/landing';
 import { RegistrationFlowComponent } from './pages/registration-flow/registration-flow';
+import { ProfileComponent } from './pages/profile/profile';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full' },
@@ -14,5 +15,6 @@ export const routes: Routes = [
             { path: 'add-card', component: AddCardComponent }
         ]
      },
-    { path: 'dashboard', component: DashboardComponent }
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'profile', component: ProfileComponent }
 ];
