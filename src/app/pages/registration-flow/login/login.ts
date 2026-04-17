@@ -65,7 +65,7 @@ export class LoginComponent {
 
   constructor(
     private settingsService: SettingsService,
-    private userService: UserService,
+    protected userService: UserService,
     private router: Router,
   ) {
     this.settingsService.setLoginPassed(false)

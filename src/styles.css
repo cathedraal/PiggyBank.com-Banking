@@ -168,6 +168,7 @@ p {
 }
 
 :root {
+  --minimal-content-padding: 100px;
   --container-padding-secondary: 60px;
   --container-padding-primary: 45px;
   --letter-spacing-secondary: -0.5px;
@@ -191,6 +192,7 @@ p {
   --container-title: #787878;
   --primary-color: #0c6fff;
   --primary-color-icon: #eff5ff;
+  --primary-color-icon-secondary: #E9F1FF;
   --primary-color-hover: #4a92ff;
   --overlay: #00000008;
   --light-gray: #f8f8f8;
@@ -231,4 +233,6 @@ p {
   --succeed-label: #327d1f;
   --error-background: rgb(255, 229, 229);
   --error-label: rgb(167, 67, 67);
+  --error-background-secondary: #FFEEEE;
+  --error-label-secondary: #D36666;
 }

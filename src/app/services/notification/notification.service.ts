@@ -21,7 +21,7 @@ export class NotificationService {
   }
 
   /**
-   * Sets notification
+   * Sets notification and pops it up
    * @param isTriggered Trigger notification
    * @param isNegative Is this notification negative or positive?
    * @param message Message of the notification

@@ -9,6 +9,7 @@ import { CurrencyComponent } from './currency/currency';
 import { EmptyCardsComponent } from './empty-cards/empty-cards';
 import { User } from '../../models/user.model';
 import { TransactionBenefitsComponent } from "./transaction-benefits/transaction-benefits";
+import { ErrorPageComponent } from '../error-page/error-page';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +21,8 @@ import { TransactionBenefitsComponent } from "./transaction-benefits/transaction
     BenefitsComponent,
     CurrencyComponent,
     EmptyCardsComponent,
-    TransactionBenefitsComponent
+    TransactionBenefitsComponent,
+    ErrorPageComponent
 ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
@@ -36,7 +38,7 @@ export class DashboardComponent {
   });
   subheader: string = `trading on ${this.dateTime}`
 
-  constructor(private userService: UserService) {
+  constructor(protected userService: UserService) {
     this.user = this.userService.getUser()
   }
 }

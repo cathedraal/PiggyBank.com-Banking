@@ -1,17 +1,23 @@
-<div class="dashboard-header">
-    <h1 class="dashboard-title">Hello, <span>{{ user?.name }}</span></h1>
+@if (userService.getUser()) {
+  <div class="dashboard-header">
+    <h1 class="dashboard-title">
+      Hello, <span>{{ user?.name }}</span>
+    </h1>
     <h3 class="dashboard-subtitle">{{ subheader }}</h3>
-</div>
-<main>
+  </div>
+  <main>
     <app-currency></app-currency>
     @if (user!.cards.length === 0) {
-        <app-empty-cards></app-empty-cards>
+      <app-empty-cards></app-empty-cards>
     } @else {
-        <app-wallet></app-wallet>
+      <app-wallet></app-wallet>
     }
     <app-transaction-benefits></app-transaction-benefits>
     <app-transactions></app-transactions>
     <app-support></app-support>
     <app-benefits></app-benefits>
     <app-articles></app-articles>
-</main>
+  </main>
+} @else {
+    <app-error-page></app-error-page>
+}
