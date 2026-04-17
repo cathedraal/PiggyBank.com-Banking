@@ -8,30 +8,27 @@ export class NotificationService {
   private successful = signal(false)
   private notificationMessage: string = ''
 
-  // popup notification
-  setNotification(value: boolean): void {
-    this.notified.set(value)
-  }
-
   isNotified(): boolean {
     return this.notified()
-  }
-
-  // notification is whether false or true
-  setBooleanNotification(value: boolean): void {
-    this.successful.set(value)
   }
 
   isSucceed(): boolean {
     return this.successful()
   }
 
-  // sets message
-  setNotificationMessage(value: string): void {
-    this.notificationMessage = value
-  }
-
   getNotificationMessage(): string {
     return this.notificationMessage
+  }
+
+  /**
+   * Sets notification
+   * @param isTriggered Trigger notification
+   * @param isNegative Is this notification negative or positive?
+   * @param message Message of the notification
+   */
+  triggerNotification(isTriggered: boolean, isNegative: boolean, message: string) {
+    this.notified.set(isTriggered)
+    this.successful.set(isNegative)
+    this.notificationMessage = message
   }
 }

@@ -13,7 +13,7 @@ export class NotificationComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.notificationService.setNotification(false)
+      this.notificationService.triggerNotification(false, false, '')
     }, 2000)
   }
 }

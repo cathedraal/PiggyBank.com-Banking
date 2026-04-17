@@ -42,6 +42,7 @@ export class LoginComponent {
   // variables
   isValidPhone: boolean = false;
   user: User | null = null
+  userId: string = `${getRandomInt(100000000000, 1900000000000)}`
 
   protected form = new FormGroup<LoginForm>({
     name: new FormControl<string>('', {
@@ -94,6 +95,7 @@ export class LoginComponent {
           this.form.value.email!,
           { code: this.selectedCountryCode.value, number: this.formattedPhoneNumber },
           this.dateTime,
+          this.userId
         ),
       );
       this.router.navigate(['/registration-flow/add-card']);
@@ -145,6 +147,7 @@ export class LoginComponent {
           number: this.guest.phone[getRandomInt(0, this.guest.phone.length - 1)],
         },
         this.dateTime,
+        this.userId
       ),
     );
   }

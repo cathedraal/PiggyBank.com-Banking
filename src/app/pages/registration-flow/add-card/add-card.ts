@@ -12,6 +12,7 @@ import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/constants';
 import { Action } from '../../../models/action.model';
 import { cardTypesItem } from '../../../models/interfaces/cardTypes.model';
 import { NotificationService } from '../../../services/notification/notification.service';
+import { formatToSource } from '../../../utils/utils';
 
 interface AddCardForm {
   holder: FormControl<string>;
@@ -188,17 +189,12 @@ export class AddCardComponent implements OnInit {
    * Creates a new card with given parameters from the UI Component using service
    */
   onSubmit(): void {
-    const clean = this.cardNumber.replace(/\s/g, '');
-    const lastFourDigits = clean.slice(-4);
-    const source = `${this.cardType}  •• ${lastFourDigits}`;
-
     if (this.form.valid) {
       const action = new Action(
         'icons/transactions_newCard.svg',
         this.dateTime,
-        source,
-        'addedCard',
-        'Added a new',
+        formatToSource(this.cardType, this.cardNumber),
+        {verb: 'Added a new', preposition: ''},
       );
       const card = new Card(
         this.cardHolder,
@@ -206,7 +202,7 @@ export class AddCardComponent implements OnInit {
         this.cardExpdate,
         this.cardCvc,
         null,
-        this.cardCurrency.value,
+        {currency: this.cardCurrency.currency, value: this.cardCurrency.value}, 
         this.cardType,
       );
       this.bankService.setCurrentCard(card);
@@ -217,9 +213,7 @@ export class AddCardComponent implements OnInit {
       console.log(card);
       console.log(this.user);
 
-      this.notificationService.setBooleanNotification(true)
-      this.notificationService.setNotification(true)
-      this.notificationService.setNotificationMessage('added card')
+      this.notificationService.triggerNotification(true, true, 'card added')
     }
   }
 
@@ -235,17 +229,11 @@ export class AddCardComponent implements OnInit {
    */
   onGuestCard(): void {
     const guestCard = this.bankService.generateGuestCard(this.user!);
-
-    const clean = guestCard.cardNumber.replace(/\s/g, '');
-    const lastFourDigits = clean.slice(-4);
-    const source = `${this.cardType}  •• ${lastFourDigits}`;
-
     const action = new Action(
       'icons/transactions_newCard.svg',
       this.dateTime,
-      source,
-      'addedCard',
-      'Added a new guest',
+      formatToSource(this.cardType, guestCard.cardNumber),
+      {verb: 'Added a new guest', preposition: ''},
     );
     this.bankService.setCurrentCard(guestCard);
     this.user?.addCard(guestCard);
@@ -255,9 +243,7 @@ export class AddCardComponent implements OnInit {
     console.log(guestCard);
     console.log(this.user);
 
-    this.notificationService.setBooleanNotification(true)
-    this.notificationService.setNotification(true)
-    this.notificationService.setNotificationMessage('added card')
+    this.notificationService.triggerNotification(true, true, 'card added')
   }
 
   /**

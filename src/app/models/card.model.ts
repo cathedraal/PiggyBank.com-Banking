@@ -8,7 +8,7 @@ export class Card {
     public expDate: string,
     public cardCvc: string,
     public cardBalance: number | null,
-    public cardCurrency: string,
+    public cardCurrency: {currency: string, value: string},
     public cardType: string,
   ) {}
 

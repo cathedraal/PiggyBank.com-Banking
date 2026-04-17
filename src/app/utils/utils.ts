@@ -44,3 +44,15 @@ export function maskCardNumber(cardNumber: string): string {
 
   return '•••• ' + lastFourDigits;
 }
+
+/**
+ * Formats a card number into the action format
+ * @param cardType type of the card
+ * @param cardNumber number of the card
+ * @returns source with card type and number 
+ */
+export function formatToSource(cardType: string, cardNumber: string): string {
+  const clean = cardNumber.replace(/\s/g, '')
+  const lastFourDigits = clean.slice(-4)
+  return `${cardType}  •• ${lastFourDigits}`
+}

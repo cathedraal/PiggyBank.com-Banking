@@ -39,20 +39,14 @@ export class QuestionService {
           publicKey: 'pOZWidCJ7_WUh0fjm',
         })
         .then(() => {
-          this.notificationService.setBooleanNotification(true);
-          this.notificationService.setNotification(true);
-          this.notificationService.setNotificationMessage('question sent');
+          this.notificationService.triggerNotification(true, true, 'question sent');
         })
         .catch((error) => {
           console.error('EmailJS error:', error);
-          this.notificationService.setBooleanNotification(false);
-          this.notificationService.setNotification(true);
-          this.notificationService.setNotificationMessage('failed to send question');
+          this.notificationService.triggerNotification(true, false, 'failed to send question');
         });
     } else if (question.trim() === '') {
-      this.notificationService.setBooleanNotification(false);
-      this.notificationService.setNotification(true);
-      this.notificationService.setNotificationMessage('failed to send question');
+      this.notificationService.triggerNotification(true, false, 'please include letters');
     }
   }
 }

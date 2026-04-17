@@ -13,7 +13,8 @@ export class User {
     public surname: string,
     public email: string,
     public phone: {code: string, number: string},
-    public logDate: string
+    public logDate: string,
+    public id: string
   ) {}
 
   addCard(card: Card): void {

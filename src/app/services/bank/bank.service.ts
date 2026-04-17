@@ -32,7 +32,7 @@ export class BankService {
       `${getRandomInt(1, 12)}/${getRandomInt(26, 35)}`,
       `${getRandomInt(100, 999)}`,
       null,
-      `${CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length-1)].value}`,
+      {currency: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length-1)].currency, value: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length-1)].value},
       `${CARD_TYPES[getRandomInt(0, CARD_TYPES.length-1)].value}`
     )
   }
