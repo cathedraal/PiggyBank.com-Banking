@@ -37,7 +37,7 @@ export class SupportComponent {
     this.questionService.sendQuestion(question, this.user);
   }
 
-  onDecline(): void {
+  onClose(): void {
     this.isPopupOpen = false;
   }
 }

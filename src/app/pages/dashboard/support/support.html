@@ -16,6 +16,7 @@
         [button2]="'send'"
         [popupContext]="popupContext"
         (confirmed)="onConfirm($event)"
-        (declined)="onDecline()"
+        (declined)="onClose()"
+        (closed)="onClose()"
     ></app-popup>
 }
