@@ -24,15 +24,4 @@ export class User {
   addAction(action: Action): void {
     this.actions.push(action);
   }
-
-  deleteCard(card: Card): void {
-    const index = this.cards.indexOf(card);
-    if (index !== -1) {
-      this.cards.splice(index, 1);
-    }
-  }
-
-  getInfo(): string {
-    return `name: ${this.name}, surname: ${this.surname}, email: ${this.email}, log. date: ${this.logDate}`;
-  }
 }

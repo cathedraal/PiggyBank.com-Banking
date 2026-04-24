@@ -9,7 +9,8 @@ export class Card {
     public cardCvc: string,
     public cardBalance: number | null,
     public cardCurrency: {currency: string, value: string},
-    public cardType: string,
+    public cardType: {type: string, color: string},
+    public flipped: boolean
   ) {}
 
   getInfo(): string {

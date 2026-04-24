@@ -1,7 +1,11 @@
-<main>
+@if (userService.getUser()) {
+  <main>
     <app-header></app-header>
     <app-banner></app-banner>
     <app-account-info></app-account-info>
     <app-cards></app-cards>
     <app-buttons></app-buttons>
-</main>
+  </main>
+} @else {
+  <app-error-page></app-error-page>
+}

@@ -1,1 +1,26 @@
-<p>buttons works!</p>
+<main>
+  <h1>manage</h1>
+  <hr />
+  <div>
+    <button routerLink="/dashboard" class="profile-dashboardButton">
+      <img src="icons/profile/dashboard.svg" alt="dashboard" />
+      Dashboard
+    </button>
+    <button (click)="openPopup()" class="profile-logOutButton">
+      <img src="icons/profile/logout.svg" alt="log out" />
+      Log out
+    </button>
+  </div>
+</main>
+
+@if (isPopupOpen) {
+  <app-popup
+    [text]="popupText"
+    [button1]="'cancel'"
+    [button2]="'delete'"
+    [popupContext]="popupContext"
+    (confirmed)="onConfirm()"
+    (declined)="onDecline()"
+    (closed)="onDecline()"
+  ></app-popup>
+}

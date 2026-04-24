@@ -1,1 +1,9 @@
-<p>banner works!</p>
+<main>
+  <div class="profile-bannerAvatar">
+    <h1>{{ userService.getUser()!.name.charAt(0) + userService.getUser()!.surname.charAt(0) }}</h1>
+  </div>
+  <div class="profile-bannerInfo">
+    <h1>{{ userService.getUser()!.name + ' ' + userService.getUser()!.surname }}</h1>
+    <p>{{ userService.getUser()!.email }}</p>
+  </div>
+</main>

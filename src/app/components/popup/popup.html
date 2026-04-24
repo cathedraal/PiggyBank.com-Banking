@@ -19,8 +19,12 @@
       </div>
     </div>
     <div class="popup-buttons">
-      <button (click)="decline()" class="popup-button1">{{ button1 }}</button>
-      <button (click)="confirm(userInput.value)" class="popup-button2">{{ button2 }}</button>
+      @if (popupContext === 'info popup') {
+        <button (click)="decline()" class="popup-button3">understood</button>
+      } @else {
+        <button (click)="decline()" class="popup-button1">{{ button1 }}</button>
+        <button (click)="confirm(userInput.value)" class="popup-button2">{{ button2 }}</button>
+      }
     </div>
   </div>
 </div>

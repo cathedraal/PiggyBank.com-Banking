@@ -15,7 +15,7 @@
         <div class="dashboard-transaction">
           <div class="dashboard-transactionText">
             <img [src]="transaction.actionIcon" alt="transaction icon" />
-            <p>{{ transaction.actionText }}</p>
+            <p>{{ transaction.actionText.verb + ' ' + transaction.actionText.preposition }}</p>
             <span> {{ transaction.actionSource }}</span>
           </div>
           <hr />

@@ -14,13 +14,13 @@ export class PopupComponent {
   @Input() button2: string = ''
   @Input() popupContext: null | string = ''
 
-  @Output() confirmed = new EventEmitter<string>()
+  @Output() confirmed = new EventEmitter<any>()
   @Output() declined = new EventEmitter<void>()
   @Output() closed = new EventEmitter<void>()
 
   supportButtons: supportButtonItem[] = SUPPORT_BUTTONS
 
-  confirm(value: string = ''): void {
+  confirm(value: any = ''): void {
     this.confirmed.emit(value)
   }
 

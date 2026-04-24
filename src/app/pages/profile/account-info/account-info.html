@@ -1,1 +1,24 @@
-<p>account-info works!</p>
+<main>
+  <h1>personal details</h1>
+  <hr />
+  <div class="profile-accountInfoPills">
+    <div class="profile-pill">
+      <p class="profile-pillParagraph">joined</p>
+      <p class="profile-pillHeader">{{ userService.getUser()!.logDate }}</p>
+    </div>
+    <div class="profile-pill">
+      <p class="profile-pillParagraph">email</p>
+      <p class="profile-pillHeader">{{ userService.getUser()!.email }}</p>
+    </div>
+    <div class="profile-pill">
+      <p class="profile-pillParagraph">phone</p>
+      <p class="profile-pillHeader">
+        {{ userService.getUser()!.phone.code + ' ' + userService.getUser()!.phone.number }}
+      </p>
+    </div>
+    <div class="profile-pill">
+      <p class="profile-pillParagraph">unique id</p>
+      <p class="profile-pillHeader">{{ userService.getUser()!.id }}</p>
+    </div>
+  </div>
+</main>

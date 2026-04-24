@@ -42,7 +42,7 @@ export class AddCardComponent implements OnInit {
   cardNumber: string = '';
   cardExpdate: string = '';
   cardCvc: string = '';
-  cardType: string = CARD_TYPES[0].value;
+  cardType: cardTypesItem = CARD_TYPES[0];
   cardCurrency: currencyTypesItem = CURRENCY_TYPES[0];
 
   // date
@@ -181,8 +181,11 @@ export class AddCardComponent implements OnInit {
     this.isChoosingType = true;
 
     const select = event.target as HTMLSelectElement;
-    this.cardType = select.value;
-    this.bankService.setCardType(this.cardType);
+    const found = this.types.find((el) => el.value === select.value)
+    if (found) {
+      this.cardType = found
+    }
+    this.bankService.setCardType(this.cardType.value);
   }
 
   /**
@@ -193,7 +196,7 @@ export class AddCardComponent implements OnInit {
       const action = new Action(
         'icons/transactions_newCard.svg',
         this.dateTime,
-        formatToSource(this.cardType, this.cardNumber),
+        formatToSource(this.cardType.value, this.cardNumber),
         {verb: 'Added a new', preposition: ''},
       );
       const card = new Card(
@@ -203,15 +206,14 @@ export class AddCardComponent implements OnInit {
         this.cardCvc,
         null,
         {currency: this.cardCurrency.currency, value: this.cardCurrency.value}, 
-        this.cardType,
+        {type: this.cardType.value, color: this.cardType.color},
+        false
       );
       this.bankService.setCurrentCard(card);
       this.user?.addCard(card);
       this.user?.addAction(action);
       this.router.navigate(['/dashboard']);
       this.isPopupOpen = false;
-      console.log(card);
-      console.log(this.user);
 
       this.notificationService.triggerNotification(true, true, 'card added')
     }
@@ -232,7 +234,7 @@ export class AddCardComponent implements OnInit {
     const action = new Action(
       'icons/transactions_newCard.svg',
       this.dateTime,
-      formatToSource(this.cardType, guestCard.cardNumber),
+      formatToSource(this.cardType.value, guestCard.cardNumber),
       {verb: 'Added a new guest', preposition: ''},
     );
     this.bankService.setCurrentCard(guestCard);
@@ -240,8 +242,6 @@ export class AddCardComponent implements OnInit {
     this.user?.addAction(action);
     this.router.navigate(['/dashboard']);
     this.isPopupOpen = false;
-    console.log(guestCard);
-    console.log(this.user);
 
     this.notificationService.triggerNotification(true, true, 'card added')
   }

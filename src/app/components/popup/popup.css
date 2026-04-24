@@ -24,10 +24,7 @@
   width: 100%;
   position: relative;
   animation: slideInFromBottom 0.2s ease;
-  box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.03),
-    0 12px 24px rgba(0, 0, 0, 0.06),
-    0 32px 64px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-container-primary)
 }
 
 .popup-header {
@@ -73,6 +70,19 @@
   transition: all 0.2s ease;
 }
 
+.popup-button3 {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--primary-color);
+  font-family: inherit;
+  border: none;
+  color: var(--white);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
 .popup-button1 {
   padding: 20px;
   max-width: 40%;
@@ -93,7 +103,7 @@
   background-color: var(--white-hover);
 }
 
-.popup-button2:hover {
+.popup-button2:hover, .popup-button3:hover {
   background-color: var(--primary-color-hover);
 }
 

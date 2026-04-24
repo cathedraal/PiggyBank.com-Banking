@@ -2,8 +2,8 @@
   <div class="dashboard-wallet">
     <div class="dashboard-walletHeader">
       <h4 class="dashboard-walletTitle">Main wallet balance</h4>
-      <h4 class="dashboard-walletType" [style.backgroundColor]="userCardTypeColor">
-        {{ userMainCard?.cardType }}
+      <h4 class="dashboard-walletType" [style.backgroundColor]="userMainCard?.cardType?.color">
+        {{ userMainCard?.cardType?.type }}
       </h4>
     </div>
     <h1 class="dashboard-walletBalance">

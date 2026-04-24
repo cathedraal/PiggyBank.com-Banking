@@ -1,0 +1,45 @@
+main {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  background-color: var(--primary-color-container);
+  border: 1px solid var(--primary-color-border);
+  border-radius: var(--border-radius);
+  padding: var(--container-padding-primary);
+  margin-top: 60px;
+  box-sizing: border-box;
+}
+
+.profile-bannerAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-container-primary);
+  background-color: var(--primary-color);
+}
+
+.profile-bannerAvatar h1 {
+  margin: 0px;
+  padding: 10px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 80px;
+  letter-spacing: var(--letter-spacing-primary);
+}
+
+.profile-bannerInfo h1 {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: var(--letter-spacing-primary);
+}
+
+.profile-bannerInfo p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: var(--primary-color);
+}

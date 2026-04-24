@@ -3,6 +3,7 @@ import { Card } from '../../models/card.model';
 import { getRandomInt } from '../../utils/utils';
 import { User } from '../../models/user.model';
 import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/constants';
+import { UserService } from '../user/user.service';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +11,10 @@ import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/constants';
 export class BankService {
   private currencyChosen: string = '';
   private cardType: string = '';
-  private amount: string = ''
-  private currentCard: Card | null = null
+  private amount: string = '';
+  private currentCard: Card | null = null;
+
+  constructor(private userService: UserService) {}
 
   setCurrency(value: string): void {
     this.currencyChosen = value;
@@ -20,21 +23,27 @@ export class BankService {
     this.cardType = value;
   }
   setCurrentCard(card: Card): void {
-    this.currentCard = card
-  } 
+    this.currentCard = card;
+  }
   setAmount(value: string): void {
-    this.amount = value
+    this.amount = value;
   }
   generateGuestCard(user: User): Card {
+    const randomCardType = CARD_TYPES[getRandomInt(0, CARD_TYPES.length - 1)];
+
     return new Card(
       `${user.name.toUpperCase()} ${user.surname.toUpperCase()}`,
       `${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)}`,
       `${getRandomInt(1, 12)}/${getRandomInt(26, 35)}`,
       `${getRandomInt(100, 999)}`,
       null,
-      {currency: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length-1)].currency, value: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length-1)].value},
-      `${CARD_TYPES[getRandomInt(0, CARD_TYPES.length-1)].value}`
-    )
+      {
+        currency: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length - 1)].currency,
+        value: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length - 1)].value,
+      },
+      { type: randomCardType.value, color: randomCardType.color },
+      false,
+    );
   }
 
   getCurrency(): string {
@@ -44,9 +53,9 @@ export class BankService {
     return this.cardType;
   }
   getCard(): Card | null {
-    return this.currentCard
+    return this.currentCard;
   }
   getAmount(): string {
-    return this.amount
+    return this.amount;
   }
 }

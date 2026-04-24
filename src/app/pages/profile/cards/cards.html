@@ -1,1 +1,92 @@
-<p>cards works!</p>
+<main>
+  <div class="profile-cardsHeader">
+    <h1>active cards</h1>
+    <button (click)="onScroll()" [style.display]="cards()?.length !== 0 ? 'block' : 'none'" [class.atEnd]="isScrolledTillEnd">
+      <img src="icons/transactions_showAllButton.svg" alt="showall" />
+    </button>
+  </div>
+  <hr />
+  <div class="profile-cards" #profileCards>
+    @if (cards()?.length === 0) {
+      <app-empty-cards-profile></app-empty-cards-profile>
+    } @else {
+      @for (card of cards(); track $index) {
+        <div class="profile-cardDiv">
+          <div class="profile-cardWrapper" [class.flip]="card.flipped">
+            <div class="profile-card" #profileCard>
+              <div class="profile-cardFront">
+                <div class="profile-cardHeader">
+                  <p class="profile-cardHeaderText">total balance</p>
+                  <p class="profile-cardHeaderType" [style.backgroundColor]="card.cardType.color">
+                    {{ card.cardType.type }}
+                  </p>
+                </div>
+                <h4 class="profile-cardBalance">
+                  <span>{{ card.cardCurrency.value }}</span
+                  >{{ 312.231 | number: '1.2-2' }}
+                </h4>
+                <div class="profile-cardBottom">
+                  <img src="icons/wallet_safe.svg" alt="safe" />
+                  <p>{{ formatNumber(card.cardNumber) }}</p>
+                </div>
+              </div>
+              <div class="profile-cardBack">
+                <div class="profile-cardHeader">
+                  <p class="profile-cardHeaderText">card details</p>
+                </div>
+                <div class="profile-cardDetails">
+                  <div class="profile-cardDetailsHolderDiv">
+                    <p class="profile-cardDetailsHolderText">holder</p>
+                    <p class="profile-cardDetailsHolderInfo">{{ card.cardHolder.toUpperCase() }}</p>
+                  </div>
+                  <div class="profile-cardDetailsNumberDiv">
+                    <p class="profile-cardDetailsNumberText">number</p>
+                    <p class="profile-cardDetailsNumberInfo">{{ card.cardNumber }}</p>
+                  </div>
+                  <div class="profile-cardDetailsExpdateDiv">
+                    <p class="profile-cardDetailsExpdateText">valid until</p>
+                    <p class="profile-cardDetailsExpdateInfo">{{ card.expDate }}</p>
+                  </div>
+                  <div class="profile-cardDetailsCvcDiv">
+                    <p class="profile-cardDetailsCvcText">security code</p>
+                    <p class="profile-cardDetailsCvcInfo">{{ card.cardCvc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-cardPills">
+            <div class="profile-cardSecure">
+              <img src="icons/profile/secure.svg" alt="secure" />
+              <p>this card is secured</p>
+            </div>
+            <button (click)="toggle(card)">
+              <img src="icons/profile/details.svg" alt="">
+              show details
+            </button>
+            <button (click)="openPopup(card)">
+              <img src="icons/profile/delete.svg" alt="delete" />
+              delete
+            </button>
+          </div>
+        </div>
+      }
+      <button class="profile-cardsButton" (click)="onAddCard()">
+        <img src="icons/profile/add.svg" alt="add" />
+        add new
+      </button>
+    }
+  </div>
+</main>
+
+@if (isPopupOpen) {
+  <app-popup
+    [text]="popupText"
+    [button1]="'cancel'"
+    [button2]="'delete'"
+    [popupContext]="popupContext"
+    (confirmed)="onConfirm()"
+    (declined)="onDecline()"
+    (closed)="onDecline()"
+  ></app-popup>
+}
