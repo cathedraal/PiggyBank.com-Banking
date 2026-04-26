@@ -4,12 +4,11 @@ import { UserService } from '../../services/user/user.service';
 import { User } from '../../models/user.model';
 import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
-import { Router, RouterLink } from '@angular/router';
-import { NotificationService } from '../../services/notification/notification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [PopupComponent, RouterLink],
+  imports: [PopupComponent],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -46,7 +45,7 @@ export class HeaderComponent {
     this.isPopupOpen = false;
   }
 
-  onRoute() {
+  onRoute(): void {
     if (this.user()) {
       this.router.navigate(['./profile'])
       if (this.user()!.cards?.length === 0) {
@@ -54,6 +53,14 @@ export class HeaderComponent {
       }
     } else {
       this.router.navigate(['/registration-flow/login'])
+    }
+  }
+
+  onLogoRoute(): void {
+    if (this.userService.user()) {
+      this.router.navigate(['/dashboard'])
+    } else {
+      this.router.navigate(['/landing'])
     }
   }
 

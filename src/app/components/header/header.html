@@ -1,17 +1,23 @@
 <header>
   <div class="header-div">
     <div class="header-logoDiv">
-      <button routerLink="/landing">
+      <button (click)="onLogoRoute()">
         <img src="icons/logo.svg" class="header-logo" alt="logo" />
         <h3 class="header-logoText">PiggyBank</h3>
       </button>
     </div>
-    @if (settingsService.isLandingPage()) {
+    @if (!userService.user()) {
       <div class="header-landingButtons">
         <button (click)="scrollTo('aboutUs')">About</button>
         <button (click)="scrollTo('steps')">Steps</button>
         <button (click)="scrollTo('benefits')">Benefits</button>
         <button (click)="scrollTo('faqs')">FAQs</button>
+      </div>
+    } @else {
+      <div class="header-dashboardButtons">
+        <button>Profile</button>
+        <button>Transactions</button>
+        <button>Articles</button>
       </div>
     }
     <div class="header-cornerButtons">
