@@ -36,13 +36,13 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     background-color: var(--white);
     border: 1px solid var(--border-color);
     color: var(--black);
     font-family: inherit;
     height: fit-content;
-    padding: 5px 15px 5px 5px;
+    padding: 10px;
     width: fit-content;
     border-radius: 40px;
     font-weight: 500;
@@ -55,13 +55,13 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     background-color: var(--white);
     border: 1px solid var(--border-color);
     color: var(--black);
     font-family: inherit;
     height: fit-content;
-    padding: 17px;
+    padding: 10px;
     width: fit-content;
     border-radius: 40px;
     font-weight: 500;
@@ -72,7 +72,13 @@ hr {
 
 .profile-dashboardButton img {
     background-color: var(--light-gray);
-    padding: 15px 10px 15px 10px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.profile-logOutButton img {
+    background-color: var(--error-background-secondary);
+    padding: 10px;
     border-radius: 50%;
 }
 
