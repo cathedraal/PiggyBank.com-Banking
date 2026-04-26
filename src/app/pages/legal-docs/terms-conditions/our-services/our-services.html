@@ -1,1 +1,72 @@
-<p>our-services works!</p>
+<main>
+  <div class="ourServices-header">
+    <h4>3</h4>
+    <h1>Our Services</h1>
+  </div>
+  <p class="ourServices-paragraph1">PiggyBank.com currently provides the following features:</p>
+  <div class="oursServices-div">
+    <div class="ourServices-div">
+      <button class="ourServices-button" (click)="is31Open = !is31Open">
+        3.1 Account & Profile
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is31Open" />
+      </button>
+      <div class="ourServices-pannelDiv" [class.active]="is31Open">
+        <div class="ourServices-pannelInner">
+          <hr />
+          <ul>
+            <li>Register and manage your personal profile</li>
+            <li>Log in and log out securely</li>
+            <li>View your account information and settings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ourServices-div">
+      <button class="ourServices-button" (click)="is32Open = !is32Open">
+        3.2 Card Management
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is32Open" />
+      </button>
+      <div class="ourServices-pannelDiv" [class.active]="is32Open">
+        <div class="ourServices-pannelInner">
+          <hr />
+          <ul>
+            <li>Add up to 3 payment cards to your account</li>
+            <li>Remove cards at any time from your profile</li>
+            <li>Set a preferred card for transactions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ourServices-div">
+      <button class="ourServices-button" (click)="is33Open = !is33Open">
+        3.3 Transactions
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is33Open" />
+      </button>
+      <div class="ourServices-pannelDiv" [class.active]="is33Open">
+        <div class="ourServices-pannelInner">
+          <hr />
+          <ul>
+            <li><span>Add money</span> — top up your wallet from a selected card</li>
+            <li><span>Withdraw money</span> — withdraw funds to a selected card</li>
+            <li><span>Send money</span> — transfer funds to another PiggyBank.com user</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ourServices-div">
+      <button class="ourServices-button" (click)="is34Open = !is34Open">
+        3.4 Activity & News
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is34Open" />
+      </button>
+      <div class="ourServices-pannelDiv" [class.active]="is34Open">
+        <div class="ourServices-pannelInner">
+          <hr />
+          <ul>
+            <li>View your full transaction history</li>
+            <li>Read financial news and articles published on PiggyBank.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { LimitationOfLiability } from './limitation-of-liability';
+import { LimitationOfLiabilityComponent } from './limitation-of-liability';
 
 describe('LimitationOfLiability', () => {
-  let component: LimitationOfLiability;
-  let fixture: ComponentFixture<LimitationOfLiability>;
+  let component: LimitationOfLiabilityComponent;
+  let fixture: ComponentFixture<LimitationOfLiabilityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LimitationOfLiability],
+      imports: [LimitationOfLiabilityComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LimitationOfLiability);
+    fixture = TestBed.createComponent(LimitationOfLiabilityComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

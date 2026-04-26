@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './limitation-of-liability.html',
   styleUrl: './limitation-of-liability.css',
 })
-export class LimitationOfLiability {}
+export class LimitationOfLiabilityComponent {}

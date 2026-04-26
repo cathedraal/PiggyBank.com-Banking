@@ -15,6 +15,7 @@ import { inputValidationContextItem } from '../models/interfaces/inputValidation
 import { retentionDataItem } from '../models/interfaces/retentionData.model';
 import { stepsItem } from '../models/interfaces/steps.model';
 import { supportButtonItem } from '../models/interfaces/supports.model';
+import { transactionSettingItem } from '../models/interfaces/transactionSettings.model';
 import { walletActionContextItem } from '../models/interfaces/walletAction.model';
 
 /**
@@ -508,5 +509,23 @@ export const RETENTION_DATA: retentionDataItem[] = [
     category: 'Marketing preferences',
     period: 'Until withdrawal of consent',
     reason: 'Consent'
+  }
+]
+
+export const TRANSACTION_SETTINGS: transactionSettingItem[] = [
+  {
+    type: 'Add money',
+    dailyLimit: '1500 per currency',
+    fee: '2%'
+  },
+  {
+    type: 'Withdraw money',
+    dailyLimit: '1500 per currency',
+    fee: '2%'
+  },
+  {
+    type: 'Send money',
+    dailyLimit: '1500 per currency',
+    fee: '2%'
   }
 ]

@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './termination.html',
   styleUrl: './termination.css',
 })
-export class Termination {}
+export class TerminationComponent {
+  is111Open: boolean = false
+  is112Open: boolean = false
+}

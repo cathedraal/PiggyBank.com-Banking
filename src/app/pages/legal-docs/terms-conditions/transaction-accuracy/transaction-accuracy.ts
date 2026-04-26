@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './transaction-accuracy.html',
   styleUrl: './transaction-accuracy.css',
 })
-export class TransactionAccuracy {}
+export class TransactionAccuracyComponent {}

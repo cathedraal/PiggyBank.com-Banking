@@ -1,0 +1,138 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--container-spacing);
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  padding: var(--container-padding-secondary);
+  border-radius: var(--border-radius);
+}
+
+.termination-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.termination-header h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  background-color: var(--primary-color-icon-secondary);
+  font-size: 24px;
+  padding: 10px;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.termination-header h1 {
+  margin: 0px;
+  letter-spacing: var(--letter-spacing-secondary);
+  font-weight: 600;
+  font-size: 28px;
+  width: 280px;
+}
+
+.termination-header hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+}
+
+.termination-paragraph1 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.termination-button {
+  display: flex;
+  border: none;
+  background: none;
+  width: 100%;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-secondary);
+  margin: 0px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.terminations-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.termination-div {
+  width: 100%;
+  padding: 15px;
+  border-radius: 35px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.termination-pannelInner {
+  min-height: 0;
+}
+
+.termination-pannelDiv {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.termination-pannelDiv.active {
+    grid-template-rows: 1fr; 
+}
+
+.termination-pannelInner hr {
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.termination-pannelInner p, ul {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 5px;
+}
+
+.termination-pannelInner p {
+    margin-bottom: 15px;
+}
+
+.termination-button img {
+  padding: 7px;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: var(--primary-color-icon);
+}
+
+.termination-button img {
+  padding: 7px;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: var(--primary-color-icon);
+  transition: all 0.3s ease;
+}
+
+.termination-button img.active {
+  transform: rotate(45deg);
+}
+
+a {
+    color: var(--primary-color);
+}

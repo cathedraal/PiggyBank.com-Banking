@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AcceptableUse } from './acceptable-use';
+import { AcceptableUseComponent } from './acceptable-use';
 
 describe('AcceptableUse', () => {
-  let component: AcceptableUse;
-  let fixture: ComponentFixture<AcceptableUse>;
+  let component: AcceptableUseComponent;
+  let fixture: ComponentFixture<AcceptableUseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AcceptableUse],
+      imports: [AcceptableUseComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AcceptableUse);
+    fixture = TestBed.createComponent(AcceptableUseComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

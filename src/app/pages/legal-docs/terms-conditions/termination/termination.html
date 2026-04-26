@@ -1,1 +1,40 @@
-<p>termination works!</p>
+<main>
+  <div class="termination-header">
+    <h4>11</h4>
+    <h1>Termination</h1>
+  </div>
+  <div class="terminations-div">
+    <div class="termination-div">
+      <button class="termination-button" (click)="is111Open = !is111Open">
+        11.1 By You
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is111Open" />
+      </button>
+      <div class="termination-pannelDiv" [class.active]="is111Open">
+        <div class="termination-pannelInner">
+          <hr />
+          <p>
+            You may close your PiggyBank.com account at any time by contacting
+            <a href="">mallindineroman@gmail.com</a>. Before closing your account, please ensure
+            your balance is zero and all pending transactions are complete.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="termination-div">
+      <button class="termination-button" (click)="is112Open = !is112Open">
+        11.2 By Us
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is112Open" />
+      </button>
+      <div class="termination-pannelDiv" [class.active]="is112Open">
+        <div class="termination-pannelInner">
+          <hr />
+          <p>
+            We reserve the right to suspend or terminate your account at any time if you violate
+            these Terms, engage in fraudulent activity, or if required by law or regulation. We will
+            notify you of termination where legally permitted to do so.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

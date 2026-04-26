@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './user-responsibilities.html',
   styleUrl: './user-responsibilities.css',
 })
-export class UserResponsibilities {}
+export class UserResponsibilitiesComponent {}

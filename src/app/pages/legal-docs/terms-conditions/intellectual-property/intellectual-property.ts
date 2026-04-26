@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './intellectual-property.html',
   styleUrl: './intellectual-property.css',
 })
-export class IntellectualProperty {}
+export class IntellectualPropertyComponent {}

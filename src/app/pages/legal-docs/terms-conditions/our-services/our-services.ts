@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './our-services.html',
   styleUrl: './our-services.css',
 })
-export class OurServices {}
+export class OurServicesComponent {
+  is31Open: boolean = false;
+  is32Open: boolean = false;
+  is33Open: boolean = false;
+  is34Open: boolean = false;
+}

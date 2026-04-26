@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './acceptable-use.html',
   styleUrl: './acceptable-use.css',
 })
-export class AcceptableUse {}
+export class AcceptableUseComponent {}

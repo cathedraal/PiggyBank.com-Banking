@@ -1,1 +1,36 @@
-<p>transaction-limits-fees works!</p>
+<main>
+  <div class="transactionSettingsTable-header">
+    <h4>4</h4>
+    <h1>Transaction Limits & Fees</h1>
+  </div>
+  <p class="transactionSettingsTable-paragraph1">
+    We retain your personal data only for as long as necessary for the purposes described in this
+    policy, or as required by law.
+  </p>
+  <table>
+    <tr class="transactionSettingsTable-headerRow">
+      <td class="transactionSettingsTable-headerTd">transaction type</td>
+      <td class="transactionSettingsTable-headerTd">daily limit</td>
+      <td class="transactionSettingsTable-headerTd">fee</td>
+    </tr>
+    <tr>
+      <td class="transactionSettingsTable-headerRowSpace"></td>
+    </tr>
+    @for (transactionSetting of transactionSettings; track $index) {
+      <tr>
+        <td class="transactionSettingsTable-defaultTd">
+          <span>{{ transactionSetting.type }}</span>
+        </td>
+        <td class="transactionSettingsTable-defaultTd">{{ transactionSetting.dailyLimit }}</td>
+        <td class="transactionSettingsTable-defaultTd">{{ transactionSetting.fee }}</td>
+      </tr>
+    }
+    <tr>
+      <td class="transactionSettingsTable-headerRowSpace2"></td>
+    </tr>
+  </table>
+  <p class="transactionSettingsTable-paragraph2">
+    Daily limits apply per calendar day and reset at midnight CET. Limits are applied in your
+    selected account currency. We reserve the right to adjust limits and fees with prior notice.
+  </p>
+</main>

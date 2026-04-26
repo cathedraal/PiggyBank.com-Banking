@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntellectualProperty } from './intellectual-property';
+import { IntellectualPropertyComponent } from './intellectual-property';
 
 describe('IntellectualProperty', () => {
-  let component: IntellectualProperty;
-  let fixture: ComponentFixture<IntellectualProperty>;
+  let component: IntellectualPropertyComponent;
+  let fixture: ComponentFixture<IntellectualPropertyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IntellectualProperty],
+      imports: [IntellectualPropertyComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(IntellectualProperty);
+    fixture = TestBed.createComponent(IntellectualPropertyComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlatformAvailability } from './platform-availability';
+import { PlatformAvailabilityComponent } from './platform-availability';
 
 describe('PlatformAvailability', () => {
-  let component: PlatformAvailability;
-  let fixture: ComponentFixture<PlatformAvailability>;
+  let component: PlatformAvailabilityComponent;
+  let fixture: ComponentFixture<PlatformAvailabilityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PlatformAvailability],
+      imports: [PlatformAvailabilityComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PlatformAvailability);
+    fixture = TestBed.createComponent(PlatformAvailabilityComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

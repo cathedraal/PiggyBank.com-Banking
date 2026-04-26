@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './governing-law.html',
   styleUrl: './governing-law.css',
 })
-export class GoverningLaw {}
+export class GoverningLawComponent {}

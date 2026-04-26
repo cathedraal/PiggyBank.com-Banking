@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './eligibility.html',
   styleUrl: './eligibility.css',
 })
-export class Eligibility {}
+export class EligibilityComponent {}

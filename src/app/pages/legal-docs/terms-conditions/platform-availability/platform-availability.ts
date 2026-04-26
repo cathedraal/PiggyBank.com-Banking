@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './platform-availability.html',
   styleUrl: './platform-availability.css',
 })
-export class PlatformAvailability {}
+export class PlatformAvailabilityComponent {}

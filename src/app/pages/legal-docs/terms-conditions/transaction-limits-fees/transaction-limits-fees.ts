@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { transactionSettingItem } from '../../../../models/interfaces/transactionSettings.model';
+import { TRANSACTION_SETTINGS } from '../../../../constants/constants';
 
 @Component({
   selector: 'app-transaction-limits-fees',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './transaction-limits-fees.html',
   styleUrl: './transaction-limits-fees.css',
 })
-export class TransactionLimitsFees {}
+export class TransactionLimitsFeesComponent {
+  transactionSettings: transactionSettingItem[] = TRANSACTION_SETTINGS
+}

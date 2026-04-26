@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TransactionAccuracy } from './transaction-accuracy';
+import { TransactionAccuracyComponent } from './transaction-accuracy';
 
 describe('TransactionAccuracy', () => {
-  let component: TransactionAccuracy;
-  let fixture: ComponentFixture<TransactionAccuracy>;
+  let component: TransactionAccuracyComponent;
+  let fixture: ComponentFixture<TransactionAccuracyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TransactionAccuracy],
+      imports: [TransactionAccuracyComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TransactionAccuracy);
+    fixture = TestBed.createComponent(TransactionAccuracyComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

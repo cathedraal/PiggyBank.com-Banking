@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserResponsibilities } from './user-responsibilities';
+import { UserResponsibilitiesComponent } from './user-responsibilities';
 
 describe('UserResponsibilities', () => {
-  let component: UserResponsibilities;
-  let fixture: ComponentFixture<UserResponsibilities>;
+  let component: UserResponsibilitiesComponent;
+  let fixture: ComponentFixture<UserResponsibilitiesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserResponsibilities],
+      imports: [UserResponsibilitiesComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UserResponsibilities);
+    fixture = TestBed.createComponent(UserResponsibilitiesComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

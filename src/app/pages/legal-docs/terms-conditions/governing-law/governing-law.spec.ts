@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoverningLaw } from './governing-law';
+import { GoverningLawComponent } from './governing-law';
 
 describe('GoverningLaw', () => {
-  let component: GoverningLaw;
-  let fixture: ComponentFixture<GoverningLaw>;
+  let component: GoverningLawComponent;
+  let fixture: ComponentFixture<GoverningLawComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GoverningLaw],
+      imports: [GoverningLawComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(GoverningLaw);
+    fixture = TestBed.createComponent(GoverningLawComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
