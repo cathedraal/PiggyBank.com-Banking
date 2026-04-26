@@ -1,0 +1,75 @@
+<main>
+  <div class="dataWeCollect-header">
+    <h4>3</h4>
+    <h1>Data We Collect</h1>
+    <hr />
+  </div>
+  <p class="dataWeCollect-paragraph1">
+    We collect personal data that you provide directly to us, data generated through your use of our services, and in some cases data from third parties.
+  </p>
+  <div class="datasWeCollect-div">
+    <div class="dataWeCollect-div">
+      <button class="dataWeCollect-button" (click)="is31Open = !is31Open">
+        3.1 Data You Provide Directly
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is31Open" />
+      </button>
+      <div class="dataWeCollect-pannelDiv" [class.active]="is31Open">
+        <div class="dataWeCollect-pannelInner">
+          <hr />
+          <p>
+            When you register, use, or contact us through PiggyBank.com, you may provide:
+          </p>
+          <ul>
+            <li><span>Identity data</span> — first name, last name, date of birth</li>
+            <li><span>Contact data</span> — email address, phone number, postal address</li>
+            <li><span>Financial data</span> — card number, card type, expiry date, CVC, account balance, transaction history</li>
+            <li><span>Authentication data</span> — login credentials, security questions</li>
+            <li><span>Communication data</span> — messages you send us through the support popup, emails, or other channels</li>
+            <li><span>Preference data</span> — your selected currency, language, notification settings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dataWeCollect-div">
+      <button class="dataWeCollect-button" (click)="is32Open = !is32Open">
+        3.2 Data We Collect Automatically
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is32Open" />
+      </button>
+      <div class="dataWeCollect-pannelDiv" [class.active]="is32Open">
+        <div class="dataWeCollect-pannelInner">
+          <hr />
+          <p>
+            When you use PiggyBank.com, we automatically collect:
+          </p>
+          <ul>
+            <li><span>Technical data</span> — IP address, browser type and version, operating system, device type, screen resolution</li>
+            <li><span>Usage data</span> — pages visited, features used, time spent, clicks, navigation paths</li>
+            <li><span>Transaction data</span> — amount, currency, date, time, and type of transactions you perform</li>
+            <li><span>Session data</span> — login timestamps, session duration, logout events</li>
+            <li><span>Security</span> — failed login attempts, suspicious activity flags, device fingerprint</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dataWeCollect-div">
+      <button class="dataWeCollect-button" (click)="is33Open = !is33Open">
+        3.3 Data From Third Parties
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is33Open" />
+      </button>
+      <div class="dataWeCollect-pannelDiv" [class.active]="is33Open">
+        <div class="dataWeCollect-pannelInner">
+          <hr />
+          <p>
+            In some cases we may receive data about you from third parties, including:
+          </p>
+          <ul>
+            <li>Identity verification providers for fraud prevention purposes</li>
+            <li>Payment network operators such as Visa and Mastercard</li>
+            <li>Analytics providers such as Google Analytics</li>
+            <li>Public registers where required by financial regulation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

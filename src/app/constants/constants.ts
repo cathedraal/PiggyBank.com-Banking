@@ -12,6 +12,7 @@ import { currencyTypesItem } from '../models/interfaces/currencies.model';
 import { faqItem } from '../models/interfaces/faqs.model';
 import { guestItem } from '../models/interfaces/guest.model';
 import { inputValidationContextItem } from '../models/interfaces/inputValidation.model';
+import { retentionDataItem } from '../models/interfaces/retentionData.model';
 import { stepsItem } from '../models/interfaces/steps.model';
 import { supportButtonItem } from '../models/interfaces/supports.model';
 import { walletActionContextItem } from '../models/interfaces/walletAction.model';
@@ -471,3 +472,41 @@ export const COOKIES: cookieItem[] = [
     provider: 'Google'
   }
 ];
+
+export const RETENTION_DATA: retentionDataItem[] = [
+  {
+    category: 'Account data',
+    period: 'Duration of account + 7 years',
+    reason: 'Legal obligation'
+  },
+  {
+    category: 'Transaction data',
+    period: '10 years',
+    reason: 'Financial regulation (AML)'
+  },
+  {
+    category: 'Support communications',
+    period: '3 years',
+    reason: 'Legitimate interests'
+  },
+  {
+    category: 'Analytics data',
+    period: '13 months',
+    reason: 'Legitimate interests'
+  },
+  {
+    category: 'Security logs',
+    period: '12 months',
+    reason: 'Security and fraud prevention'
+  },
+  {
+    category: 'Cookie data',
+    period: 'As per Cookie Policy',
+    reason: 'Various'
+  },
+  {
+    category: 'Marketing preferences',
+    period: 'Until withdrawal of consent',
+    reason: 'Consent'
+  }
+]

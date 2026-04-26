@@ -1,0 +1,105 @@
+<main>
+  <div class="sharingData-header">
+    <h4>6</h4>
+    <h1>Sharing Your Data</h1>
+    <hr />
+  </div>
+  <p class="sharingData-paragraph1">
+    We do not sell your personal data to third parties. We may share your data in the following
+    limited circumstances:
+  </p>
+  <div class="sharingDatas-div">
+    <div class="sharingData-div">
+      <button class="sharingData-button" (click)="is61Open = !is61Open">
+        6.1 Service Providers
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is61Open" />
+      </button>
+      <div class="sharingData-pannelDiv" [class.active]="is61Open">
+        <div class="sharingData-pannelInner">
+          <hr />
+          <p class="sharingData-pannelInnerParagraph1">
+            We work with carefully selected third-party service providers who process data on our
+            behalf. These include:
+          </p>
+          <ul>
+            <li>Cloud infrastructure providers for data hosting</li>
+            <li>Analytics providers for platform improvement</li>
+            <li>Security and fraud prevention services</li>
+            <li>Email delivery services for notifications</li>
+            <li>Identity verification providers</li>
+          </ul>
+          <p class="sharingData-pannelInnerParagraph2">
+            All service providers are bound by data processing agreements and are required to
+            process your data only as instructed by us.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="sharingData-div">
+      <button class="sharingData-button" (click)="is62Open = !is62Open">
+        6.2 Payment Networks
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is62Open" />
+      </button>
+      <div class="sharingData-pannelDiv" [class.active]="is62Open">
+        <div class="sharingData-pannelInner">
+          <hr />
+          <p class="sharingData-pannelInnerParagraph1">
+            To process card transactions, we share necessary transaction data with payment networks
+            such as Visa and Mastercard, and where applicable, correspondent banking partners.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="sharingData-div">
+      <button class="sharingData-button" (click)="is63Open = !is63Open">
+        6.3 Legal & Regulatory Authorities
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is63Open" />
+      </button>
+      <div class="sharingData-pannelDiv" [class.active]="is63Open">
+        <div class="sharingData-pannelInner">
+          <hr />
+          <p class="sharingData-pannelInnerParagraph1">
+            We may disclose your data to regulatory authorities, law enforcement agencies, or courts
+            where required by law, including but not limited to:
+          </p>
+          <ul>
+            <li>Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)</li>
+            <li>Financial intelligence units under AML obligations</li>
+            <li>Courts and tribunals in legal proceedings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sharingData-div">
+      <button class="sharingData-button" (click)="is64Open = !is64Open">
+        6.4 Business Transfers
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is64Open" />
+      </button>
+      <div class="sharingData-pannelDiv" [class.active]="is64Open">
+        <div class="sharingData-pannelInner">
+          <hr />
+          <p class="sharingData-pannelInnerParagraph1">
+            In the event of a merger, acquisition, or sale of all or part of our business, your
+            personal data may be transferred to the acquiring entity. We will notify you of any such
+            change and ensure your data remains protected.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="sharingData-div">
+      <button class="sharingData-button" (click)="is65Open = !is65Open">
+        6.5 With Your Consent
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is65Open" />
+      </button>
+      <div class="sharingData-pannelDiv" [class.active]="is65Open">
+        <div class="sharingData-pannelInner">
+          <hr />
+          <p class="sharingData-pannelInnerParagraph1">
+            We may share your data with other parties where you have provided explicit consent to do
+            so.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

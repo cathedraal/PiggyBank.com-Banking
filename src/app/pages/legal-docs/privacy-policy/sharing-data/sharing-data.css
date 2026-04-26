@@ -1,0 +1,136 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--container-spacing);
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  padding: var(--container-padding-secondary);
+  border-radius: var(--border-radius);
+}
+
+.sharingData-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.sharingData-header h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  background-color: var(--primary-color-icon-secondary);
+  font-size: 24px;
+  padding: 10px;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.sharingData-header h1 {
+  margin: 0px;
+  letter-spacing: var(--letter-spacing-secondary);
+  font-weight: 600;
+  font-size: 28px;
+  width: 320px;
+}
+
+.sharingData-header hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+}
+
+.sharingData-paragraph1 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.sharingData-button {
+  display: flex;
+  border: none;
+  background: none;
+  width: 100%;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-secondary);
+  margin: 0px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.sharingDatas-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sharingData-div {
+  width: 100%;
+  padding: 15px;
+  border-radius: 35px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.sharingData-pannelInner {
+  min-height: 0;
+}
+
+.sharingData-pannelDiv {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.sharingData-pannelDiv.active {
+    grid-template-rows: 1fr; 
+}
+
+.sharingData-pannelInner hr {
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.sharingData-pannelInner p, ul {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 5px;
+}
+
+ul {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.sharingData-button img {
+  padding: 7px;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: var(--primary-color-icon);
+}
+
+.sharingData-button img {
+  padding: 7px;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: var(--primary-color-icon);
+  transition: all 0.3s ease;
+}
+
+.sharingData-button img.active {
+  transform: rotate(45deg);
+}
