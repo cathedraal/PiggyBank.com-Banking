@@ -11,7 +11,6 @@ main {
 .typesOfCookies-header {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
   gap: 10px;
   margin-bottom: 35px;
@@ -47,10 +46,10 @@ main {
 }
 
 .typesOfCookies-paragraph1 {
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .typesOfCookie-button {
@@ -68,9 +67,9 @@ main {
 }
 
 .typesOfCookies-div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .typesOfCookie-div {
@@ -94,7 +93,7 @@ main {
 }
 
 .typesOfCookie-pannelDiv.active {
-    grid-template-rows: 1fr; 
+  grid-template-rows: 1fr;
 }
 
 .typesOfCookie-pannelInner hr {
@@ -105,14 +104,15 @@ main {
   margin-bottom: 15px;
 }
 
-.typesOfCookie-pannelInner p, ul {
+.typesOfCookie-pannelInner p,
+ul {
   font-size: 18px;
   font-weight: 300;
   margin: 5px;
 }
 
 span {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 a {
@@ -138,6 +138,8 @@ a {
   transform: rotate(45deg);
 }
 
-.typesOfCookie-pannelInnerParagraph3, .typesOfCookie-pannelInnerParagraph2, .typesOfCookie-pannelInnerParagraph1 {
-    padding-bottom: 15px;
+.typesOfCookie-pannelInnerParagraph3,
+.typesOfCookie-pannelInnerParagraph2,
+.typesOfCookie-pannelInnerParagraph1 {
+  padding-bottom: 15px;
 }

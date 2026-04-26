@@ -3,6 +3,14 @@ main {
     padding-top: 150px;
 }
 
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 h1 {
     margin: 0px;
     letter-spacing: var(--letter-spacing-primary);

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TermsConditions } from './terms-conditions';
+import { TermsConditionsComponent } from './terms-conditions';
 
 describe('TermsConditions', () => {
-  let component: TermsConditions;
-  let fixture: ComponentFixture<TermsConditions>;
+  let component: TermsConditionsComponent;
+  let fixture: ComponentFixture<TermsConditionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TermsConditions],
+      imports: [TermsConditionsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TermsConditions);
+    fixture = TestBed.createComponent(TermsConditionsComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -12,7 +12,6 @@ main {
 .introduction-header {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
   gap: 10px;
   margin-bottom: 35px;
@@ -69,9 +68,8 @@ main {
 
 .introduction-paragraph6 {
   margin-bottom: 0px;
-  background-color: var(--light-gray);
   padding: 25px;
-  border-radius: 20px;
+  border-radius: 35px;
   border: 1px solid var(--border-color);
   font-style: italic;
 }

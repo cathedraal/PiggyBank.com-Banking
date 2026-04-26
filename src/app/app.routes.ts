@@ -8,19 +8,23 @@ import { ProfileComponent } from './pages/profile/profile';
 import { ErrorPageComponent } from './pages/error-page/error-page';
 import { CookiePolicyComponent } from './pages/legal-docs/cookie-policy/cookie-policy';
 import { PrivacyPolicyComponent } from './pages/legal-docs/privacy-policy/privacy-policy';
+import { TermsConditionsComponent } from './pages/legal-docs/terms-conditions/terms-conditions';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'landing', pathMatch: 'full' },
-    { path: 'landing', component: LandingComponent },
-    { path: 'registration-flow', component: RegistrationFlowComponent,
-        children: [
-            { path: 'login', component: LoginComponent},
-            { path: 'add-card', component: AddCardComponent }
-        ]
-     },
-    { path: 'dashboard', component: DashboardComponent },
-    { path: 'profile', component: ProfileComponent },
-    { path: 'error-page', component: ErrorPageComponent },
-    { path: 'cookie-policy', component: CookiePolicyComponent },
-    { path: 'privacy-policy', component: PrivacyPolicyComponent }
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingComponent },
+  {
+    path: 'registration-flow',
+    component: RegistrationFlowComponent,
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'add-card', component: AddCardComponent },
+    ],
+  },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'error-page', component: ErrorPageComponent },
+  { path: 'cookie-policy', component: CookiePolicyComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-and-conditions', component: TermsConditionsComponent },
 ];

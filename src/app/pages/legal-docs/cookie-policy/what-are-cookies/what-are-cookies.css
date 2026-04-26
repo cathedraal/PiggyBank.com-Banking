@@ -1,62 +1,66 @@
 main {
-    display: flex;
-    flex-direction: column;
-    margin-top: var(--container-spacing);
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    padding: var(--container-padding-secondary);
-    border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--container-spacing);
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  padding: var(--container-padding-secondary);
+  border-radius: var(--border-radius);
 }
 
 .whatAreCookies-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 10px;
-    margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 35px;
 }
 
 .whatAreCookies-header h4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    background-color: var(--primary-color-icon-secondary);
-    font-size: 24px;
-    padding: 10px;
-    margin: 0;
-    width: 25px;
-    height: 25px;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  background-color: var(--primary-color-icon-secondary);
+  font-size: 24px;
+  padding: 10px;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
 }
 
 .whatAreCookies-header h1 {
-    margin: 0px;
-    letter-spacing: var(--letter-spacing-secondary);
-    font-weight: 600;
-    font-size: 28px;
-    width: 320px;
+  margin: 0px;
+  letter-spacing: var(--letter-spacing-secondary);
+  font-weight: 600;
+  font-size: 28px;
+  width: 320px;
 }
 
 .whatAreCookies-header hr {
-    width: 100%;
-    height: 1px;
-    background-color: var(--border-color);
-    border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
 }
 
-.whatAreCookies-paragraph1, .whatAreCookies-paragraph2, .whatAreCookies-paragraph3, ul {
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 0px;
-    margin-bottom: 0px;
+.whatAreCookies-paragraph1,
+.whatAreCookies-paragraph2,
+.whatAreCookies-paragraph3,
+ul {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 span {
-    font-weight: 500;
+  font-weight: 500;
 }
 
-.whatAreCookies-paragraph1, .whatAreCookies-paragraph2, .whatAreCookies-paragraph3 {
-    margin-bottom: 25px;
+.whatAreCookies-paragraph1,
+.whatAreCookies-paragraph2,
+.whatAreCookies-paragraph3 {
+  margin-bottom: 25px;
 }

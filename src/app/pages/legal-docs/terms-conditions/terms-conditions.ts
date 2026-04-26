@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './terms-conditions.html',
   styleUrl: './terms-conditions.css',
 })
-export class TermsConditions {}
+export class TermsConditionsComponent {}
