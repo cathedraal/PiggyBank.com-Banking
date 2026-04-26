@@ -1,0 +1,79 @@
+<main>
+  <div class="managingCookies-header">
+    <h4>8</h4>
+    <h1>Managing & Controlling Cookies</h1>
+    <hr />
+  </div>
+  <p class="managingCookies-paragraph1">
+    You have several options to control how cookies are used on your device:
+  </p>
+  <div class="managingCookies-div">
+    <div class="managingCookie-div">
+      <button class="managingCookie-button" (click)="is81Open = !is81Open">
+        8.1 Browser Settings
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is81Open" />
+      </button>
+      <div class="managingCookie-pannelDiv" [class.active]="is81Open">
+        <div class="managingCookie-pannelInner">
+          <hr />
+          <p class="managingCookie-pannelInnerParagraph1">
+            Most modern browsers allow you to manage cookie preferences through their settings. You
+            can typically:
+          </p>
+          <ul>
+            <li>View cookies currently stored on your device</li>
+            <li>Delete individual cookies or all cookies</li>
+            <li>Block cookies from specific websites</li>
+            <li>Block all third-party cookies</li>
+            <li>Set your browser to notify you when a cookie is being set</li>
+          </ul>
+          <p class="managingCookie-pannelInnerParagraph2">
+            Please note that blocking essential cookies will significantly impair the functionality
+            of PiggyBank.com and may prevent you from accessing your account.
+          </p>
+          <p class="managingCookie-pannelInnerParagraph3">Browser-specific instructions:</p>
+          <ul>
+            <li>
+              <span>Chrome:</span> Settings → Privacy and Security → Cookies and other site data
+            </li>
+            <li><span>Firefox:</span> Settings → Privacy & Security → Cookies and Site Data</li>
+            <li><span>Safari:</span> Preferences → Privacy → Manage Website Data</li>
+            <li><span>Edge:</span> Settings → Cookies and site permissions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="managingCookie-div">
+      <button class="managingCookie-button" (click)="is82Open = !is82Open">
+        8.2 Opt-Out of Analytics
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is82Open" />
+      </button>
+      <div class="managingCookie-pannelDiv" [class.active]="is82Open">
+        <div class="managingCookie-pannelInner">
+          <hr />
+          <p>
+            You may opt out of analytics cookies at any time by contacting us at
+            <a href="">mallindineroman@gmail.com</a>. We will process your request within 14
+            business days.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="managingCookie-div">
+      <button class="managingCookie-button" (click)="is83Open = !is83Open">
+        8.3 Do Not Track
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is83Open" />
+      </button>
+      <div class="managingCookie-pannelDiv" [class.active]="is83Open">
+        <div class="managingCookie-pannelInner">
+          <hr />
+          <p>
+            Some browsers offer a "Do Not Track" (DNT) setting. PiggyBank.com currently does not
+            respond to DNT signals, as there is no universal standard for how they should be
+            interpreted. We will update this policy if a standard is established.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

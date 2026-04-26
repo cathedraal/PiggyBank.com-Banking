@@ -7,6 +7,7 @@ import { articlePageItem, articlePreviewItem } from '../models/interfaces/articl
 import { benefitItem } from '../models/interfaces/benefits.model';
 import { cardTypesItem } from '../models/interfaces/cardTypes.model';
 import { countryCodeItem } from '../models/interfaces/ccodes.model';
+import { cookieItem } from '../models/interfaces/cookies.model';
 import { currencyTypesItem } from '../models/interfaces/currencies.model';
 import { faqItem } from '../models/interfaces/faqs.model';
 import { guestItem } from '../models/interfaces/guest.model';
@@ -368,4 +369,105 @@ export const COUNTRY_CODES: countryCodeItem[] = [
   { value: '+55', code: '+55' },
   { value: '+91', code: '+91' },
   { value: '+52', code: '+52' },
+];
+
+export const COOKIES: cookieItem[] = [
+  {
+    name: 'pb_session',
+    type: 'Essential',
+    purpose: 'Maintains your login session',
+    duration: 'Session',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_auth_token',
+    type: 'Essential',
+    purpose: 'Secure authentication token',
+    duration: '30 days',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_csrf',
+    type: 'Essential',
+    purpose: 'Cross-site request forgery protection',
+    duration: 'Session',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_currency',
+    type: 'Functional',
+    purpose: 'Remembers your preferred currency',
+    duration: '12 months',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_language',
+    type: 'Functional',
+    purpose: 'Stores language preference',
+    duration: '12 months',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_theme',
+    type: 'Preference',
+    purpose: 'Stores display preferences',
+    duration: '12 months',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_dismissed',
+    type: 'Preference',
+    purpose: 'Tracks dismissed notifications',
+    duration: '6 months',
+    provider: 'PiggyBank'
+  },
+  {
+    name: '_pb_analytics',
+    type: 'Analytics',
+    purpose: 'Tracks usage patterns anonymously',
+    duration: '13 months',
+    provider: 'PiggyBank'
+  },
+  {
+    name: '_pb_session_id',
+    type: 'Analytics',
+    purpose: 'Anonymous session identifier',
+    duration: 'Session',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_fraud_detect',
+    type: 'Security',
+    purpose: 'Fraud and bot detection',
+    duration: '90 days',
+    provider: 'PiggyBank'
+  },
+  {
+    name: 'pb_device_id',
+    type: 'Security',
+    purpose: 'Trusted device recognition',
+    duration: '12 months',
+    provider: 'PiggyBank'
+  },
+  {
+    name: '_ga',
+    type: 'Analytics',
+    purpose: 'Google Analytics identifier',
+    duration: '2 years',
+    provider: 'Google'
+  },
+  {
+    name: '_ga_*',
+    type: 'Analytics',
+    purpose: 'Google Analytics session data',
+    duration: '2 years',
+    provider: 'Google'
+  },
+  {
+    name: '_gid',
+    type: 'Analytics',
+    purpose: 'Google Analytics daily session',
+    duration: '2 years',
+    provider: 'Google'
+  }
 ];

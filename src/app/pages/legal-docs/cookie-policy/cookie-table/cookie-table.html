@@ -1,0 +1,37 @@
+<main>
+    <div class="cookieTable-header">
+        <h4>5</h4>
+        <h1>Cookie Table</h1>
+        <hr />
+    </div>
+    <p class="cookieTable-paragraph1">
+        Below is a detailed list of the cookies currently used on PiggyBank.com:
+    </p>
+    <table>
+        <tr class="cookieTable-headerRow">
+            <td class="cookieTable-headerTd">cookie name</td>
+            <td class="cookieTable-headerTd">type</td>
+            <td class="cookieTable-headerTd">purpose</td>
+            <td class="cookieTable-headerTd">duration</td>
+            <td class="cookieTable-headerTd">provider</td>
+        </tr>
+        <tr>
+            <td class="cookieTable-headerRowSpace"></td>
+        </tr>
+        @for (cookie of cookies; track $index) {
+            <tr>
+                <td class="cookieTable-name"><span>{{cookie.name}}</span></td>
+                <td class="cookieTable-defaultTd">{{cookie.type}}</td>
+                <td class="cookieTable-defaultTd">{{cookie.purpose}}</td>
+                <td class="cookieTable-defaultTd">{{cookie.duration}}</td>
+                <td class="cookieTable-defaultTd">{{cookie.provider}}</td>
+            </tr>   
+        }
+        <tr>
+            <td class="cookieTable-headerRowSpace2"></td>
+        </tr>
+    </table>
+    <p class="cookieTable-paragraph2">
+        This table is updated periodically. Last reviewed: April 2026.
+    </p>
+</main>

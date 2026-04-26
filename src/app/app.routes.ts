@@ -6,6 +6,7 @@ import { LandingComponent } from './pages/landing/landing';
 import { RegistrationFlowComponent } from './pages/registration-flow/registration-flow';
 import { ProfileComponent } from './pages/profile/profile';
 import { ErrorPageComponent } from './pages/error-page/error-page';
+import { CookiePolicyComponent } from './pages/legal-docs/cookie-policy/cookie-policy';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full' },
@@ -18,5 +19,6 @@ export const routes: Routes = [
      },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'profile', component: ProfileComponent },
-    { path: 'error-page', component: ErrorPageComponent }
+    { path: 'error-page', component: ErrorPageComponent },
+    { path: 'cookie-policy', component: CookiePolicyComponent }
 ];

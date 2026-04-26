@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroComponent } from './hero';
+import { CookieTableComponent } from './cookie-table';
 
-describe('Hero', () => {
-  let component: HeroComponent;
-  let fixture: ComponentFixture<HeroComponent>;
+describe('CookieTable', () => {
+  let component: CookieTableComponent;
+  let fixture: ComponentFixture<CookieTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroComponent],
+      imports: [CookieTableComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HeroComponent);
+    fixture = TestBed.createComponent(CookieTableComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,0 +1,63 @@
+<main>
+  <div class="thirdPartyCookies-header">
+    <h4>7</h4>
+    <h1>Third-Party Cookies</h1>
+    <hr />
+  </div>
+  <p class="thirdPartyCookies-paragraph1">
+    Some cookies on PiggyBank.com are set by third-party services that we use to enhance our
+    platform. These third parties have their own privacy and cookie policies, which we encourage you
+    to review.
+  </p>
+  <div class="thirdPartyCookies-div">
+    <div class="thirdPartyCookie-div">
+      <button class="thirdPartyCookie-button" (click)="is71Open = !is71Open">
+        7.1 Analytics Partners
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is71Open" />
+      </button>
+      <div class="thirdPartyCookie-pannelDiv" [class.active]="is71Open">
+        <div class="thirdPartyCookie-pannelInner">
+          <hr />
+          <p>
+            We use Google Analytics to understand how users interact with our platform. Google
+            Analytics sets cookies that collect information anonymously and report website usage
+            trends without identifying individual visitors. You can opt out of Google Analytics by
+            installing the Google Analytics Opt-out Browser Add-on available at
+            <a href="">tools.google.com/dlpage/gaoptout</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="thirdPartyCookie-div">
+      <button class="thirdPartyCookie-button" (click)="is72Open = !is72Open">
+        7.2 Security Partners
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is72Open" />
+      </button>
+      <div class="thirdPartyCookie-pannelDiv" [class.active]="is72Open">
+        <div class="thirdPartyCookie-pannelInner">
+          <hr />
+          <p>
+            We work with security service providers to protect our platform from fraud and abuse.
+            These providers may set cookies to help identify and block malicious activity.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="thirdPartyCookie-div">
+      <button class="thirdPartyCookie-button" (click)="is73Open = !is73Open">
+        7.3 Important Note
+        <img src="icons/cookies/expand.svg" alt="expand" [class.active]="is73Open" />
+      </button>
+      <div class="thirdPartyCookie-pannelDiv" [class.active]="is73Open">
+        <div class="thirdPartyCookie-pannelInner">
+          <hr />
+          <p>
+            We do not allow third-party advertising cookies on PiggyBank.com. We do not sell your
+            data to advertisers or use cookies for targeted advertising purposes. PiggyBank.com is
+            an ad-free platform.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
