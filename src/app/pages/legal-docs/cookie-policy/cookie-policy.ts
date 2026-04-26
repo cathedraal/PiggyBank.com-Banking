@@ -12,6 +12,7 @@ import { DataTransfersComponent } from './data-transfers/data-transfers';
 import { ChangesComponent } from './changes/changes';
 import { ContactUsComponent } from './contact-us/contact-us';
 import { ChildrensPrivacyComponent } from './childrens-privacy/childrens-privacy';
+import { ButtonsComponent } from './buttons/buttons';
 
 @Component({
   selector: 'app-cookie-policy',
@@ -28,7 +29,8 @@ import { ChildrensPrivacyComponent } from './childrens-privacy/childrens-privacy
     DataTransfersComponent,
     ChildrensPrivacyComponent,
     ChangesComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ButtonsComponent
   ],
   templateUrl: './cookie-policy.html',
   styleUrl: './cookie-policy.css',

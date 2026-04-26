@@ -1,7 +1,7 @@
 main {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: var(--container-spacing);
   background-color: var(--white);
   border: 1px solid var(--border-color);
   padding: var(--container-padding-secondary);
@@ -25,8 +25,8 @@ main {
   font-size: 24px;
   padding: 10px;
   margin: 0;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 10px;
 }
 

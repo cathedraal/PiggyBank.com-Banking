@@ -13,6 +13,7 @@ import { AutomatedDecisionMakingComponent } from './automated-decision-making/au
 import { ThirdPartyLinksComponent } from './third-party-links/third-party-links';
 import { ChangesComponent } from './changes/changes';
 import { ContactUsComponent } from './contact-us/contact-us';
+import { ButtonsComponent } from './buttons/buttons';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -30,7 +31,8 @@ import { ContactUsComponent } from './contact-us/contact-us';
     AutomatedDecisionMakingComponent,
     ThirdPartyLinksComponent,
     ChangesComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ButtonsComponent
   ],
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.css',

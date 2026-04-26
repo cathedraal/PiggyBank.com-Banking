@@ -48,7 +48,7 @@ hr {
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-size: medium;
+    font-size: 18px;
 }
 
 .profile-logOutButton {
@@ -67,7 +67,7 @@ hr {
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-size: medium;
+    font-size: 18px;
 }
 
 .profile-dashboardButton img {

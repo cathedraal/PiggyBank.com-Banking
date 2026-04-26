@@ -13,6 +13,7 @@ import { TerminationComponent } from './termination/termination';
 import { GoverningLawComponent } from './governing-law/governing-law';
 import { ChangesComponent } from './changes/changes';
 import { ContactUsComponent } from './contact-us/contact-us';
+import { ButtonsComponent } from './buttons/buttons';
 
 @Component({
   selector: 'app-terms-conditions',
@@ -30,7 +31,8 @@ import { ContactUsComponent } from './contact-us/contact-us';
     TerminationComponent,
     GoverningLawComponent,
     ChangesComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ButtonsComponent
   ],
   templateUrl: './terms-conditions.html',
   styleUrl: './terms-conditions.css',
