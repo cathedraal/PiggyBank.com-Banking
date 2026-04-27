@@ -81,6 +81,18 @@ body {
   }
 }
 
+/* container & label slide in */
+@keyframes pageSlideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* container & label slide out */
 @keyframes slideOutFromTop {
   from {
