@@ -1,0 +1,11 @@
+<main>
+    <div class="header">
+        <img [src]="transactionFlowWordsArr[transactionFlowContext].header.icon" alt="header">
+        <h1>{{transactionFlowWordsArr[transactionFlowContext].header.text}}</h1>
+        <hr>
+    </div>
+    <div class="header-buttons">
+        <button routerLink="/dashboard">dashboard</button>
+        <button>{{transactionFlowWordsArr[transactionFlowContext].header.button}}</button>
+    </div>
+</main>

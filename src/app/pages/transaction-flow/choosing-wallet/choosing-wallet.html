@@ -1,0 +1,78 @@
+<main>
+  <div class="choosingWallet-div">
+    <div class="choosingWallet-chooseWalletDiv">
+      <div class="choosingWallet-chooseWalletHeaderDiv">
+        <h1>choose wallet</h1>
+        @if (user()!.cards.length >= 3) {
+          <button (click)="onScroll()" [class.atEnd]="isScrolledTillEnd">
+            <img src="icons/transaction-flow/scroll.svg" alt="scroll" />
+          </button>
+        }
+      </div>
+      <div class="choosingWallet-chooseWalletCards" #cards>
+        @for (card of user()!.cards; track $index) {
+          <button
+            class="choosingWallet-chooseWalletCard"
+            (click)="onSelectingWallet(card)"
+            [class.active]="card.active"
+            #card
+          >
+            <h1>
+              <span>{{ card.cardCurrency.value }}</span
+              >{{ card.cardBalance| number: '1.2-2' }}
+            </h1>
+            <p>
+              {{ formatNumber(card.cardNumber) }}
+              <span [style.background]="card.cardType.color">{{ card.cardType.type }}</span>
+            </p>
+          </button>
+        }
+      </div>
+    </div>
+    <div class="choosingWallet-chooseAmountDiv">
+      <h1>choose amount</h1>
+      <input
+        type="text"
+        inputmode="numeric"
+        [placeholder]="placeholder"
+        (input)="onChoosingAmount($event)"
+        maxlength="7"
+      />
+      <div class="choosingWallet-totalAmountdiv">
+        <div class="choosingWallet-totalAmount">
+            <p class="choosingWallet-totalAmountText">total amount</p>
+            <p class="choosingWallet-totalAmountInfo">{{chosenAmountOfMoney | number: '1.2-2' }}</p>
+        </div>
+        <hr class="choosingWallet-totalAmountHr">
+        <div class="choosingWallet-totalAmountFeesInfo">
+            <img src="icons/transaction-flow/info.svg" alt="info" />
+            <p>
+                We charge 2% fees for each transaction. <br />
+                <a href="/terms-and-conditions">Learn more</a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="choosingWallet-bottomHr" />
+  <div class="choosingWallet-bottomDiv">
+    <div class="choosingWallet-buttons">
+      <button class="choosingWallet-backButton" (click)="onRoute()">
+        <img src="icons/back.svg" alt="back" />
+      </button>
+      <button class="choosingWallet-continueButton" (click)="onContinue()">continue</button>
+    </div>
+  </div>
+</main>
+
+<!-- @if (isPopupOpen) {
+  <app-popup
+    [text]="''"
+    [button1]="'cancel'"
+    [button2]="'send'"
+    [popupContext]="popupContext"
+    (confirmed)="onConfirm($event)"
+    (declined)="onDecline()"
+    (closed)="onDecline()"
+  ></app-popup>
+} -->

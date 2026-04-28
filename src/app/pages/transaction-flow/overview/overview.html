@@ -1,0 +1,69 @@
+@if (transactionFlowService.isChoosingWalletPassed()) {
+    <main>
+    <h1>all clear?</h1>
+    <div class="overview-totalDiv">
+        <h4 class="overview-totalDivHeader">
+        {{ transactionFlowWordsArr[transactionFlowContext].overview.container1 }}
+        </h4>
+        <div>
+        <h4>
+            {{ user?.selectedCard?.cardCurrency?.currency }} {{ transactionAmount | number: '1.2-2' }}
+        </h4>
+        <p>+{{ displayFees }}% fees</p>
+        </div>
+    </div>
+    <div class="overview-sourceDiv">
+        <h4 class="overview-sourceDivHeader">
+        {{ transactionFlowWordsArr[transactionFlowContext].overview.container2 }}
+        </h4>
+        <div class="overview-source">
+        <div class="overview-sourceNumber">
+            <h4>{{ formatNumber(user?.selectedCard!.cardNumber) }}</h4>
+            <p>
+            {{ user?.selectedCard?.cardCurrency?.currency }}
+            {{ user?.selectedCard?.cardBalance | number: '1.2-2' }}
+            </p>
+        </div>
+        <p [style.background]="user?.selectedCard?.cardType?.color" class="overview-sourceType">
+            {{ user?.selectedCard?.cardType?.type }}
+        </p>
+        </div>
+    </div>
+    @if (
+        transactionFlowService.isRecipientInfoPassed() && transactionFlowContext === 'transferMoney'
+    ) {
+        <div class="overview-recipientDiv">
+        <h4 class="overview-recipientDivHeader">
+            {{ transactionFlowWordsArr[transactionFlowContext].overview.container3 }}
+        </h4>
+        <div class="overview-recipient">
+            <h2>
+            {{
+                recipient!.name!.charAt(0)!.toUpperCase() + recipient!.surname!.charAt(0)!.toUpperCase()
+            }}
+            </h2>
+            <div>
+            <h4>{{ recipient?.name }} {{ recipient?.surname }}</h4>
+            <p class="overview-recipientEmail">
+                <a href="">{{ recipient?.email }}</a>
+            </p>
+            @if (recipient?.optionalText !== '') {
+                <p class="overview-recipientOptionalText">"{{ recipient?.optionalText }}"</p>
+            }
+            </div>
+        </div>
+        </div>
+    }
+    <hr />
+    <div class="overview-buttons">
+        <button class="overview-backButton" (click)="onRoute()">
+        <img src="icons/back.svg" alt="back" />
+        </button>
+        <button class="overview-submitButton" (click)="onSubmit()">
+            <img [src]="transactionFlowWordsArr[transactionFlowContext].overview.buttonIcon" alt="add" />
+        {{ transactionFlowWordsArr[transactionFlowContext].overview.button }}
+        {{ user?.selectedCard?.cardCurrency?.value }}{{ transactionAmount | number: '1.2-2' }}
+        </button>
+    </div>
+    </main>
+}

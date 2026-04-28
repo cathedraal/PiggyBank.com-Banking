@@ -1,0 +1,56 @@
+<main>
+  @if (transactionFlowService.getTransactionFlowContext() === 'transferMoney') {
+    <div class="transactionFlow-firstStep">
+      <div class="transactionFlow-firstStepIcon" [class.active]="isRecipientInfoPassed">
+        @if (!isRecipientInfoPassed) {
+          <h4>1/3</h4>
+        } @else {
+          <img src="icons/registration-flow/check.svg" alt="first step" />
+        }
+      </div>
+      <p>recipient</p>
+    </div>
+    <hr [class.active]="isRecipientInfoPassed" />
+    <div class="transactionFlow-secondStep">
+      <div class="transactionFlow-secondStepIcon" [class.active]="isChoosingWalletPassed">
+        @if (!isChoosingWalletPassed) {
+          <h4>2/3</h4>
+        } @else {
+          <img src="icons/registration-flow/check.svg" alt="first step" />
+        }
+      </div>
+      @if (isRecipientInfoPassed) {
+        <p>wallet & amount</p>
+      }
+    </div>
+    <hr [class.active]="isChoosingWalletPassed" />
+    <div class="transactionFlow-thirdStep">
+      <div class="transactionFlow-thirdStepIcon">
+        <h4>3/3</h4>
+      </div>
+      @if (isChoosingWalletPassed) {
+        <p>overview</p>
+      }
+    </div>
+  } @else {
+    <div class="transactionFlow-firstStep">
+      <div class="transactionFlow-firstStepIcon" [class.active]="isChoosingWalletPassed">
+        @if (!isChoosingWalletPassed) {
+          <h4>1/2</h4>
+        } @else {
+          <img src="icons/registration-flow/check.svg" alt="first step" />
+        }
+      </div>
+      <p>wallet & amount</p>
+    </div>
+    <hr [class.active]="isChoosingWalletPassed" />
+    <div class="transactionFlow-secondStep">
+      <div class="transactionFlow-secondStepIcon">
+        <h4>2/2</h4>
+      </div>
+      @if (isChoosingWalletPassed) {
+        <p>overview</p>
+      }
+    </div>
+  }
+</main>

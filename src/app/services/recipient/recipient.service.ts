@@ -1,30 +1,44 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Signal, signal } from '@angular/core';
+import { Recipient } from '../../models/recipient.model';
+import { UserService } from '../user/user.service';
+import { User } from '../../models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RecipientService {
-  private recipientName: string = '';
-  private recipientEmail: string = '';
-  private recipientText: string = '';
+  public recipient = signal<Recipient | null>(null)
+  public user = signal<User | null>(null);
 
-  setRecipientName(value: string): void {
-    this.recipientName = value;
-  }
-  setRecipientEmail(value: string): void {
-    this.recipientEmail = value;
-  }
-  setRecipientText(value: string): void {
-    this.recipientText = value;
+  constructor(private userService: UserService) {
+    this.user.set(this.userService.getUser())
   }
 
-  getRecipientName(): string {
-    return this.recipientName;
+  setRecipient(value: Recipient | null): void {
+    this.recipient.set(value)
   }
-  getRecipientEmail(): string {
-    return this.recipientEmail;
+
+  getRecipient(): Recipient | null {
+    return this.recipient()
   }
-  getRecipientText(): string {
-    return this.recipientText;
+
+  deleteRecipient(recipient: Recipient): void {
+    this.user.update((currentUser) => {
+      if (!currentUser) {
+        return null
+      }
+
+      // make copy of user model
+      const updatedUser = Object.assign(
+        Object.create(Object.getPrototypeOf(currentUser)),
+        currentUser
+      );
+
+      // update the copy
+      updatedUser.recipients = currentUser.recipients.filter((el) => el !== recipient);
+      
+      // return copy as user and update
+      return updatedUser;
+    })
   }
 }

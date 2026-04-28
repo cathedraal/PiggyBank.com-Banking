@@ -15,19 +15,19 @@ export class TransferService {
     private bankService: BankService,
   ) {}
 
-  sendEmail(): void {
-    const user = this.userService.getUser();
+  // sendEmail(): void {
+  //   const user = this.userService.getUser();
 
-    const params = {
-      amount: this.bankService.getAmount(),
-      recipientName: this.recipientService.getRecipientName(),
-      recipientEmail: this.recipientService.getRecipientEmail(),
-      recipientText: this.recipientService.getRecipientText(),
-      userName: user?.name,
-      userEmail: user?.email,
-      companyName: COMPANY_NAME,
-    };
+  //   const params = {
+  //     amount: this.bankService.getAmount(),
+  //     recipientName: this.recipientService.getRecipientName(),
+  //     recipientEmail: this.recipientService.getRecipientEmail(),
+  //     recipientText: this.recipientService.getRecipientText(),
+  //     userName: user?.name,
+  //     userEmail: user?.email,
+  //     companyName: COMPANY_NAME,
+  //   };
 
-    emailjs.send('service_807c8ah', 'template_lkb0bhl', params);
-  }
+  //   emailjs.send('service_807c8ah', 'template_lkb0bhl', params);
+  // }
 }

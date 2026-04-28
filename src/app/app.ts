@@ -15,12 +15,12 @@ import { NotificationService } from './services/notification/notification.servic
 })
 export class App implements OnInit {
   protected readonly title = signal('PiggyBank.com-Banking_A');
-  protected isLoading = signal(true)
-  protected isHiding = signal(false)
-  protected isVisible = signal(false)
+  protected isLoading = signal(true);
+  protected isHiding = signal(false);
+  protected isVisible = signal(false);
   private timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-  constructor (protected notificationService: NotificationService) {}
+  constructor(protected notificationService: NotificationService) {}
 
   ngOnInit(): void {
     const lenis = new Lenis({ lerp: 0.08 });
@@ -34,19 +34,19 @@ export class App implements OnInit {
     lenis.scrollTo(0)
 
     this.timeoutId = setTimeout(() => {
-      this.isHiding.set(true)
+      this.isHiding.set(true); // loader hides in 2s
       setTimeout(() => {
-        this.isLoading.set(false)
+        this.isLoading.set(false); // loader loades for 3ms
         setTimeout(() => {
-          this.isVisible.set(true)
-        }, 500)
-      }, 300)
-    }, 2000)
+          this.isVisible.set(true); // content is visible in 5ms
+        }, 500);
+      }, 300);
+    }, 2000);
   }
 
   ngOnDestroy(): void {
     if (this.timeoutId) {
-      clearTimeout(this.timeoutId)
+      clearTimeout(this.timeoutId);
     }
-  } 
+  }
 }

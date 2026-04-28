@@ -4,58 +4,50 @@ import { getRandomInt } from '../../utils/utils';
 import { User } from '../../models/user.model';
 import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/constants';
 import { UserService } from '../user/user.service';
+import { TransactionFlowService } from '../transaction-flow/transaction-flow';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BankService {
-  private currencyChosen: string = '';
-  private cardType: string = '';
-  private amount: string = '';
   private currentCard: Card | null = null;
 
-  constructor(private userService: UserService) {}
+  constructor(private transactionFlowService: TransactionFlowService) {}
 
-  setCurrency(value: string): void {
-    this.currencyChosen = value;
-  }
-  setCardType(value: string): void {
-    this.cardType = value;
-  }
   setCurrentCard(card: Card): void {
     this.currentCard = card;
   }
-  setAmount(value: string): void {
-    this.amount = value;
+
+  transact(card: Card | null, value: number): void {
+    if (card?.cardBalance) {
+      if (this.transactionFlowService.getTransactionFlowContext() === 'addMoney') {
+        card.cardBalance += value
+      } else {
+        card.cardBalance -= value
+      }
+    }
   }
+
   generateGuestCard(user: User): Card {
     const randomCardType = CARD_TYPES[getRandomInt(0, CARD_TYPES.length - 1)];
+    const randomCurrencyType = CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length - 1)]
 
     return new Card(
       `${user.name.toUpperCase()} ${user.surname.toUpperCase()}`,
       `${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)} ${getRandomInt(1000, 4999)}`,
       `${getRandomInt(1, 12)}/${getRandomInt(26, 35)}`,
       `${getRandomInt(100, 999)}`,
-      null,
+      100,
       {
-        currency: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length - 1)].currency,
-        value: CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length - 1)].value,
+        currency: randomCurrencyType.currency,
+        value: randomCurrencyType.value,
       },
       { type: randomCardType.value, color: randomCardType.color },
       false,
     );
   }
 
-  getCurrency(): string {
-    return this.currencyChosen;
-  }
-  getCardType(): string {
-    return this.cardType;
-  }
   getCard(): Card | null {
     return this.currentCard;
-  }
-  getAmount(): string {
-    return this.amount;
   }
 }

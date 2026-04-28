@@ -1,7 +1,14 @@
 <div class="body-overlay">
   <div class="body-popup">
     <div class="popup-header">
-      <h3 class="popup-text">{{ text }}</h3>
+      @if (popupContext === 'daily limit') {
+        <h3 class="popup-text">
+          daily limit: 1.500,00 in the selected currency
+          <a href="/terms-and-conditions">learn more</a>
+        </h3>
+      } @else {
+        <h3 class="popup-text">{{ text }}</h3>
+      }
       <button><img src="icons/cross.svg" alt="cancel" (click)="close()"></button>
     </div>
     <div class="popup-support" [style.display]="popupContext === 'support' ? 'block' : 'none'">
@@ -19,7 +26,7 @@
       </div>
     </div>
     <div class="popup-buttons">
-      @if (popupContext === 'info popup') {
+      @if (popupContext === 'info popup' || popupContext === 'daily limit') {
         <button (click)="decline()" class="popup-button3">understood</button>
       } @else {
         <button (click)="decline()" class="popup-button1">{{ button1 }}</button>

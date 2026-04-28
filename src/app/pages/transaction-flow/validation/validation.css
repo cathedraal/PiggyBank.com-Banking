@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+main.visible {
+    opacity: 1;
+}
+
+h1 {
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 0px;
+  font-size: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+button {
+  padding: 20px 40px 20px 40px;
+  width: fit-content;
+    margin-top: 20px;
+  background-color: var(--white);
+  border-radius: 40px;
+  color: var(--black);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  box-shadow: var(--shadow-container-primary);
+
+}
+
+button:hover {
+    background-color: var(--white-hover);
+}

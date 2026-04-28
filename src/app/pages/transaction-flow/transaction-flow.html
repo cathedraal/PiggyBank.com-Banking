@@ -1,0 +1,18 @@
+@if (userService.user()) {
+  <app-transaction-flow-header></app-transaction-flow-header>
+  <main>
+    @if (transactionFlowService.isTransactionFlow()) {
+      <app-transaction-label
+        [isRecipientInfoPassed]="transactionFlowService.isRecipientInfoPassed()"
+        [isChoosingWalletPassed]="transactionFlowService.isChoosingWalletPassed()"
+      ></app-transaction-label>
+    }
+    <router-outlet></router-outlet>
+  </main>
+} @else {
+  <app-error-page></app-error-page>
+}
+
+@if (actionLoaderService.isLoading()) {
+  <app-action-loader></app-action-loader>
+}

@@ -1,0 +1,15 @@
+<main
+  class="actionLoader"
+  [class.hide]="actionLoaderService.isHiding()"
+  [class.invisible]="!actionLoaderService.isLoading()"
+>
+  <div>
+    <div class="actionLoader-icon"></div>
+    @if (transactionFlowService.isTransactionFlow()) {
+      <h4>
+        {{ transactionFlowWordsArr[transactionFlowContext].validation.loader }}
+        <span>{{ formatNumber(source.cardNumber) }} {{ source.cardType }}</span>
+      </h4>
+    }
+  </div>
+</main>

@@ -1,0 +1,6 @@
+<main [class.visible]="actionLoaderService.isVisible()">
+    <img src="icons/transaction-flow/validation_successfull.svg" alt="success">
+    <h1>{{transactionFlowWordsArr[transactionFlowContext].validation.successful.title}}</h1>
+    <p>{{transactionFlowWordsArr[transactionFlowContext].validation.successful.subtitle}}</p>
+    <button routerLink="/dashboard">dashboard</button>
+</main>

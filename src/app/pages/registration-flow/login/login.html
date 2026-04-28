@@ -33,7 +33,14 @@
         </div>
       </div>
       <div class="login-phoneDiv">
-        <input type="text" class="login-phoneInput" maxlength="20" placeholder="phone number" formControlName="phone" (input)="onPhoneNumberInput($event)"/>
+        <input
+          type="text"
+          class="login-phoneInput"
+          maxlength="20"
+          placeholder="phone number"
+          formControlName="phone"
+          (input)="onPhoneNumberInput($event)"
+        />
         <div class="error-label" [class.visible]="phone.invalid && phone.dirty">
           @if (phone.hasError('required')) {
             phone required
@@ -45,29 +52,29 @@
         </div>
       </div>
       <select
-          name="country codes"
-          id="countryCodes"
-          class="login-countryCodeDropdown"
-          (change)="onCountryCodeChange($event)"
-          [class.active]="isChoosingCountryCode"
-        >
-          <button>
-            <div>
-              <div class="selectedcontent2">{{ selectedCountryCode.value }}</div>
-            </div>
-          </button>
-          <div class="login-countryCodeOptionContainer">
-            @for (ccode of ccodes; track $index) {
-              <option [value]="ccode.value" class="login-countryCodeOption">
-                <div class="login-countryCodeOptioDiv">
-                  <span class="login-countryCodeOptionTitle">{{ ccode.code }}</span>
-                </div>
-              </option>
-            }
+        name="country codes"
+        id="countryCodes"
+        class="login-countryCodeDropdown"
+        (change)="onCountryCodeChange($event)"
+        [class.active]="isChoosingCountryCode"
+      >
+        <button>
+          <div>
+            <div class="selectedcontent2">{{ selectedCountryCode.value }}</div>
           </div>
+        </button>
+        <div class="login-countryCodeOptionContainer">
+          @for (ccode of ccodes; track $index) {
+            <option [value]="ccode.value" class="login-countryCodeOption">
+              <div class="login-countryCodeOptioDiv">
+                <span class="login-countryCodeOptionTitle">{{ ccode.code }}</span>
+              </div>
+            </option>
+          }
+        </div>
       </select>
     </div>
-    <hr>
+    <hr />
     <div class="login-containerButtons">
       <button routerLink="/landing" class="login-backButton" (click)="onBack()">
         <svg

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, computed, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Card } from '../../../models/card.model';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../../services/user/user.service';
@@ -14,12 +14,12 @@ import { CARDS_AMOUNT_ALLOWED } from '../../../constants/constants';
   templateUrl: './cards.html',
   styleUrl: './cards.css',
 })
-export class CardsComponent implements AfterViewInit {
+export class CardsComponent implements AfterViewInit, OnInit {
   // html template
   cards = computed(() => this.userService.user()?.cards ?? null);
   formatNumber = maskCardNumber;
   isPopupOpen: boolean = false;
-  popupText: string = 'you sure you want to delete this card?';
+  popupText: string = '';
   popupContext: string = '';
   isScrolledTillEnd: boolean = false
 
@@ -37,7 +37,14 @@ export class CardsComponent implements AfterViewInit {
     this.cardScrollWidth = this.activeCard.nativeElement.scrollWidth;
   }
 
+  ngOnInit(): void {
+    for (let i = 0; i < this.userService.user()!.cards.length; i++) {
+      this.userService.user()!.cards[i].active = false
+    }
+  }
+
   openPopup(card: Card): void {
+    this.popupText = 'you sure you want to delete this card?'
     this.popupContext = 'delete card';
     this.selectedCard = card;
     this.isPopupOpen = true;
@@ -82,7 +89,7 @@ export class CardsComponent implements AfterViewInit {
   }
 
   toggle(card: Card): void {
-    card.flipped = !card.flipped
-    console.log(card.flipped)
+    card.active = !card.active
+    console.log(card.active)
   }
 }

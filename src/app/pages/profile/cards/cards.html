@@ -12,7 +12,7 @@
     } @else {
       @for (card of cards(); track $index) {
         <div class="profile-cardDiv">
-          <div class="profile-cardWrapper" [class.flip]="card.flipped">
+          <div class="profile-cardWrapper" [class.flip]="card.active">
             <div class="profile-card" #profileCard>
               <div class="profile-cardFront">
                 <div class="profile-cardHeader">
@@ -23,7 +23,7 @@
                 </div>
                 <h4 class="profile-cardBalance">
                   <span>{{ card.cardCurrency.value }}</span
-                  >{{ 312.231 | number: '1.2-2' }}
+                  >{{ card.cardBalance| number: '1.2-2' }}
                 </h4>
                 <div class="profile-cardBottom">
                   <img src="icons/wallet_safe.svg" alt="safe" />

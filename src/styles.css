@@ -218,6 +218,7 @@ p {
 
 :root {
   --minimal-content-padding: 100px;
+  --minimal-content-padding-secondary: 200px;
   --container-padding-secondary: 60px;
   --container-padding-primary: 45px;
   --letter-spacing-secondary: -0.5px;
@@ -248,9 +249,11 @@ p {
   --overlay: #00000008;
   --light-gray: #f8f8f8;
   --light-gray-2: #fbfbfb;
+  --light-gray-3: #EFEFEF;
   --light-dark-gray: #f0f0f0;
   --gray: #e7e7e7;
   --dark-gray: #9f9f9f;
+  --dark-gray-secondary: #B3B3B3;
   --line: #dfdfdf;
   --active: #81b4ff;
   --profile-button: #e5e5e5;

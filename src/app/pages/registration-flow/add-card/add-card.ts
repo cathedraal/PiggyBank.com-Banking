@@ -170,7 +170,6 @@ export class AddCardComponent implements OnInit {
     if (found) {
       this.cardCurrency = found;
     }
-    this.bankService.setCurrency(this.cardCurrency.currency);
   }
 
   /**
@@ -185,7 +184,6 @@ export class AddCardComponent implements OnInit {
     if (found) {
       this.cardType = found
     }
-    this.bankService.setCardType(this.cardType.value);
   }
 
   /**
@@ -197,14 +195,14 @@ export class AddCardComponent implements OnInit {
         'icons/transactions_newCard.svg',
         this.dateTime,
         formatToSource(this.cardType.value, this.cardNumber),
-        {verb: 'Added a new', preposition: ''},
+        {verb: 'Added a new', noun: '', preposition1: '', preposition2: ''},
       );
       const card = new Card(
         this.cardHolder,
         this.cardNumber,
         this.cardExpdate,
         this.cardCvc,
-        null,
+        100,
         {currency: this.cardCurrency.currency, value: this.cardCurrency.value}, 
         {type: this.cardType.value, color: this.cardType.color},
         false
@@ -235,7 +233,7 @@ export class AddCardComponent implements OnInit {
       'icons/transactions_newCard.svg',
       this.dateTime,
       formatToSource(this.cardType.value, guestCard.cardNumber),
-      {verb: 'Added a new guest', preposition: ''},
+      {verb: 'Added a new guest', noun: '', preposition1: '', preposition2: ''},
     );
     this.bankService.setCurrentCard(guestCard);
     this.user?.addCard(guestCard);

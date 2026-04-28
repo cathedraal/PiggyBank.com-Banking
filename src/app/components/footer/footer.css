@@ -8,7 +8,6 @@ footer {
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     position: relative;
-    z-index: 1;
     font-family: inherit;
     box-shadow: var(--shadow-tertiary);
     box-sizing: border-box;

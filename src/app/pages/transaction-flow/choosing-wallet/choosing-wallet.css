@@ -1,0 +1,287 @@
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--container-padding-primary);
+  box-shadow: var(--shadow-container-primary);
+  animation: slideInFromBottom 0.6s ease;
+  position: relative;
+  width: 1000px;
+  min-height: 630px;
+  max-height: 630px;
+  box-sizing: border-box;
+}
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choosingWallet-bottomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  bottom: 0;
+  left: 0;
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  backdrop-filter: blur(30px);
+  z-index: 500;
+}
+
+.choosingWallet-bottomHr {
+  position: absolute;
+  height: 1px;
+  background-color: var(--border-color);
+  bottom: 133px;
+  width: 90%;
+  border: none;
+  z-index: 501;
+}
+
+.choosingWallet-div {
+  display: flex;
+}
+
+.choosingWallet-buttons {
+  display: flex;
+  width: 100%;
+}
+
+.choosingWallet-chooseWalletDiv {
+  width: 400px;
+}
+
+.choosingWallet-chooseWalletHeaderDiv {
+  display: flex;
+  width: 100%;
+}
+
+.choosingWallet-chooseWalletHeaderDiv button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--light-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.choosingWallet-chooseWalletHeaderDiv button:hover {
+  background-color: var(--white);
+}
+
+.choosingWallet-chooseWalletHeaderDiv button.atEnd {
+  transform: rotate(180deg);
+}
+
+.choosingWallet-chooseWalletHeaderDiv h1,
+.choosingWallet-chooseAmountDiv h1 {
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.choosingWallet-chooseWalletCards {
+  margin-top: 40px;
+  max-height: 400px;
+  padding-bottom: 133px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choosingWallet-chooseWalletCard {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  width: 100%;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choosingWallet-chooseWalletCard h1,
+p {
+  margin: 0;
+}
+
+.choosingWallet-chooseWalletCard h1 {
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: var(--letter-spacing-secondary);
+  color: var(--black);
+}
+
+.choosingWallet-chooseWalletCard h1 span {
+  color: var(--primary-color);
+}
+
+.choosingWallet-chooseWalletCard p {
+  font-size: 18px;
+  color: var(--label);
+}
+
+.choosingWallet-chooseWalletCard p span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  padding: 7px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.choosingWallet-chooseWalletCard.active {
+  background-color: var(--primary-color);
+}
+
+.choosingWallet-chooseWalletCard.active h1 {
+  color: var(--white);
+}
+
+.choosingWallet-chooseWalletCard.active h1 span {
+  color: var(--white);
+  opacity: 0.7;
+}
+
+.choosingWallet-chooseWalletCard.active p {
+  color: #ffffff72;
+}
+
+.choosingWallet-chooseWalletCard.active p span {
+  background-color: #ffffffcf;
+  color: #ffffffdf;
+}
+
+.choosingWallet-continueButton {
+  padding: 20px;
+  max-width: 190px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 18px;
+  margin-left: auto;
+}
+
+.choosingWallet-continueButton:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.choosingWallet-backButton {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choosingWallet-backButton:hover {
+  background-color: var(--white-hover);
+}
+
+.choosingWallet-chooseAmountDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+input {
+  width: 450px;
+  height: 180px;
+  margin-top: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-gray);
+  text-align: center;
+  outline: none;
+  font-family: inherit;
+  font-size: 96px;
+  font-weight: 600;
+  letter-spacing: -4px;
+}
+
+input::placeholder {
+  color: var(--border-color);
+  font-weight: 600;
+}
+
+.choosingWallet-totalAmountdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+}
+
+.choosingWallet-totalAmount {
+    display: flex;
+}
+
+.choosingWallet-totalAmountText {
+    color: var(--label);
+}
+
+.choosingWallet-totalAmountInfo {
+    color: var(--black);
+    margin-left: auto;
+}
+
+.choosingWallet-totalAmountFeesInfo {
+    display: flex;
+    gap: 5px;
+}
+
+.choosingWallet-totalAmountFeesInfo p {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--subtitle);
+}
+
+.choosingWallet-totalAmountFeesInfo img {
+  align-self: baseline;
+}
+
+.choosingWallet-totalAmountHr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    border: none;
+}

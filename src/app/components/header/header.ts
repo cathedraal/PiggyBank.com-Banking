@@ -5,6 +5,8 @@ import { User } from '../../models/user.model';
 import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
 import { Router } from '@angular/router';
+import { RecipientService } from '../../services/recipient/recipient.service';
+import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
 
 @Component({
   selector: 'app-header',
@@ -13,21 +15,39 @@ import { Router } from '@angular/router';
   styleUrl: './header.css',
 })
 export class HeaderComponent {
+  // html template
   isPopupOpen = false;
   user: Signal<User | null>;
-  get popupText(): string {
-    return this.user() ? `${this.user()!.name}, describe your problem.` : `Guest, describe your problem.`
-  }
   popupContext: string = 'support';
   userQuestion!: string;
+  button1: string = '';
+  button2: string = '';
 
   constructor(
     protected userService: UserService,
     protected settingsService: SettingsService,
     private questionService: QuestionService,
     private router: Router,
+    private recipientService: RecipientService,
+    private transactionFlowService: TransactionFlowService
   ) {
     this.user = this.userService.user;
+  }
+
+  get popupText(): string {
+    const user = this.user()
+
+    if (!this.transactionFlowService.isTransactionFlow()) {
+      if (!user) {
+        return 'Guest, describe your problem.'
+      } else {
+        return `${user.name}, describe your problem`
+      }
+    } else if (this.transactionFlowService.isTransactionFlow()) {
+      return 'you sure you want to quit the transaction?'
+    }
+
+    return '<unknown error>'
   }
 
   openPopup(): void {
@@ -58,6 +78,10 @@ export class HeaderComponent {
 
   onLogoRoute(): void {
     if (this.userService.user()) {
+      this.popupContext = 'transaction distraction'
+      this.recipientService.setRecipient(null)
+      this.user()!.transacts = 0
+      this.user()!.selectedCard = null
       this.router.navigate(['/dashboard'])
     } else {
       this.router.navigate(['/landing'])

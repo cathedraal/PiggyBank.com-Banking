@@ -8,7 +8,7 @@
     </div>
     <h1 class="dashboard-walletBalance">
       <span>{{ userMainCard?.cardCurrency?.value }}</span
-      >{{ 312.231 | number: '1.2-2' }}
+      >{{ userMainCard?.cardBalance| number: '1.2-2' }}
     </h1>
     <div class="dashboard-walletBottom">
       <img src="icons/wallet_safe.svg" alt="safe" class="dashboard-walletImg" />
@@ -21,11 +21,11 @@
   <div class="dashboard-manageWalletDiv">
     <h4>Manage wallet</h4>
     <div class="dashboard-manageWalletButtons">
-      <button class="dashboard-manageWalletAdd" routerLink="">
+      <button class="dashboard-manageWalletAdd" (click)="onAddMoney()">
         <img src="icons/manageWallet_add.svg" alt="add" class="dashboard-manageWalletAddIcon" /> add
         money
       </button>
-      <button class="dashboard-manageWalletTransfer" routerLink="">
+      <button class="dashboard-manageWalletTransfer" (click)="onTransferMoney()">
         <img
           src="icons/manageWallet_transfer.svg"
           alt="transfer"
@@ -33,7 +33,7 @@
         />
         transfer money
       </button>
-      <button class="dashboard-manageWalletWithdraw" routerLink="">
+      <button class="dashboard-manageWalletWithdraw" (click)="onWithdrawMoney()">
         <img
           src="icons/manageWallet_withdraw.svg"
           alt=""
