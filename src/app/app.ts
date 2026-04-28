@@ -23,7 +23,7 @@ export class App implements OnInit {
   constructor(protected notificationService: NotificationService) {}
 
   ngOnInit(): void {
-    const lenis = new Lenis({ lerp: 0.08 });
+    const lenis = new Lenis({ lerp: 0.1 });
 
     const raf = (time: number) => {
       lenis.raf(time);
