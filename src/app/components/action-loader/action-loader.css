@@ -24,8 +24,8 @@ main.hide {
 }
 
 main.invisible {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .actionLoader div {
@@ -47,7 +47,7 @@ main.invisible {
   background-color: var(--light-gray);
   color: var(--label);
   margin-left: 5px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid var(--border-color);
 }
 
@@ -84,6 +84,7 @@ main.invisible {
     clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
   }
 }
+
 @keyframes l20-2 {
   0% {
     transform: scaleY(1) rotate(0deg);

@@ -8,7 +8,7 @@ import { BankService } from '../../../services/bank/bank.service';
 import { Card } from '../../../models/card.model';
 import { PopupComponent } from '../../../components/popup/popup';
 import { currencyTypesItem } from '../../../models/interfaces/currencies.model';
-import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/constants';
+import { CARD_TYPES, CURRENCY_TYPES, RANDOM_CARD_BALANCE } from '../../../constants/constants';
 import { Action } from '../../../models/action.model';
 import { cardTypesItem } from '../../../models/interfaces/cardTypes.model';
 import { NotificationService } from '../../../services/notification/notification.service';
@@ -202,7 +202,7 @@ export class AddCardComponent implements OnInit {
         this.cardNumber,
         this.cardExpdate,
         this.cardCvc,
-        100,
+        RANDOM_CARD_BALANCE,
         {currency: this.cardCurrency.currency, value: this.cardCurrency.value}, 
         {type: this.cardType.value, color: this.cardType.color},
         false
@@ -241,6 +241,7 @@ export class AddCardComponent implements OnInit {
     this.router.navigate(['/dashboard']);
     this.isPopupOpen = false;
 
+    console.log(guestCard.cardBalance)
     this.notificationService.triggerNotification(true, true, 'card added')
   }
 

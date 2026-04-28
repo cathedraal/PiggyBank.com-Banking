@@ -14,6 +14,8 @@ import { RecipientInfoComponent } from './pages/transaction-flow/recipient-info/
 import { ChoosingWalletComponent } from './pages/transaction-flow/choosing-wallet/choosing-wallet';
 import { OverviewComponent } from './pages/transaction-flow/overview/overview';
 import { ValidationComponent } from './pages/transaction-flow/validation/validation';
+import { ArticlesComponent } from './pages/articles/articles';
+import { AllTransactionsComponent } from './pages/all-transactions/all-transactions';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
@@ -39,7 +41,9 @@ export const routes: Routes = [
       { path: 'recipient-info', component: RecipientInfoComponent },
       { path: 'choosing-wallet', component: ChoosingWalletComponent },
       { path: 'overview', component: OverviewComponent },
-      { path: 'validation', component: ValidationComponent }
+      { path: 'validation', component: ValidationComponent },
     ],
   },
+  { path: 'articles', component: ArticlesComponent },
+  { path: 'all-transactions', component: AllTransactionsComponent }
 ];

@@ -6,6 +6,7 @@ import { maskCardNumber } from '../../../utils/utils';
 import { Router, RouterLink } from '@angular/router';
 import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
 import { ActionLoaderService } from '../../../services/action-loader/action-loader';
+import { UserService } from '../../../services/user/user.service';
 
 @Component({
   selector: 'app-wallet',
@@ -21,7 +22,8 @@ export class WalletComponent {
     private bankService: BankService,
     private transactionFlowService: TransactionFlowService,
     private router: Router,
-    private actionLoaderService: ActionLoaderService
+    private actionLoaderService: ActionLoaderService,
+    protected userService: UserService
   ) {
     this.userMainCard = this.bankService.getCard();
     if (this.userMainCard) {

@@ -18,6 +18,7 @@ import { supportButtonItem } from '../models/interfaces/supports.model';
 import { transactionFlowItem } from '../models/interfaces/transactionFlow.model';
 import { transactionSettingItem } from '../models/interfaces/transactionSettings.model';
 import { walletActionContextItem } from '../models/interfaces/walletAction.model';
+import { getRandomInt } from '../utils/utils';
 
 /**
  * Company name
@@ -38,6 +39,11 @@ export const TRANSACTION_FEES: number = 0.02
  * Daily transaction limit allowed
  */
 export const DAILY_TRANSACTION_LIMIT: number = 900
+
+/**
+ * Random money user gets when creating a card. Allows to calculate fees from first transaction
+ */
+export const RANDOM_CARD_BALANCE: number = getRandomInt(0.01, 5)
 
 /**
  * Guest profile

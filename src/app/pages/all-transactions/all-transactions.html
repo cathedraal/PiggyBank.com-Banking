@@ -1,0 +1,25 @@
+@if (userService.getUser()) {
+  <main>
+    <div class="allTransactions-placeholder">
+      <div>
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+      </div>
+      <div aria-hidden="true">
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+      </div>
+      <div aria-hidden="true">
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+        <img src="icons/articles/placeholder.svg" alt="placeholder" />
+      </div>
+    </div>
+    <h1>transactions are coming soon.</h1>
+    <button routerLink="/dashboard">dashboard</button>
+  </main>
+} @else {
+  <app-error-page></app-error-page>
+}

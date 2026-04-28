@@ -1,0 +1,88 @@
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  width: 100%;
+  padding: var(--container-padding-secondary);
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-top: var(--container-spacing);
+  margin-bottom: 60px;
+}
+
+main div {
+  display: flex;
+  margin: 0 0 0 auto;
+  gap: 10px;
+}
+
+main h1 {
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: var(--border-color);
+  margin: 30px 0 30px 0;
+}
+
+.allTransactions-dashboardButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--black);
+  font-family: inherit;
+  height: fit-content;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.allTransactions-logOutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--black);
+  font-family: inherit;
+  height: fit-content;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.allTransactions-dashboardButton img {
+  background-color: var(--light-gray);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.allTransactions-logOutButton img {
+  background-color: var(--error-background-secondary);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.allTransactions-dashboardButton:hover,
+.allTransactions-logOutButton:hover {
+  background-color: var(--white-hover);
+}

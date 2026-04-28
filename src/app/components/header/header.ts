@@ -4,13 +4,13 @@ import { UserService } from '../../services/user/user.service';
 import { User } from '../../models/user.model';
 import { SettingsService } from '../../services/settings/settings.service';
 import { QuestionService } from '../../services/question/question.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { RecipientService } from '../../services/recipient/recipient.service';
 import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
 
 @Component({
   selector: 'app-header',
-  imports: [PopupComponent],
+  imports: [PopupComponent, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

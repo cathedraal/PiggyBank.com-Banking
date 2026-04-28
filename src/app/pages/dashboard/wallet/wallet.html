@@ -8,11 +8,14 @@
     </div>
     <h1 class="dashboard-walletBalance">
       <span>{{ userMainCard?.cardCurrency?.value }}</span
-      >{{ userMainCard?.cardBalance| number: '1.2-2' }}
+      >{{ userMainCard?.cardBalance | number: '1.2-2' }}
     </h1>
     <div class="dashboard-walletBottom">
       <img src="icons/wallet_safe.svg" alt="safe" class="dashboard-walletImg" />
-      <p>{{ userCardNumber }}</p>
+      <p class="dashboard-walletCardNumber">{{ userCardNumber }}</p>
+      @if (userService.getUser()!.cards!.length > 1) {
+        <p class="dashboard-walletAmountOfCards">+{{userService.getUser()!.cards!.length-1}}</p>
+      }
       <button routerLink="/profile" class="dashboard-walletProfileButton">
         <img src="icons/wallet_profile.svg" alt="profile" />
       </button>

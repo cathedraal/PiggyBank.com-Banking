@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { UserService } from '../../../services/user/user.service';
 import { Action } from '../../../models/action.model';
 import { User } from '../../../models/user.model';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-transactions',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: `./transactions.html`,
   styleUrl: './transactions.css',
 })
