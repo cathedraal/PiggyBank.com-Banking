@@ -31,11 +31,10 @@ main {
 }
 
 .managingCookies-header h1 {
-  margin: 0px;
-  letter-spacing: var(--letter-spacing-secondary);
-  font-weight: 600;
-  font-size: 28px;
-  width: 750px;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .managingCookies-header hr {
@@ -46,10 +45,10 @@ main {
 }
 
 .managingCookies-paragraph1 {
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .managingCookie-button {
@@ -67,9 +66,9 @@ main {
 }
 
 .managingCookies-div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .managingCookie-div {
@@ -93,7 +92,7 @@ main {
 }
 
 .managingCookie-pannelDiv.active {
-    grid-template-rows: 1fr; 
+  grid-template-rows: 1fr;
 }
 
 .managingCookie-pannelInner hr {
@@ -104,14 +103,15 @@ main {
   margin-bottom: 15px;
 }
 
-.managingCookie-pannelInner p, ul {
+.managingCookie-pannelInner p,
+ul {
   font-size: 18px;
   font-weight: 300;
   margin: 5px;
 }
 
 span {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 a {
@@ -137,6 +137,8 @@ a {
   transform: rotate(45deg);
 }
 
-.managingCookie-pannelInnerParagraph3, .managingCookie-pannelInnerParagraph2, .managingCookie-pannelInnerParagraph1 {
-    padding-bottom: 15px;
+.managingCookie-pannelInnerParagraph3,
+.managingCookie-pannelInnerParagraph2,
+.managingCookie-pannelInnerParagraph1 {
+  padding-bottom: 15px;
 }

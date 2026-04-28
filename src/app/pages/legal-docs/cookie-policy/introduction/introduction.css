@@ -31,10 +31,10 @@ main {
 }
 
 .cookiePolicy-header h1 {
-  margin: 0px;
-  letter-spacing: var(--letter-spacing-secondary);
-  font-weight: 600;
-  font-size: 28px;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .cookiePolicy-header hr {

@@ -54,6 +54,10 @@ main.show {
   -webkit-text-fill-color: transparent;
 }
 
+.landing-ctaDiv h1 span {
+  font-style: italic;
+}
+
 .landing-ctaSubtitle {
   width: 300px;
   font-weight: 300;

@@ -32,10 +32,10 @@ main {
 }
 
 .profile-bannerInfo h1 {
-  margin: 0px;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
   font-weight: 600;
   font-size: 36px;
-  letter-spacing: var(--letter-spacing-primary);
 }
 
 .profile-bannerInfo p {

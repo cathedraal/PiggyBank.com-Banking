@@ -31,11 +31,10 @@ main {
 }
 
 .termination-header h1 {
-  margin: 0px;
-  letter-spacing: var(--letter-spacing-secondary);
-  font-weight: 600;
-  font-size: 28px;
-  width: 280px;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .termination-header hr {
@@ -67,9 +66,9 @@ main {
 }
 
 .terminations-div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .termination-div {
@@ -93,7 +92,7 @@ main {
 }
 
 .termination-pannelDiv.active {
-    grid-template-rows: 1fr; 
+  grid-template-rows: 1fr;
 }
 
 .termination-pannelInner hr {
@@ -104,14 +103,15 @@ main {
   margin-bottom: 15px;
 }
 
-.termination-pannelInner p, ul {
+.termination-pannelInner p,
+ul {
   font-size: 18px;
   font-weight: 300;
   margin: 5px;
 }
 
 .termination-pannelInner p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .termination-button img {
@@ -134,5 +134,5 @@ main {
 }
 
 a {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }

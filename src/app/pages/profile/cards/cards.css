@@ -1,292 +1,300 @@
 main {
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: var(--container-padding-secondary);
-    margin-top: var(--container-spacing);
-    position: relative;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--container-padding-secondary);
+  margin-top: var(--container-spacing);
+  position: relative;
 }
 
 .profile-cardsHeader {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .profile-cardsHeader button {
-    border: none;
-    background-color: var(--light-gray);
-    border-radius: 50%;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    position: absolute;
-    top: 50px;
-    right: 60px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  border: none;
+  background-color: var(--light-gray);
+  border-radius: 50%;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .profile-cardsHeader button.atEnd {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .profile-cardsHeader button:hover {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 main h1 {
-  margin: 0px;
-  letter-spacing: var(--letter-spacing-secondary);
-  font-weight: 600;
-  font-size: 28px;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 hr {
-    width: 100%;
-    height: 1px;
-    border: none;
-    background-color: var(--border-color);
-    margin: 30px 0 30px 0;
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: var(--border-color);
+  margin: 30px 0 30px 0;
 }
 
 .profile-cards {
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    max-width: 100%;
-    min-width: 0;
-    gap: 20px;
-    border-radius: 30px;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  min-width: 0;
+  gap: 20px;
+  border-radius: 30px;
 }
 
 .profile-cardDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-cardWrapper {
-    perspective: 5000px;
-    position: relative;
-    z-index: 500;
+  perspective: 5000px;
+  position: relative;
+  z-index: 500;
 }
 
 .profile-card {
-    min-width: 550px;
-    width: 100%;
-    min-height: 300px;
-    height: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    box-sizing: border-box;
-    box-shadow: var(--shadow-card);
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.6s ease;
-    cursor: default;
+  min-width: 550px;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+  cursor: default;
 }
 
-.profile-cardFront, .profile-cardBack {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    box-sizing: border-box;
-    padding: var(--container-padding-primary);
+.profile-cardFront,
+.profile-cardBack {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  padding: var(--container-padding-primary);
 }
 
 .profile-cardFront {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .profile-cardBack {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .profile-cardWrapper.flip .profile-card {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .profile-cardHeader {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .profile-cardHeaderText {
-    color: var(--container-title);
-    font-size: 18px;
-    margin: 0;
+  color: var(--container-title);
+  font-size: 18px;
+  margin: 0;
 }
 
 .profile-cardHeaderType {
-    width: 100px;
-    text-align: center;
-    border-radius: 50px;
-    margin: 0 0 0 auto;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0 10px 0;
+  width: 100px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 0 0 0 auto;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 0 10px 0;
 }
 
 .profile-cardBalance {
-    font-weight: 600;
-    font-size: 80px;
-    margin: auto 0 0 0;
-    letter-spacing: var(--letter-spacing-primary);
+  font-weight: 600;
+  font-size: 80px;
+  margin: auto 0 0 0;
+  letter-spacing: var(--letter-spacing-primary);
 }
 
 .profile-cardBalance span {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .profile-cardBottom {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .profile-cardBottom img {
-    width: 20px;
+  width: 20px;
 }
 
 .profile-cardBottom p {
-    color: var(--container-title);
-    margin: 0;
+  color: var(--container-title);
+  margin: 0;
 }
 
 .profile-cardPills {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    z-index: 0;
-    max-width: 500px;
-    margin-top: 20px;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 0;
+  max-width: 500px;
+  margin-top: 20px;
+  gap: 10px;
 }
 
 .profile-cardSecure {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 15px;
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
-    color: var(--container-title);
-    font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  color: var(--container-title);
+  font-weight: 400;
 }
 
 .profile-cardSecure p {
-    margin: 0;
+  margin: 0;
 }
 
 .profile-cardPills button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--container-title);
-    font-family: inherit;
-    gap: 5px;
-    border: none;
-    border-radius: 50px;
-    padding: 15px;
-    background-color: var(--light-gray);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--container-title);
+  font-family: inherit;
+  gap: 5px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  background-color: var(--light-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
 }
 
 .profile-cardPills button:hover {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 .profile-cardsButton {
-    max-height: 300px;
-    position: relative;
-    z-index: 100;
-    max-width: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    font-family: inherit;
-    color: var(--black);
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
+  max-height: 300px;
+  position: relative;
+  z-index: 100;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-family: inherit;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.profile-cardsButton:hover, .profile-cardsButton:hover img {
-    background-color: var(--white-hover);
+.profile-cardsButton:hover,
+.profile-cardsButton:hover img {
+  background-color: var(--white-hover);
 }
 
 .profile-cardsButton img {
-    background-color: var(--primary-color-icon);
-    border-radius: 15px;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 20px;
+  background-color: var(--primary-color-icon);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 20px;
 }
 
 .profile-cardDetails {
-    margin-top: auto;
-    display: grid;
-    grid-template-areas:
-        'holder holder'
-        'number number'
-        'expdate cvc';
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    box-sizing: border-box;
+  margin-top: auto;
+  display: grid;
+  grid-template-areas:
+    'holder holder'
+    'number number'
+    'expdate cvc';
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  box-sizing: border-box;
 }
 
 .profile-cardDetailsHolderDiv {
-    grid-area: holder;
+  grid-area: holder;
 }
 
 .profile-cardDetailsNumberDiv {
-    grid-area: number;
+  grid-area: number;
 }
 
 .profile-cardDetailsExpdateDiv {
-    grid-area: expdate;
+  grid-area: expdate;
 }
 
 .profile-cardDetailsCvcDiv {
-    grid-area: cvc;
+  grid-area: cvc;
 }
 
 .profile-cardDetails p {
-    margin: 0;
+  margin: 0;
 }
 
 .profile-cardDetails div {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--light-gray);
-    padding: 15px;
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-gray);
+  padding: 15px;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
 }
 
-.profile-cardDetailsHolderText, .profile-cardDetailsNumberText, .profile-cardDetailsExpdateText, .profile-cardDetailsCvcText {
-    color: var(--dark-gray);
-    margin-right: 10px;
+.profile-cardDetailsHolderText,
+.profile-cardDetailsNumberText,
+.profile-cardDetailsExpdateText,
+.profile-cardDetailsCvcText {
+  color: var(--dark-gray);
+  margin-right: 10px;
 }
 
-.profile-cardDetailsHolderInfo, .profile-cardDetailsNumberInfo, .profile-cardDetailsExpdateInfo, .profile-cardDetailsCvcInfo {
-    color: var(--black);
-    font-weight: 500;
-    margin-left: 100px;
-} 
+.profile-cardDetailsHolderInfo,
+.profile-cardDetailsNumberInfo,
+.profile-cardDetailsExpdateInfo,
+.profile-cardDetailsCvcInfo {
+  color: var(--black);
+  font-weight: 500;
+  margin-left: 100px;
+}

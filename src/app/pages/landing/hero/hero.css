@@ -32,14 +32,18 @@ main h1 {
   font-weight: 700;
   margin-top: 0px;
   font-size: 100px;
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: var(--letter-spacing-primary);
   width: 700px;
   text-align: center;
-  line-height: 85px;
+  line-height: 82px;
   background: linear-gradient(91deg, #0C6FFF 8.85%, rgba(87, 156, 255, 0.70) 94.15%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+main h1 span {
+  font-style: italic;
 }
 
 .landing-heroCircleBg {

@@ -31,11 +31,10 @@ main {
 }
 
 .ourServices-header h1 {
-  margin: 0px;
-  letter-spacing: var(--letter-spacing-secondary);
-  font-weight: 600;
-  font-size: 28px;
-  width: 280px;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .ourServices-header hr {
@@ -67,9 +66,9 @@ main {
 }
 
 .oursServices-div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .ourServices-div {
@@ -93,7 +92,7 @@ main {
 }
 
 .ourServices-pannelDiv.active {
-    grid-template-rows: 1fr; 
+  grid-template-rows: 1fr;
 }
 
 .ourServices-pannelInner hr {
@@ -104,14 +103,15 @@ main {
   margin-bottom: 15px;
 }
 
-.ourServices-pannelInner p, ul {
+.ourServices-pannelInner p,
+ul {
   font-size: 18px;
   font-weight: 300;
   margin: 5px;
 }
 
 .ourServices-pannelInner p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .ourServices-button img {
@@ -134,5 +134,5 @@ main {
 }
 
 span {
-    font-weight: 500;
+  font-weight: 500;
 }

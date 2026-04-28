@@ -19,29 +19,20 @@ main {
   background-color: var(--border-color);
 }
 
-.profile-headerLabel img {
-  background-color: var(--primary-color-icon-secondary);
-  padding: 15px;
-  border-radius: 20px;
-}
-
-.profile-headerLabel h4 {
-  font-weight: 600;
-  font-size: 32px;
-  letter-spacing: var(--letter-spacing-secondary);
-  padding-right: 10px;
+.profile-headerLabel h1 {
   margin: 0px;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 600;
+  font-size: 40px;
 }
 
 .profile-headerButtons button {
-  background: none;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: inherit;
+  background-color: var(--light-gray);
   border: 1px solid var(--border-color);
-  color: var(--dark-gray);
-  padding: 5px 10px 5px 10px;
-  margin-right: 5px;
-  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px;
+  font-family: inherit;
+  color: var(--label);
+  border-radius: 30px;
   cursor: pointer;
 }

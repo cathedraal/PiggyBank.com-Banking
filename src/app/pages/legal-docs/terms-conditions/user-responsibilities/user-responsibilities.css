@@ -31,11 +31,10 @@ main {
 }
 
 .userResponsibilities-header h1 {
-  margin: 0px;
-  letter-spacing: var(--letter-spacing-secondary);
-  font-weight: 600;
-  font-size: 28px;
-  width: 100%;
+  margin: 0;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .userResponsibilities-header hr {
@@ -46,17 +45,19 @@ main {
 }
 
 .userResponsibilities-paragraph1,
-.userResponsibilities-paragraph2, ul {
+.userResponsibilities-paragraph2,
+ul {
   font-size: 20px;
   font-weight: 300;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.userResponsibilities-paragraph1, ul {
+.userResponsibilities-paragraph1,
+ul {
   margin-bottom: 25px;
 }
 
 a {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
