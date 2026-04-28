@@ -25,7 +25,7 @@ export class TransactionsComponent {
   constructor(private userService: UserService) {
     this.user = this.userService.getUser();
     if (this.user) {
-      this.transactions = this.user?.actions;
+      this.transactions = this.user?.actions.slice(-5);
     }
   }
 }
