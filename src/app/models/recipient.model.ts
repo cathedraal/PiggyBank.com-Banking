@@ -1,5 +1,5 @@
 /**
- * Class Recipient - used to create a new recipient when transferring money
+ * This class is used for creating a new recipients when wanting to transfer money
  */
 export class Recipient {
   getsMoney: number = 0;
@@ -11,6 +11,9 @@ export class Recipient {
     public optionalText: string,
   ) {}
 
+  /**
+   * @param value amount of money this recipient will get
+   */
   gets(value: number): void {
     this.getsMoney = value;
   }

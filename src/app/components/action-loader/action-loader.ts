@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { transactionFlowItem } from '../../models/interfaces/transactionFlow.model';
+import { Component } from '@angular/core';
+import { transactionFlowItem } from '../../models/interfaces/default/transactionFlow.model';
 import { TRANSACTION_FLOW } from '../../constants/constants';
 import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
 import { ActionLoaderService, transActionSource } from '../../services/action-loader/action-loader';
@@ -18,6 +18,7 @@ export class ActionLoaderComponent {
   source: transActionSource
   formatNumber = maskCardNumber
 
+  // DI
   constructor(
     protected transactionFlowService: TransactionFlowService,
     protected actionLoaderService: ActionLoaderService,

@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: `./currency.html`,
   styleUrl: './currency.css',
 })
-export class CurrencyComponent {
-
-}
+export class CurrencyComponent {}

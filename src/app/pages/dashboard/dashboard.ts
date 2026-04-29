@@ -30,6 +30,8 @@ import { ErrorPageComponent } from '../error-page/error-page';
 export class DashboardComponent {
   // html template
   user: User | null = null
+
+  // date
   date = new Date();
   dateTime = this.date.toLocaleString('de-DE', {
     year: 'numeric',
@@ -38,6 +40,7 @@ export class DashboardComponent {
   });
   subheader: string = `trading on ${this.dateTime}`
 
+  // DI
   constructor(protected userService: UserService) {
     this.user = this.userService.getUser()
   }

@@ -42,23 +42,29 @@ export class CardsComponent implements AfterViewInit, OnInit {
     minute: '2-digit',
   });
 
-  // constructor
+  // DI
   constructor(
     private userService: UserService,
     private router: Router,
     private notificationService: NotificationService,
   ) {}
 
+  // Gives a width of a card displayed on DOM
   ngAfterViewInit(): void {
     this.cardScrollWidth = this.activeCard.nativeElement.scrollWidth;
   }
 
+  // Sets all cards as inactive, so that they all are not flipped by default
   ngOnInit(): void {
     for (let i = 0; i < this.userService.user()!.cards.length; i++) {
       this.userService.user()!.cards[i].active = false;
     }
   }
 
+  /**
+   * Opens popup
+   * @param card Chosen card
+   */
   openPopup(card: Card): void {
     this.popupText = 'you sure you want to delete this card?';
     this.popupContext = 'delete card';
@@ -67,6 +73,16 @@ export class CardsComponent implements AfterViewInit, OnInit {
     console.log(this.userService.user()?.cards);
   }
 
+  /**
+   * Closes popup
+   */
+  onDecline(): void {
+    this.isPopupOpen = false;
+  }
+
+  /**
+   * Deletes the chosen card
+   */
   onConfirm(): void {
     if (this.selectedCard) {
       this.userService.deleteCard(this.selectedCard);
@@ -84,10 +100,9 @@ export class CardsComponent implements AfterViewInit, OnInit {
     console.log(this.userService.user()?.cards);
   }
 
-  onDecline(): void {
-    this.isPopupOpen = false;
-  }
-
+  /**
+   * Scrolls the cards
+   */
   onScroll(): void {
     const el = this.activeCards.nativeElement;
     const isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth;
@@ -101,16 +116,23 @@ export class CardsComponent implements AfterViewInit, OnInit {
     }
   }
 
+  /**
+   * Validates if user already reached the limit of allowed cards before redirecting to add card flow
+   */
   onAddCard(): void {
     if (this.userService.getUser()?.cards.length === CARDS_AMOUNT_ALLOWED) {
       this.isPopupOpen = true;
-      this.popupText = 'the amount of cards allowed is limited at 3.';
+      this.popupText = `the amount of cards allowed is limited at ${CARDS_AMOUNT_ALLOWED}.`;
       this.popupContext = 'info popup';
     } else {
       this.router.navigate(['/registration-flow/add-card']);
     }
   }
 
+  /**
+   * Flippes chosen card
+   * @param card Chosen card
+   */
   toggle(card: Card): void {
     card.active = !card.active;
     console.log(card.active);

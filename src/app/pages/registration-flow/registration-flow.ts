@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from "@angular/router";
+import { RouterOutlet } from '@angular/router';
 import { SettingsService } from '../../services/settings/settings.service';
 import { RegistrationLabelComponent } from '../../components/registration-label/registration-label';
 
@@ -10,9 +10,11 @@ import { RegistrationLabelComponent } from '../../components/registration-label/
   styleUrl: './registration-flow.css',
 })
 export class RegistrationFlowComponent {
+  // html template
   isRegistrationFlow = signal(false);
 
-  constructor ( protected settingsService: SettingsService) {
-    this.isRegistrationFlow.set(this.settingsService.isRegistrationFlow())
+  // DI
+  constructor(protected settingsService: SettingsService) {
+    this.isRegistrationFlow.set(this.settingsService.isRegistrationFlow());
   }
 }

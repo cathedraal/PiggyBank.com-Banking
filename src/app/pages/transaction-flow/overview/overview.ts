@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { transactionFlowItem } from '../../../models/interfaces/transactionFlow.model';
+import { transactionFlowItem } from '../../../models/interfaces/default/transactionFlow.model';
 import { TRANSACTION_FEES, TRANSACTION_FLOW } from '../../../constants/constants';
 import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
 import { User } from '../../../models/user.model';
@@ -42,6 +42,7 @@ export class OverviewComponent {
     minute: '2-digit',
   });
 
+  // DI
   constructor(
     protected transactionFlowService: TransactionFlowService,
     private userService: UserService,
@@ -60,12 +61,14 @@ export class OverviewComponent {
     }
   }
 
+  // Routes to the previous page
   onRoute(): void {
     this.transactionAmount = 0;
     this.router.navigate(['/transaction-flow/choosing-wallet']);
     this.transactionFlowService.setChoosingWalletPassed(false);
   }
 
+  // Sets loader and creates an action
   onSubmit(): void {
     if (this.user) {
       this.actionLoaderService.setSource(

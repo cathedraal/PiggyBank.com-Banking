@@ -15,15 +15,17 @@ import { UserService } from '../../../services/user/user.service';
   styleUrl: './wallet.css',
 })
 export class WalletComponent {
+  // html template
   userMainCard: Card | null = null;
   userCardNumber: string = '';
 
+  // DI
   constructor(
     private bankService: BankService,
     private transactionFlowService: TransactionFlowService,
     private router: Router,
     private actionLoaderService: ActionLoaderService,
-    protected userService: UserService
+    protected userService: UserService,
   ) {
     this.userMainCard = this.bankService.getCard();
     if (this.userMainCard) {
@@ -31,27 +33,36 @@ export class WalletComponent {
     }
   }
 
+  /**
+   * Redirects to choosing-wallet page, user then chooses a wallet and amount
+   */
   onAddMoney(): void {
-    this.actionLoaderService.reset()
-    this.transactionFlowService.setTransactionFlow(true)
+    this.actionLoaderService.reset();
+    this.transactionFlowService.setTransactionFlow(true);
     this.transactionFlowService.setTransactionFlowContext('addMoney');
     this.transactionFlowService.setRecipientInfoPassed(false);
     this.transactionFlowService.setChoosingWalletPassed(false);
     this.router.navigate(['/transaction-flow/choosing-wallet']);
   }
 
+  /**
+   * Redirects to recipient-info page, user then creates a recipient and then chooses a wallet and amount
+   */
   onTransferMoney(): void {
-    this.actionLoaderService.reset()
-    this.transactionFlowService.setTransactionFlow(true)
+    this.actionLoaderService.reset();
+    this.transactionFlowService.setTransactionFlow(true);
     this.transactionFlowService.setTransactionFlowContext('transferMoney');
     this.transactionFlowService.setRecipientInfoPassed(false);
     this.transactionFlowService.setChoosingWalletPassed(false);
     this.router.navigate(['/transaction-flow/recipient-info']);
   }
 
+  /**
+   * Redirects to choosing-wallet page, user then chooses a wallet and amount
+   */
   onWithdrawMoney(): void {
-    this.actionLoaderService.reset()
-    this.transactionFlowService.setTransactionFlow(true)
+    this.actionLoaderService.reset();
+    this.transactionFlowService.setTransactionFlow(true);
     this.transactionFlowService.setTransactionFlowContext('withdrawMoney');
     this.transactionFlowService.setRecipientInfoPassed(false);
     this.transactionFlowService.setChoosingWalletPassed(false);

@@ -8,5 +8,6 @@ import { TRANSACTION_BENEFITS } from '../../../constants/constants';
   styleUrl: './transaction-benefits.css',
 })
 export class TransactionBenefitsComponent {
+  // html template
   transactionBenefits: string[] = TRANSACTION_BENEFITS;
 }

@@ -1,4 +1,4 @@
 main {
-    min-height: 50vh;
-    padding: var(--minimal-content-padding) 0 var(--minimal-content-padding) 0;
+  min-height: 50vh;
+  padding: var(--minimal-content-padding) 0 200px 0;
 }

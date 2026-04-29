@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './registration-label.css',
 })
 export class RegistrationLabelComponent {
+  // inputs
   @Input() isLoginPassed: boolean = true
 }

@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { transactionFlowItem } from '../../models/interfaces/transactionFlow.model';
+import { transactionFlowItem } from '../../models/interfaces/default/transactionFlow.model';
 
 @Injectable({
   providedIn: 'root',

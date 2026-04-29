@@ -7,14 +7,8 @@ import { COUNTRY_CODES, GUEST_PROFILE } from '../../../constants/constants';
 import { User } from '../../../models/user.model';
 import { getRandomInt } from '../../../utils/utils';
 import { parsePhoneNumberWithError, type CountryCode } from 'libphonenumber-js';
-import { countryCodeItem } from '../../../models/interfaces/ccodes.model';
-
-interface LoginForm {
-  name: FormControl<string>;
-  surname: FormControl<string>;
-  email: FormControl<string>;
-  phone: FormControl<string>;
-}
+import { countryCodeItem } from '../../../models/interfaces/default/ccodes.model';
+import { LoginForm } from '../../../models/interfaces/reactive-forms/login.model';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +23,7 @@ export class LoginComponent {
   ccodes: countryCodeItem[] = COUNTRY_CODES;
   selectedCountryCode: countryCodeItem = this.ccodes[0];
   formattedPhoneNumber: string = '';
-  isChoosingCountryCode: boolean = false
+  isChoosingCountryCode: boolean = false;
 
   // date
   date = new Date();
@@ -41,9 +35,10 @@ export class LoginComponent {
 
   // variables
   isValidPhone: boolean = false;
-  user: User | null = null
-  userId: string = `${getRandomInt(100000000000, 1900000000000)}`
+  user: User | null = null;
+  userId: string = `${getRandomInt(100000000000, 1900000000000)}`;
 
+  // reactive forms
   protected form = new FormGroup<LoginForm>({
     name: new FormControl<string>('', {
       nonNullable: true,
@@ -63,24 +58,28 @@ export class LoginComponent {
     }),
   });
 
+  // DI
   constructor(
     private settingsService: SettingsService,
     protected userService: UserService,
     private router: Router,
   ) {
-    this.settingsService.setLoginPassed(false)
-    this.user = this.userService.getUser()
+    this.settingsService.setLoginPassed(false);
+    this.user = this.userService.getUser();
     this.isRegistrationFlow = this.settingsService.isRegistrationFlow();
-    this.settingsService.setLandingPage(false)
+    this.settingsService.setLandingPage(false);
 
     if (this.user) {
-      this.form.controls.name.setValue(this.user.name)
-      this.form.controls.surname.setValue(this.user.surname)
-      this.form.controls.email.setValue(this.user.email)
-      this.form.controls.phone.setValue(this.user.phone.number)
+      this.form.controls.name.setValue(this.user.name);
+      this.form.controls.surname.setValue(this.user.surname);
+      this.form.controls.email.setValue(this.user.email);
+      this.form.controls.phone.setValue(this.user.phone.number);
     }
   }
 
+  /**
+   * Redirects to add card flow after logging in and creates new user
+   */
   onSubmit(): void {
     if (
       this.form.valid &&
@@ -95,13 +94,17 @@ export class LoginComponent {
           this.form.value.email!,
           { code: this.selectedCountryCode.value, number: this.formattedPhoneNumber },
           this.dateTime,
-          this.userId
+          this.userId,
         ),
       );
       this.router.navigate(['/registration-flow/add-card']);
     }
   }
 
+  /**
+   * Formats phone number with libphonenumber library and validates it
+   * @param event Event
+   */
   onPhoneNumberInput(event: Event): void {
     const input = event.target as HTMLInputElement;
     const raw = input.value;
@@ -123,8 +126,12 @@ export class LoginComponent {
     }
   }
 
+  /**
+   * Sets the selected country code
+   * @param event Event
+   */
   onCountryCodeChange(event: Event): void {
-    this.isChoosingCountryCode = true
+    this.isChoosingCountryCode = true;
 
     const select = event.target as HTMLSelectElement;
 
@@ -136,6 +143,9 @@ export class LoginComponent {
     console.log(this.selectedCountryCode);
   }
 
+  /**
+   * Creates a guest profile if user wants to skip the login flow
+   */
   onSubmitAsGuest(): void {
     this.userService.setUser(
       new User(
@@ -147,11 +157,14 @@ export class LoginComponent {
           number: this.guest.phone[getRandomInt(0, this.guest.phone.length - 1)],
         },
         this.dateTime,
-        this.userId
+        this.userId,
       ),
     );
   }
 
+  /**
+   * Redirects to previous page and deletes user
+   */
   onBack(): void {
     this.userService.deleteUser();
   }

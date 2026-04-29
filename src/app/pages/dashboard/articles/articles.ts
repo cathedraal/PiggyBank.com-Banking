@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { articlePreviewItem } from '../../../models/interfaces/articles.model';
+import { articlePreviewItem } from '../../../models/interfaces/default/articles.model';
 import { ARTICLE_PREVIEW_SECTION } from '../../../constants/constants';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from "@angular/router";
@@ -11,5 +11,6 @@ import { RouterLink } from "@angular/router";
   styleUrl: './articles.css',
 })
 export class ArticlesComponent {
+  // html template
   articles: articlePreviewItem[] = ARTICLE_PREVIEW_SECTION
 }

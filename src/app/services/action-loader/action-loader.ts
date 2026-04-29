@@ -41,14 +41,24 @@ export class ActionLoaderService {
     return this.visible();
   }
 
+  /**
+   * Sets source (card number) which user is transacting with
+   */
   setSource(cardNumber: string, cardType: string): void {
     this.source = {cardNumber, cardType}
   }
 
+  /**
+   * Gets source (card number) which user is transacting with
+   * @returns source
+   */
   getSource(): transActionSource {
     return this.source
   }
 
+  /**
+   * Resets loader
+   */
   reset(): void {
     this.loading.set(false)
     this.hiding.set(false)

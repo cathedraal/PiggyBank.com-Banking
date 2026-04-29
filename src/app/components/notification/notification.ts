@@ -9,8 +9,10 @@ import { NotificationService } from '../../services/notification/notification.se
   styleUrl: './notification.css',
 })
 export class NotificationComponent implements OnInit {
+  // DI
   constructor (protected notificationService: NotificationService) {}
 
+  // sets the notification off in 2s
   ngOnInit(): void {
     setTimeout(() => {
       this.notificationService.triggerNotification(false, false, '')

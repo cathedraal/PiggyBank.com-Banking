@@ -7,26 +7,21 @@ import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { BankService } from '../../../services/bank/bank.service';
 import { Card } from '../../../models/card.model';
 import { PopupComponent } from '../../../components/popup/popup';
-import { currencyTypesItem } from '../../../models/interfaces/currencies.model';
+import { currencyTypesItem } from '../../../models/interfaces/default/currencies.model';
 import { CARD_TYPES, CURRENCY_TYPES, RANDOM_CARD_BALANCE } from '../../../constants/constants';
 import { Action } from '../../../models/action.model';
-import { cardTypesItem } from '../../../models/interfaces/cardTypes.model';
+import { cardTypesItem } from '../../../models/interfaces/default/cardTypes.model';
 import { NotificationService } from '../../../services/notification/notification.service';
 import { formatToSource } from '../../../utils/utils';
+import { AddCardForm } from '../../../models/interfaces/reactive-forms/addCard.model';
 
-interface AddCardForm {
-  holder: FormControl<string>;
-  number: FormControl<string>;
-  expDate: FormControl<string>;
-  cvc: FormControl<string>;
-}
 @Component({
   selector: 'app-add-card',
   imports: [RouterLink, ReactiveFormsModule, PopupComponent],
   templateUrl: `./add-card.html`,
   styleUrl: './add-card.css',
 })
-export class AddCardComponent implements OnInit {
+export class AddCardComponent {
   // html template
   isPopupOpen: boolean = false;
   popupText: string = `you didn't add a card. Create a guest card?`;
@@ -59,6 +54,7 @@ export class AddCardComponent implements OnInit {
   isChoosingType: boolean = false;
   isChoosingCurrency: boolean = false;
 
+  // reactive forms
   protected form = new FormGroup<AddCardForm>({
     holder: new FormControl<string>(``, {
       nonNullable: true,
@@ -78,6 +74,7 @@ export class AddCardComponent implements OnInit {
     }),
   });
 
+  // DI
   constructor(
     private settingsService: SettingsService,
     private userService: UserService,
@@ -90,10 +87,6 @@ export class AddCardComponent implements OnInit {
     this.form.controls.holder.setValue(
       `${this.user?.name.toUpperCase()} ${this.user?.surname.toUpperCase()}`,
     );
-  }
-
-  ngOnInit(): void {
-    console.log(this.user);
   }
 
   /**

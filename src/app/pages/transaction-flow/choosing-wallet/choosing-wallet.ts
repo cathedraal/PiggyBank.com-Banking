@@ -37,6 +37,7 @@ export class ChoosingWalletComponent {
   private recipient: Recipient | null = null;
   dailyLimit: number = DAILY_TRANSACTION_LIMIT;
 
+  // DI
   constructor(
     private userService: UserService,
     private decimalPipe: DecimalPipe,
@@ -57,6 +58,9 @@ export class ChoosingWalletComponent {
     this.placeholder = `${this.selectedCard.cardCurrency.value}00.00`;
   }
 
+  /**
+   * Scrolls the wallets
+   */
   onScroll(): void {
     const el = this.cards.nativeElement;
     const isAtEnd = el.scrollTop + el.clientHeight >= el.scrollHeight;
@@ -70,6 +74,10 @@ export class ChoosingWalletComponent {
     }
   }
 
+  /**
+   * Sets chosen wallet as active
+   * @param card Chosen wallet
+   */
   onSelectingWallet(card: Card) {
     this.selectedCard = card;
     for (let i = 0; i < this.user()!.cards.length; i++) {
@@ -78,6 +86,10 @@ export class ChoosingWalletComponent {
     this.selectedCard.active = !this.selectedCard.active;
   }
 
+  /**
+   * Formats the input field
+   * @param event Input field event
+   */
   onChoosingAmount(event: Event): void {
     const input = event.target as HTMLInputElement;
     let value = input.value.replace(/\D/g, '');
@@ -91,6 +103,12 @@ export class ChoosingWalletComponent {
     input.value = `${this.selectedCard?.cardCurrency.value}${this.decimalPipe.transform(formatted, '1.2-2') ?? '0.00'}`;
   }
 
+  /**
+   * Validates users current position
+   * @example
+   * If user passed the recipient-info, he will be redirected to recipient-info
+   * If not, he will be redirected to dashboard and all details will be deleted
+   */
   onRoute(): void {
     if (this.transactionFlowService.isRecipientInfoPassed()) {
       this.router.navigate(['/transaction-flow/recipient-info']);
@@ -100,6 +118,9 @@ export class ChoosingWalletComponent {
     }
   }
 
+  /**
+   * Validates before continuing and redirects the user to the next page only if conditions passed
+   */
   onContinue() {
     if (this.chosenAmountOfMoney === 0) {
       this.notificationService.triggerNotification(true, false, 'please enter a digit');

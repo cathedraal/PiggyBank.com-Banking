@@ -12,12 +12,14 @@ import { QuestionService } from '../../../services/question/question.service';
   styleUrl: './support.css',
 })
 export class SupportComponent {
+  // variables
   isPopupOpen: boolean = false;
   popupContext: string = 'support';
   popupText: string = '';
   user: User | null = null;
   userQuestion: string = '';
 
+  // DI
   constructor(
     private userService: UserService,
     private questionService: QuestionService,
@@ -28,15 +30,25 @@ export class SupportComponent {
     }
   }
 
+  /**
+   * Opens popup with support context
+   */
   openPopup(): void {
     this.isPopupOpen = true;
   }
 
+  /**
+   * Sends question
+   * @param question Users question 
+   */
   onConfirm(question: string): void {
     this.isPopupOpen = false;
     this.questionService.sendQuestion(question, this.user);
   }
 
+  /**
+   * Closes popup
+   */
   onClose(): void {
     this.isPopupOpen = false;
   }

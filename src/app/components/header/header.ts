@@ -23,6 +23,7 @@ export class HeaderComponent {
   button1: string = '';
   button2: string = '';
 
+  // DI
   constructor(
     protected userService: UserService,
     protected settingsService: SettingsService,
@@ -34,37 +35,49 @@ export class HeaderComponent {
     this.user = this.userService.user;
   }
 
+  // sets the popup text depending on if user exists or not
   get popupText(): string {
     const user = this.user()
 
-    if (!this.transactionFlowService.isTransactionFlow()) {
-      if (!user) {
-        return 'Guest, describe your problem.'
-      } else {
-        return `${user.name}, describe your problem`
-      }
-    } else if (this.transactionFlowService.isTransactionFlow()) {
-      return 'you sure you want to quit the transaction?'
+    if (!user) {
+      return 'Guest, describe your problem.'
+    } else {
+      return `${user.name}, describe your problem`
     }
+    // else if (this.transactionFlowService.isTransactionFlow()) {
+    //   return 'you sure you want to quit the transaction?'
+    // }
 
-    return '<unknown error>'
   }
 
+  /**
+   * Triggers popup
+   */
   openPopup(): void {
     console.log('popup opened');
     this.isPopupOpen = true;
   }
 
+  /**
+   * Confirm popup button
+   * @param question question user wrote
+   */
   onConfirm(question: string): void {
     this.isPopupOpen = false;
     this.userQuestion = question;
     this.questionService.sendQuestion(this.userQuestion, this.user())
   }
 
+  /**
+   * Closes popup
+   */
   onDecline(): void {
     this.isPopupOpen = false;
   }
 
+  /**
+   * Validates if user exists before redirecting to profile page
+   */
   onRoute(): void {
     if (this.user()) {
       this.router.navigate(['./profile'])
@@ -76,9 +89,12 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Validates if user exists before redirecting to dashboard
+   */
   onLogoRoute(): void {
     if (this.userService.user()) {
-      this.popupContext = 'transaction distraction'
+      // this.popupContext = 'transaction distraction'
       this.recipientService.setRecipient(null)
       this.user()!.transacts = 0
       this.user()!.selectedCard = null
@@ -88,6 +104,10 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Scrolls to the given id of a section on landing page
+   * @param id id of a landing section
+   */
   scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({behavior: 'smooth'})
   }

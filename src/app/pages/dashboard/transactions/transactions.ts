@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { UserService } from '../../../services/user/user.service';
 import { Action } from '../../../models/action.model';
 import { User } from '../../../models/user.model';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-transactions',
@@ -11,8 +11,10 @@ import { RouterLink } from "@angular/router";
   styleUrl: './transactions.css',
 })
 export class TransactionsComponent {
+  // html template
   transactions: Action[] = [];
   user: User | null = null;
+
   // date
   date = new Date();
   dateTime = this.date.toLocaleString('de-DE', {
@@ -23,6 +25,7 @@ export class TransactionsComponent {
     minute: '2-digit',
   });
 
+  // DI
   constructor(private userService: UserService) {
     this.user = this.userService.getUser();
     if (this.user) {

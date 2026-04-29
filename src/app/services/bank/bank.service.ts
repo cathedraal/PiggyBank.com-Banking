@@ -18,6 +18,11 @@ export class BankService {
     this.currentCard = card;
   }
 
+  /**
+   * Transaction method to transact money with chosen card
+   * @param card Chosen card
+   * @param value Amount of money
+   */
   transact(card: Card | null, value: number): void {
     if (card?.cardBalance) {
       if (this.transactionFlowService.getTransactionFlowContext() === 'addMoney') {
@@ -28,6 +33,11 @@ export class BankService {
     }
   }
 
+  /**
+   * Generates a guest card if user wants to skip adding card flow
+   * @param user Created user
+   * @returns New guest card
+   */
   generateGuestCard(user: User): Card {
     const randomCardType = CARD_TYPES[getRandomInt(0, CARD_TYPES.length - 1)];
     const randomCurrencyType = CURRENCY_TYPES[getRandomInt(0, CURRENCY_TYPES.length - 1)];
@@ -47,6 +57,9 @@ export class BankService {
     );
   }
 
+  /**
+   * @returns Card
+   */
   getCard(): Card | null {
     return this.currentCard;
   }

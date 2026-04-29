@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Recipient } from '../../../models/recipient.model';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
 import { RecipientService } from '../../../services/recipient/recipient.service';
 import { UserService } from '../../../services/user/user.service';
-
-interface RecipientInfoForm {
-  name: FormControl<string>;
-  surname: FormControl<string>;
-  email: FormControl<string>;
-}
+import { RecipientInfoForm } from '../../../models/interfaces/reactive-forms/recipientInfo.model';
 
 @Component({
   selector: 'app-recipient-info',
@@ -39,6 +34,7 @@ export class RecipientInfoComponent {
   optionalText: string = '';
   recipient: Recipient | null = null;
 
+  // DI
   constructor(
     private router: Router,
     private transactionFlowService: TransactionFlowService,
@@ -54,11 +50,18 @@ export class RecipientInfoComponent {
     }
   }
 
+  /**
+   * Sets the optional text for the recipient
+   * @param event Input field event
+   */
   onOptionalTextInput(event: Event): void {
     const input = event.target as HTMLTextAreaElement;
     this.optionalText = input.value;
   }
 
+  /**
+   * If the form is valid, user will be redirected to the next page
+   */
   onContinue(): void {
     if (this.form.valid) {
       const recipient = new Recipient(
@@ -68,12 +71,16 @@ export class RecipientInfoComponent {
         this.optionalText,
       );
       this.recipientService.setRecipient(recipient);
-      this.userService.user()?.addRecipient(recipient)
+      this.userService.user()?.addRecipient(recipient);
       this.transactionFlowService.setRecipientInfoPassed(true);
       this.router.navigate(['/transaction-flow/choosing-wallet']);
     }
   }
 
+  /**
+   * Redirects to the previous page and deletes the details from the form
+   * @param recipientName
+   */
   onBack(recipientName: string): void {
     if (this.userService.user()) {
       const found = this.userService
@@ -82,7 +89,7 @@ export class RecipientInfoComponent {
       if (found) {
         this.recipientService.deleteRecipient(found);
       }
-      this.recipientService.setRecipient(null)
+      this.recipientService.setRecipient(null);
       this.router.navigate(['/dashboard']);
     }
   }

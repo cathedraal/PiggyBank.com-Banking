@@ -8,8 +8,10 @@ import { TransactionFlowService } from '../../services/transaction-flow/transact
   styleUrl: './transaction-label.css',
 })
 export class TransactionLabelComponent {
+  // inputs
   @Input() isRecipientInfoPassed: boolean = false
   @Input() isChoosingWalletPassed: boolean = false
 
+  // DI
   constructor(protected transactionFlowService: TransactionFlowService) {}
 }

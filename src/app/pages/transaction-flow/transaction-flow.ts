@@ -21,52 +21,40 @@ import { ActionLoaderComponent } from '../../components/action-loader/action-loa
   styleUrl: './transaction-flow.css',
 })
 export class TransactionFlowComponent implements OnDestroy {
+  // variable
   private timeoutId: ReturnType<typeof setTimeout> | null = null;
 
+  // DI
   constructor(
     protected transactionFlowService: TransactionFlowService,
     protected userService: UserService,
     protected actionLoaderService: ActionLoaderService,
     private router: Router,
   ) {
-    // effect(() => {
-    //   if (this.actionLoaderService.loading()) {
-    //     this.timeoutId = setTimeout(() => {
-    //       this.actionLoaderService.setHiding(true);
-    //       setTimeout(() => {
-    //         this.actionLoaderService.setLoading(false);
-    //         setTimeout(() => {
-    //           this.router.navigate(['/transaction-flow/validation']);
-    //           setTimeout(() => {
-    //             this.actionLoaderService.setVisible(true);
-    //           }, 100)
-    //         }, 500);
-    //       }, 300);
-    //     }, 3000);
-    //   }
-    // });
+    // reacts to the signals and starts timers
     effect(() => {
       if (this.actionLoaderService.loading()) {
         if (this.timeoutId) return
         this.timeoutId = setTimeout(() => {
-          this.actionLoaderService.setHiding(true); // начинаем fade out
+          this.actionLoaderService.setHiding(true); // starting fade out
           setTimeout(() => {
-            this.router.navigate(['/transaction-flow/validation']); // навигация пока лоадер ещё виден
+            this.router.navigate(['/transaction-flow/validation']); // navigate while loader is still visible
             setTimeout(() => {
-               // показываем контент
-              this.actionLoaderService.setLoading(false); // убираем лоадер из DOM
-              this.actionLoaderService.setHiding(false); // сбрасываем состояние для следующего раза
+              // show the content after loader
+              this.actionLoaderService.setLoading(false); // remove the loader from DOM
+              this.actionLoaderService.setHiding(false); // reset the state before using again
               this.timeoutId = null
               setTimeout(() => {
                 this.actionLoaderService.setVisible(true);
               }, 50)
             }, 100);
-          }, 300); // ждём пока fade out завершится
+          }, 300); // waiting until fade out ends
         }, 2000);
       }
     });
   }
 
+  // clear the timer
   ngOnDestroy(): void {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);

@@ -1,5 +1,5 @@
 /**
- * This class is used to create user's log after manipulating with one of his cards
+ * This class is used to create user's log after each transaction with one of his cards
  */
 export class Action {
   constructor(

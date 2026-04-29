@@ -1,6 +1,6 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Footer } from './components/footer/footer';
+import { FooterComponent } from './components/footer/footer';
 import { HeaderComponent } from './components/header/header';
 import Lenis from 'lenis';
 import { LoaderComponent } from './components/loader/loader';
@@ -9,20 +9,23 @@ import { NotificationService } from './services/notification/notification.servic
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, HeaderComponent, LoaderComponent, NotificationComponent],
+  imports: [RouterOutlet, FooterComponent, HeaderComponent, LoaderComponent, NotificationComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App implements OnInit {
+  // variables
   protected readonly title = signal('PiggyBank.com-Banking_A');
   protected isLoading = signal(true);
   protected isHiding = signal(false);
   protected isVisible = signal(false);
   private timeoutId: ReturnType<typeof setTimeout> | null = null;
 
+  // DI
   constructor(protected notificationService: NotificationService) {}
 
   ngOnInit(): void {
+    // lenis smooth scroll
     const lenis = new Lenis({ lerp: 0.1 });
 
     const raf = (time: number) => {
@@ -31,8 +34,9 @@ export class App implements OnInit {
     };
 
     requestAnimationFrame(raf);
-    lenis.scrollTo(0)
+    lenis.scrollTo(0);
 
+    // sets loader before displaying content
     this.timeoutId = setTimeout(() => {
       this.isHiding.set(true); // loader hides in 2s
       setTimeout(() => {
@@ -44,6 +48,7 @@ export class App implements OnInit {
     }, 2000);
   }
 
+  // clear timeout
   ngOnDestroy(): void {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);

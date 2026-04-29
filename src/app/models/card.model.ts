@@ -1,5 +1,5 @@
 /**
- * Class Card - used to create a new card
+ * This class is used for creating a new card
  */
 export class Card {
   constructor(

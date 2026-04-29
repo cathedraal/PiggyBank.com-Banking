@@ -11,6 +11,11 @@ import { getRandomInt } from '../../utils/utils';
 export class QuestionService {
   constructor(private notificationService: NotificationService) {}
 
+  /**
+   * Sends question using EmailJS API
+   * @param question Question user wrote
+   * @param user User
+   */
   sendQuestion(question: string, user: User | null = null): void {
     let name: string = '';
     let surname: string = '';

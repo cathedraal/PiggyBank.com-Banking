@@ -3,14 +3,14 @@ import { Action } from './action.model';
 import { Recipient } from './recipient.model';
 
 /**
- * Class Card - used to create a new user after logging in
+ * This class is used for creating a new user after logging in
  */
 export class User {
   cards: Card[] = [];
   actions: Action[] = [];
   recipients: Recipient[] = [];
-  selectedCard: Card | null = null
-  transacts: number = 0
+  selectedCard: Card | null = null;
+  transacts: number = 0;
 
   constructor(
     public name: string,
@@ -30,14 +30,14 @@ export class User {
   }
 
   addRecipient(recipient: Recipient): void {
-    this.recipients.push(recipient)
+    this.recipients.push(recipient);
   }
 
   addSelectedCard(card: Card): void {
-    this.selectedCard = card
+    this.selectedCard = card;
   }
 
   addTransactionAmount(value: number): void {
-    this.transacts = value
+    this.transacts = value;
   }
 }
