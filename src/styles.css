@@ -240,20 +240,20 @@ p {
   --label: #7b7b7b;
   --label-background: #f9f9f9;
   --container-title: #787878;
-  --primary-color-border: #C4DAFF;
+  --primary-color-border: #c4daff;
   --primary-color: #0c6fff;
-  --primary-color-container: #E9F1FF;
+  --primary-color-container: #e9f1ff;
   --primary-color-icon: #eff5ff;
-  --primary-color-icon-secondary: #E9F1FF;
+  --primary-color-icon-secondary: #e9f1ff;
   --primary-color-hover: #4a92ff;
   --overlay: #00000008;
   --light-gray: #f8f8f8;
   --light-gray-2: #fbfbfb;
-  --light-gray-3: #EFEFEF;
+  --light-gray-3: #efefef;
   --light-dark-gray: #f0f0f0;
   --gray: #e7e7e7;
   --dark-gray: #9f9f9f;
-  --dark-gray-secondary: #B3B3B3;
+  --dark-gray-secondary: #b3b3b3;
   --line: #dfdfdf;
   --active: #81b4ff;
   --profile-button: #e5e5e5;
@@ -283,13 +283,15 @@ p {
     0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 24px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(0, 0, 0, 0.1);
   --shadow-hovered:
     0 4px 4px rgba(0, 0, 0, 0.03), 0 7px 10px rgba(0, 0, 0, 0.06), 0 17px 25px rgba(0, 0, 0, 0.1);
-  --shadow-card: 
-    0 70px 20px 0 rgba(0, 0, 0, 0.00), 0 45px 18px 0 rgba(0, 0, 0, 0.01), 0 25px 15px 0 rgba(0, 0, 0, 0.05), 0 11px 11px 0 rgba(0, 0, 0, 0.09), 0 3px 6px 0 rgba(0, 0, 0, 0.10);
+  --shadow-card:
+    0 70px 20px 0 rgba(0, 0, 0, 0), 0 45px 18px 0 rgba(0, 0, 0, 0.01),
+    0 25px 15px 0 rgba(0, 0, 0, 0.05), 0 11px 11px 0 rgba(0, 0, 0, 0.09),
+    0 3px 6px 0 rgba(0, 0, 0, 0.1);
   --succeed-background: #c8ffba;
   --succeed-label: #327d1f;
   --error-background: rgb(255, 229, 229);
   --error-label: rgb(167, 67, 67);
-  --error-background-secondary: #FFEEEE;
-  --error-label-secondary: #D36666;
-  --logout: #FFE9E9;
+  --error-background-secondary: #ffeeee;
+  --error-label-secondary: #d36666;
+  --logout: #ffe9e9;
 }
