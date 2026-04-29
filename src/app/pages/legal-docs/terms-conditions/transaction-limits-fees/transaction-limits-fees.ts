@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { transactionSettingItem } from '../../../../models/interfaces/transactionSettings.model';
+import { transactionSettingItem } from '../../../../models/interfaces/default/transactionSettings.model';
 import { TRANSACTION_SETTINGS } from '../../../../constants/constants';
 
 @Component({

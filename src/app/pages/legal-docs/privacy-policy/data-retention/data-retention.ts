@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { retentionDataItem } from '../../../../models/interfaces/retentionData.model';
+import { retentionDataItem } from '../../../../models/interfaces/default/retentionData.model';
 import { RETENTION_DATA } from '../../../../constants/constants';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { cookieItem } from '../../../../models/interfaces/cookies.model';
+import { cookieItem } from '../../../../models/interfaces/default/cookies.model';
 import { COOKIES } from '../../../../constants/constants';
 
 @Component({

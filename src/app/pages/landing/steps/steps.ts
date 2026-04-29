@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { stepsItem } from '../../../models/interfaces/steps.model';
+import { stepsItem } from '../../../models/interfaces/default/steps.model';
 import { STEPS_SECTION } from '../../../constants/constants';
 
 @Component({

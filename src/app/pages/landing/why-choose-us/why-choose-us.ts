@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { benefitItem } from '../../../models/interfaces/benefits.model';
+import { benefitItem } from '../../../models/interfaces/default/benefits.model';
 import { BENEFITS_SECTION } from '../../../constants/constants';
 
 @Component({

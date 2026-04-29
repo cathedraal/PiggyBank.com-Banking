@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { faqItem } from '../../../models/interfaces/faqs.model';
+import { faqItem } from '../../../models/interfaces/default/faqs.model';
 import { FAQS_SECTION } from '../../../constants/constants';
 
 @Component({
