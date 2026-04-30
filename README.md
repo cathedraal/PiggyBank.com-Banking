@@ -41,3 +41,9 @@ State Management: Component interaction via Input/Output and Services.
 Routing: 16 routes with lazy loading potential and guard-ready structures.
 
 Security Simulations: Improved login/logout, add card, transaction flows and data validation using reactive forms.
+
+# Showcase
+
+<img width="1299" height="1316" alt="image" src="https://github.com/user-attachments/assets/cae99432-e7ec-4642-ad52-ac748f6e313d" />
+<img width="1216" height="1316" alt="image" src="https://github.com/user-attachments/assets/3438ef64-2927-4e7b-8243-5f1e4b96b176" />
+<img width="1146" height="1316" alt="image" src="https://github.com/user-attachments/assets/984fe935-608a-4e29-acae-285648ec315b" />
