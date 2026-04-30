@@ -23,6 +23,12 @@ The interface was first meticulously crafted in Figma, focusing on a clean, mode
 - EmailJS API
 - Modular architecture (ES Modules)
 
+# Showcase
+
+<img width="1334" height="1315" alt="image" src="https://github.com/user-attachments/assets/fa7c2136-5616-4689-b54a-db8cccf0ca37" />
+<img width="1141" height="1316" alt="image" src="https://github.com/user-attachments/assets/a6e4c5aa-36df-4c19-a3a2-18d3e65b3f44" />
+<img width="1236" height="1316" alt="image" src="https://github.com/user-attachments/assets/b5e1fde1-5f40-4c75-b273-ccf876ca6187" />
+
 ## How To Run
 
 Clone the repo and open `index.html` in your browser.
