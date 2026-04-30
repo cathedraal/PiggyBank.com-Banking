@@ -1,59 +1,43 @@
-# PiggyBankComBankingA
+№ PiggyBank.com Angular 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+A modular Single Page Application built with Angular 21. 
+This version is a complete architectural rewrite of the original PiggyBank project (main branch on this repository), scaling from a simple interface to a complex ecosystem with over 14.500 lines of code.
 
-## Development server
+# Evolution: From Vanilla JS to Angular
+This version represents a massive upgrade in software engineering standards:
 
-To start a local development server, run:
+Scale: 3x growth in codebase with deep optimization.
 
-```bash
-ng serve
-```
+Architecture: Shifted from "spaghetti code" to a Component-Based Architecture.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Routing: Implemented 16 distinct routes for seamless navigation.
 
-## Code scaffolding
+UX/UI Redesign: A complete visual overhaul with a focus on high-end user experience, including custom landing pages and complex state transitions.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+# Advanced Features
+Modular Design: Every feature (Cards, Transactions, Profile) is a standalone component.
 
-```bash
-ng generate component component-name
-```
+Sophisticated Navigation: Full application header and footer.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Legal Compliance Suite: Dedicated pages for Privacy Policy, Terms & Conditions, and Cookie Policy.
 
-```bash
-ng generate --help
-```
+UI/UX:
 
-## Building
+Dynamic Blur Effects and Glassmorphism.
 
-To build the project run:
+Custom-built Modals & Pop-ups for transaction confirmations, delete card, support.
 
-```bash
-ng build
-```
+Advanced Page Transition Animations for a native-app feel.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Marketing: A landing Page to introduce the service.
 
-## Running unit tests
+# Technical Deep Dive
+Framework: Angular (TypeScript)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Styling: 8.6k+ lines of custom CSS (Advanced Flexbox/Grid, Animations, Variable-driven themes).
 
-```bash
-ng test
-```
+State Management: Component interaction via Input/Output and Services.
 
-## Running end-to-end tests
+Routing: 16 routes with lazy loading potential and guard-ready structures.
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Security Simulations: Improved login/logout, add card, transaction flows and data validation using reactive forms.
