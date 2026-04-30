@@ -1,6 +1,7 @@
-# PiggyBank.com-Banking
+# PiggyBank.com-Banking Vanilla JS
 
 A simple digital bank that lets users send, top up, and withdraw money. It’s designed to be easy to use and beginner-friendly.
+The interface was first meticulously crafted in Figma, focusing on a clean, modern, and intuitive user experience. The design was then translated into pixel-perfect HTML5 and CSS3, ensuring a premium feel with smooth transitions and responsive layouts.
 
 ## Features
 
@@ -22,40 +23,7 @@ A simple digital bank that lets users send, top up, and withdraw money. It’s d
 - EmailJS API
 - Modular architecture (ES Modules)
 
-## Project Structure
-
-```
-/interfaces
-   - login.js
-   - articlePage.js
-   - menu.js
-   - profile.js
-   - addCard.js
-   - addMoney.js
-   - transferMoney.js
-   - withdrawMoney.js
-   - validationPages.js
-   - actions.js
-/logics
-   - classes.js
-   - logic.js
-   - rendering.js
-   - globals.js
-/styles
-   - actions.css
-   - addCard.css
-   - chooseWallet.css
-   - footer.css
-   - headers.css
-   - login.css
-   - menu.css
-   - newsPage.css
-   - profile.css
-   - validationPages.css
-   - GENERAL.css
-```
-
-## Getting Started
+## How To Run
 
 Clone the repo and open `index.html` in your browser.
 No dependencies, no build tools required.
