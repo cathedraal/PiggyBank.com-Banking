@@ -1,7 +1,7 @@
 # PiggyBank.com Angular 
 
 A modular Single Page Application built with Angular 21. 
-This version is a complete architectural rewrite of the original PiggyBank project (main branch on this repository), scaling from a simple interface to a complex ecosystem with over 14.500 lines of code.
+This version is a complete architectural rewrite of the original PiggyBank project (main branch on this repository), scaling from a simple interface to a complex ecosystem with over 14.500 lines of code with a docker integration. 
 
 # Evolution: From Vanilla JS to Angular
 This version represents a massive upgrade in software engineering standards:
