@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { PopupComponent } from '../../../components/popup/popup';
 import { UserService } from '../../../services/user/user.service';
 import { User } from '../../../models/user.model';
-import { SettingsService } from '../../../services/settings/settings.service';
 import { QuestionService } from '../../../services/question/question.service';
 
 @Component({

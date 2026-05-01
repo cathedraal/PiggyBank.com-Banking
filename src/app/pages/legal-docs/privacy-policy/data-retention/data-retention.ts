@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { retentionDataItem } from '../../../../models/interfaces/default/retentionData.model';
-import { RETENTION_DATA } from '../../../../constants/constants';
+import { RETENTION_DATA } from '../../../../constants/legal';
 
 @Component({
   selector: 'app-data-retention',

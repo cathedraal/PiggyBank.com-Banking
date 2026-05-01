@@ -5,8 +5,8 @@ import { UserService } from '../../../services/user/user.service';
 import { formatToSource, maskCardNumber } from '../../../utils/utils';
 import { PopupComponent } from '../../../components/popup/popup';
 import { EmptyCardsProfileComponent } from '../empty-cards-profile/empty-cards-profile';
-import { Router, RouterLink } from '@angular/router';
-import { CARDS_AMOUNT_ALLOWED } from '../../../constants/constants';
+import { Router } from '@angular/router';
+import { CARDS_AMOUNT_ALLOWED } from '../../../constants/businessLogic';
 import { Action } from '../../../models/action.model';
 import { NotificationService } from '../../../services/notification/notification.service';
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { benefitItem } from '../../../models/interfaces/default/benefits.model';
-import { BENEFITS_SECTION } from '../../../constants/constants';
+import { BENEFITS_SECTION } from '../../../constants/landing';
 
 @Component({
   selector: 'app-benefits',

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { transactionFlowItem } from '../../../models/interfaces/default/transactionFlow.model';
-import { TRANSACTION_FEES, TRANSACTION_FLOW } from '../../../constants/constants';
+import { TRANSACTION_FEES } from '../../../constants/businessLogic';
+import { TRANSACTION_FLOW } from '../../../constants/transaction';
 import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
 import { User } from '../../../models/user.model';
 import { UserService } from '../../../services/user/user.service';

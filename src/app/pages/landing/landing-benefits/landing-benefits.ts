@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { LANDING_BENEFITS_SECTION } from '../../../constants/constants';
+import { LANDING_BENEFITS_SECTION } from '../../../constants/landing';
 
 @Component({
   selector: 'app-landing-benefits',

@@ -3,7 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { SettingsService } from '../../../services/settings/settings.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../../services/user/user.service';
-import { COUNTRY_CODES, GUEST_PROFILE } from '../../../constants/constants';
+import { COUNTRY_CODES, GUEST_PROFILE } from '../../../constants/registration';
 import { User } from '../../../models/user.model';
 import { getRandomInt } from '../../../utils/utils';
 import { parsePhoneNumberWithError, type CountryCode } from 'libphonenumber-js';

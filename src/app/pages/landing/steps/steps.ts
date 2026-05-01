@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { stepsItem } from '../../../models/interfaces/default/steps.model';
-import { STEPS_SECTION } from '../../../constants/constants';
+import { STEPS_SECTION } from '../../../constants/landing';
 
 @Component({
   selector: 'app-steps',

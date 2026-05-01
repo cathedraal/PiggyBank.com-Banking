@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ViewChild, ElementRef } from '@angular/core';
-import { HERO_BENEFITS_SECTION } from '../../../constants/constants';
+import { HERO_BENEFITS_SECTION } from '../../../constants/landing';
 
 @Component({
   selector: 'app-hero-benefits',

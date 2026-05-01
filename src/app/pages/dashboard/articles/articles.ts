@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { articlePreviewItem } from '../../../models/interfaces/default/articles.model';
-import { ARTICLE_PREVIEW_SECTION } from '../../../constants/constants';
+import { ARTICLE_PREVIEW_SECTION } from '../../../constants/articles';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from "@angular/router";
 

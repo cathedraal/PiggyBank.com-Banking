@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { RecipientService } from '../recipient/recipient.service';
 import { UserService } from '../user/user.service';
 import { BankService } from '../bank/bank.service'
-import emailjs from '@emailjs/browser';
-import { COMPANY_NAME } from '../../constants/constants';
 
+// TODO
 @Injectable({
   providedIn: 'root',
 })

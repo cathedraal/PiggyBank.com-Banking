@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { supportButtonItem } from '../../models/interfaces/default/supports.model';
-import { SUPPORT_BUTTONS } from '../../constants/constants';
+import { SUPPORT_BUTTONS } from '../../constants/popup';
 
 @Component({
   selector: 'app-popup',

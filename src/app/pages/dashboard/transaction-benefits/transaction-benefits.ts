@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TRANSACTION_BENEFITS } from '../../../constants/constants';
+import { TRANSACTION_BENEFITS } from '../../../constants/landing';
 
 @Component({
   selector: 'app-transaction-benefits',

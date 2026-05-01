@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { faqItem } from '../../../models/interfaces/default/faqs.model';
-import { FAQS_SECTION } from '../../../constants/constants';
+import { FAQS_SECTION } from '../../../constants/landing';
 
 @Component({
   selector: 'app-faqs',

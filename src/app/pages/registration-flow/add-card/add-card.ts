@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { SettingsService } from '../../../services/settings/settings.service';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../../services/user/user.service';
@@ -8,7 +8,8 @@ import { BankService } from '../../../services/bank/bank.service';
 import { Card } from '../../../models/card.model';
 import { PopupComponent } from '../../../components/popup/popup';
 import { currencyTypesItem } from '../../../models/interfaces/default/currencies.model';
-import { CARD_TYPES, CURRENCY_TYPES, RANDOM_CARD_BALANCE } from '../../../constants/constants';
+import { RANDOM_CARD_BALANCE } from '../../../constants/businessLogic';
+import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/settings';
 import { Action } from '../../../models/action.model';
 import { cardTypesItem } from '../../../models/interfaces/default/cardTypes.model';
 import { NotificationService } from '../../../services/notification/notification.service';
@@ -80,7 +81,7 @@ export class AddCardComponent {
     private userService: UserService,
     private bankService: BankService,
     private router: Router,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
   ) {
     this.settingsService.setLoginPassed(true);
     this.user = this.userService.getUser();
@@ -173,9 +174,9 @@ export class AddCardComponent {
     this.isChoosingType = true;
 
     const select = event.target as HTMLSelectElement;
-    const found = this.types.find((el) => el.value === select.value)
+    const found = this.types.find((el) => el.value === select.value);
     if (found) {
-      this.cardType = found
+      this.cardType = found;
     }
   }
 
@@ -188,7 +189,7 @@ export class AddCardComponent {
         'icons/transactions_newCard.svg',
         this.dateTime,
         formatToSource(this.cardType.value, this.cardNumber),
-        {verb: 'Added a new', noun: '', preposition1: '', preposition2: ''},
+        { verb: 'Added a new', noun: '', preposition1: '', preposition2: '' },
       );
       const card = new Card(
         this.cardHolder,
@@ -196,9 +197,9 @@ export class AddCardComponent {
         this.cardExpdate,
         this.cardCvc,
         RANDOM_CARD_BALANCE,
-        {currency: this.cardCurrency.currency, value: this.cardCurrency.value}, 
-        {type: this.cardType.value, color: this.cardType.color},
-        false
+        { currency: this.cardCurrency.currency, value: this.cardCurrency.value },
+        { type: this.cardType.value, color: this.cardType.color },
+        false,
       );
       this.bankService.setCurrentCard(card);
       this.user?.addCard(card);
@@ -206,7 +207,7 @@ export class AddCardComponent {
       this.router.navigate(['/dashboard']);
       this.isPopupOpen = false;
 
-      this.notificationService.triggerNotification(true, true, 'card added')
+      this.notificationService.triggerNotification(true, true, 'card added');
     }
   }
 
@@ -226,7 +227,7 @@ export class AddCardComponent {
       'icons/transactions_newCard.svg',
       this.dateTime,
       formatToSource(this.cardType.value, guestCard.cardNumber),
-      {verb: 'Added a new guest', noun: '', preposition1: '', preposition2: ''},
+      { verb: 'Added a new guest', noun: '', preposition1: '', preposition2: '' },
     );
     this.bankService.setCurrentCard(guestCard);
     this.user?.addCard(guestCard);
@@ -234,8 +235,8 @@ export class AddCardComponent {
     this.router.navigate(['/dashboard']);
     this.isPopupOpen = false;
 
-    console.log(guestCard.cardBalance)
-    this.notificationService.triggerNotification(true, true, 'card added')
+    console.log(guestCard.cardBalance);
+    this.notificationService.triggerNotification(true, true, 'card added');
   }
 
   /**

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { transactionSettingItem } from '../../../../models/interfaces/default/transactionSettings.model';
-import { TRANSACTION_SETTINGS } from '../../../../constants/constants';
+import { TRANSACTION_SETTINGS } from '../../../../constants/legal';
 
 @Component({
   selector: 'app-transaction-limits-fees',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { cookieItem } from '../../../../models/interfaces/default/cookies.model';
-import { COOKIES } from '../../../../constants/constants';
+import { COOKIES } from '../../../../constants/legal';
 
 @Component({
   selector: 'app-cookie-table',

@@ -4,13 +4,12 @@ import { UserService } from '../../../services/user/user.service';
 import { maskCardNumber } from '../../../utils/utils';
 import { DecimalPipe } from '@angular/common';
 import { Card } from '../../../models/card.model';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
 import { RecipientService } from '../../../services/recipient/recipient.service';
 import { Recipient } from '../../../models/recipient.model';
 import { NotificationService } from '../../../services/notification/notification.service';
-import { DAILY_TRANSACTION_LIMIT, TRANSACTION_FEES } from '../../../constants/constants';
-import { PopupComponent } from '../../../components/popup/popup';
+import { DAILY_TRANSACTION_LIMIT, TRANSACTION_FEES } from '../../../constants/businessLogic';
 
 @Component({
   selector: 'app-choosing-wallet',
