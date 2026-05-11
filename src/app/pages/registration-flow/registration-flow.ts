@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SettingsService } from '../../services/settings/settings.service';
+import { SettingsService } from '../../services/default/settings/settings.service';
 import { RegistrationLabelComponent } from '../../components/registration-label/registration-label';
 
 @Component({

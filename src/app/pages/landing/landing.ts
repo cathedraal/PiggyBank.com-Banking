@@ -9,7 +9,7 @@ import { FaqsComponent } from './faqs/faqs';
 import { CtaComponent } from './cta/cta';
 import { HeroComponent } from './hero/hero';
 import { LandingBenefitsComponent } from './landing-benefits/landing-benefits';
-import { SettingsService } from '../../services/settings/settings.service';
+import { SettingsService } from '../../services/default/settings/settings.service';
 
 @Component({
   selector: 'app-landing',
@@ -23,15 +23,14 @@ import { SettingsService } from '../../services/settings/settings.service';
     FaqsComponent,
     CtaComponent,
     HeroComponent,
-    LandingBenefitsComponent
+    LandingBenefitsComponent,
   ],
   templateUrl: `./landing.html`,
   styleUrl: './landing.css',
 })
 export class LandingComponent {
-
-  constructor ( private settingsService: SettingsService ) {
-    this.settingsService.setRegistrationFlow(true)
-    this.settingsService.setLandingPage(true)
+  constructor(private settingsService: SettingsService) {
+    this.settingsService.setRegistrationFlow(true);
+    this.settingsService.setLandingPage(true);
   }
 }

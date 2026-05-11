@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from "@angular/router";
+import { Router, RouterLink } from '@angular/router';
 import { PopupComponent } from '../../../components/popup/popup';
-import { UserService } from '../../../services/user/user.service';
+import { UserService } from '../../../services/default/user/user.service';
 
 @Component({
   selector: 'app-buttons',
@@ -10,23 +10,26 @@ import { UserService } from '../../../services/user/user.service';
   styleUrl: './buttons.css',
 })
 export class ButtonsComponent {
-  isPopupOpen: boolean = false
-  popupText: string = 'You sure you want to log out?'
-  popupContext: string = 'log out'
+  isPopupOpen: boolean = false;
+  popupText: string = 'You sure you want to log out?';
+  popupContext: string = 'log out';
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(
+    private userService: UserService,
+    private router: Router,
+  ) {}
 
   openPopup(): void {
-    this.isPopupOpen = true
+    this.isPopupOpen = true;
   }
 
   onConfirm(): void {
-    this.userService.deleteUser()
-    this.isPopupOpen = false
-    this.router.navigate(['/landing'])
+    this.userService.deleteUser();
+    this.isPopupOpen = false;
+    this.router.navigate(['/landing']);
   }
 
   onDecline(): void {
-    this.isPopupOpen = false
+    this.isPopupOpen = false;
   }
 }

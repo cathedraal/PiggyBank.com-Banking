@@ -1,11 +1,11 @@
-import { Component, effect, OnDestroy, OnInit } from '@angular/core';
-import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
+import { Component, effect, OnDestroy } from '@angular/core';
+import { TransactionFlowService } from '../../services/default/transaction-flow/transaction-flow';
 import { TransactionLabelComponent } from '../../components/transaction-label/transaction-label';
 import { Router, RouterOutlet } from '@angular/router';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/default/user/user.service';
 import { ErrorPageComponent } from '../error-page/error-page';
 import { TransactionFlowHeaderComponent } from '../../components/transaction-flow-header/transaction-flow-header';
-import { ActionLoaderService } from '../../services/action-loader/action-loader';
+import { ActionLoaderService } from '../../services/default/action-loader/action-loader';
 import { ActionLoaderComponent } from '../../components/action-loader/action-loader';
 
 @Component({
@@ -34,7 +34,7 @@ export class TransactionFlowComponent implements OnDestroy {
     // reacts to the signals and starts timers
     effect(() => {
       if (this.actionLoaderService.loading()) {
-        if (this.timeoutId) return
+        if (this.timeoutId) return;
         this.timeoutId = setTimeout(() => {
           this.actionLoaderService.setHiding(true); // starting fade out
           setTimeout(() => {
@@ -43,10 +43,10 @@ export class TransactionFlowComponent implements OnDestroy {
               // show the content after loader
               this.actionLoaderService.setLoading(false); // remove the loader from DOM
               this.actionLoaderService.setHiding(false); // reset the state before using again
-              this.timeoutId = null
+              this.timeoutId = null;
               setTimeout(() => {
                 this.actionLoaderService.setVisible(true);
-              }, 50)
+              }, 50);
             }, 100);
           }, 300); // waiting until fade out ends
         }, 2000);

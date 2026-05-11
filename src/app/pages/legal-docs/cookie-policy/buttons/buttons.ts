@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../../../services/user/user.service';
+import { UserService } from '../../../../services/default/user/user.service';
 import { Router, RouterLink } from '@angular/router';
-import { TransactionFlowService } from '../../../../services/transaction-flow/transaction-flow';
+import { TransactionFlowService } from '../../../../services/default/transaction-flow/transaction-flow';
 
 @Component({
   selector: 'app-buttons',

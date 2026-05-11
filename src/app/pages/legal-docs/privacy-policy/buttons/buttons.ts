@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from "@angular/router";
-import { UserService } from '../../../../services/user/user.service';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../../../../services/default/user/user.service';
 
 @Component({
   selector: 'app-buttons',
@@ -9,13 +9,16 @@ import { UserService } from '../../../../services/user/user.service';
   styleUrl: './buttons.css',
 })
 export class ButtonsComponent {
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(
+    private userService: UserService,
+    private router: Router,
+  ) {}
 
   onRoute(): void {
     if (this.userService.user()) {
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['/dashboard']);
     } else {
-      this.router.navigate(['/landing'])
+      this.router.navigate(['/landing']);
     }
   }
 }

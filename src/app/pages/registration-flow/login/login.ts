@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { SettingsService } from '../../../services/settings/settings.service';
+import { SettingsService } from '../../../services/default/settings/settings.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UserService } from '../../../services/user/user.service';
+import { UserService } from '../../../services/default/user/user.service';
 import { COUNTRY_CODES, GUEST_PROFILE } from '../../../constants/registration';
 import { User } from '../../../models/user.model';
 import { getRandomInt } from '../../../utils/utils';

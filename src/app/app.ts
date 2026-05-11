@@ -5,7 +5,7 @@ import { HeaderComponent } from './components/header/header';
 import Lenis from 'lenis';
 import { LoaderComponent } from './components/loader/loader';
 import { NotificationComponent } from './components/notification/notification';
-import { NotificationService } from './services/notification/notification.service';
+import { NotificationService } from './services/default/notification/notification.service';
 
 @Component({
   selector: 'app-root',

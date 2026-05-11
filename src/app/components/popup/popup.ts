@@ -10,29 +10,29 @@ import { SUPPORT_BUTTONS } from '../../constants/popup';
 })
 export class PopupComponent {
   // inputs
-  @Input() text: string = ''
-  @Input() button1: string = ''
-  @Input() button2: string = ''
-  @Input() popupContext: null | string = ''
+  @Input() text: string = '';
+  @Input() button1: string = '';
+  @Input() button2: string = '';
+  @Input() popupContext: null | string = '';
 
   // outputs
-  @Output() confirmed = new EventEmitter<any>()
-  @Output() declined = new EventEmitter<void>()
-  @Output() closed = new EventEmitter<void>()
+  @Output() confirmed = new EventEmitter<any>();
+  @Output() declined = new EventEmitter<void>();
+  @Output() closed = new EventEmitter<void>();
 
   // html template
-  supportButtons: supportButtonItem[] = SUPPORT_BUTTONS
+  supportButtons: supportButtonItem[] = SUPPORT_BUTTONS;
 
   confirm(value: any = ''): void {
-    this.confirmed.emit(value)
+    this.confirmed.emit(value);
   }
 
   decline(): void {
-    this.declined.emit()
+    this.declined.emit();
   }
 
   close(): void {
-    this.closed.emit()
+    this.closed.emit();
   }
 
   /**
@@ -41,7 +41,7 @@ export class PopupComponent {
    * @param input Input
    */
   onInputValueChange(event: Event, input: HTMLTextAreaElement) {
-    const button = event.target as HTMLButtonElement
-    input.value = button.value
+    const button = event.target as HTMLButtonElement;
+    input.value = button.value;
   }
 }

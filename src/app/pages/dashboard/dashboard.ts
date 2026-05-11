@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/default/user/user.service';
 import { WalletComponent } from './wallet/wallet';
 import { ArticlesComponent } from './articles/articles';
 import { TransactionsComponent } from './transactions/transactions';
@@ -8,7 +8,7 @@ import { BenefitsComponent } from './benefits/benefits';
 import { CurrencyComponent } from './currency/currency';
 import { EmptyCardsComponent } from './empty-cards/empty-cards';
 import { User } from '../../models/user.model';
-import { TransactionBenefitsComponent } from "./transaction-benefits/transaction-benefits";
+import { TransactionBenefitsComponent } from './transaction-benefits/transaction-benefits';
 import { ErrorPageComponent } from '../error-page/error-page';
 
 @Component({
@@ -22,14 +22,14 @@ import { ErrorPageComponent } from '../error-page/error-page';
     CurrencyComponent,
     EmptyCardsComponent,
     TransactionBenefitsComponent,
-    ErrorPageComponent
-],
+    ErrorPageComponent,
+  ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
 export class DashboardComponent {
   // html template
-  user: User | null = null
+  user: User | null = null;
 
   // date
   date = new Date();
@@ -38,10 +38,10 @@ export class DashboardComponent {
     month: '2-digit',
     day: '2-digit',
   });
-  subheader: string = `trading on ${this.dateTime}`
+  subheader: string = `trading on ${this.dateTime}`;
 
   // DI
   constructor(protected userService: UserService) {
-    this.user = this.userService.getUser()
+    this.user = this.userService.getUser();
   }
 }

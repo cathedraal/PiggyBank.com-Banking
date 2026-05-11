@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { SettingsService } from '../../../services/settings/settings.service';
+import { SettingsService } from '../../../services/default/settings/settings.service';
 import { Router, RouterLink } from '@angular/router';
-import { UserService } from '../../../services/user/user.service';
+import { UserService } from '../../../services/default/user/user.service';
 import { User } from '../../../models/user.model';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { BankService } from '../../../services/bank/bank.service';
+import { BankService } from '../../../services/default/bank/bank.service';
 import { Card } from '../../../models/card.model';
 import { PopupComponent } from '../../../components/popup/popup';
 import { currencyTypesItem } from '../../../models/interfaces/default/currencies.model';
@@ -12,7 +12,7 @@ import { RANDOM_CARD_BALANCE } from '../../../constants/businessLogic';
 import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/settings';
 import { Action } from '../../../models/action.model';
 import { cardTypesItem } from '../../../models/interfaces/default/cardTypes.model';
-import { NotificationService } from '../../../services/notification/notification.service';
+import { NotificationService } from '../../../services/default/notification/notification.service';
 import { formatToSource } from '../../../utils/utils';
 import { AddCardForm } from '../../../models/interfaces/reactive-forms/addCard.model';
 

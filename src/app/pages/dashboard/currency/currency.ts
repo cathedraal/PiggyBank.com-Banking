@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
-import { CurrencyApiService } from '../../../services/currency-api/currency-api';
+import { CurrencyApiService } from '../../../services/api/currency-api/currency-api';
 import { DecimalPipe } from '@angular/common';
 import { Subject, takeUntil } from 'rxjs';
-import { NotificationService } from '../../../services/notification/notification.service';
+import { NotificationService } from '../../../services/default/notification/notification.service';
 
 @Component({
   selector: 'app-currency',

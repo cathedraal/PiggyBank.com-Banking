@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/default/user/user.service';
 import { ErrorPageComponent } from '../error-page/error-page';
 import { RouterLink } from '@angular/router';
 

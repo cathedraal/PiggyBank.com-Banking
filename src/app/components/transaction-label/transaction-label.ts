@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
+import { TransactionFlowService } from '../../services/default/transaction-flow/transaction-flow';
 
 @Component({
   selector: 'app-transaction-label',
@@ -9,8 +9,8 @@ import { TransactionFlowService } from '../../services/transaction-flow/transact
 })
 export class TransactionLabelComponent {
   // inputs
-  @Input() isRecipientInfoPassed: boolean = false
-  @Input() isChoosingWalletPassed: boolean = false
+  @Input() isRecipientInfoPassed: boolean = false;
+  @Input() isChoosingWalletPassed: boolean = false;
 
   // DI
   constructor(protected transactionFlowService: TransactionFlowService) {}

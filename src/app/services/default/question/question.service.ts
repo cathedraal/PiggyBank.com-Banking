@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import emailjs from '@emailjs/browser';
 import { NotificationService } from '../notification/notification.service';
-import { User } from '../../models/user.model';
-import { getRandomInt } from '../../utils/utils';
+import { User } from '../../../models/user.model';
+import { getRandomInt } from '../../../utils/utils';
 
 @Injectable({
   providedIn: 'root',

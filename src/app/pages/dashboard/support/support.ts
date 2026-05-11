@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { PopupComponent } from '../../../components/popup/popup';
-import { UserService } from '../../../services/user/user.service';
+import { UserService } from '../../../services/default/user/user.service';
 import { User } from '../../../models/user.model';
-import { QuestionService } from '../../../services/question/question.service';
+import { QuestionService } from '../../../services/default/question/question.service';
 
 @Component({
   selector: 'app-support',
@@ -38,7 +38,7 @@ export class SupportComponent {
 
   /**
    * Sends question
-   * @param question Users question 
+   * @param question Users question
    */
   onConfirm(question: string): void {
     this.isPopupOpen = false;

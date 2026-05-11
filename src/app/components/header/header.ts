@@ -1,12 +1,12 @@
 import { Component, Signal } from '@angular/core';
 import { PopupComponent } from '../popup/popup';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/default/user/user.service';
 import { User } from '../../models/user.model';
-import { SettingsService } from '../../services/settings/settings.service';
-import { QuestionService } from '../../services/question/question.service';
+import { SettingsService } from '../../services/default/settings/settings.service';
+import { QuestionService } from '../../services/default/question/question.service';
 import { Router, RouterLink } from '@angular/router';
-import { RecipientService } from '../../services/recipient/recipient.service';
-import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
+import { RecipientService } from '../../services/default/recipient/recipient.service';
+import { TransactionFlowService } from '../../services/default/transaction-flow/transaction-flow';
 
 @Component({
   selector: 'app-header',
@@ -30,24 +30,23 @@ export class HeaderComponent {
     private questionService: QuestionService,
     private router: Router,
     private recipientService: RecipientService,
-    private transactionFlowService: TransactionFlowService
+    private transactionFlowService: TransactionFlowService,
   ) {
     this.user = this.userService.user;
   }
 
   // sets the popup text depending on if user exists or not
   get popupText(): string {
-    const user = this.user()
+    const user = this.user();
 
     if (!user) {
-      return 'Guest, describe your problem.'
+      return 'Guest, describe your problem.';
     } else {
-      return `${user.name}, describe your problem`
+      return `${user.name}, describe your problem`;
     }
     // else if (this.transactionFlowService.isTransactionFlow()) {
     //   return 'you sure you want to quit the transaction?'
     // }
-
   }
 
   /**
@@ -65,7 +64,7 @@ export class HeaderComponent {
   onConfirm(question: string): void {
     this.isPopupOpen = false;
     this.userQuestion = question;
-    this.questionService.sendQuestion(this.userQuestion, this.user())
+    this.questionService.sendQuestion(this.userQuestion, this.user());
   }
 
   /**
@@ -80,12 +79,12 @@ export class HeaderComponent {
    */
   onRoute(): void {
     if (this.user()) {
-      this.router.navigate(['./profile'])
+      this.router.navigate(['./profile']);
       if (this.user()!.cards?.length === 0) {
-        this.isPopupOpen = true
+        this.isPopupOpen = true;
       }
     } else {
-      this.router.navigate(['/registration-flow/login'])
+      this.router.navigate(['/registration-flow/login']);
     }
   }
 
@@ -95,12 +94,12 @@ export class HeaderComponent {
   onLogoRoute(): void {
     if (this.userService.user()) {
       // this.popupContext = 'transaction distraction'
-      this.recipientService.setRecipient(null)
-      this.user()!.transacts = 0
-      this.user()!.selectedCard = null
-      this.router.navigate(['/dashboard'])
+      this.recipientService.setRecipient(null);
+      this.user()!.transacts = 0;
+      this.user()!.selectedCard = null;
+      this.router.navigate(['/dashboard']);
     } else {
-      this.router.navigate(['/landing'])
+      this.router.navigate(['/landing']);
     }
   }
 
@@ -109,6 +108,6 @@ export class HeaderComponent {
    * @param id id of a landing section
    */
   scrollTo(id: string) {
-    document.getElementById(id)?.scrollIntoView({behavior: 'smooth'})
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 }

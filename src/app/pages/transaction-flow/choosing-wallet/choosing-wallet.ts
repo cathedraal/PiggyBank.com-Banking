@@ -1,14 +1,14 @@
 import { Component, ElementRef, Signal, ViewChild } from '@angular/core';
 import { User } from '../../../models/user.model';
-import { UserService } from '../../../services/user/user.service';
+import { UserService } from '../../../services/default/user/user.service';
 import { maskCardNumber } from '../../../utils/utils';
 import { DecimalPipe } from '@angular/common';
 import { Card } from '../../../models/card.model';
 import { Router } from '@angular/router';
-import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
-import { RecipientService } from '../../../services/recipient/recipient.service';
+import { TransactionFlowService } from '../../../services/default/transaction-flow/transaction-flow';
+import { RecipientService } from '../../../services/default/recipient/recipient.service';
 import { Recipient } from '../../../models/recipient.model';
-import { NotificationService } from '../../../services/notification/notification.service';
+import { NotificationService } from '../../../services/default/notification/notification.service';
 import { DAILY_TRANSACTION_LIMIT, TRANSACTION_FEES } from '../../../constants/businessLogic';
 
 @Component({

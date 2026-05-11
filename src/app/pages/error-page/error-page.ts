@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SettingsService } from '../../services/settings/settings.service';
+import { SettingsService } from '../../services/default/settings/settings.service';
 
 @Component({
   selector: 'app-error-page',

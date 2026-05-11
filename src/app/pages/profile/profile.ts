@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header';
 import { BannerComponent } from './banner/banner';
 import { AccountInfoComponent } from './account-info/account-info';
 import { CardsComponent } from './cards/cards';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/default/user/user.service';
 import { ErrorPageComponent } from '../error-page/error-page';
 
 @Component({
@@ -15,7 +15,7 @@ import { ErrorPageComponent } from '../error-page/error-page';
     BannerComponent,
     AccountInfoComponent,
     CardsComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
   ],
   templateUrl: `./profile.html`,
   styleUrl: './profile.css',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationService } from '../../services/notification/notification.service';
+import { NotificationService } from '../../services/default/notification/notification.service';
 
 @Component({
   selector: 'app-notification',
@@ -10,12 +10,12 @@ import { NotificationService } from '../../services/notification/notification.se
 })
 export class NotificationComponent implements OnInit {
   // DI
-  constructor (protected notificationService: NotificationService) {}
+  constructor(protected notificationService: NotificationService) {}
 
   // sets the notification off in 2s
   ngOnInit(): void {
     setTimeout(() => {
-      this.notificationService.triggerNotification(false, false, '')
-    }, 2000)
+      this.notificationService.triggerNotification(false, false, '');
+    }, 2000);
   }
 }
