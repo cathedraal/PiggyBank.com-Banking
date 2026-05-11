@@ -150,7 +150,7 @@ main {
 }
 
 .addCard-dropdown:open.active::picker-icon {
-  rotate: 180deg
+  rotate: 180deg;
 }
 
 .addCard-optionDiv {
@@ -185,7 +185,8 @@ main {
   font-weight: 500;
 }
 
-.addCard-title {
+.addCard-title,
+.addCard-title2 {
   margin-bottom: 15px;
   color: var(--subtitle);
   font-weight: 400;
@@ -260,4 +261,100 @@ main {
 .addCard-backButton:hover,
 .addCard-skipButton:hover {
   background-color: var(--white-hover);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .addCard-container {
+    width: 298px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+  }
+
+  :host {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border-radius: var(--border-radius-mobile);
+  }
+
+  .addCard-header {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .addCard-containers {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .addCard-leftContainer,
+  .addCard-rightContainer {
+    margin: 0;
+    width: 300px;
+  }
+
+  .addCard-leftContainer {
+    padding-bottom: 5px;
+    /* border-bottom: 1px solid var(--border-color); */
+  }
+
+  .addCard-rightContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .addCard-title {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  .addCard-title2 {
+    display: none;
+  }
+
+  .addCard-inputs {
+    max-width: unset;
+  }
+
+  .addCard-container hr {
+    margin: 25px 0 25px 0;
+  }
+
+  .addCard-dropdown {
+    min-width: unset;
+    font-size: 14px;
+  }
+
+  .addCard-skipButton {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .addCard-buttons {
+    gap: 5px;
+  }
+
+  .addCard-optionContainer {
+    width: 300px;
+  }
+
+  .addCard-submitButton {
+    font-size: 16px;
+  }
+
+  .addCard-holderInput,
+  .addCard-numberInput,
+  .addCard-expdateInput,
+  .addCard-cvcInput {
+    font-size: 14px;
+  }
 }

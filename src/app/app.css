@@ -30,3 +30,20 @@
 .app-content.visible {
   opacity: 1;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  :host {
+    width: 100%;
+  }
+
+  .app-content, .app-content.visible {
+    padding: 0px 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}

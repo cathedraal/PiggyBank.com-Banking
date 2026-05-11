@@ -43,3 +43,32 @@ main {
   font-size: 16px;
   color: var(--primary-color);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    margin-top: 20px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    gap: 10px;
+  }
+  
+  .profile-bannerAvatar {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  .profile-bannerAvatar h1 {
+    font-size: 45px;
+  }
+
+  .profile-bannerInfo h1 {
+    font-size: 24px;
+  }
+
+  .profile-bannerInfo p {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}

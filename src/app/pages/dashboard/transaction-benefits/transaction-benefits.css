@@ -56,3 +56,10 @@ main {
 .dashboard-transactionBenefit:hover svg path {
   stroke: var(--primary-color);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    display: none;
+  }
+}

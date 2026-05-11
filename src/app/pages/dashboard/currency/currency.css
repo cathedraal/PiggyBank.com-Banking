@@ -56,3 +56,43 @@ main span {
   background-color: var(--currency-span);
   border-radius: 50px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+  }
+
+  .dashboard-gbpCurrencyFrom, .dashboard-usdCurrencyFrom,
+  .dashboard-gbpCurrencyTo, .dashboard-usdCurrencyTo {
+    font-size: 14px;
+  }
+
+  main img {
+    display: none;
+  }
+
+  main div {
+    padding: 5px;
+    gap: 5px;
+  }
+
+  .dashboard-gbpCurrencyTo, .dashboard-usdCurrencyTo {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .dashboard-gbpCurrencyTo span, .dashboard-usdCurrencyTo span {
+    margin-left: 5px;
+  }
+
+  .dashboard-gbpCurrencyFrom span, .dashboard-usdCurrencyFrom span {
+    margin: 0 5px 0 5px;
+  }
+}

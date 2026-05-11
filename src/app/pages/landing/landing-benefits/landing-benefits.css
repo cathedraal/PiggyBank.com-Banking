@@ -55,3 +55,17 @@ main div {
     flex-direction: row;
     animation: spin 20s infinite linear;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    main {
+        margin-top: var(--container-spacing-mobile);
+        margin-right: 5px;
+    }
+
+    main h4 {
+        font-size: 16px;
+        padding: unset;
+        padding: 25px 30px;
+    }
+}

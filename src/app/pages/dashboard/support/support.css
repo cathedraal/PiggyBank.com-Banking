@@ -64,3 +64,37 @@ main {
     color: var(--white);
     font-weight: 300;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    main {
+        margin-top: var(--container-spacing-mobile);
+        max-width: 310px;
+        padding: 20px
+    }
+
+    .dashboard-supportButton {
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 0 15px 0 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .dashboard-supportButton img {
+        width: 15px;
+        padding: 15px 10px 15px 15px;
+        margin: 0;
+        background:none
+    }
+
+    main p {
+        display: none;
+    }
+
+    main h4 {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}

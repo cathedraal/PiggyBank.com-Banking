@@ -114,3 +114,42 @@ hr {
   font-weight: 600;
   width: fit-content;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .landing-faq {
+    width: fit-content;
+  }
+
+  .landing-faqsTopDiv button {
+    font-size: 16px;
+  }
+
+  .landing-faqPannelInner p {
+    font-size: 14px;
+  }
+
+  .landing-faqPannelInner hr {
+    margin: 15px 0 15px 0;
+  }
+
+  .landing-faqsTopDiv {
+    gap: 10px;
+  }
+
+  .landing-faqsBottomDiv h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .landing-faqsBottomDiv p {
+    font-size: 12px;
+  }
+}

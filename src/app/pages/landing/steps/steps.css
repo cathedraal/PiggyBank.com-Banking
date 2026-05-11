@@ -92,3 +92,49 @@ hr {
   letter-spacing: var(--letter-spacing-primary);
   font-weight: 600;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    margin-top: var(--container-spacing-mobile);
+    overflow: hidden;
+    border-radius: var(--border-radius-mobile);
+  }
+
+  .landing-stepIcon1, .landing-stepIcon2 {
+    display: none;
+  }
+
+  .landing-stepsBottomDiv h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .landing-stepsBottomDiv p {
+    font-size: 12px;
+  }
+
+  .landing-stepsTopDiv {
+    gap: 10px;
+    overflow-x: scroll;
+  }
+
+  .landing-step {
+    width: 140px;
+  }
+  
+  .landing-step h4 {
+    margin: 10px 0 10px 0;
+    font-size: 18px;
+  }
+
+  .landing-step p {
+    font-size: 16px;
+  }
+
+  .landing-step h2 {
+    font-size: 18px;
+  }
+}

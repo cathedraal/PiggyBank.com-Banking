@@ -251,27 +251,28 @@ input::placeholder {
 }
 
 .choosingWallet-totalAmount {
-    display: flex;
+  display: flex;
 }
 
 .choosingWallet-totalAmountText {
-    color: var(--label);
+  color: var(--label);
 }
 
 .choosingWallet-totalAmountInfo {
-    color: var(--black);
-    margin-left: auto;
+  color: var(--black);
+  margin-left: auto;
 }
 
 .choosingWallet-totalAmountFeesInfo {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .choosingWallet-totalAmountFeesInfo p {
   font-weight: 300;
   font-size: 16px;
   color: var(--subtitle);
+  width: 300px;
 }
 
 .choosingWallet-totalAmountFeesInfo img {
@@ -279,9 +280,86 @@ input::placeholder {
 }
 
 .choosingWallet-totalAmountHr {
-    display: block;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    width: unset;
+    width: 360px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    min-height: 700px;
+  }
+
+  .choosingWallet-bottomHr {
+    display: none;
+  }
+
+  .choosingWallet-div {
+    flex-direction: column;
+  }
+
+  .choosingWallet-chooseAmountDiv {
+    margin: 25px 0 0 0;
+  }
+
+  .choosingWallet-chooseAmountDiv h1,
+  .choosingWallet-chooseWalletDiv h1 {
+    font-size: 24px;
+  }
+
+  .choosingWallet-chooseWalletDiv {
     width: 100%;
-    height: 1px;
-    background-color: var(--border-color);
-    border: none;
+  }
+
+  .choosingWallet-chooseWalletCards {
+    margin-top: 20px;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .choosingWallet-chooseWalletCard {
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  .choosingWallet-chooseWalletCard p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .choosingWallet-chooseWalletCard p span {
+    margin: 0;
+  }
+
+  .choosingWallet-chooseWalletHeaderDiv button {
+    display: none;
+  }
+
+  input {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 70px;
+    height: 120px;
+    border-radius: 30px;
+    box-sizing: border-box;
+  }
+
+  .choosingWallet-totalAmountFeesInfo p {
+    font-size: 14px;
+  }
+
+  .choosingWallet-bottomDiv {
+    padding: 5px var(--container-padding-mobile) var(--container-padding-mobile)
+      var(--container-padding-mobile);
+    backdrop-filter: blur(0px);
+  }
 }

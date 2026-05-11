@@ -298,3 +298,90 @@ hr {
   font-weight: 500;
   margin-left: 100px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  hr {
+    margin: 25px 0 25px 0;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  .profile-cards {
+    gap: 10px;
+  }
+
+  .profile-cardsHeader button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 25px;
+    right: 25px;
+    padding: 5px;
+  }
+
+  .profile-card {
+    min-width: unset;
+    min-height: unset;
+    width: 300px;
+    height: 200px;
+  }
+
+  .profile-cardsButton {
+    max-height: unset;
+    height: 200px;
+  }
+
+  .profile-cardBack, .profile-cardFront {
+    padding: 30px;
+  }
+
+  .profile-cardHeaderText {
+    font-size: 14px;
+  }
+
+  .profile-cardHeaderType {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  .profile-cardBalance {
+    font-size: 40px;
+  }
+
+  .profile-cardPills button {
+    font-size: 14px;
+  }
+
+  .profile-cardSecure {
+    display: none;
+  }
+
+  .profile-cardDetailsHolderText,
+  .profile-cardDetailsNumberText,
+  .profile-cardDetailsExpdateText,
+  .profile-cardDetailsCvcText {
+    color: var(--dark-gray);
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .profile-cardDetailsHolderInfo,
+  .profile-cardDetailsNumberInfo,
+  .profile-cardDetailsExpdateInfo,
+  .profile-cardDetailsCvcInfo {
+    font-size: 14px;
+  }
+
+  .profile-cardDetails div {
+    padding: 3px;
+  }
+}

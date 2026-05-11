@@ -2,3 +2,10 @@ main {
   min-height: 50vh;
   padding: var(--minimal-content-padding) 0 200px 0;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: 0 0 80px 0;
+  }
+}

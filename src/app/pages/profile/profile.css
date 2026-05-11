@@ -2,3 +2,10 @@ main {
   width: 1100px;
   animation: pageSlideInFromBottom 0.6s ease;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    max-width: 360px;
+  }
+}

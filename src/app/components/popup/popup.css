@@ -152,3 +152,38 @@
 .popup-supportButton:hover {
   color: var(--black);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .body-popup {
+    max-width: unset;
+    width: 250px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+  }
+
+  .popup-text {
+    width: 230px;
+    font-size: 18px;
+  }
+
+  .popup-button2 {
+    max-width: unset;
+    width: 49%;
+    margin: 0;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .popup-button1 {
+    max-width: unset;
+    width: 49%;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

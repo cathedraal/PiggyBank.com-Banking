@@ -1,7 +1,5 @@
 body {
   font-family: 'Inter Variable', sans-serif;
-  justify-content: center;
-  width: 100%;
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -225,6 +223,9 @@ p {
   --letter-spacing-primary: -1.44px;
   --container-spacing: 15px;
   --border-radius: 65px;
+  --border-radius-mobile: 50px;
+  --container-padding-mobile: 30px;
+  --container-spacing-mobile: 10px;
   --border-radius-2: 40px;
   --background: #f8fafc;
   --border-color: #e4e4e4;

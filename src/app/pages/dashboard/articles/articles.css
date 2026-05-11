@@ -1,139 +1,186 @@
 main {
-    display: flex;
-    flex-direction: column;
-    padding: var(--container-padding-primary);
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    margin-top: var(--container-spacing);
+  display: flex;
+  flex-direction: column;
+  padding: var(--container-padding-primary);
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  margin-top: var(--container-spacing);
 }
 
 main button {
-    display: flex;
-    align-items: center;
-    color: var(--black);
-    width: fit-content;
-    margin-bottom: 25px;
-    background-color: var(--white);
-    border: none;
-    font-family: inherit;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  width: fit-content;
+  margin-bottom: 25px;
+  background-color: var(--white);
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 main button img {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 main button h4 {
-    margin: 0px;
-    font-weight: 400;
-    color: var(--container-title);
+  margin: 0px;
+  font-weight: 400;
+  color: var(--container-title);
 }
 
 main button:hover img {
-    transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 .dashboard-articlesDiv {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 20px;
 }
 
 .dashboard-articleContent {
-    margin-bottom: 20px;
-    box-sizing: border-box;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .dashboard-articleImgDiv {
-    display: flex;
-    width: fit-content;
-    position: relative;
-    border-radius: 30px;
-    box-shadow: var(--shadow-img);
+  display: flex;
+  width: fit-content;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: var(--shadow-img);
 }
 
 .dashboard-articleTimeIcon {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .dashboard-articleImg {
-    width: 320px;
-    height: 250px;
-    object-position: center 65%;
-    object-fit: cover;
-    border-radius: 30px;
-    border: 1px solid var(--border-color);
-    position: relative;
-    z-index: 0;
+  width: 320px;
+  height: 250px;
+  object-position: center 65%;
+  object-fit: cover;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  z-index: 0;
 }
 
 .dashboard-articleLogo {
-    width: 20px;
-    position: absolute;
-    z-index: 2;
-    bottom: 15px;
-    left: 15px;
-    padding: 8px;
-    border-radius: 50%;
+  width: 20px;
+  position: absolute;
+  z-index: 2;
+  bottom: 15px;
+  left: 15px;
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .dashboard-articleTime {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--white);
-    position: absolute;
-    z-index: 2;
-    background-color: #11111125;
-    backdrop-filter: blur(10px);
-    padding: 5px 10px 5px 5px;
-    border-radius: 40px;
-    bottom: 15px;
-    right: 15px;
-    margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--white);
+  position: absolute;
+  z-index: 2;
+  background-color: #11111125;
+  backdrop-filter: blur(10px);
+  padding: 5px 10px 5px 5px;
+  border-radius: 40px;
+  bottom: 15px;
+  right: 15px;
+  margin: 0px;
 }
 
 .dashboard-articleDate {
-    color: var(--date);
-    font-size: 14px;
-    margin: 35px 0 0 0;
+  color: var(--date);
+  font-size: 14px;
+  margin: 35px 0 0 0;
 }
 
 .dashboard-article h4 {
-    font-weight: 600;
-    letter-spacing: var(--letter-spacing);
-    max-width: 330px;
-    font-size: 20px;
-    margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  max-width: 330px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 .dashboard-articleSubtitle {
-    color: var(--subtitle4);
+  color: var(--subtitle4);
 }
 
 .dashboard-article button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--light-gray-2);
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    padding: 15px;
-    font-weight: 300;
-    font-size: 18px;
-    font-family: inherit;
-    margin-bottom: 0px;
-    transition: all 0.3s ease;
-    margin-top: 30px;
-    max-width: 360px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--light-gray-2);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: inherit;
+  margin-bottom: 0px;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  max-width: 360px;
 }
 
 .dashboard-article button:hover {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 .dashboard-article {
-    max-width: 320px;
+  max-width: 320px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+    overflow: hidden;
+  }
+
+  main button h4 {
+    font-size: 14px;
+  }
+
+  main button img {
+    width: 25px;
+  }
+
+  .dashboard-articleImg {
+    width: 250px;
+    height: 150px;
+  }
+
+  .dashboard-articlesDiv {
+    gap: 15px;
+    overflow: scroll;
+  }
+
+  .dashboard-articleTime {
+    font-size: 14px;
+  }
+
+  .dashboard-articleDate {
+    font-size: 14px;
+  }
+
+  .dashboard-articleContent h4 {
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+  }
+
+  .dashboard-article button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+  }
 }

@@ -93,7 +93,7 @@ main {
   margin-right: 7px;
 }
 
-.dashboard-transactionText span {
+.dashboard-transactionSourceSpan {
   background-color: var(--light-dark-gray);
   padding: 7px;
   border-radius: 20px;
@@ -102,4 +102,60 @@ main {
 .dashboard-transactionDate {
   margin-left: 15px;
   color: var(--container-title);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .dashboard-transactionText p {
+    font-size: 14px;
+  }
+
+  .dashboard-transactionText {
+    margin-right: 0;
+  }
+
+  .dashboard-transaction {
+    align-items: center;
+  }
+
+  .dashboard-transaction img {
+    width: 25px;
+  }
+
+  .dashboard-transactionText {
+    padding: 5px;
+  }
+
+  .dashboard-transactionTextSpan {
+    display: none;
+  }
+
+  .dashboard-transactionSourceSpan {
+    display: none;
+  }
+
+  .dashboard-transactionDate {
+    margin: 0 0 0 auto;
+    width: fit-content;
+    font-size: 12px;
+  }
+
+  .dashboard-transactionsButton h4 {
+    font-size: 14px;
+  }
+
+  .dashboard-transactionsButton img {
+    width: 25px;
+  }
+
+  .dashboard-transaction hr {
+    margin-right: 4px;
+    margin-left: 3px;
+  }
 }

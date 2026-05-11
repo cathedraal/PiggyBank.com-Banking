@@ -46,3 +46,34 @@ button {
     border-radius: 30px;
     cursor: pointer;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  img {
+    width: 45px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 80px 0 0 0;
+    width: 360px;
+  }
+
+  :host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .header {
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  main .header-buttons {
+    margin: 0;
+  }
+}

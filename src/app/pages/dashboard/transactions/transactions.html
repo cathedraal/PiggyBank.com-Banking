@@ -17,13 +17,12 @@
             <img [src]="transaction.actionIcon" alt="transaction icon" />
             <p>
               {{
-                transaction.actionText.verb +
-                  transaction.actionText.preposition1 +
+                transaction.actionText.verb
+              }} <span class="dashboard-transactionTextSpan">{{transaction.actionText.preposition1 +
                   transaction.actionText.noun +
-                  transaction.actionText.preposition2
-              }}
+                  transaction.actionText.preposition2}}</span>
             </p>
-            <span> {{ transaction.actionSource }}</span>
+            <span class="dashboard-transactionSourceSpan"> {{ transaction.actionSource }}</span>
           </div>
           <hr />
           <p class="dashboard-transactionDate">{{ transaction.actionDate }}</p>

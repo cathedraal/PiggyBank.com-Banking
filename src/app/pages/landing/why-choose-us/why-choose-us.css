@@ -83,3 +83,44 @@ hr {
   letter-spacing: var(--letter-spacing-primary);
   font-weight: 600;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    overflow: hidden;
+  }
+
+  .landing-whychooseusBottomDiv h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .landing-whychooseusBottomDiv p {
+    font-size: 12px;
+  }
+
+  .landing-whychooseusBenefit {
+    width: 200px;
+  }
+
+  .landing-whychooseusTopDiv {
+    gap: 20px;
+    overflow-x: scroll;
+  }
+
+  .landing-whychooseusBenefit img {
+    width: 20px;
+  }
+
+  .landing-whychooseusBenefit h4 {
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+  }
+
+  .landing-whychooseusBenefit p {
+    font-size: 16px;
+  }
+}

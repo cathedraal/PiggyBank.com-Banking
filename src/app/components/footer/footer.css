@@ -151,3 +151,59 @@ button:hover {
   margin-top: 0px;
   opacity: 0.8;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+  }
+
+  .footer-logo {
+    width: 40px;
+  }
+
+  .footer-logoText {
+    font-size: 16px;
+  }
+
+  .footer-bottomDiv {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-bottomLinksDiv {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff5d;
+  }
+
+  .footer-subtitle2 {
+    display: none;
+  }
+
+  .footer-subtitle1 {
+    font-weight: 300;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .footer-bottomTextDiv {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff5d;
+  }
+
+  .footer-bottomSocialDiv {
+    margin: 0;
+  }
+
+  .footer-bottomNewsletterDiv {
+    display: none;
+  }
+
+  .footer-sign {
+    width: fit-content;
+    margin: 0;
+    padding: 20px 120px 15px 0px;
+  }
+}

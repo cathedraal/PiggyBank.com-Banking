@@ -1,5 +1,5 @@
 <main>
-  <div class="registrationFlow-firstStep">
+  <div class="registrationFlow-firstStep" [class.active]="isLoginPassed">
     <div class="registrationFlow-firstStepIcon" [class.active]="isLoginPassed">
       @if (!isLoginPassed) {
         <h4>1/2</h4>

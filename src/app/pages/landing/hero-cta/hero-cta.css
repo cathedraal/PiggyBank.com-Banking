@@ -84,3 +84,24 @@ main div button:hover svg {
 main div button:hover svg {
   transform: translateX(8px);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    margin-top: var(--container-spacing-mobile);
+    border-radius: var(--border-radius-mobile);
+  }
+
+  main h4 span {
+    font-size: 18px;
+    padding: 20px;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+
+  main h4 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}

@@ -110,7 +110,8 @@ hr {
   resize: none;
   width: 100%;
   height: 120px;
-  font-size: 18px;
+  font-size: 15px;
+  letter-spacing: 1px;
   box-sizing: border-box;
 }
 
@@ -152,4 +153,28 @@ hr {
 
 .recipientInfo-backButton:hover {
     background-color: var(--white-hover);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    max-width: unset;
+    width: 360px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  hr {
+    margin: 25px 0 25px 0;
+  }
 }

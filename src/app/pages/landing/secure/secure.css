@@ -108,3 +108,46 @@ main img {
   width: 400px;
   opacity: 0.8;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .landing-secureDiv h1 {
+    font-size: 28px;
+    margin: 20px 0 20px 0;
+    font-weight: 600;
+    width: 300px;
+  }
+
+  .landing-secureP1 {
+    width: fit-content;
+    font-weight: 300;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .landing-secureSubtitle {
+    width: 300px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  main img {
+    height: 400px;
+    object-position: center 105%
+  }
+
+  .landing-secureOverlay {
+    height: 70%;
+    border-radius: var(--border-radius-mobile);
+  }
+
+  .landing-secureOverlay2 {
+    height: 100%;
+    border-radius: var(--border-radius-mobile);
+  }
+}

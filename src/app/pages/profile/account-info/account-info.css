@@ -48,3 +48,28 @@ hr {
   margin: 0px;
   font-size: 18px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  hr {
+    margin: 25px 0 25px 0;
+  }
+
+  .profile-accountInfoPills {
+    flex-direction: column;
+  }
+
+  .profile-pill {
+    padding: 20px;
+  }
+}

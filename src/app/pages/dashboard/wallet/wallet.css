@@ -120,7 +120,7 @@ main {
 .dashboard-manageWalletButtons {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 5px;
   margin-top: auto;
   min-width: 210px;
@@ -139,11 +139,22 @@ main {
   align-items: center;
   font-family: inherit;
   font-weight: 600;
-  gap: 15px;
   font-size: medium;
   color: var(--black);
   transition: all 0.3s ease;
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.dashboard-manageWalletAdd img,
+.dashboard-manageWalletTransfer img,
+.dashboard-manageWalletWithdraw img {
+  margin-right: 15px;
+}
+
+.dashboard-manageWalletTransfer span,
+.dashboard-manageWalletWithdraw span {
+  margin-left: 5px;
 }
 
 .dashboard-manageWalletAdd:hover,
@@ -165,4 +176,100 @@ main {
   margin-top: 0px;
   color: var(--subtitle);
   margin-left: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    margin-top: var(--container-spacing-mobile);
+    height: fit-content;
+  }
+
+  .dashboard-wallet {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    height: fit-content;
+  }
+
+  .dashboard-walletTitle {
+    font-size: 16px;
+  }
+
+  .dashboard-walletType {
+    font-size: 14px;
+    width: 50px;
+    font-weight: 600;
+    padding: 10px 15px 10px 15px;
+  }
+
+  .dashboard-walletBalance {
+    font-size: 52px;
+    margin-top: 50px;
+  }
+
+  .dashboard-walletImg {
+    width: 18px;
+  }
+
+  .dashboard-walletBottom .dashboard-walletCardNumber {
+    font-size: 14px;
+  }
+
+  .dashboard-walletBottom button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .dashboard-walletBottom button img {
+    width: 15px;
+  }
+
+  .dashboard-manageWalletDiv {
+    padding: 0;
+    background: none;
+    border: none;
+    margin: 0px;
+    justify-content: baseline;
+    overflow: scroll;
+    border-radius: 0px;
+    width: 310px;
+  }
+
+  .dashboard-manageWalletDiv h4 {
+    display: none;
+  }
+
+  .dashboard-manageWalletButtons {
+    flex-direction: row;
+    margin-top: var(--container-spacing-mobile);
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+
+  .dashboard-manageWalletAdd, .dashboard-manageWalletTransfer, .dashboard-manageWalletWithdraw {
+    font-size: 16px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+  }
+
+  .dashboard-manageWalletTransfer span, .dashboard-manageWalletWithdraw span {
+    display:  none;
+  }
+
+  .dashboard-manageWalletAdd img, 
+  .dashboard-manageWalletTransfer img,
+  .dashboard-manageWalletWithdraw img {
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  .dashboard-manageWalletAdd {
+    padding-right: 10px;
+  }
+
+  .dashboard-manageWalletTransfer, .dashboard-manageWalletWithdraw {
+    padding-right: 10px;
+  }
 }

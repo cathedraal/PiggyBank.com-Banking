@@ -86,3 +86,31 @@ hr {
 .profile-logOutButton:hover {
   background-color: var(--white-hover);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    margin-top: var(--container-spacing-mobile);
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  hr {
+    margin: 25px 0 25px 0;
+  }
+
+  .profile-dashboardButton,
+  .profile-logOutButton {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .profile-dashboardButton img,
+  .profile-logOutButton img {
+    width: 20px;
+  }
+}

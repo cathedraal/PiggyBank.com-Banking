@@ -1,82 +1,124 @@
 main {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: fit-content;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: center;
 }
 
 :host {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    animation: slideInFromTop 0.3s ease;
-    margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  animation: slideInFromTop 0.3s ease;
+  margin: 0 0 30px 0;
 }
 
-h4, p, img, .registrationFlow-firstStep, .registrationFlow-secondStep {
-    animation: iconChange 0.3s ease;
+h4,
+p,
+img,
+.registrationFlow-firstStep,
+.registrationFlow-secondStep {
+  animation: iconChange 0.3s ease;
 }
 
 hr {
-    height: 1px;
-    width: 200px;
-    border: none;
-    background-color: var(--border-color);
-    animation: iconChange 0.3s ease;
+  height: 1px;
+  width: 200px;
+  border: none;
+  background-color: var(--border-color);
+  animation: iconChange 0.3s ease;
 }
 
 hr.active {
-    width: 100px;
+  width: 100px;
 }
 
 .registrationFlow-firstStep {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
 }
 
 .registrationFlow-secondStep {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
 }
 
 .registrationFlow-secondStepIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--light-gray);
-    border: 1px solid var(--border-color);
-    padding: 23px 20px 23px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+  padding: 23px 20px 23px 20px;
 }
 
 .registrationFlow-firstStepIcon img {
-    width: 23.5px;
+  width: 23.5px;
 }
 
 .registrationFlow-firstStepIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--light-gray);
-    border: 1px solid var(--border-color);
-    padding: 23px 22px 23px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+  padding: 23px 22px 23px 22px;
 }
 
 .registrationFlow-firstStepIcon.active {
-    padding: 10px;
-    background-color: var(--primary-color);
+  padding: 10px;
+  background-color: var(--primary-color);
 }
 
 .registrationFlow-firstStepIcon h4,
 .registrationFlow-secondStepIcon h4 {
-    margin: 0px;
-    color: var(--container-title);
-    font-weight: 400;
+  margin: 0px;
+  color: var(--container-title);
+  font-weight: 400;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    max-width: 360px;
+  }
+
+  .registrationFlow-firstStepIcon h4,
+  .registrationFlow-secondStepIcon h4 {
+    font-size: 16px;
+  }
+
+  .registrationFlow-firstStep {
+    margin-right: 10px;
+  }
+
+  .registrationFlow-secondStep {
+    margin-left: 10px;
+  }
+
+  .registrationFlow-firstStep.active p {
+    display: none;
+  }
+
+  hr {
+    width: 50px;
+  }
+
+  hr.active {
+    width: 50px;
+  }
+
+  .registrationFlow-firstStep p,
+  .registrationFlow-secondStep p {
+    font-size: 14px;
+    width: 70px;
+  }
 }

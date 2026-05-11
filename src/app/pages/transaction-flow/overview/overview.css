@@ -202,3 +202,59 @@ a {
 .overview-backButton:hover {
   background-color: var(--white-hover);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    width: 360px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  hr {
+    margin: 25px 0 25px 0;
+  }
+
+  .overview-totalDiv div, .overview-sourceDiv div, .overview-recipient {
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .overview-recipient h4, .overview-sourceNumber h4, .overview-totalDiv div h4 {
+    font-size: 18px;
+  }
+
+  .overview-totalDivHeader, .overview-sourceDivHeader, .overview-recipientDivHeader {
+    font-size: 16px;
+  }
+
+  /* .overview-buttons {
+    margin-top: 30px;
+  } */
+
+  .overview-sourceType {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .overview-source .overview-sourceNumber {
+    padding: 5px;
+  }
+
+  .overview-recipient div {
+    margin-left: 10px;
+  }
+
+  a {
+    word-break: break-all;
+  }
+
+  .overview-submitButton span {
+    display: none;
+  }
+}

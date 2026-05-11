@@ -48,3 +48,26 @@ button {
 button:hover {
     background-color: var(--white-hover);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  img {
+    width: 70px;
+  }
+}
