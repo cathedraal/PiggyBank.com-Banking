@@ -1,5 +1,5 @@
 <main>
-  <div class="dashboard-wallet">
+  <div class="dashboard-wallet" role="button" routerLink="/profile" tabindex="0">
     <div class="dashboard-walletHeader">
       <h4 class="dashboard-walletTitle">Main wallet balance</h4>
       <h4 class="dashboard-walletType" [style.backgroundColor]="userMainCard?.cardType?.color">
@@ -14,7 +14,7 @@
       <img src="icons/wallet_safe.svg" alt="safe" class="dashboard-walletImg" />
       <p class="dashboard-walletCardNumber">{{ userCardNumber }}</p>
       @if (userService.getUser()!.cards!.length > 1) {
-        <p class="dashboard-walletAmountOfCards">+{{userService.getUser()!.cards!.length-1}}</p>
+        <p class="dashboard-walletAmountOfCards">+{{ userService.getUser()!.cards!.length - 1 }}</p>
       }
       <button routerLink="/profile" class="dashboard-walletProfileButton">
         <img src="icons/wallet_profile.svg" alt="profile" />

@@ -46,3 +46,15 @@ main div button {
   font-size: 18px;
   cursor: pointer;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main div h1 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  main div img {
+    width: 50px;
+  }
+}

@@ -80,3 +80,10 @@
     transform: scaleY(-1) rotate(-135deg);
   }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .loader h4 {
+    font-size: 16px;
+  }
+}
