@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Recipient } from '../../../models/recipient.model';
 import { Router } from '@angular/router';
-import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
-import { RecipientService } from '../../../services/recipient/recipient.service';
-import { UserService } from '../../../services/user/user.service';
+import { TransactionFlowService } from '../../../services/default/transaction-flow/transaction-flow';
+import { RecipientService } from '../../../services/default/recipient/recipient.service';
+import { UserService } from '../../../services/default/user/user.service';
 import { RecipientInfoForm } from '../../../models/interfaces/reactive-forms/recipientInfo.model';
 
 @Component({

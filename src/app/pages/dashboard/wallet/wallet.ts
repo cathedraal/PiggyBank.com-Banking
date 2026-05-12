@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Card } from '../../../models/card.model';
-import { BankService } from '../../../services/bank/bank.service';
+import { BankService } from '../../../services/default/bank/bank.service';
 import { CommonModule } from '@angular/common';
 import { maskCardNumber } from '../../../utils/utils';
 import { Router, RouterLink } from '@angular/router';
-import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
-import { ActionLoaderService } from '../../../services/action-loader/action-loader';
-import { UserService } from '../../../services/user/user.service';
+import { TransactionFlowService } from '../../../services/default/transaction-flow/transaction-flow';
+import { ActionLoaderService } from '../../../services/default/action-loader/action-loader';
+import { UserService } from '../../../services/default/user/user.service';
 
 @Component({
   selector: 'app-wallet',

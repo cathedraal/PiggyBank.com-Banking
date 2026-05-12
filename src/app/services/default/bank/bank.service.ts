@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Card } from '../../models/card.model';
-import { getRandomInt } from '../../utils/utils';
-import { User } from '../../models/user.model';
-import { CARD_TYPES, CURRENCY_TYPES } from '../../constants/settings';
-import { RANDOM_CARD_BALANCE } from '../../constants/businessLogic';
+import { Card } from '../../../models/card.model';
+import { getRandomInt } from '../../../utils/utils';
+import { User } from '../../../models/user.model';
+import { CARD_TYPES, CURRENCY_TYPES } from '../../../constants/settings';
+import { RANDOM_CARD_BALANCE } from '../../../constants/businessLogic';
 import { TransactionFlowService } from '../transaction-flow/transaction-flow';
 
 @Injectable({

@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { transactionFlowItem } from '../../models/interfaces/default/transactionFlow.model';
 import { TRANSACTION_FLOW } from '../../constants/transaction';
-import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
-import { ActionLoaderService, transActionSource } from '../../services/action-loader/action-loader';
+import { TransactionFlowService } from '../../services/default/transaction-flow/transaction-flow';
+import {
+  ActionLoaderService,
+  transActionSource,
+} from '../../services/default/action-loader/action-loader';
 import { maskCardNumber } from '../../utils/utils';
 
 @Component({
@@ -15,8 +18,8 @@ export class ActionLoaderComponent {
   // html template
   transactionFlowContext: keyof transactionFlowItem = 'addMoney';
   transactionFlowWordsArr: transactionFlowItem = TRANSACTION_FLOW;
-  source: transActionSource
-  formatNumber = maskCardNumber
+  source: transActionSource;
+  formatNumber = maskCardNumber;
 
   // DI
   constructor(
@@ -24,6 +27,6 @@ export class ActionLoaderComponent {
     protected actionLoaderService: ActionLoaderService,
   ) {
     this.transactionFlowContext = this.transactionFlowService.getTransactionFlowContext();
-    this.source = this.actionLoaderService.getSource()
+    this.source = this.actionLoaderService.getSource();
   }
 }

@@ -1,11 +1,11 @@
 import { Injectable, signal } from '@angular/core';
-import { transactionFlowItem } from '../../models/interfaces/default/transactionFlow.model';
+import { transactionFlowItem } from '../../../models/interfaces/default/transactionFlow.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TransactionFlowService {
-  private transactionFlow = false
+  private transactionFlow = false;
   private recipientInfoPassed = signal(false);
   private choosingWalletPassed = signal(false);
   private transactionFlowContext: keyof transactionFlowItem = 'addMoney';
@@ -39,10 +39,10 @@ export class TransactionFlowService {
 
   // sets transaction flow
   setTransactionFlow(value: boolean) {
-    this.transactionFlow = value
+    this.transactionFlow = value;
   }
 
   isTransactionFlow(): boolean {
-    return this.transactionFlow
+    return this.transactionFlow;
   }
 }

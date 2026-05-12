@@ -1,12 +1,12 @@
 <main>
   <div class="dashboard-usdCurrencyDiv">
     <h4 class="dashboard-usdCurrencyFrom">1<span>EUR</span></h4>
-    <img src="icons/currency_arrow.svg" alt="arrow">
-    <h4 class="dashboard-usdCurrencyTo">1.09<span>USD</span></h4>
+    <img src="icons/currency_arrow.svg" alt="arrow" />
+    <h4 class="dashboard-usdCurrencyTo">{{ usd() | number: '1.2-3' }}<span>USD</span></h4>
   </div>
   <div class="dashboard-gbpCurrencyDiv">
     <h4 class="dashboard-gbpCurrencyFrom">1<span>EUR</span></h4>
-    <img src="icons/currency_arrow.svg" alt="arrow">
-    <h4 class="dashboard-gbpCurrencyTo">0.85<span>GBP</span></h4>
+    <img src="icons/currency_arrow.svg" alt="arrow" />
+    <h4 class="dashboard-gbpCurrencyTo">{{ gbp() | number: '1.2-3' }}<span>GBP</span></h4>
   </div>
 </main>

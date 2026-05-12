@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
+import { TransactionFlowService } from '../../../services/default/transaction-flow/transaction-flow';
 import { transactionFlowItem } from '../../../models/interfaces/default/transactionFlow.model';
 import { TRANSACTION_FLOW } from '../../../constants/transaction';
 import { RouterLink } from '@angular/router';
-import { ActionLoaderService } from '../../../services/action-loader/action-loader';
+import { ActionLoaderService } from '../../../services/default/action-loader/action-loader';
 
 @Component({
   selector: 'app-validation',

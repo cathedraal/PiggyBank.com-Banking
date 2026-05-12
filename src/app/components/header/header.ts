@@ -1,12 +1,12 @@
 import { Component, signal, Signal } from '@angular/core';
 import { PopupComponent } from '../popup/popup';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/default/user/user.service';
 import { User } from '../../models/user.model';
-import { SettingsService } from '../../services/settings/settings.service';
-import { QuestionService } from '../../services/question/question.service';
+import { SettingsService } from '../../services/default/settings/settings.service';
+import { QuestionService } from '../../services/default/question/question.service';
 import { Router, RouterLink } from '@angular/router';
-import { RecipientService } from '../../services/recipient/recipient.service';
-import { TransactionFlowService } from '../../services/transaction-flow/transaction-flow';
+import { RecipientService } from '../../services/default/recipient/recipient.service';
+import { TransactionFlowService } from '../../services/default/transaction-flow/transaction-flow';
 
 @Component({
   selector: 'app-header',

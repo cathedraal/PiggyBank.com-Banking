@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { transactionFlowItem } from '../../../models/interfaces/default/transactionFlow.model';
 import { TRANSACTION_FEES } from '../../../constants/businessLogic';
 import { TRANSACTION_FLOW } from '../../../constants/transaction';
-import { TransactionFlowService } from '../../../services/transaction-flow/transaction-flow';
+import { TransactionFlowService } from '../../../services/default/transaction-flow/transaction-flow';
 import { User } from '../../../models/user.model';
-import { UserService } from '../../../services/user/user.service';
-import { RecipientService } from '../../../services/recipient/recipient.service';
+import { UserService } from '../../../services/default/user/user.service';
+import { RecipientService } from '../../../services/default/recipient/recipient.service';
 import { Recipient } from '../../../models/recipient.model';
 import { formatToSource, maskCardNumber } from '../../../utils/utils';
 import { DecimalPipe } from '@angular/common';
 import { Router } from '@angular/router';
-import { ActionLoaderService } from '../../../services/action-loader/action-loader';
-import { BankService } from '../../../services/bank/bank.service';
+import { ActionLoaderService } from '../../../services/default/action-loader/action-loader';
+import { BankService } from '../../../services/default/bank/bank.service';
 import { Action } from '../../../models/action.model';
 
 @Component({

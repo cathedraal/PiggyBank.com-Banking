@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, computed, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Card } from '../../../models/card.model';
 import { CommonModule } from '@angular/common';
-import { UserService } from '../../../services/user/user.service';
+import { UserService } from '../../../services/default/user/user.service';
 import { formatToSource, maskCardNumber } from '../../../utils/utils';
 import { PopupComponent } from '../../../components/popup/popup';
 import { EmptyCardsProfileComponent } from '../empty-cards-profile/empty-cards-profile';
 import { Router } from '@angular/router';
 import { CARDS_AMOUNT_ALLOWED } from '../../../constants/businessLogic';
 import { Action } from '../../../models/action.model';
-import { NotificationService } from '../../../services/notification/notification.service';
+import { NotificationService } from '../../../services/default/notification/notification.service';
 
 @Component({
   selector: 'app-cards',

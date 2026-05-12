@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class RegistrationLabelComponent {
   // inputs
-  @Input() isLoginPassed: boolean = true
+  @Input() isLoginPassed: boolean = true;
 }
