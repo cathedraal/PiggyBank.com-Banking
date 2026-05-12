@@ -1,21 +1,21 @@
 # PiggyBank.com Angular 
 
-A modular Single Page Application built with Angular 21. 
-This version is a complete architectural rewrite of the original PiggyBank project (main branch on this repository), scaling from a simple interface to a complex ecosystem with over 14.500 lines of code with a docker integration. 
+A modular Single Page Application built with Angular 21+. 
+This version is a complete architectural rewrite of the original PiggyBank project (main branch on this repository), scaling from a simple interface to a complex ecosystem with over 17.700 lines of code with a docker, RxJS & HttpClient integration. 
 
-# Evolution: From Vanilla JS to Angular
-This version represents a massive upgrade in software engineering standards:
+# From Vanilla JS to Angular
+This version represents a fundamental upgrade in software standards:
 
-Scale: 3x growth in codebase with deep optimization.
+Scale: 3.5x growth in codebase with deep optimization.
 
 Architecture: Shifted from "spaghetti code" to a Component-Based Architecture.
 
 Routing: Implemented 16 distinct routes for seamless navigation.
 
-UX/UI Redesign: A complete visual overhaul with a focus on high-end user experience, including custom landing pages and complex state transitions.
+UX/UI Redesign: A visual overhaul with a focus on high-end user experience, including custom landing page and state transitions.
 
 # Advanced Features
-Modular Design: Every feature (Cards, Transactions, Profile) is a standalone component.
+Modular Design: Every feature (Cards, Transactions, Profile) is now a standalone component.
 
 Sophisticated Navigation: Full application header and footer.
 
@@ -25,22 +25,27 @@ UI/UX:
 
 Dynamic Blur Effects and Glassmorphism.
 
-Custom-built Modals & Pop-ups for transaction confirmations, delete card, support.
+Custom-built Modals & Pop-ups for transaction confirmations, delete card, support etc.
 
-Advanced Page Transition Animations for a native-app feel.
+Page Transition Animations for a native-app feel.
 
 Marketing: A landing Page to introduce the service.
 
 # Technical Deep Dive
-Framework: Angular (TypeScript)
+Framework: Angular v21+
 
-Styling: 8.6k+ lines of custom CSS (Advanced Flexbox/Grid, Animations, Variable-driven themes).
+CSS: 11.6k+ lines (Advanced Flexbox/Grid, Animations, Variable-driven themes).
+HTML: 3k+ lines (@if, @for, reactive forms etc.).
+TS: 3.1k+ lines.
 
 State Management: Component interaction via Input/Output and Services.
 
 Routing: 16 routes with lazy loading potential and guard-ready structures.
 
 Security Simulations: Improved login/logout, add card, transaction flows and data validation using reactive forms.
+
+# Live Demo
+https://cathedraal.github.io/PiggyBank.com-Banking/
 
 # Showcase
 
