@@ -162,5 +162,6 @@ ul {
   .dataWeCollect-button {
     font-size: 18px;
     text-align: left;
+    color: var(--black);
   }
 }

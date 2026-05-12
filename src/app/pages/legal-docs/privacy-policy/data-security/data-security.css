@@ -158,5 +158,6 @@ ul {
   .dataSecurity-button {
     text-align: left;
     font-size: 18px;
+    color: var(--black);
   }
 }

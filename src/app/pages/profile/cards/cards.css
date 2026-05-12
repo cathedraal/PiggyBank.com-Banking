@@ -338,6 +338,7 @@ hr {
   .profile-cardsButton {
     max-height: unset;
     height: 200px;
+    font-size: 16px;
   }
 
   .profile-cardBack, .profile-cardFront {

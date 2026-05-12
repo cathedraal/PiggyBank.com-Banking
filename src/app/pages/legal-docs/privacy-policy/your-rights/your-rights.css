@@ -162,5 +162,6 @@ a {
   .yourRights-button {
     text-align: left;
     font-size: 18px;
+    color: var(--black);
   }
 }

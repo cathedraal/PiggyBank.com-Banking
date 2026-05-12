@@ -36,6 +36,7 @@ main.show {
   font-size: 18px;
   cursor: pointer;
   font-family: inherit;
+  color: var(--black)
 }
 
 .landing-faq {

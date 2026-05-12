@@ -1,100 +1,102 @@
 :host {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--primary-color);
-    border-radius: var(--border-radius-2);
-    box-sizing: border-box;
-    padding: 30px;
-    margin-top: var(--container-spacing);
-    max-width: 1000px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-2);
+  box-sizing: border-box;
+  padding: 30px;
+  margin-top: var(--container-spacing);
+  max-width: 1000px;
+  width: 100%;
 }
 
 .dashboard-supportButton {
-    display: flex;
-    align-items: center;
-    background-color: var(--white);
-    border: none;
-    color: var(--black);
-    font-family: inherit;
-    height: fit-content;
-    padding: 5px;
-    max-width: 140px;
-    width: 100%;
-    border-radius: 40px;
-    font-weight: 600;
-    margin-left: auto;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: medium;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border: none;
+  color: var(--black);
+  font-family: inherit;
+  height: fit-content;
+  padding: 5px;
+  max-width: 140px;
+  width: 100%;
+  border-radius: 40px;
+  font-weight: 600;
+  margin-left: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: medium;
 }
 
 .dashboard-supportButton img {
-    background-color: #0000000e;
-    padding: 15px;
-    border-radius: 50%;
-    margin-right: 10px;
-    transition: all 0.3s ease;
+  background-color: #0000000e;
+  padding: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
 .dashboard-supportButton:hover {
-    background-color: var(--white-hover);
+  background-color: var(--white-hover);
 }
 
 .dashboard-supportButton:hover img {
-    background-color: var(--white-hover);
+  background-color: var(--white-hover);
 }
 
 .dashboard-supportText h4 {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    color: var(--white);
-    font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  color: var(--white);
+  font-weight: 500;
 }
 
 .dashboard-supportText p {
-    margin: 0px;
-    opacity: 0.8;
-    color: var(--white);
-    font-weight: 300;
+  margin: 0px;
+  opacity: 0.8;
+  color: var(--white);
+  font-weight: 300;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    main {
-        margin-top: var(--container-spacing-mobile);
-        max-width: 310px;
-        padding: 20px
-    }
+  main {
+    margin-top: var(--container-spacing-mobile);
+    max-width: 310px;
+    padding: 15px;
+    border-radius: 35px;
+  }
 
-    .dashboard-supportButton {
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        padding: 0 15px 0 0;
-        font-size: 16px;
-        font-weight: 500;
-    }
+  .dashboard-supportButton {
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0 15px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
-    .dashboard-supportButton img {
-        width: 15px;
-        padding: 15px 10px 15px 15px;
-        margin: 0;
-        background:none
-    }
+  .dashboard-supportButton img {
+    width: 15px;
+    padding: 15px 10px 15px 15px;
+    margin: 0;
+    background: none;
+  }
 
-    main p {
-        display: none;
-    }
+  main p {
+    display: none;
+  }
 
-    main h4 {
-        font-size: 16px;
-        margin-left: 10px;
-    }
+  main h4 {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
 }

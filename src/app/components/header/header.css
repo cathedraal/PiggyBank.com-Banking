@@ -189,10 +189,12 @@ header {
 @media (max-width: 768px) {
   header {
     padding: 0 10px 0 10px;
+    backdrop-filter: blur(0px);
+    background-color: var(--background);
   }
 
   .header-div {
-    padding: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
   }
 
   .header-needHelpButton p {
