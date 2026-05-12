@@ -51,6 +51,28 @@ p {
   margin-bottom: 0px;
 }
 
-a {
-  color: var(--primary-color);
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .changes-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .changes-header h1 {
+    font-size: 24px;
+  }
+
+  .changes-header {
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }

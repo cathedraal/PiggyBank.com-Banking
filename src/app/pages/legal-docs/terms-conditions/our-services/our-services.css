@@ -136,3 +136,35 @@ ul {
 span {
   font-weight: 500;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .ourServices-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .ourServices-header h1 {
+    font-size: 24px;
+  }
+
+  .ourServices-header {
+    margin-bottom: 25px;
+  }
+
+  .ourServices-paragraph1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .ourServices-button {
+    font-size: 18px;
+    text-align: left;
+  }
+}

@@ -50,3 +50,29 @@ p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .thirdPartyLinks-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .thirdPartyLinks-header h1 {
+    font-size: 24px;
+  }
+
+  .thirdPartyLinks-header {
+    margin-bottom: 25px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+}

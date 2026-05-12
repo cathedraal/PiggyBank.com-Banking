@@ -59,4 +59,36 @@ ul {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .automatedDecisionMaking-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .automatedDecisionMaking-header h1 {
+    font-size: 24px;
+  }
+
+  .automatedDecisionMaking-header {
+    margin-bottom: 25px;
+  }
+
+  .automatedDecisionMaking-paragraph1,
+  .automatedDecisionMaking-paragraph2 {
+    font-size: 18px;
+  }
+
+  .automatedDecisionMaking-paragraph1 {
+    margin-bottom: 15px;
+  }
 }

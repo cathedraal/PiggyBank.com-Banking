@@ -132,3 +132,35 @@ ul {
 .dataWeCollect-button img.active {
   transform: rotate(45deg);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .dataWeCollect-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .dataWeCollect-header h1 {
+    font-size: 24px;
+  }
+
+  .dataWeCollect-header {
+    margin-bottom: 25px;
+  }
+
+  .dataWeCollect-paragraph1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .dataWeCollect-button {
+    font-size: 18px;
+    text-align: left;
+  }
+}

@@ -60,4 +60,38 @@ ul {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .acceptableUse-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .acceptableUse-header h1 {
+    font-size: 24px;
+  }
+
+  .acceptableUse-header {
+    margin-bottom: 25px;
+  }
+
+  .acceptableUse-paragraph1,
+  .acceptableUse-paragraph2,
+  ul {
+    font-size: 18px;
+  }
+
+  .acceptableUse-paragraph1,
+  ul {
+    margin-bottom: 15px;
+  }
 }

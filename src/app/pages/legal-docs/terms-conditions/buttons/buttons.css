@@ -59,3 +59,35 @@ img {
   padding: 10px;
   border-radius: 50%;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    width: 360px;
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  hr {
+    margin: 25px 0 25px 0;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  div {
+    justify-content: right;
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 20px;
+  }
+}

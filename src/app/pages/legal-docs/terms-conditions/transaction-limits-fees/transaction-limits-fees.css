@@ -90,3 +90,32 @@ table {
 .transactionSettingsTable-headerRowSpace2 {
   padding-top: 15px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .transactionSettingsTable-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .transactionSettingsTable-header h1 {
+    font-size: 24px;
+  }
+
+  .transactionSettingsTable-header {
+    margin-bottom: 25px;
+  }
+
+  .transactionSettingsTable-paragraph1,
+  .transactionSettingsTable-paragraph2,
+  .transactionSettingsTable-defaultTd,
+  .transactionSettingsTable-headerTd {
+    font-size: 18px;
+  }
+}

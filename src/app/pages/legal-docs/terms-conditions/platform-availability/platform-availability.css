@@ -56,6 +56,33 @@ main {
   margin-bottom: 25px;
 }
 
-a {
-  color: var(--primary-color);
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .platformAvailability-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .platformAvailability-header h1 {
+    font-size: 24px;
+  }
+
+  .platformAvailability-header {
+    margin-bottom: 25px;
+  }
+
+  .platformAvailability-paragraph1,
+  .platformAvailability-paragraph2 {
+    font-size: 18px;
+  }
+
+  .platformAvailability-paragraph1 {
+    margin-bottom: 15px;
+  }
 }

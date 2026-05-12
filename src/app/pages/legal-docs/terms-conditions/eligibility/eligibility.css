@@ -53,4 +53,32 @@ p {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .eligibility-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .eligibility-header h1 {
+    font-size: 24px;
+  }
+
+  .eligibility-header {
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+

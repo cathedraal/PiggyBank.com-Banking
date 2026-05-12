@@ -63,3 +63,38 @@ span {
 .whatAreCookies-paragraph3 {
   margin-bottom: 25px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .whatAreCookies-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .whatAreCookies-header h1 {
+    font-size: 24px;
+  }
+
+  .whatAreCookies-header {
+    margin-bottom: 25px;
+  }
+
+  .whatAreCookies-paragraph1,
+  .whatAreCookies-paragraph2,
+  .whatAreCookies-paragraph3,
+  ul {
+    font-size: 18px;
+  }
+
+  .whatAreCookies-paragraph1,
+  .whatAreCookies-paragraph2,
+  .whatAreCookies-paragraph3 {
+    margin-bottom: 15px;
+  }
+}

@@ -136,3 +136,35 @@ ul {
 .howWeUseData-button img.active {
   transform: rotate(45deg);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .howWeUseData-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .howWeUseData-header h1 {
+    font-size: 24px;
+  }
+
+  .howWeUseData-header {
+    margin-bottom: 25px;
+  }
+
+  .howWeUseData-paragraph1 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .howWeUseData-button {
+    font-size: 18px;
+    text-align: left;
+  }
+}

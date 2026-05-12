@@ -56,6 +56,33 @@ main {
   margin-bottom: 25px;
 }
 
-a {
-  color: var(--primary-color);
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .intellectualProperty-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .intellectualProperty-header h1 {
+    font-size: 24px;
+  }
+
+  .intellectualProperty-header {
+    margin-bottom: 25px;
+  }
+
+  .intellectualProperty-paragraph1,
+  .intellectualProperty-paragraph2 {
+    font-size: 18px;
+  }
+
+  .intellectualProperty-paragraph1 {
+    margin-bottom: 15px;
+  }
 }

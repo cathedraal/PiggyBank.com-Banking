@@ -60,3 +60,34 @@ li {
 ul {
   margin: 0;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .whyWeUseCookies-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .whyWeUseCookies-header h1 {
+    font-size: 24px;
+  }
+
+  .whyWeUseCookies-header {
+    margin-bottom: 25px;
+  }
+
+  .whyWeUseCookies-paragraph {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  li {
+    font-size: 18px;
+  }
+}

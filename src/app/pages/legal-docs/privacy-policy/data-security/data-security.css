@@ -128,3 +128,35 @@ ul {
 .dataSecurity-button img.active {
   transform: rotate(45deg);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .dataSecurity-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .dataSecurity-header h1 {
+    font-size: 24px;
+  }
+
+  .dataSecurity-header {
+    margin-bottom: 25px;
+  }
+
+  .dataSecurity-paragraph1 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .dataSecurity-button {
+    text-align: left;
+    font-size: 18px;
+  }
+}

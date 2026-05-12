@@ -58,6 +58,35 @@ ul {
   margin-bottom: 25px;
 }
 
-a {
-  color: var(--primary-color);
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .limitationOfLiability-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .limitationOfLiability-header h1 {
+    font-size: 24px;
+  }
+
+  .limitationOfLiability-header {
+    margin-bottom: 25px;
+  }
+
+  .limitationOfLiability-paragraph1,
+  .limitationOfLiability-paragraph2,
+  ul {
+    font-size: 18px;
+  }
+
+  .limitationOfLiability-paragraph1,
+  ul {
+    margin-bottom: 15px;
+  }
 }

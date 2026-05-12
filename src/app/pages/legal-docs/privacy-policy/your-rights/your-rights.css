@@ -130,4 +130,37 @@ main {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .yourRights-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .yourRights-header h1 {
+    font-size: 24px;
+  }
+
+  .yourRights-header {
+    margin-bottom: 25px;
+  }
+
+  .yourRights-paragraph1 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .yourRights-button {
+    text-align: left;
+    font-size: 18px;
+  }
 }

@@ -60,4 +60,38 @@ ul {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .userResponsibilities-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .userResponsibilities-header h1 {
+    font-size: 24px;
+  }
+
+  .userResponsibilities-header {
+    margin-bottom: 25px;
+  }
+
+  .userResponsibilities-paragraph1,
+  .userResponsibilities-paragraph2,
+  ul {
+    font-size: 18px;
+  }
+
+  .userResponsibilities-paragraph1,
+  ul {
+    margin-bottom: 15px;
+  }
 }

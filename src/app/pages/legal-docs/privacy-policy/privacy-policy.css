@@ -16,6 +16,7 @@ h1 {
   margin: 0px;
   letter-spacing: var(--letter-spacing-primary);
   font-weight: 600;
+  font-size: 48px;
 }
 
 p {
@@ -23,4 +24,21 @@ p {
   margin-top: 10px;
   color: var(--label);
   font-style: italic;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    width: 360px;
+    padding-top: 100px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    width: 320px;
+  }
 }

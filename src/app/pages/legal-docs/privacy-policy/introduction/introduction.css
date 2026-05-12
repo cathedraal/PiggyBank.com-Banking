@@ -79,4 +79,44 @@ main {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .introduction-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .introduction-header h1 {
+    font-size: 24px;
+  }
+
+  .introduction-header {
+    margin-bottom: 25px;
+  }
+
+  .introduction-paragraph1,
+  .introduction-paragraph2,
+  .introduction-paragraph3,
+  .introduction-paragraph4,
+  .introduction-paragraph5,
+  .introduction-paragraph6 {
+    font-size: 18px;
+  }
+
+  .introduction-paragraph1,
+  .introduction-paragraph2,
+  .introduction-paragraph3,
+  .introduction-paragraph4,
+  .introduction-paragraph5 {
+    margin-bottom: 15px;
+  }
 }

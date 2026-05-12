@@ -32,9 +32,9 @@ main {
 
 .introduction-header h1 {
   margin: 0;
-    letter-spacing: var(--letter-spacing-primary);
-    font-weight: 500;
-    font-size: 32px;
+  letter-spacing: var(--letter-spacing-primary);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .introduction-header hr {
@@ -70,4 +70,37 @@ main {
 .introduction-paragraph3 span {
   font-weight: 500;
   color: var(--error-label);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .introduction-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .introduction-header h1 {
+    font-size: 24px;
+  }
+
+  .introduction-header {
+    margin-bottom: 25px;
+  }
+
+  .introduction-paragraph1,
+  .introduction-paragraph2,
+  .introduction-paragraph3 {
+    font-size: 18px;
+  }
+
+  .introduction-paragraph1,
+  .introduction-paragraph2 {
+    margin-bottom: 15px;
+  }
 }

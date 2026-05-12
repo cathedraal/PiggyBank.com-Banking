@@ -116,6 +116,7 @@ span {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 .typesOfCookie-button img {
@@ -141,4 +142,31 @@ a {
 .typesOfCookie-pannelInnerParagraph2,
 .typesOfCookie-pannelInnerParagraph1 {
   padding-bottom: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .typesOfCookies-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .typesOfCookies-header h1 {
+    font-size: 24px;
+  }
+
+  .typesOfCookies-header {
+    margin-bottom: 25px;
+  }
+
+  .typesOfCookie-button {
+    font-size: 18px;
+    text-align: left;
+  }
 }

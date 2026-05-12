@@ -111,6 +111,7 @@ main {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 .thirdPartyCookie-button img {
@@ -130,4 +131,37 @@ a {
 
 .thirdPartyCookie-button img.active {
   transform: rotate(45deg);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+    overflow: hidden;
+  }
+
+  .thirdPartyCookies-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .thirdPartyCookies-header h1 {
+    font-size: 24px;
+  }
+
+  .thirdPartyCookies-header {
+    margin-bottom: 25px;
+  }
+
+  .thirdPartyCookies-paragraph1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .thirdPartyCookie-button {
+    font-size: 18px;
+    text-align: left;
+  }
 }

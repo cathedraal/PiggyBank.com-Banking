@@ -55,3 +55,35 @@ main {
 .regulations-paragraph1 {
   margin-bottom: 25px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+    overflow: hidden;
+  }
+
+  .regulations-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .regulations-header h1 {
+    font-size: 24px;
+  }
+
+  .regulations-header {
+    margin-bottom: 25px;
+  }
+
+  .regulations-paragraph1,
+  .regulations-paragraph2 {
+    font-size: 18px;
+  }
+
+  .regulations-paragraph1 {
+    margin-bottom: 15px;
+  }
+}

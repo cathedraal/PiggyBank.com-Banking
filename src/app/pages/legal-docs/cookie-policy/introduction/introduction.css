@@ -72,4 +72,38 @@ main {
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
+    margin-top: var(--container-spacing-mobile);
+  }
+
+  .cookiePolicy-header h4 {
+    font-size: 18px;
+    padding: 7px;
+  }
+
+  .cookiePolicy-header h1 {
+    font-size: 24px;
+  }
+
+  .cookiePolicy-header {
+    margin-bottom: 25px;
+  }
+
+  .cookiePolicy-paragraph1,
+  .cookiePolicy-paragraph2,
+  .cookiePolicy-paragraph3 {
+    font-size: 18px;
+  }
+
+  .cookiePolicy-paragraph1,
+  .cookiePolicy-paragraph2 {
+    margin-bottom: 15px;
+  }
 }
