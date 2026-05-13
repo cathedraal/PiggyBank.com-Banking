@@ -23,6 +23,7 @@ export class CurrencyComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    console.log(this.unsubscribe)
     this.currencyApiService
       .getRates()
       .pipe(takeUntil(this.unsubscribe))
@@ -42,5 +43,6 @@ export class CurrencyComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe.next();
     this.unsubscribe.complete();
+    console.log(this.unsubscribe)
   }
 }

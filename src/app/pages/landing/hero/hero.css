@@ -1,20 +1,20 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    padding: var(--container-padding-primary) var(--container-padding-primary) 0
-      var(--container-padding-primary);
-    overflow: hidden;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-    animation-timing-function: ease;
-    cursor: default;
-    max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: var(--container-padding-primary) var(--container-padding-primary) 0
+    var(--container-padding-primary);
+  overflow: hidden;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  animation-timing-function: ease;
+  cursor: default;
+  max-height: 82vh;
 }
 
 main p {
@@ -36,7 +36,7 @@ main h1 {
   width: 700px;
   text-align: center;
   line-height: 82px;
-  background: linear-gradient(91deg, #0C6FFF 8.85%, rgba(87, 156, 255, 0.70) 94.15%);
+  background: linear-gradient(91deg, #0c6fff 8.85%, rgba(87, 156, 255, 0.7) 94.15%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,6 +111,10 @@ main h1 span {
     padding: var(--container-padding-mobile);
   }
 
+  :host {
+    border-radius: var(--border-radius-mobile);
+  }
+
   .landing-heroMockupImg {
     width: 210px;
     bottom: -170px;
@@ -150,7 +154,8 @@ main h1 span {
     height: 340px;
   }
 
-  .landing-heroMockupDiv, .landing-heroMockupImgDiv {
+  .landing-heroMockupDiv,
+  .landing-heroMockupImgDiv {
     width: 100%;
     height: 30vh;
     margin-top: 10px;

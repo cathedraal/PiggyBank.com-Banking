@@ -74,10 +74,10 @@ img {
   }
 
   hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
   }
 
-  button{
+  button {
     font-size: 14px;
     padding: 5px;
   }
@@ -85,6 +85,7 @@ img {
   div {
     justify-content: right;
     flex-wrap: wrap;
+    gap: 5px;
   }
 
   img {

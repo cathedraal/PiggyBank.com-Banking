@@ -51,7 +51,7 @@
           }
         </div>
       </div>
-      <select
+      <!-- <select
         name="country codes"
         id="countryCodes"
         class="login-countryCodeDropdown"
@@ -72,6 +72,19 @@
             </option>
           }
         </div>
+      </select> -->
+      <select
+        name="country codes"
+        id="countrycodes"
+        class="login-countryCodeDropdown"
+        (change)="onCountryCodeChange($event)"
+        [class.active]="isChoosingCountryCode"
+      >
+        @for (ccode of ccodes; track $index) {
+          <option [value]="ccode.value" class="login-countryCodeOption">
+              {{ ccode.code }}
+          </option>
+        }
       </select>
     </div>
     <hr />

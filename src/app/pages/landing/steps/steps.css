@@ -133,14 +133,18 @@ hr {
 
   .landing-step h4 {
     margin: 10px 0 10px 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .landing-step p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .landing-step h2 {
     font-size: 18px;
+  }
+
+  hr {
+    margin: 20px 0 20px 0;
   }
 }

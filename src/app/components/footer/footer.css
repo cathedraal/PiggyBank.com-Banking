@@ -174,7 +174,6 @@ button:hover {
 
   .footer-bottomLinksDiv {
     margin: 0;
-    padding-bottom: 10px;
     border-bottom: 1px solid #ffffff5d;
   }
 
@@ -189,7 +188,7 @@ button:hover {
   }
 
   .footer-bottomTextDiv {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #ffffff5d;
   }
 

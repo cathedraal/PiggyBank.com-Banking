@@ -133,12 +133,12 @@ main {
   font-family: inherit;
   font-weight: 500;
   font-size: medium;
-  &,
+  /* &,
   &::picker(select) {
     appearance: base-select;
     border: 1px solid var(--border-color);
     border-radius: 40px;
-  }
+  } */
 }
 
 .addCard-dropdown:hover {
@@ -246,16 +246,19 @@ main {
 }
 
 .addCard-backButton {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
+  padding: 14px 15px 14px 15px;
+  margin-right: 10px;
   background-color: var(--white);
   border: 1px solid var(--border-color);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--black);
+  margin-right: auto;
+}
+
+.addCard-backButton svg {
+  transform: scaleX(-1);
 }
 
 .addCard-backButton:hover,
@@ -284,8 +287,8 @@ main {
   }
 
   .addCard-header {
-    font-size: 28px;
-    margin: 0;
+    font-size: 24px;
+    margin: 0 0 30px 0;
   }
 
   .addCard-containers {
@@ -309,12 +312,12 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    gap: 10px;
+    gap: 5px;
   }
 
   .addCard-title {
-    font-size: 18px;
-    margin-top: 40px;
+    font-size: 16px;
+    margin-top: 0;
   }
 
   .addCard-title2 {
@@ -326,17 +329,21 @@ main {
   }
 
   .addCard-container hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
   }
 
   .addCard-dropdown {
     min-width: unset;
     font-size: 14px;
+    padding: 15px;
   }
 
   .addCard-skipButton {
     margin: 0;
     font-size: 16px;
+    width: unset;
+    width: fit-content;
+    padding: 16px 25px 16px 25px;
   }
 
   .addCard-buttons {
@@ -349,6 +356,16 @@ main {
 
   .addCard-submitButton {
     font-size: 16px;
+    padding: 17px;
+  }
+
+  .addCard-backButton {
+    padding: 12px;
+  }
+
+  .addCard-backButton svg {
+    width: 25px;
+    height: 25px;
   }
 
   .addCard-holderInput,
@@ -356,5 +373,6 @@ main {
   .addCard-expdateInput,
   .addCard-cvcInput {
     font-size: 14px;
+    padding: 15px;
   }
 }

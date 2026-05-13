@@ -57,11 +57,17 @@ main div h4 {
 /* Mobile */
 @media (max-width: 768px) {
   main div h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .notification-notSucceed,
   .notification-succeed {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .notification-notSucceed svg,
+  .notification-succeed svg {
+    width: 30px;
+    height: 30px;
   }
 }

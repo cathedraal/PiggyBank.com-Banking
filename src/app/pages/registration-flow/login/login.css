@@ -125,13 +125,13 @@ hr {
   font-family: inherit;
   font-weight: 500;
   font-size: medium;
-  &,
+  /* &,
   &::picker(select) {
     appearance: base-select;
     border: 1px solid var(--border-color);
     border-radius: 30px;
     max-height: 300px;
-  }
+  } */
 }
 
 .login-countryCodeDropdown:hover {
@@ -264,29 +264,31 @@ hr {
     border-radius: var(--border-radius-mobile);
     width: unset;
     width: 298px;
-    z-index: 200;
+    z-index: 0;
     position: relative;
   }
 
   .login-headerTitle {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .login-asGuestContainer {
     width: 298px;
     padding: var(--container-padding-mobile);
     border-radius: var(--border-radius-mobile);
-    z-index: 1;
+    z-index: 100;
     position: relative;
     margin: 25px 0 0 0;
   }
 
   .login-asGuestContainer button {
     font-size: 16px;
+    padding: 16px;
+    margin-top: 30px;
   }
 
   .login-asGuestContainer h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin: 0;
   }
 
@@ -294,13 +296,47 @@ hr {
     margin: 0;
     flex: 1;
     font-size: 16px;
+    padding: 15px;
+  }
+
+  .login-backButton {
+    padding: 12px;
+  }
+
+  .login-backButton svg {
+    width: 25px;
+    height: 25px;
   }
 
   .login-container hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
   }
 
   .login-headerSubtitle {
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 0px;
+  }
+
+  .login-inputs {
+    grid-template-areas:
+      'name surname'
+      'email email'
+      'code phone';
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .login-nameInput,
+  .login-surnameInput,
+  .login-emailInput,
+  .login-phoneInput {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .login-countryCodeDropdown {
+    padding: 15px;
+    font-size: 14px;
   }
 }

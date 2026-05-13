@@ -11,9 +11,9 @@ main {
 }
 
 :host {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 hr {
@@ -187,16 +187,17 @@ a {
 }
 
 .overview-backButton {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
+  padding: 14px 15px 14px 15px;
   background-color: var(--white);
   border: 1px solid var(--border-color);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--black);
+}
+
+.overview-backButton svg {
+  transform: scaleX(-1);
 }
 
 .overview-backButton:hover {
@@ -220,16 +221,27 @@ a {
     margin: 25px 0 25px 0;
   }
 
-  .overview-totalDiv div, .overview-sourceDiv div, .overview-recipient {
+  .overview-totalDiv div,
+  .overview-sourceDiv div,
+  .overview-recipient {
     padding: 20px;
     border-radius: 30px;
   }
 
-  .overview-recipient h4, .overview-sourceNumber h4, .overview-totalDiv div h4 {
+  .overview-totalDiv div p,
+  .overview-sourceDiv div p {
+    font-size: 14px;
+  }
+
+  .overview-recipient h4,
+  .overview-sourceNumber h4,
+  .overview-totalDiv div h4 {
     font-size: 18px;
   }
 
-  .overview-totalDivHeader, .overview-sourceDivHeader, .overview-recipientDivHeader {
+  .overview-totalDivHeader,
+  .overview-sourceDivHeader,
+  .overview-recipientDivHeader {
     font-size: 16px;
   }
 
@@ -239,7 +251,7 @@ a {
 
   .overview-sourceType {
     font-size: 16px;
-    padding: 15px;
+    padding: 12px;
   }
 
   .overview-source .overview-sourceNumber {
@@ -256,5 +268,22 @@ a {
 
   .overview-submitButton span {
     display: none;
+  }
+
+  .overview-backButton {
+    padding: 12px;
+  }
+
+  .overview-backButton svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .overview-submitButton {
+    font-size: 16px;
+  }
+
+  .overview-submitButton img {
+    width: 40px;
   }
 }

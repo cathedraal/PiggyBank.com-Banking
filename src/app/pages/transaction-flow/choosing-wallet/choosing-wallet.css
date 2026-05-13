@@ -174,7 +174,7 @@ p {
 
 .choosingWallet-continueButton {
   padding: 20px;
-  max-width: 190px;
+  max-width: 180px;
   width: 100%;
   background-color: var(--primary-color);
   border-radius: 40px;
@@ -192,16 +192,17 @@ p {
 }
 
 .choosingWallet-backButton {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
+  padding: 14px 15px 14px 15px;
   background-color: var(--white);
   border: 1px solid var(--border-color);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--black);
+}
+
+.choosingWallet-backButton svg {
+  transform: scaleX(-1);
 }
 
 .choosingWallet-backButton:hover {
@@ -294,7 +295,7 @@ input::placeholder {
     width: 360px;
     padding: var(--container-padding-mobile);
     border-radius: var(--border-radius-mobile);
-    min-height: 700px;
+    min-height: 680px;
   }
 
   .choosingWallet-bottomHr {
@@ -322,18 +323,21 @@ input::placeholder {
     margin-top: 20px;
     flex-direction: row;
     padding-bottom: 0;
+    gap: 5px;
   }
 
   .choosingWallet-chooseWalletCard {
     width: 180px;
     flex-shrink: 0;
+    padding: 25px;
   }
 
   .choosingWallet-chooseWalletCard p {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-top: 10px;
+    font-size: 16px;
+    margin-top: 5px;
   }
 
   .choosingWallet-chooseWalletCard p span {
@@ -361,5 +365,23 @@ input::placeholder {
     padding: 5px var(--container-padding-mobile) var(--container-padding-mobile)
       var(--container-padding-mobile);
     backdrop-filter: blur(0px);
+  }
+
+  .choosingWallet-backButton {
+    padding: 12px;
+  }
+
+  .choosingWallet-backButton svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .choosingWallet-continueButton {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .choosingWallet-totalAmountdiv {
+    margin-top: 5px;
   }
 }

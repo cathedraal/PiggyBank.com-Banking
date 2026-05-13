@@ -79,7 +79,8 @@
       </div>
       <div class="addCard-rightContainer">
         <h4 class="addCard-title2">Currency</h4>
-        <select
+        <!-- TODO: NEW SELECT DESIGN -->
+        <!-- <select
           name="currencies"
           (change)="onCurrencyChange($event)"
           id="currencies"
@@ -100,9 +101,23 @@
               </option>
             }
           </div>
+        </select> -->
+        <select
+          name="currencies"
+          id="currencies"
+          class="addCard-dropdown"
+          (change)="onCurrencyChange($event)"
+          [class.active]="isChoosingCurrency"
+        >
+          @for (currency of currencies; track $index) {
+            <option [value]="currency.currency" class="addCard-option">
+              {{ currency.currency }}
+            </option>
+          }
         </select>
         <h4 class="addCard-title2">Type</h4>
-        <select
+        <!-- TODO: NEW SELECT DESIGN -->
+        <!-- <select
           name="types"
           (change)="onTypeChange($event)"
           id="types"
@@ -124,13 +139,42 @@
               </option>
             }
           </div>
+        </select> -->
+        <select
+          name="types"
+          id="types"
+          class="addCard-dropdown"
+          (change)="onTypeChange($event)"
+          [class.active]="isChoosingType"
+        >
+          @for (type of types; track $index) {
+            <option [value]="type.value" class="addCard-option">
+              {{ type.value }}
+            </option>
+          }
         </select>
       </div>
     </div>
     <hr class="addCard-line" />
     <div class="addCard-buttons">
       <button routerLink="/registration-flow/login" class="addCard-backButton">
-        <img src="icons/back.svg" alt="back" />
+        <svg
+          class="arrow-icon"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 15H28M28 15L21 8M28 15L21 22"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </button>
       <button class="addCard-submitButton" (click)="onSubmit()">add card</button>
       <button class="addCard-skipButton" (click)="openPopup()">skip</button>

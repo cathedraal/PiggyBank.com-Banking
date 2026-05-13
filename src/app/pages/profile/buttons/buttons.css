@@ -100,7 +100,7 @@ hr {
   }
 
   hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
   }
 
   .profile-dashboardButton,
@@ -112,5 +112,9 @@ hr {
   .profile-dashboardButton img,
   .profile-logOutButton img {
     width: 20px;
+  }
+
+  main div {
+    gap: 5px;
   }
 }

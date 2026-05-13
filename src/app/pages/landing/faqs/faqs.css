@@ -153,4 +153,8 @@ hr {
   .landing-faqsBottomDiv p {
     font-size: 12px;
   }
+
+  hr {
+    margin: 20px 0 20px 0;
+  }
 }

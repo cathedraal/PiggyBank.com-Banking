@@ -1,24 +1,27 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    position: relative;
-    overflow: hidden;
-    margin: var(--container-spacing) 0 var(--container-spacing) 0;
-    opacity: 1;
-    filter: blur(00px);
-    transform: translateY(000px);
-    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  margin: var(--container-spacing) 0 var(--container-spacing) 0;
+  opacity: 1;
+  filter: blur(00px);
+  transform: translateY(000px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
 }
 
 main.show {
-    filter: blur(0);
-    opacity: 1;
-    transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .landing-ctaPill {
@@ -68,8 +71,7 @@ main.show {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-padding: 10px 25px 10px 10px;
+  padding: 10px 25px 10px 10px;
   background-color: var(--primary-color);
   border: none;
   color: var(--white);
@@ -85,13 +87,18 @@ padding: 10px 25px 10px 10px;
   font-size: 18px;
 }
 
+.landing-ctaSpanMobile {
+  display: none;
+}
+
 .landing-ctaDiv button svg {
-    background-color: var(--black);
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #ffffff36;
-    color: var(--white);
+  background-color: var(--black);
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ffffff36;
+  color: var(--white);
   transition: all 0.3s ease;
+  margin-right: 10px;
 }
 
 .landing-ctaDiv button:hover {
@@ -99,7 +106,7 @@ padding: 10px 25px 10px 10px;
 }
 
 .landing-ctaDiv button:hover svg {
-    background-color: var(--primary-color-hover);
+  background-color: var(--primary-color-hover);
 }
 
 .landing-ctaCircleBg {
@@ -122,6 +129,10 @@ padding: 10px 25px 10px 10px;
     height: 500px;
   }
 
+  :host {
+    border-radius: var(--border-radius-mobile);
+  }
+
   .landing-ctaDiv h1 {
     font-size: 28px;
     width: 300px;
@@ -135,17 +146,26 @@ padding: 10px 25px 10px 10px;
   }
 
   .landing-ctaDiv .landing-ctaSubtitle {
-    font-size: 16px;
+    font-size: 14px;
     width: 300px;
   }
 
   .landing-ctaDiv button {
     margin-top: 40px;
+    padding: 5px 15px 5px 5px;
   }
 
   .landing-ctaCircleBg {
     width: 350px;
     height: 350px;
     filter: blur(70px);
+  }
+
+  .landing-ctaSpanDesktop {
+    display: none;
+  }
+
+  .landing-ctaSpanMobile {
+    display: block;
   }
 }

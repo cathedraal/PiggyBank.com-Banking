@@ -84,21 +84,24 @@ main {
     max-width: unset;
     min-width: 200px;
     padding: var(--container-padding-mobile);
+    border-radius: var(--border-radius-mobile);
   }
 
   .dashboard-benefitTitle {
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0 10px 0;
   }
 
   .dashboard-benefit p {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     font-weight: 300;
   }
 
   .dashboard-benefitImg {
-    width: 20px;
+    width: 25px;
+    padding: 15px;
+    margin-top: 30px;
   }
 
   .dashboard-benefitDelete {

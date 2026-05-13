@@ -1,39 +1,75 @@
 <main [formGroup]="form">
-    @let name = form.controls.name;
-    @let surname = form.controls.surname;
-    @let email = form.controls.email;
-    <h1>transfer to whom?</h1>
-    <h4>Recipient information</h4>
-    <div class="recipientInfo-inputs">
-        <div class="recipientInfo-nameDiv">
-            <input type="text" class="recipientInfo-nameInput" placeholder="name" formControlName="name">
-            <div class="error-label" [class.visible]="name.invalid && name.dirty">
-                name required
-            </div>
-        </div>
-        <div class="recipientInfo-surnameDiv">
-            <input type="text" class="recipientInfo-surnameInput" placeholder="surname" formControlName="surname">
-            <div class="error-label" [class.visible]="surname.invalid && surname.dirty">
-                surname required
-            </div>
-        </div>
-        <div class="recipientInfo-emailDiv">
-            <input type="text" class="recipientInfo-emailInput" placeholder="email" formControlName="email">
-            <div class="error-label" [class.visible]="email.invalid && email.dirty">
-                @if (email.hasError('email')) {
-                    email incorrect
-                } @else {
-                    email required
-                }
-            </div>
-        </div>
-        <div class="recipientInfo-optionalTextDiv">
-            <textarea type="text" class="recipientInfo-optionalTextInput" placeholder="text (optional)" (input)="onOptionalTextInput($event)"></textarea>
-        </div>
+  @let name = form.controls.name;
+  @let surname = form.controls.surname;
+  @let email = form.controls.email;
+  <h1>transfer to whom?</h1>
+  <h4>Recipient information</h4>
+  <div class="recipientInfo-inputs">
+    <div class="recipientInfo-nameDiv">
+      <input
+        type="text"
+        class="recipientInfo-nameInput"
+        placeholder="name"
+        formControlName="name"
+      />
+      <div class="error-label" [class.visible]="name.invalid && name.dirty">name required</div>
     </div>
-    <hr>
-    <div class="recipientInfo-buttons">
-        <button class="recipientInfo-backButton" (click)="onBack(name.value)"><img src="icons/back.svg" alt="back" /></button>
-        <button class="recipientInfo-continueButton" (click)="onContinue()">continue</button>
+    <div class="recipientInfo-surnameDiv">
+      <input
+        type="text"
+        class="recipientInfo-surnameInput"
+        placeholder="surname"
+        formControlName="surname"
+      />
+      <div class="error-label" [class.visible]="surname.invalid && surname.dirty">
+        surname required
+      </div>
     </div>
+    <div class="recipientInfo-emailDiv">
+      <input
+        type="text"
+        class="recipientInfo-emailInput"
+        placeholder="email"
+        formControlName="email"
+      />
+      <div class="error-label" [class.visible]="email.invalid && email.dirty">
+        @if (email.hasError('email')) {
+          email incorrect
+        } @else {
+          email required
+        }
+      </div>
+    </div>
+    <div class="recipientInfo-optionalTextDiv">
+      <textarea
+        type="text"
+        class="recipientInfo-optionalTextInput"
+        placeholder="text (optional)"
+        (input)="onOptionalTextInput($event)"
+      ></textarea>
+    </div>
+  </div>
+  <hr />
+  <div class="recipientInfo-buttons">
+    <button class="recipientInfo-backButton" (click)="onBack(name.value)">
+      <svg
+        class="arrow-icon"
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 15H28M28 15L21 8M28 15L21 22"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <button class="recipientInfo-continueButton" (click)="onContinue()">continue</button>
+  </div>
 </main>

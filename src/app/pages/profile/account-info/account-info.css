@@ -62,11 +62,12 @@ hr {
   }
 
   hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
   }
 
   .profile-accountInfoPills {
     flex-direction: column;
+    gap: 5px;
   }
 
   .profile-pill {

@@ -116,6 +116,10 @@ main img {
     margin-top: var(--container-spacing-mobile);
   }
 
+  :host {
+    border-radius: var(--border-radius-mobile);
+  }
+
   .landing-secureDiv h1 {
     font-size: 28px;
     margin: 20px 0 20px 0;
@@ -138,7 +142,8 @@ main img {
 
   main img {
     height: 400px;
-    object-position: center 105%
+    object-position: center 105%;
+    border-radius: var(--border-radius-mobile);
   }
 
   .landing-secureOverlay {

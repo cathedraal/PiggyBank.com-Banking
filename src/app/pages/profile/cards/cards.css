@@ -308,7 +308,7 @@ hr {
   }
 
   hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
   }
 
   main h1 {
@@ -331,7 +331,7 @@ hr {
   .profile-card {
     min-width: unset;
     min-height: unset;
-    width: 300px;
+    width: 295px;
     height: 200px;
   }
 

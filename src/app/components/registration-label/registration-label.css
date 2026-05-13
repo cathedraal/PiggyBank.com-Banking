@@ -88,6 +88,10 @@ hr.active {
 /* Mobile */
 @media (max-width: 768px) {
   main {
+    display: none;
+  }
+
+  /* main {
     max-width: 360px;
   }
 
@@ -120,5 +124,5 @@ hr.active {
   .registrationFlow-secondStep p {
     font-size: 14px;
     width: 70px;
-  }
+  } */
 }

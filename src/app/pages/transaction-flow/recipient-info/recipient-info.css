@@ -10,9 +10,9 @@ main {
 }
 
 :host {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -116,12 +116,12 @@ hr {
 }
 
 .recipientInfo-buttons {
-    display: flex;
+  display: flex;
 }
 
 .recipientInfo-continueButton {
   padding: 20px;
-  max-width: 190px;
+  max-width: 180px;
   width: 100%;
   background-color: var(--primary-color);
   border-radius: 40px;
@@ -139,20 +139,21 @@ hr {
 }
 
 .recipientInfo-backButton {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
+  padding: 14px 15px 14px 15px;
   background-color: var(--white);
   border: 1px solid var(--border-color);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--black);
+}
+
+.recipientInfo-backButton svg {
+  transform: scaleX(-1);
 }
 
 .recipientInfo-backButton:hover {
-    background-color: var(--white-hover);
+  background-color: var(--white-hover);
 }
 
 /* Mobile */
@@ -175,6 +176,29 @@ hr {
   }
 
   hr {
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
+  }
+
+  .recipientInfo-nameInput,
+  .recipientInfo-emailInput,
+  .recipientInfo-surnameInput,
+  .recipientInfo-optionalTextInput {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .recipientInfo-backButton {
+    padding: 12px;
+  }
+
+  .recipientInfo-backButton svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .recipientInfo-continueButton {
+    flex: 1;
+    font-size: 16px;
+    padding: 15px;
   }
 }

@@ -19,7 +19,7 @@
           >
             <h1>
               <span>{{ card.cardCurrency.value }}</span
-              >{{ card.cardBalance| number: '1.2-2' }}
+              >{{ card.cardBalance | number: '1.2-2' }}
             </h1>
             <p>
               {{ formatNumber(card.cardNumber) }}
@@ -40,16 +40,16 @@
       />
       <div class="choosingWallet-totalAmountdiv">
         <div class="choosingWallet-totalAmount">
-            <p class="choosingWallet-totalAmountText">total amount</p>
-            <p class="choosingWallet-totalAmountInfo">{{chosenAmountOfMoney | number: '1.2-2' }}</p>
+          <p class="choosingWallet-totalAmountText">total amount</p>
+          <p class="choosingWallet-totalAmountInfo">{{ chosenAmountOfMoney | number: '1.2-2' }}</p>
         </div>
-        <hr class="choosingWallet-totalAmountHr">
+        <hr class="choosingWallet-totalAmountHr" />
         <div class="choosingWallet-totalAmountFeesInfo">
-            <img src="icons/transaction-flow/info.svg" alt="info" />
-            <p>
-                We charge 2% fees for each transaction.
-                <a href="/terms-and-conditions">Learn more</a>
-            </p>
+          <img src="icons/transaction-flow/info.svg" alt="info" />
+          <p>
+            We charge 2% fees for each transaction.
+            <a href="/terms-and-conditions">Learn more</a>
+          </p>
         </div>
       </div>
     </div>
@@ -58,7 +58,23 @@
   <div class="choosingWallet-bottomDiv">
     <div class="choosingWallet-buttons">
       <button class="choosingWallet-backButton" (click)="onRoute()">
-        <img src="icons/back.svg" alt="back" />
+        <svg
+          class="arrow-icon"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 15H28M28 15L21 8M28 15L21 22"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </button>
       <button class="choosingWallet-continueButton" (click)="onContinue()">continue</button>
     </div>
