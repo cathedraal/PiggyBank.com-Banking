@@ -6,7 +6,7 @@ import { Observable, Subject, takeUntil } from 'rxjs';
   providedIn: 'root',
 })
 export class CurrencyApiService {
-  private readonly url: string = 'https://api.frankfurter.dev/v2/rates?quotes=USD,GBP';
+  private readonly baseUrl: string = 'https://api.frankfurter.dev/v2';
   public usd = signal<number>(0);
   public gbp = signal<number>(0);
   private unsubscribe = new Subject<void>();
@@ -18,7 +18,7 @@ export class CurrencyApiService {
    * Fetch API, no rxjs, loads rates -------> not in use
    */
   loadRatesFetch(): void {
-    fetch(this.url)
+    fetch(this.baseUrl)
       .then((response) => {
         console.log(response.status);
         return response.json();
@@ -35,7 +35,7 @@ export class CurrencyApiService {
    */
   loadRatesRxjs(): void {
     this.http
-      .get<Array<any>>(this.url)
+      .get<Array<any>>(this.baseUrl)
       .pipe(takeUntil(this.unsubscribe))
       .subscribe({
         next: (data) => {
@@ -52,7 +52,9 @@ export class CurrencyApiService {
    * Gets rates from the URL
    * @returns Array of rates
    */
-  getRates(): Observable<Array<any>> {
-    return this.http.get<Array<any>>(this.url);
+  getRates(symbols: string[]): Observable<Array<any>> {
+    const url = new URL(`${this.baseUrl}/rates`);
+    url.searchParams.set('quotes', symbols.join(','));
+    return this.http.get<Array<any>>(url.toString());
   }
 }

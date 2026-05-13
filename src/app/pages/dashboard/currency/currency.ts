@@ -25,7 +25,7 @@ export class CurrencyComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     console.log(this.unsubscribe)
     this.currencyApiService
-      .getRates()
+      .getRates(['USD', 'GBP'])
       .pipe(takeUntil(this.unsubscribe))
       .subscribe({
         next: (data) => {
