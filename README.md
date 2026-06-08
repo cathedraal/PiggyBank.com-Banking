@@ -1,7 +1,7 @@
 # PiggyBank.com-Banking Vanilla JS
 
-A simple digital bank that lets users send, top up, and withdraw money. It’s designed to be easy to use and beginner-friendly.
-The interface was first meticulously crafted in Figma, focusing on a clean, modern, and intuitive user experience. The design was then translated into pixel-perfect HTML5 and CSS3, ensuring a premium feel with smooth transitions and responsive layouts.
+A simple fintech SPA I wrote using JS/CSS/HTML stack.
+The interface was first meticulously crafted in Figma. The design was then translated into HTML5 and CSS3.
 
 ## Features
 
